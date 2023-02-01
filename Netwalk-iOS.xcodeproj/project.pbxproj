@@ -13,9 +13,12 @@
 		576C0DEB298ACAB300485AD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576C0DE9298ACAB300485AD5 /* Main.storyboard */; };
 		576C0DED298ACAB400485AD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 576C0DEC298ACAB400485AD5 /* Assets.xcassets */; };
 		576C0DF0298ACAB400485AD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576C0DEE298ACAB400485AD5 /* LaunchScreen.storyboard */; };
+		7AA3F62EF603725162AB6B74 /* Pods_Netwalk_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		277EA68E255120B0DBC71666 /* Pods-Netwalk-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netwalk-iOS.release.xcconfig"; path = "Target Support Files/Pods-Netwalk-iOS/Pods-Netwalk-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		4F671F28F8A304E80430BB26 /* Pods-Netwalk-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netwalk-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Netwalk-iOS/Pods-Netwalk-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		576C0DE0298ACAB300485AD5 /* Netwalk-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netwalk-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		576C0DE3298ACAB300485AD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		576C0DE5298ACAB300485AD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		576C0DEC298ACAB400485AD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		576C0DEF298ACAB400485AD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		576C0DF1298ACAB400485AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netwalk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AA3F62EF603725162AB6B74 /* Pods_Netwalk_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				576C0DE2298ACAB300485AD5 /* Netwalk-iOS */,
 				576C0DE1298ACAB300485AD5 /* Products */,
+				ED93471A6FE4872BCA376455 /* Pods */,
+				6A7398B2DB305C1B1D15B3FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = "Netwalk-iOS";
 			sourceTree = "<group>";
 		};
+		6A7398B2DB305C1B1D15B3FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED93471A6FE4872BCA376455 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F671F28F8A304E80430BB26 /* Pods-Netwalk-iOS.debug.xcconfig */,
+				277EA68E255120B0DBC71666 /* Pods-Netwalk-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 576C0DF4298ACAB400485AD5 /* Build configuration list for PBXNativeTarget "Netwalk-iOS" */;
 			buildPhases = (
+				C8E2E77CEA4139F088D2B424 /* [CP] Check Pods Manifest.lock */,
 				576C0DDC298ACAB300485AD5 /* Sources */,
 				576C0DDD298ACAB300485AD5 /* Frameworks */,
 				576C0DDE298ACAB300485AD5 /* Resources */,
+				5B967314334DC482809FB6C1 /* [CP] Embed Pods Frameworks */,
+				7988CCD396E021E4ABC2F21A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +160,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B967314334DC482809FB6C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Netwalk-iOS/Pods-Netwalk-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Netwalk-iOS/Pods-Netwalk-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Netwalk-iOS/Pods-Netwalk-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7988CCD396E021E4ABC2F21A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Netwalk-iOS/Pods-Netwalk-iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Netwalk-iOS/Pods-Netwalk-iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Netwalk-iOS/Pods-Netwalk-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8E2E77CEA4139F088D2B424 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Netwalk-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		576C0DDC298ACAB300485AD5 /* Sources */ = {
@@ -282,6 +369,7 @@
 		};
 		576C0DF5298ACAB400485AD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F671F28F8A304E80430BB26 /* Pods-Netwalk-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +398,7 @@
 		};
 		576C0DF6298ACAB400485AD5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 277EA68E255120B0DBC71666 /* Pods-Netwalk-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
