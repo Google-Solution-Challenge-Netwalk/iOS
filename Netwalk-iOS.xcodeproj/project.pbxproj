@@ -15,6 +15,7 @@
 		576C0DF0298ACAB400485AD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576C0DEE298ACAB400485AD5 /* LaunchScreen.storyboard */; };
 		576C0DF8298ACE3800485AD5 /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 576C0DF7298ACE3800485AD5 /* SecretKey.plist */; };
 		576C0DFB298ACE9C00485AD5 /* Bundle+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C0DFA298ACE9C00485AD5 /* Bundle+Ext.swift */; };
+		576C0DFD298ACF7100485AD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 576C0DFC298ACF7100485AD5 /* GoogleService-Info.plist */; };
 		7AA3F62EF603725162AB6B74 /* Pods_Netwalk_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		576C0DF1298ACAB400485AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		576C0DF7298ACE3800485AD5 /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
 		576C0DFA298ACE9C00485AD5 /* Bundle+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Ext.swift"; sourceTree = "<group>"; };
+		576C0DFC298ACF7100485AD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netwalk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,6 +78,7 @@
 				576C0DEE298ACAB400485AD5 /* LaunchScreen.storyboard */,
 				576C0DF1298ACAB400485AD5 /* Info.plist */,
 				576C0DF7298ACE3800485AD5 /* SecretKey.plist */,
+				576C0DFC298ACF7100485AD5 /* GoogleService-Info.plist */,
 			);
 			path = "Netwalk-iOS";
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			files = (
 				576C0DF8298ACE3800485AD5 /* SecretKey.plist in Resources */,
 				576C0DF0298ACAB400485AD5 /* LaunchScreen.storyboard in Resources */,
+				576C0DFD298ACF7100485AD5 /* GoogleService-Info.plist in Resources */,
 				576C0DED298ACAB400485AD5 /* Assets.xcassets in Resources */,
 				576C0DEB298ACAB300485AD5 /* Main.storyboard in Resources */,
 			);
