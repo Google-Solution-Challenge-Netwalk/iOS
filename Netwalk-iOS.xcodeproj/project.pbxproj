@@ -16,6 +16,17 @@
 		576C0DF8298ACE3800485AD5 /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 576C0DF7298ACE3800485AD5 /* SecretKey.plist */; };
 		576C0DFB298ACE9C00485AD5 /* Bundle+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C0DFA298ACE9C00485AD5 /* Bundle+Ext.swift */; };
 		576C0DFD298ACF7100485AD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 576C0DFC298ACF7100485AD5 /* GoogleService-Info.plist */; };
+		576C0E02298AD07000485AD5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C0E01298AD07000485AD5 /* LoginViewController.swift */; };
+		57D88FD3298AD2AF00C33F29 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FD2298AD2AF00C33F29 /* TabBarController.swift */; };
+		57D88FD6298AD2ED00C33F29 /* ExampleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FD5298AD2ED00C33F29 /* ExampleNavigationController.swift */; };
+		57D88FD8298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FD7298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift */; };
+		57D88FDA298AD32800C33F29 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FD9298AD32800C33F29 /* ExampleBouncesContentView.swift */; };
+		57D88FDC298AD33F00C33F29 /* ExampleBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FDB298AD33F00C33F29 /* ExampleBasicContentView.swift */; };
+		57D88FDE298AD41B00C33F29 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FDD298AD41B00C33F29 /* GroupViewController.swift */; };
+		57D88FE0298AD42200C33F29 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FDF298AD42200C33F29 /* ReviewViewController.swift */; };
+		57D88FE2298AD42C00C33F29 /* PloggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FE1298AD42C00C33F29 /* PloggingViewController.swift */; };
+		57D88FE4298AD43500C33F29 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FE3298AD43500C33F29 /* RankingViewController.swift */; };
+		57D88FE6298AD44000C33F29 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FE5298AD44000C33F29 /* ProfileViewController.swift */; };
 		7AA3F62EF603725162AB6B74 /* Pods_Netwalk_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +44,17 @@
 		576C0DF7298ACE3800485AD5 /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
 		576C0DFA298ACE9C00485AD5 /* Bundle+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Ext.swift"; sourceTree = "<group>"; };
 		576C0DFC298ACF7100485AD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		576C0E01298AD07000485AD5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		57D88FD2298AD2AF00C33F29 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		57D88FD5298AD2ED00C33F29 /* ExampleNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNavigationController.swift; sourceTree = "<group>"; };
+		57D88FD7298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleIrregularityBasicContentView.swift; sourceTree = "<group>"; };
+		57D88FD9298AD32800C33F29 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
+		57D88FDB298AD33F00C33F29 /* ExampleBasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleBasicContentView.swift; sourceTree = "<group>"; };
+		57D88FDD298AD41B00C33F29 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		57D88FDF298AD42200C33F29 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		57D88FE1298AD42C00C33F29 /* PloggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PloggingViewController.swift; sourceTree = "<group>"; };
+		57D88FE3298AD43500C33F29 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
+		57D88FE5298AD44000C33F29 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netwalk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,10 +91,12 @@
 		576C0DE2298ACAB300485AD5 /* Netwalk-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				576C0DF9298ACE8500485AD5 /* Extensions */,
 				576C0DE3298ACAB300485AD5 /* AppDelegate.swift */,
 				576C0DE5298ACAB300485AD5 /* SceneDelegate.swift */,
-				576C0DE7298ACAB300485AD5 /* ViewController.swift */,
+				576C0E00298ACFF800485AD5 /* Sources */,
+				576C0DF9298ACE8500485AD5 /* Extensions */,
+				576C0DFF298ACFF200485AD5 /* Views */,
+				576C0DFE298ACFED00485AD5 /* Controllers */,
 				576C0DE9298ACAB300485AD5 /* Main.storyboard */,
 				576C0DEC298ACAB400485AD5 /* Assets.xcassets */,
 				576C0DEE298ACAB400485AD5 /* LaunchScreen.storyboard */,
@@ -89,6 +113,47 @@
 				576C0DFA298ACE9C00485AD5 /* Bundle+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		576C0DFE298ACFED00485AD5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57D88FD2298AD2AF00C33F29 /* TabBarController.swift */,
+				576C0DE7298ACAB300485AD5 /* ViewController.swift */,
+				576C0E01298AD07000485AD5 /* LoginViewController.swift */,
+				57D88FDD298AD41B00C33F29 /* GroupViewController.swift */,
+				57D88FDF298AD42200C33F29 /* ReviewViewController.swift */,
+				57D88FE1298AD42C00C33F29 /* PloggingViewController.swift */,
+				57D88FE3298AD43500C33F29 /* RankingViewController.swift */,
+				57D88FE5298AD44000C33F29 /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		576C0DFF298ACFF200485AD5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		576C0E00298ACFF800485AD5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				57D88FD4298AD2BA00C33F29 /* ESTabBar */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		57D88FD4298AD2BA00C33F29 /* ESTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				57D88FD5298AD2ED00C33F29 /* ExampleNavigationController.swift */,
+				57D88FD7298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift */,
+				57D88FD9298AD32800C33F29 /* ExampleBouncesContentView.swift */,
+				57D88FDB298AD33F00C33F29 /* ExampleBasicContentView.swift */,
+			);
+			path = ESTabBar;
 			sourceTree = "<group>";
 		};
 		6A7398B2DB305C1B1D15B3FB /* Frameworks */ = {
@@ -243,9 +308,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D88FE2298AD42C00C33F29 /* PloggingViewController.swift in Sources */,
 				576C0DE8298ACAB300485AD5 /* ViewController.swift in Sources */,
+				57D88FDA298AD32800C33F29 /* ExampleBouncesContentView.swift in Sources */,
+				57D88FE4298AD43500C33F29 /* RankingViewController.swift in Sources */,
+				57D88FE0298AD42200C33F29 /* ReviewViewController.swift in Sources */,
 				576C0DFB298ACE9C00485AD5 /* Bundle+Ext.swift in Sources */,
+				57D88FDE298AD41B00C33F29 /* GroupViewController.swift in Sources */,
 				576C0DE4298ACAB300485AD5 /* AppDelegate.swift in Sources */,
+				57D88FD8298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift in Sources */,
+				57D88FD6298AD2ED00C33F29 /* ExampleNavigationController.swift in Sources */,
+				57D88FDC298AD33F00C33F29 /* ExampleBasicContentView.swift in Sources */,
+				57D88FD3298AD2AF00C33F29 /* TabBarController.swift in Sources */,
+				57D88FE6298AD44000C33F29 /* ProfileViewController.swift in Sources */,
+				576C0E02298AD07000485AD5 /* LoginViewController.swift in Sources */,
 				576C0DE6298ACAB300485AD5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
