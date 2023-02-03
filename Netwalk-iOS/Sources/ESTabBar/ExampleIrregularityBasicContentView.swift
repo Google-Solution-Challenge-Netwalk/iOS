@@ -59,7 +59,6 @@ class ExampleIrregularityContentView: ESTabBarItemContentView {
     }
     
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
-        print(#function)
         let p = CGPoint.init(x: point.x - imageView.frame.origin.x, y: point.y - imageView.frame.origin.y)
         return sqrt(pow(imageView.bounds.size.width / 2.0 - p.x, 2) + pow(imageView.bounds.size.height / 2.0 - p.y, 2)) < imageView.bounds.size.width / 2.0
     }
