@@ -15,6 +15,9 @@ class PloggingViewController: UIViewController {
     @IBOutlet weak var totalDistance: UILabel!
     @IBOutlet weak var totalTime: UILabel!
     
+    @IBOutlet weak var myLocationButton: UIButton!
+    
+    
     var locationManager = CLLocationManager()
     var mapView: GMSMapView!
     
@@ -28,6 +31,8 @@ class PloggingViewController: UIViewController {
     func setupView() {
         loadMapView()
         topView.layer.cornerRadius = 10
+        
+        myLocationButton.layer.cornerRadius = myLocationButton.frame.width / 2
     }
     
 
@@ -41,11 +46,13 @@ class PloggingViewController: UIViewController {
         let camera = GMSCameraPosition(latitude: latitude, longitude: longitude, zoom: 18)
         mapView = GMSMapView(frame: self.view.bounds, camera: camera)
         mapView.delegate = self
-        mapView.settings.myLocationButton = true
+        //mapView.settings.myLocationButton = true
         mapView.isMyLocationEnabled = true
         
         view.addSubview(mapView)
         view.bringSubviewToFront(topView)
+        view.bringSubviewToFront(myLocationButton)
+        
     }
     
     func setupLocation() {
@@ -63,12 +70,22 @@ class PloggingViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func myLocationButtonTapped(_ sender: UIButton) {
+        
+        guard let lat = self.mapView.myLocation?.coordinate.latitude, let lng = self.mapView.myLocation?.coordinate.longitude else {
+            return
+        }
+        let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: lng, zoom: 18)
+        self.mapView.animate(to: camera)
+    }
+    
 
 }
 
 // MARK: - GMSMapViewDelegate
 extension PloggingViewController: GMSMapViewDelegate {
-
+    
 }
 
 // MARK: - CLLocationManagerDelegate

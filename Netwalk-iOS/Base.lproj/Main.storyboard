@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -172,17 +173,36 @@
                                     <constraint firstAttribute="bottom" secondItem="5Ia-XK-q4k" secondAttribute="bottom" constant="10" id="rmI-XP-qzJ"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HH-pf-KYF">
+                                <rect key="frame" x="323" y="699" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="3nf-4H-g31"/>
+                                    <constraint firstAttribute="height" constant="50" id="ung-RE-0RN"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="location.circle.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="myLocationButtonTapped:" destination="lg1-jj-jdj" eventType="touchUpInside" id="Iyr-e4-b4O"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="shj-As-Okn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="shj-As-Okn" firstAttribute="bottom" secondItem="6HH-pf-KYF" secondAttribute="bottom" constant="20" id="S7O-cz-hxe"/>
                             <constraint firstItem="shj-As-Okn" firstAttribute="trailing" secondItem="n5h-Vu-MlR" secondAttribute="trailing" constant="50" id="foj-bn-amy"/>
+                            <constraint firstItem="shj-As-Okn" firstAttribute="trailing" secondItem="6HH-pf-KYF" secondAttribute="trailing" constant="20" id="u7R-fa-2Te"/>
                             <constraint firstItem="n5h-Vu-MlR" firstAttribute="top" secondItem="shj-As-Okn" secondAttribute="top" id="vNV-cN-vMC"/>
                             <constraint firstItem="n5h-Vu-MlR" firstAttribute="leading" secondItem="shj-As-Okn" secondAttribute="leading" constant="50" id="zh5-5B-XU2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ByD-P1-fjI"/>
                     <connections>
+                        <outlet property="myLocationButton" destination="6HH-pf-KYF" id="dl7-D0-FVx"/>
                         <outlet property="topView" destination="n5h-Vu-MlR" id="IAU-sg-3mR"/>
                         <outlet property="totalDistance" destination="JsI-vm-bYL" id="o3F-Gi-DGB"/>
                         <outlet property="totalTime" destination="YnM-Tw-zKM" id="QgD-K3-4tG"/>
@@ -256,6 +276,7 @@
     <resources>
         <image name="clock.arrow.circlepath" catalog="system" width="128" height="112"/>
         <image name="figure.walk.motion" catalog="system" width="128" height="112"/>
+        <image name="location.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
