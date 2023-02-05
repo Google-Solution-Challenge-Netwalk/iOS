@@ -18,6 +18,13 @@ class PloggingViewController: UIViewController {
     @IBOutlet weak var myLocationButton: UIButton!
     @IBOutlet weak var ploggingButton: UIButton!
     
+    @IBOutlet weak var groupButton: UIButton!
+    @IBOutlet weak var cameraButton: UIButton!
+    
+    @IBOutlet weak var groupInfoLabel: UILabel!
+    @IBOutlet weak var cameraInfoLabel: UILabel!
+    
+    
     var locationManager = CLLocationManager()
     var mapView: GMSMapView!
     var ploggingStatus = false
@@ -28,7 +35,6 @@ class PloggingViewController: UIViewController {
 
         setupView()
         setupLocation()
-        
     }
     
     func setupView() {
@@ -40,11 +46,26 @@ class PloggingViewController: UIViewController {
         
         myLocationButton.layer.cornerRadius = myLocationButton.frame.width / 2
         ploggingButton.layer.cornerRadius = ploggingButton.frame.width / 2
+        groupButton.layer.cornerRadius = groupButton.frame.width / 2
+        cameraButton.layer.cornerRadius = cameraButton.frame.width / 2
+        
+        groupInfoLabel.layer.cornerRadius = groupInfoLabel.frame.width / 2
+        cameraInfoLabel.layer.cornerRadius = cameraInfoLabel.frame.width / 2
+        
+        cameraButton.isHidden = true
+        cameraInfoLabel.isHidden = true
+        groupInfoLabel.isHidden = true
         
         // 스토리보드에 올려진 서브뷰들을 맵뷰 앞으로 가져오기
         view.bringSubviewToFront(topView)
         view.bringSubviewToFront(myLocationButton)
         view.bringSubviewToFront(ploggingButton)
+        
+        view.bringSubviewToFront(groupButton)
+        view.bringSubviewToFront(cameraButton)
+        
+        view.bringSubviewToFront(groupInfoLabel)
+        view.bringSubviewToFront(cameraInfoLabel)
     }
     
     // 맵 불러오기
@@ -92,16 +113,26 @@ class PloggingViewController: UIViewController {
         if ploggingStatus { // 플로깅 활성화 상태
             print("stop")
             sender.setImage(UIImage(systemName: "play.fill"), for: .normal)
-            
+            cameraButton.isHidden = true
             timer.invalidate()
         } else { // 플로깅 비활성화 상태
             print("start")
             sender.setImage(UIImage(systemName: "stop.fill"), for: .normal)
-            
+            cameraButton.isHidden = false
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         }
         ploggingStatus = !ploggingStatus
     }
+    
+    @IBAction func groupButtonTapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func cameraButtonTapped(_ sender: UIButton) {
+        
+    }
+    
+    
     
     @objc func updateCounter() {
         print("--")
