@@ -28,6 +28,8 @@
 		57D88FE6298AD44000C33F29 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FE5298AD44000C33F29 /* ProfileViewController.swift */; };
 		7AA3F62EF603725162AB6B74 /* Pods_Netwalk_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */; };
 		954FCE9F298BCDDB001DF8C3 /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 954FCE9E298BCDDB001DF8C3 /* SecretKey.plist */; };
+		95F55CC3298FB3FE00022B0D /* splahLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 95F55CC2298FB3FE00022B0D /* splahLogo.png */; };
+		95F55CC5298FB4F100022B0D /* 스플래시 화면.png in Resources */ = {isa = PBXBuildFile; fileRef = 95F55CC4298FB4F100022B0D /* 스플래시 화면.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		57D88FE5298AD44000C33F29 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netwalk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		954FCE9E298BCDDB001DF8C3 /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
+		95F55CC2298FB3FE00022B0D /* splahLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splahLogo.png; path = ../../../../../../Documents/splahLogo.png; sourceTree = "<group>"; };
+		95F55CC4298FB4F100022B0D /* 스플래시 화면.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "스플래시 화면.png"; path = "../../../../../../Documents/스플래시 화면.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,8 @@
 		576C0E00298ACFF800485AD5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				95F55CC4298FB4F100022B0D /* 스플래시 화면.png */,
+				95F55CC2298FB3FE00022B0D /* splahLogo.png */,
 				57D88FD4298AD2BA00C33F29 /* ESTabBar */,
 			);
 			path = Sources;
@@ -238,7 +244,9 @@
 				954FCE9F298BCDDB001DF8C3 /* SecretKey.plist in Resources */,
 				576C0DFD298ACF7100485AD5 /* GoogleService-Info.plist in Resources */,
 				576C0DED298ACAB400485AD5 /* Assets.xcassets in Resources */,
+				95F55CC5298FB4F100022B0D /* 스플래시 화면.png in Resources */,
 				576C0DEB298ACAB300485AD5 /* Main.storyboard in Resources */,
+				95F55CC3298FB3FE00022B0D /* splahLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
