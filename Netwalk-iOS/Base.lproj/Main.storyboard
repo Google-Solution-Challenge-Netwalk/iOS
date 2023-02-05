@@ -138,7 +138,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Be4-vq-NJ3">
-                                                <rect key="frame" x="122" y="0.0" width="131" height="20"/>
+                                                <rect key="frame" x="121" y="0.0" width="132" height="20"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock.arrow.circlepath" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Slg-in-fCE">
                                                         <rect key="frame" x="0.0" y="0.99999999999999822" width="20" height="18.666666666666664"/>
@@ -153,8 +153,8 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfK-O4-NeN">
-                                                        <rect key="frame" x="109" y="0.0" width="22" height="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hrs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfK-O4-NeN">
+                                                        <rect key="frame" x="109" y="0.0" width="23" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -174,7 +174,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HH-pf-KYF">
-                                <rect key="frame" x="323" y="699" width="50" height="50"/>
+                                <rect key="frame" x="323" y="629" width="50" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="3nf-4H-g31"/>
@@ -189,13 +189,29 @@
                                     <action selector="myLocationButtonTapped:" destination="lg1-jj-jdj" eventType="touchUpInside" id="Iyr-e4-b4O"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z30-7Z-UQv">
+                                <rect key="frame" x="323" y="689" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Zo1-yI-lEw"/>
+                                    <constraint firstAttribute="width" constant="50" id="jNE-PQ-0G7"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="play.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="ploggingButtonTapped:" destination="lg1-jj-jdj" eventType="touchUpInside" id="RXa-X8-9R4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="shj-As-Okn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="shj-As-Okn" firstAttribute="bottom" secondItem="6HH-pf-KYF" secondAttribute="bottom" constant="20" id="S7O-cz-hxe"/>
+                            <constraint firstItem="shj-As-Okn" firstAttribute="bottom" secondItem="Z30-7Z-UQv" secondAttribute="bottom" constant="30" id="09o-XM-eue"/>
+                            <constraint firstItem="shj-As-Okn" firstAttribute="trailing" secondItem="6HH-pf-KYF" secondAttribute="trailing" constant="20" id="1eV-6K-V4Z"/>
+                            <constraint firstItem="Z30-7Z-UQv" firstAttribute="top" secondItem="6HH-pf-KYF" secondAttribute="bottom" constant="10" id="cDU-Sl-fqc"/>
                             <constraint firstItem="shj-As-Okn" firstAttribute="trailing" secondItem="n5h-Vu-MlR" secondAttribute="trailing" constant="50" id="foj-bn-amy"/>
-                            <constraint firstItem="shj-As-Okn" firstAttribute="trailing" secondItem="6HH-pf-KYF" secondAttribute="trailing" constant="20" id="u7R-fa-2Te"/>
+                            <constraint firstItem="shj-As-Okn" firstAttribute="trailing" secondItem="Z30-7Z-UQv" secondAttribute="trailing" constant="20" id="iqp-Fi-HwG"/>
                             <constraint firstItem="n5h-Vu-MlR" firstAttribute="top" secondItem="shj-As-Okn" secondAttribute="top" id="vNV-cN-vMC"/>
                             <constraint firstItem="n5h-Vu-MlR" firstAttribute="leading" secondItem="shj-As-Okn" secondAttribute="leading" constant="50" id="zh5-5B-XU2"/>
                         </constraints>
@@ -203,6 +219,7 @@
                     <navigationItem key="navigationItem" id="ByD-P1-fjI"/>
                     <connections>
                         <outlet property="myLocationButton" destination="6HH-pf-KYF" id="dl7-D0-FVx"/>
+                        <outlet property="ploggingButton" destination="Z30-7Z-UQv" id="XB7-Am-hkb"/>
                         <outlet property="topView" destination="n5h-Vu-MlR" id="IAU-sg-3mR"/>
                         <outlet property="totalDistance" destination="JsI-vm-bYL" id="o3F-Gi-DGB"/>
                         <outlet property="totalTime" destination="YnM-Tw-zKM" id="QgD-K3-4tG"/>
@@ -277,6 +294,7 @@
         <image name="clock.arrow.circlepath" catalog="system" width="128" height="112"/>
         <image name="figure.walk.motion" catalog="system" width="128" height="112"/>
         <image name="location.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
