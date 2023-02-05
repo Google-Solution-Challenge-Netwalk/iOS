@@ -16,30 +16,42 @@ class PloggingViewController: UIViewController {
     @IBOutlet weak var totalTime: UILabel!
     
     @IBOutlet weak var myLocationButton: UIButton!
-    
+    @IBOutlet weak var ploggingButton: UIButton!
     
     var locationManager = CLLocationManager()
     var mapView: GMSMapView!
+    var ploggingStatus = false
+    var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupView()
         setupLocation()
+        
     }
     
     func setupView() {
+        // 맵뷰 불러오기
         loadMapView()
         topView.layer.cornerRadius = 10
+        topView.layer.borderWidth = 1
+        topView.layer.borderColor = UIColor.lightGray.cgColor
         
         myLocationButton.layer.cornerRadius = myLocationButton.frame.width / 2
+        ploggingButton.layer.cornerRadius = ploggingButton.frame.width / 2
+        
+        // 스토리보드에 올려진 서브뷰들을 맵뷰 앞으로 가져오기
+        view.bringSubviewToFront(topView)
+        view.bringSubviewToFront(myLocationButton)
+        view.bringSubviewToFront(ploggingButton)
     }
     
-
+    // 맵 불러오기
     func loadMapView() {
-        // 현재 내 위치 가져오기
+        
         print(#function)
-        let myLocation = locationManager.location?.coordinate
+        let myLocation = locationManager.location?.coordinate // 현재 내 위치 가져오기
         let latitude = myLocation?.latitude ?? 0.0
         let longitude = myLocation?.longitude ?? 0.0
         
@@ -50,9 +62,6 @@ class PloggingViewController: UIViewController {
         mapView.isMyLocationEnabled = true
         
         view.addSubview(mapView)
-        view.bringSubviewToFront(topView)
-        view.bringSubviewToFront(myLocationButton)
-        
     }
     
     func setupLocation() {
@@ -73,13 +82,30 @@ class PloggingViewController: UIViewController {
     
     @IBAction func myLocationButtonTapped(_ sender: UIButton) {
         
-        guard let lat = self.mapView.myLocation?.coordinate.latitude, let lng = self.mapView.myLocation?.coordinate.longitude else {
-            return
-        }
+        guard let lat = self.mapView.myLocation?.coordinate.latitude,
+              let lng = self.mapView.myLocation?.coordinate.longitude else { return }
         let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: lng, zoom: 18)
         self.mapView.animate(to: camera)
     }
     
+    @IBAction func ploggingButtonTapped(_ sender: UIButton) {
+        if ploggingStatus { // 플로깅 활성화 상태
+            print("stop")
+            sender.setImage(UIImage(systemName: "play.fill"), for: .normal)
+            
+            timer.invalidate()
+        } else { // 플로깅 비활성화 상태
+            print("start")
+            sender.setImage(UIImage(systemName: "stop.fill"), for: .normal)
+            
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        }
+        ploggingStatus = !ploggingStatus
+    }
+    
+    @objc func updateCounter() {
+        print("--")
+    }
 
 }
 
