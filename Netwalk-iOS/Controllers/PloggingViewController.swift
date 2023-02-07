@@ -129,7 +129,8 @@ class PloggingViewController: UIViewController {
     }
     
     @IBAction func cameraButtonTapped(_ sender: UIButton) {
-        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "TrashAlbumVC") as! TrashAlbumViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     
