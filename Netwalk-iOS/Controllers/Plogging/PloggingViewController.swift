@@ -137,11 +137,11 @@ class PloggingViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     @IBAction func groupButtonTapped(_ sender: UIButton) {
-        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ActivateGroupsViewController") as! ActivateGroupsViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func cameraButtonTapped(_ sender: UIButton) {
-
         
         let actionSheet = UIAlertController(title: "title", message: "message", preferredStyle: .actionSheet)
         
@@ -202,6 +202,8 @@ extension PloggingViewController: UIImagePickerControllerDelegate {
         
         guard let image = info[.originalImage] as? UIImage else { return }
         print(image)
+        
+        // 인공지능 네트워킹 처리
         
         picker.dismiss(animated: true)
     }
