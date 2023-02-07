@@ -291,6 +291,36 @@
             </objects>
             <point key="canvasLocation" x="3840.4580152671756" y="-54.225352112676056"/>
         </scene>
+        <!--Trash Album View Controller-->
+        <scene sceneID="sRV-my-fYl">
+            <objects>
+                <viewController storyboardIdentifier="TrashAlbumVC" id="epv-Xy-GpB" customClass="TrashAlbumViewController" customModule="Netwalk_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6ti-Y7-aaI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xX6-5w-Z4S">
+                                <rect key="frame" x="10" y="59" width="373" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vym-ZZ-ceL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xX6-5w-Z4S" firstAttribute="leading" secondItem="Vym-ZZ-ceL" secondAttribute="leading" constant="10" id="TJh-hC-yZN"/>
+                            <constraint firstItem="Vym-ZZ-ceL" firstAttribute="trailing" secondItem="xX6-5w-Z4S" secondAttribute="trailing" constant="10" id="Uka-yl-t3J"/>
+                            <constraint firstItem="Vym-ZZ-ceL" firstAttribute="bottom" secondItem="xX6-5w-Z4S" secondAttribute="bottom" id="aIU-hS-M6j"/>
+                            <constraint firstItem="xX6-5w-Z4S" firstAttribute="top" secondItem="Vym-ZZ-ceL" secondAttribute="top" id="og7-Ft-Wkv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="xX6-5w-Z4S" id="aMV-nI-uuR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQi-lq-ZMr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4749" y="-54"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QDU-aZ-yVL">
             <objects>
