@@ -31,6 +31,8 @@
 		57E4FD9E299288C900C8E082 /* TrashCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E4FD9C299288C900C8E082 /* TrashCategoryTableViewCell.xib */; };
 		57E4FDA129928AEE00C8E082 /* TrashPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E4FD9F29928AEE00C8E082 /* TrashPhotoTableViewCell.swift */; };
 		57E4FDA229928AEE00C8E082 /* TrashPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E4FDA029928AEE00C8E082 /* TrashPhotoTableViewCell.xib */; };
+		57E4FDA5299298A000C8E082 /* TrashPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E4FDA3299298A000C8E082 /* TrashPhotoCollectionViewCell.swift */; };
+		57E4FDA6299298A000C8E082 /* TrashPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E4FDA4299298A000C8E082 /* TrashPhotoCollectionViewCell.xib */; };
 		7AA3F62EF603725162AB6B74 /* Pods_Netwalk_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */; };
 		954FCE9F298BCDDB001DF8C3 /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 954FCE9E298BCDDB001DF8C3 /* SecretKey.plist */; };
 /* End PBXBuildFile section */
@@ -64,6 +66,8 @@
 		57E4FD9C299288C900C8E082 /* TrashCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrashCategoryTableViewCell.xib; sourceTree = "<group>"; };
 		57E4FD9F29928AEE00C8E082 /* TrashPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashPhotoTableViewCell.swift; sourceTree = "<group>"; };
 		57E4FDA029928AEE00C8E082 /* TrashPhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrashPhotoTableViewCell.xib; sourceTree = "<group>"; };
+		57E4FDA3299298A000C8E082 /* TrashPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		57E4FDA4299298A000C8E082 /* TrashPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrashPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netwalk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		954FCE9E298BCDDB001DF8C3 /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +179,8 @@
 				57E4FD9C299288C900C8E082 /* TrashCategoryTableViewCell.xib */,
 				57E4FD9F29928AEE00C8E082 /* TrashPhotoTableViewCell.swift */,
 				57E4FDA029928AEE00C8E082 /* TrashPhotoTableViewCell.xib */,
+				57E4FDA3299298A000C8E082 /* TrashPhotoCollectionViewCell.swift */,
+				57E4FDA4299298A000C8E082 /* TrashPhotoCollectionViewCell.xib */,
 			);
 			path = Trash;
 			sourceTree = "<group>";
@@ -257,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57E4FDA6299298A000C8E082 /* TrashPhotoCollectionViewCell.xib in Resources */,
 				576C0DF0298ACAB400485AD5 /* LaunchScreen.storyboard in Resources */,
 				954FCE9F298BCDDB001DF8C3 /* SecretKey.plist in Resources */,
 				57E4FDA229928AEE00C8E082 /* TrashPhotoTableViewCell.xib in Resources */,
@@ -346,6 +353,7 @@
 				57D88FDC298AD33F00C33F29 /* ExampleBasicContentView.swift in Sources */,
 				57E4FD9929927CC100C8E082 /* TrashAlbumViewController.swift in Sources */,
 				57D88FD3298AD2AF00C33F29 /* TabBarController.swift in Sources */,
+				57E4FDA5299298A000C8E082 /* TrashPhotoCollectionViewCell.swift in Sources */,
 				57D88FE6298AD44000C33F29 /* ProfileViewController.swift in Sources */,
 				576C0E02298AD07000485AD5 /* LoginViewController.swift in Sources */,
 				576C0DE6298ACAB300485AD5 /* SceneDelegate.swift in Sources */,

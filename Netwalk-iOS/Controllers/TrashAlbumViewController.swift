@@ -23,6 +23,7 @@ class TrashAlbumViewController: UIViewController {
         tableView.dataSource = self
         
         tableView.register(UINib(nibName:"TrashCategoryTableViewCell", bundle: nil), forCellReuseIdentifier:"TrashCategoryTableViewCell")
+        tableView.register(UINib(nibName:"TrashPhotoTableViewCell", bundle: nil), forCellReuseIdentifier:"TrashPhotoTableViewCell")
     }
 
 }
@@ -39,11 +40,23 @@ extension TrashAlbumViewController: UITableViewDelegate, UITableViewDataSource {
             
             return cell
         case 1:
-            return UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TrashPhotoTableViewCell", for: indexPath) as! TrashPhotoTableViewCell
+            
+            return cell
         default:
             return UITableViewCell()
         }
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return 120
+        case 1:
+            return tableView.frame.height - 120
+        default:
+            return 0
+        }
+        
+    }
 }
