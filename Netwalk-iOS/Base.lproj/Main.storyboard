@@ -109,10 +109,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5h-Vu-MlR">
-                                <rect key="frame" x="50" y="93" width="293" height="40"/>
+                                <rect key="frame" x="60" y="93" width="273" height="40"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="5Ia-XK-q4k">
-                                        <rect key="frame" x="20" y="10" width="253" height="20"/>
+                                        <rect key="frame" x="20" y="10" width="233" height="20"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="91O-yl-5i2">
                                                 <rect key="frame" x="0.0" y="0.0" width="100.33333333333333" height="20"/>
@@ -139,7 +139,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Be4-vq-NJ3">
-                                                <rect key="frame" x="121" y="0.0" width="132" height="20"/>
+                                                <rect key="frame" x="116.33333333333334" y="0.0" width="116.66666666666666" height="20"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock.arrow.circlepath" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Slg-in-fCE">
                                                         <rect key="frame" x="0.0" y="0.99999999999999822" width="20" height="18.666666666666664"/>
@@ -148,14 +148,14 @@
                                                             <constraint firstAttribute="width" constant="20" id="MeV-SD-kJi"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00 : 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnM-Tw-zKM">
-                                                        <rect key="frame" x="23" y="0.0" width="83" height="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnM-Tw-zKM">
+                                                        <rect key="frame" x="23" y="0.0" width="67.666666666666671" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hrs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfK-O4-NeN">
-                                                        <rect key="frame" x="109" y="0.0" width="23" height="20"/>
+                                                        <rect key="frame" x="93.666666666666657" y="0.0" width="23" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -266,13 +266,13 @@
                             <constraint firstItem="6HH-pf-KYF" firstAttribute="top" secondItem="HtB-at-JF1" secondAttribute="bottom" constant="10" id="Ar2-nX-C5r"/>
                             <constraint firstItem="Z30-7Z-UQv" firstAttribute="top" secondItem="6HH-pf-KYF" secondAttribute="bottom" constant="10" id="cDU-Sl-fqc"/>
                             <constraint firstItem="HtB-at-JF1" firstAttribute="top" secondItem="Qv4-9a-Vec" secondAttribute="bottom" constant="5" id="cUk-WJ-AHE"/>
-                            <constraint firstItem="shj-As-Okn" firstAttribute="trailing" secondItem="n5h-Vu-MlR" secondAttribute="trailing" constant="50" id="foj-bn-amy"/>
+                            <constraint firstItem="shj-As-Okn" firstAttribute="trailing" secondItem="n5h-Vu-MlR" secondAttribute="trailing" constant="60" id="foj-bn-amy"/>
                             <constraint firstItem="shj-As-Okn" firstAttribute="trailing" secondItem="Z30-7Z-UQv" secondAttribute="trailing" constant="20" id="iqp-Fi-HwG"/>
                             <constraint firstItem="HtB-at-JF1" firstAttribute="top" secondItem="MrO-is-nqy" secondAttribute="bottom" constant="10" id="kWR-6T-Cr6"/>
                             <constraint firstItem="shj-As-Okn" firstAttribute="trailing" secondItem="MrO-is-nqy" secondAttribute="trailing" constant="20" id="oDv-Pd-ud6"/>
                             <constraint firstItem="6HH-pf-KYF" firstAttribute="top" secondItem="7lU-dQ-44w" secondAttribute="bottom" constant="5" id="uJb-ei-RGr"/>
                             <constraint firstItem="n5h-Vu-MlR" firstAttribute="top" secondItem="shj-As-Okn" secondAttribute="top" constant="-10" id="vNV-cN-vMC"/>
-                            <constraint firstItem="n5h-Vu-MlR" firstAttribute="leading" secondItem="shj-As-Okn" secondAttribute="leading" constant="50" id="zh5-5B-XU2"/>
+                            <constraint firstItem="n5h-Vu-MlR" firstAttribute="leading" secondItem="shj-As-Okn" secondAttribute="leading" constant="60" id="zh5-5B-XU2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ByD-P1-fjI"/>
