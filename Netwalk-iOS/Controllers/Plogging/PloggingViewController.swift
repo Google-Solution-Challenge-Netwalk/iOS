@@ -24,12 +24,18 @@ class PloggingViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var groupInfoLabel: UILabel!
     @IBOutlet weak var cameraInfoLabel: UILabel!
     
-    
     var locationManager = CLLocationManager()
     var mapView: GMSMapView!
     var ploggingStatus = false
     var timer = Timer()
+    
     let camera = UIImagePickerController()
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm:ss"
+        return formatter
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -166,7 +172,10 @@ class PloggingViewController: UIViewController, UINavigationControllerDelegate {
     
     
     @objc func updateCounter() {
-        print("--")
+        print("-")
+        var hrs = dateFormatter.date(from: totalTime.text!)!
+        hrs.addTimeInterval(1)
+        totalTime.text = dateFormatter.string(from: hrs)
     }
 
 }

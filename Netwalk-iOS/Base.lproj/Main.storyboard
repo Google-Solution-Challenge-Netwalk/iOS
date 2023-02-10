@@ -115,7 +115,7 @@
                                         <rect key="frame" x="20" y="10" width="233" height="20"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="91O-yl-5i2">
-                                                <rect key="frame" x="0.0" y="0.0" width="100.33333333333333" height="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="20"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="figure.walk.motion" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yri-y7-d5n">
                                                         <rect key="frame" x="0.0" y="-0.33333333333333215" width="20" height="20.666666666666664"/>
@@ -125,13 +125,16 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsI-vm-bYL">
-                                                        <rect key="frame" x="23.000000000000004" y="0.0" width="52.333333333333343" height="20"/>
+                                                        <rect key="frame" x="23" y="0.0" width="53" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="53" id="kmk-19-gq3"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wlk-Pn-yat">
-                                                        <rect key="frame" x="78.333333333333343" y="0.0" width="22" height="20"/>
+                                                        <rect key="frame" x="79" y="0.0" width="22" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -139,7 +142,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Be4-vq-NJ3">
-                                                <rect key="frame" x="116.33333333333334" y="0.0" width="116.66666666666666" height="20"/>
+                                                <rect key="frame" x="115.66666666666666" y="0.0" width="117.33333333333334" height="20"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock.arrow.circlepath" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Slg-in-fCE">
                                                         <rect key="frame" x="0.0" y="0.99999999999999822" width="20" height="18.666666666666664"/>
@@ -149,13 +152,16 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnM-Tw-zKM">
-                                                        <rect key="frame" x="23" y="0.0" width="67.666666666666671" height="20"/>
+                                                        <rect key="frame" x="23" y="0.0" width="68.333333333333329" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="68.5" id="tA3-iD-hof"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hrs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfK-O4-NeN">
-                                                        <rect key="frame" x="93.666666666666657" y="0.0" width="23" height="20"/>
+                                                        <rect key="frame" x="94.333333333333343" y="0.0" width="23" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
