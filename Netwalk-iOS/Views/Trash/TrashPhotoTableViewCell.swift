@@ -9,7 +9,7 @@ import UIKit
 
 struct CVCell {
     static let spacingWitdh: CGFloat = 0
-    static let cellColumns: CGFloat = 4
+    static let cellColumns: CGFloat = 3
     private init() {}
 }
 
@@ -43,7 +43,8 @@ class TrashPhotoTableViewCell: UITableViewCell {
         
         // UIScreen.main.bounds.width = 스크린 가로 사이즈
         // CVCell.spacingWidth * (CVCell.cellColumns - 1) = 셀 사이의 spacing 공간 개수
-        let collectionCellWidth = (UIScreen.main.bounds.width - CVCell.spacingWitdh * (CVCell.cellColumns - 1)) / CVCell.cellColumns
+        let collectionCellWidth = ((UIScreen.main.bounds.width - 20) - CVCell.spacingWitdh * (CVCell.cellColumns - 1)) / CVCell.cellColumns
+        
         flowLayout.itemSize = CGSize(width: collectionCellWidth, height: 200)
         
         // 아이템 사이 간격 설정
