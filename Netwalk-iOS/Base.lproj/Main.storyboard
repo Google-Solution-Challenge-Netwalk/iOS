@@ -321,21 +321,6 @@
             </objects>
             <point key="canvasLocation" x="4749" y="-54"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="dIr-x7-I6h">
-            <objects>
-                <viewController storyboardIdentifier="VC" id="uOT-xO-abD" customClass="ViewController" customModule="Netwalk_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dmJ-OM-jfD">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="P2x-Sk-1xR"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DgY-Bo-iWB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6166" y="-54"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QDU-aZ-yVL">
             <objects>
@@ -406,9 +391,6 @@
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
