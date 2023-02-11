@@ -39,12 +39,44 @@
         <!--Group View Controller-->
         <scene sceneID="k81-GJ-Rzq">
             <objects>
-                <viewController id="j2T-Oh-1qM" customClass="GroupViewController" customModule="Netwalk_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupViewVC" id="j2T-Oh-1qM" customClass="GroupViewController" customModule="Netwalk_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yuW-Rg-jd7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wU-B4-hjf">
+                                <rect key="frame" x="30" y="70" width="132.33333333333334" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5c5-My-0Z3">
+                                <rect key="frame" x="0.0" y="126" width="393" height="1"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="dB1-Og-Ut3"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="003-vt-pbI">
+                                <rect key="frame" x="0.0" y="126" width="393" height="726"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="hwG-l0-5bO"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="k2i-ih-x42"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vlX-jJ-8gb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5c5-My-0Z3" firstAttribute="leading" secondItem="vlX-jJ-8gb" secondAttribute="leading" id="Jfo-iL-Q0x"/>
+                            <constraint firstItem="0wU-B4-hjf" firstAttribute="top" secondItem="yuW-Rg-jd7" secondAttribute="top" constant="70" id="L39-mQ-yoB"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0wU-B4-hjf" secondAttribute="trailing" constant="20" symbolic="YES" id="OtK-Rn-nE1"/>
+                            <constraint firstItem="vlX-jJ-8gb" firstAttribute="trailing" secondItem="5c5-My-0Z3" secondAttribute="trailing" id="knr-rb-AIW"/>
+                            <constraint firstItem="003-vt-pbI" firstAttribute="centerX" secondItem="yuW-Rg-jd7" secondAttribute="centerX" id="mXn-Ot-heN"/>
+                            <constraint firstItem="003-vt-pbI" firstAttribute="leading" secondItem="vlX-jJ-8gb" secondAttribute="leading" id="pcE-u5-3Jb"/>
+                            <constraint firstItem="5c5-My-0Z3" firstAttribute="top" secondItem="0wU-B4-hjf" secondAttribute="bottom" constant="20" id="qcb-7K-Hde"/>
+                            <constraint firstItem="0wU-B4-hjf" firstAttribute="leading" secondItem="vlX-jJ-8gb" secondAttribute="leading" constant="30" id="qlk-Fa-NUn"/>
+                            <constraint firstItem="003-vt-pbI" firstAttribute="top" secondItem="0wU-B4-hjf" secondAttribute="bottom" constant="100" id="tmP-Y0-WAx"/>
+                            <constraint firstItem="003-vt-pbI" firstAttribute="trailing" secondItem="vlX-jJ-8gb" secondAttribute="trailing" id="yO1-fi-4Ab"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Tcs-VN-nLm"/>
                 </viewController>
@@ -444,6 +476,9 @@
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
