@@ -207,6 +207,7 @@ extension PloggingViewController: CLLocationManagerDelegate {
 
 }
 
+// MARK: - UIImagePickerControllerDelegate
 extension PloggingViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
@@ -219,6 +220,7 @@ extension PloggingViewController: UIImagePickerControllerDelegate {
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
         picker.dismiss(animated: true)
     }
     
