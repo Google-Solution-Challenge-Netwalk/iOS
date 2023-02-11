@@ -140,6 +140,7 @@ class PloggingViewController: UIViewController, UINavigationControllerDelegate {
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         }
         ploggingStatus = !ploggingStatus
+        //GoogleMapsNetManager.shared.getDistanceMatrix()
     }
     
     @IBAction func groupButtonTapped(_ sender: UIButton) {

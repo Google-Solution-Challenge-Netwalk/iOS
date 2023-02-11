@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		576B64B42997B382002609FA /* GoogleMapsNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B64B32997B382002609FA /* GoogleMapsNetManager.swift */; };
+		576B64B72997B7A6002609FA /* DistanceMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B64B62997B7A6002609FA /* DistanceMatrix.swift */; };
 		576C0DE4298ACAB300485AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C0DE3298ACAB300485AD5 /* AppDelegate.swift */; };
 		576C0DE6298ACAB300485AD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C0DE5298ACAB300485AD5 /* SceneDelegate.swift */; };
 		576C0DEB298ACAB300485AD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576C0DE9298ACAB300485AD5 /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		277EA68E255120B0DBC71666 /* Pods-Netwalk-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netwalk-iOS.release.xcconfig"; path = "Target Support Files/Pods-Netwalk-iOS/Pods-Netwalk-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		4F671F28F8A304E80430BB26 /* Pods-Netwalk-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netwalk-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Netwalk-iOS/Pods-Netwalk-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		576B64B32997B382002609FA /* GoogleMapsNetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsNetManager.swift; sourceTree = "<group>"; };
+		576B64B62997B7A6002609FA /* DistanceMatrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceMatrix.swift; sourceTree = "<group>"; };
 		576C0DE0298ACAB300485AD5 /* Netwalk-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netwalk-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		576C0DE3298ACAB300485AD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		576C0DE5298ACAB300485AD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		576B64B22997B27E002609FA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				576B64B32997B382002609FA /* GoogleMapsNetManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		576B64B52997B658002609FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				576B64B62997B7A6002609FA /* DistanceMatrix.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		576C0DD7298ACAB300485AD5 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +137,8 @@
 				576C0DE5298ACAB300485AD5 /* SceneDelegate.swift */,
 				576C0E00298ACFF800485AD5 /* Sources */,
 				576C0DF9298ACE8500485AD5 /* Extensions */,
+				576B64B22997B27E002609FA /* Networking */,
+				576B64B52997B658002609FA /* Models */,
 				576C0DFF298ACFF200485AD5 /* Views */,
 				576C0DFE298ACFED00485AD5 /* Controllers */,
 				576C0DE9298ACAB300485AD5 /* Main.storyboard */,
@@ -375,12 +397,14 @@
 				57D88FE4298AD43500C33F29 /* RankingViewController.swift in Sources */,
 				57D88FE0298AD42200C33F29 /* ReviewViewController.swift in Sources */,
 				576C0DFB298ACE9C00485AD5 /* Bundle+Ext.swift in Sources */,
+				576B64B42997B382002609FA /* GoogleMapsNetManager.swift in Sources */,
 				57D88FDE298AD41B00C33F29 /* GroupViewController.swift in Sources */,
 				576C0DE4298ACAB300485AD5 /* AppDelegate.swift in Sources */,
 				57D88FD8298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift in Sources */,
 				57D88FD6298AD2ED00C33F29 /* ExampleNavigationController.swift in Sources */,
 				57D88FDC298AD33F00C33F29 /* ExampleBasicContentView.swift in Sources */,
 				57E4FD9929927CC100C8E082 /* TrashAlbumViewController.swift in Sources */,
+				576B64B72997B7A6002609FA /* DistanceMatrix.swift in Sources */,
 				5789E39C29930CF1009927F8 /* BodyCollectionViewCell.swift in Sources */,
 				57D88FD3298AD2AF00C33F29 /* TabBarController.swift in Sources */,
 				57E4FDAE2993061A00C8E082 /* HeaderCollectionReusableView.swift in Sources */,
