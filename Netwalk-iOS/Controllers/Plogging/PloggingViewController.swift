@@ -9,7 +9,7 @@ import UIKit
 import GoogleMaps
 import CoreLocation
 
-class PloggingViewController: UIViewController {
+class PloggingViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var totalDistance: UILabel!
@@ -24,17 +24,25 @@ class PloggingViewController: UIViewController {
     @IBOutlet weak var groupInfoLabel: UILabel!
     @IBOutlet weak var cameraInfoLabel: UILabel!
     
-    
     var locationManager = CLLocationManager()
     var mapView: GMSMapView!
     var ploggingStatus = false
     var timer = Timer()
+    
+    let camera = UIImagePickerController()
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm:ss"
+        return formatter
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupView()
         setupLocation()
+        setupCamera()
     }
     
     func setupView() {
@@ -85,6 +93,16 @@ class PloggingViewController: UIViewController {
         view.addSubview(mapView)
     }
     
+    // 카메라 관련 설정
+    func setupCamera() {
+        camera.sourceType = .camera
+        camera.allowsEditing = false
+        camera.cameraDevice = .rear
+        camera.cameraCaptureMode = .photo
+        camera.delegate = self
+    }
+    
+    // 내 위치 불러오기
     func setupLocation() {
         print(#function)
         locationManager.delegate = self
@@ -122,20 +140,43 @@ class PloggingViewController: UIViewController {
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         }
         ploggingStatus = !ploggingStatus
+        //GoogleMapsNetManager.shared.getDistanceMatrix()
     }
     
     @IBAction func groupButtonTapped(_ sender: UIButton) {
-        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ActivateGroupsViewController") as! ActivateGroupsViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func cameraButtonTapped(_ sender: UIButton) {
         
+        let actionSheet = UIAlertController(title: "title", message: "message", preferredStyle: .actionSheet)
+        
+        let camera = UIAlertAction(title: "Camera", style: .default) { action in
+            self.present(self.camera, animated: true)
+        }
+        
+        let trashList = UIAlertAction(title: "Trash List", style: .default) { action in
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "TrashAlbumVC") as! TrashAlbumViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        actionSheet.addAction(camera)
+        actionSheet.addAction(trashList)
+        actionSheet.addAction(cancel)
+        
+        present(actionSheet, animated: true)
     }
     
     
     
     @objc func updateCounter() {
-        print("--")
+        print("-")
+        var hrs = dateFormatter.date(from: totalTime.text!)!
+        hrs.addTimeInterval(1)
+        totalTime.text = dateFormatter.string(from: hrs)
     }
 
 }
@@ -164,4 +205,21 @@ extension PloggingViewController: CLLocationManagerDelegate {
         }
     }
 
+}
+
+extension PloggingViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        guard let image = info[.originalImage] as? UIImage else { return }
+        print(image)
+        
+        // 인공지능 네트워킹 처리
+        
+        picker.dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
+    }
+    
 }
