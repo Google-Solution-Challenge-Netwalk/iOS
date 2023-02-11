@@ -10,10 +10,12 @@ import UIKit
 class GroupViewController: UIViewController {
 
     override func viewDidLoad() {
+        self.navigationController?.isNavigationBarHidden = true
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*
