@@ -24,12 +24,18 @@ class PloggingViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var groupInfoLabel: UILabel!
     @IBOutlet weak var cameraInfoLabel: UILabel!
     
-    
     var locationManager = CLLocationManager()
     var mapView: GMSMapView!
     var ploggingStatus = false
     var timer = Timer()
+    
     let camera = UIImagePickerController()
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm:ss"
+        return formatter
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -134,14 +140,15 @@ class PloggingViewController: UIViewController, UINavigationControllerDelegate {
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         }
         ploggingStatus = !ploggingStatus
+        //GoogleMapsNetManager.shared.getDistanceMatrix()
     }
     
     @IBAction func groupButtonTapped(_ sender: UIButton) {
-        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ActivateGroupsViewController") as! ActivateGroupsViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func cameraButtonTapped(_ sender: UIButton) {
-
         
         let actionSheet = UIAlertController(title: "title", message: "message", preferredStyle: .actionSheet)
         
@@ -166,7 +173,10 @@ class PloggingViewController: UIViewController, UINavigationControllerDelegate {
     
     
     @objc func updateCounter() {
-        print("--")
+        print("-")
+        var hrs = dateFormatter.date(from: totalTime.text!)!
+        hrs.addTimeInterval(1)
+        totalTime.text = dateFormatter.string(from: hrs)
     }
 
 }
@@ -202,6 +212,8 @@ extension PloggingViewController: UIImagePickerControllerDelegate {
         
         guard let image = info[.originalImage] as? UIImage else { return }
         print(image)
+        
+        // 인공지능 네트워킹 처리
         
         picker.dismiss(animated: true)
     }

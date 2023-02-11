@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		576B64B42997B382002609FA /* GoogleMapsNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B64B32997B382002609FA /* GoogleMapsNetManager.swift */; };
+		576B64B72997B7A6002609FA /* DistanceMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B64B62997B7A6002609FA /* DistanceMatrix.swift */; };
 		576C0DE4298ACAB300485AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C0DE3298ACAB300485AD5 /* AppDelegate.swift */; };
 		576C0DE6298ACAB300485AD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C0DE5298ACAB300485AD5 /* SceneDelegate.swift */; };
 		576C0DEB298ACAB300485AD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576C0DE9298ACAB300485AD5 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 		576C0DFB298ACE9C00485AD5 /* Bundle+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C0DFA298ACE9C00485AD5 /* Bundle+Ext.swift */; };
 		576C0DFD298ACF7100485AD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 576C0DFC298ACF7100485AD5 /* GoogleService-Info.plist */; };
 		576C0E02298AD07000485AD5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C0E01298AD07000485AD5 /* LoginViewController.swift */; };
+		5789E39C29930CF1009927F8 /* BodyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789E39A29930CF1009927F8 /* BodyCollectionViewCell.swift */; };
+		5789E39D29930CF1009927F8 /* BodyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5789E39B29930CF1009927F8 /* BodyCollectionViewCell.xib */; };
 		57D88FD3298AD2AF00C33F29 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FD2298AD2AF00C33F29 /* TabBarController.swift */; };
 		57D88FD6298AD2ED00C33F29 /* ExampleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FD5298AD2ED00C33F29 /* ExampleNavigationController.swift */; };
 		57D88FD8298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FD7298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift */; };
@@ -32,6 +36,9 @@
 		57E4FDA229928AEE00C8E082 /* TrashPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E4FDA029928AEE00C8E082 /* TrashPhotoTableViewCell.xib */; };
 		57E4FDA5299298A000C8E082 /* TrashPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E4FDA3299298A000C8E082 /* TrashPhotoCollectionViewCell.swift */; };
 		57E4FDA6299298A000C8E082 /* TrashPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E4FDA4299298A000C8E082 /* TrashPhotoCollectionViewCell.xib */; };
+		57E4FDAE2993061A00C8E082 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E4FDAC2993061A00C8E082 /* HeaderCollectionReusableView.swift */; };
+		57E4FDAF2993061A00C8E082 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E4FDAD2993061A00C8E082 /* HeaderCollectionReusableView.xib */; };
+		57E4FDB22993086300C8E082 /* ActivateGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E4FDB12993086300C8E082 /* ActivateGroupsViewController.swift */; };
 		7AA3F62EF603725162AB6B74 /* Pods_Netwalk_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */; };
 		954FCE9F298BCDDB001DF8C3 /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 954FCE9E298BCDDB001DF8C3 /* SecretKey.plist */; };
 /* End PBXBuildFile section */
@@ -39,6 +46,8 @@
 /* Begin PBXFileReference section */
 		277EA68E255120B0DBC71666 /* Pods-Netwalk-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netwalk-iOS.release.xcconfig"; path = "Target Support Files/Pods-Netwalk-iOS/Pods-Netwalk-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		4F671F28F8A304E80430BB26 /* Pods-Netwalk-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netwalk-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Netwalk-iOS/Pods-Netwalk-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		576B64B32997B382002609FA /* GoogleMapsNetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsNetManager.swift; sourceTree = "<group>"; };
+		576B64B62997B7A6002609FA /* DistanceMatrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceMatrix.swift; sourceTree = "<group>"; };
 		576C0DE0298ACAB300485AD5 /* Netwalk-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netwalk-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		576C0DE3298ACAB300485AD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		576C0DE5298ACAB300485AD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +58,8 @@
 		576C0DFA298ACE9C00485AD5 /* Bundle+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Ext.swift"; sourceTree = "<group>"; };
 		576C0DFC298ACF7100485AD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		576C0E01298AD07000485AD5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5789E39A29930CF1009927F8 /* BodyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyCollectionViewCell.swift; sourceTree = "<group>"; };
+		5789E39B29930CF1009927F8 /* BodyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyCollectionViewCell.xib; sourceTree = "<group>"; };
 		57D88FD2298AD2AF00C33F29 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		57D88FD5298AD2ED00C33F29 /* ExampleNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNavigationController.swift; sourceTree = "<group>"; };
 		57D88FD7298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleIrregularityBasicContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +77,9 @@
 		57E4FDA029928AEE00C8E082 /* TrashPhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrashPhotoTableViewCell.xib; sourceTree = "<group>"; };
 		57E4FDA3299298A000C8E082 /* TrashPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		57E4FDA4299298A000C8E082 /* TrashPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrashPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		57E4FDAC2993061A00C8E082 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		57E4FDAD2993061A00C8E082 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		57E4FDB12993086300C8E082 /* ActivateGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateGroupsViewController.swift; sourceTree = "<group>"; };
 		5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netwalk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		954FCE9E298BCDDB001DF8C3 /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +96,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		576B64B22997B27E002609FA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				576B64B32997B382002609FA /* GoogleMapsNetManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		576B64B52997B658002609FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				576B64B62997B7A6002609FA /* DistanceMatrix.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		576C0DD7298ACAB300485AD5 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +137,8 @@
 				576C0DE5298ACAB300485AD5 /* SceneDelegate.swift */,
 				576C0E00298ACFF800485AD5 /* Sources */,
 				576C0DF9298ACE8500485AD5 /* Extensions */,
+				576B64B22997B27E002609FA /* Networking */,
+				576B64B52997B658002609FA /* Models */,
 				576C0DFF298ACFF200485AD5 /* Views */,
 				576C0DFE298ACFED00485AD5 /* Controllers */,
 				576C0DE9298ACAB300485AD5 /* Main.storyboard */,
@@ -130,11 +162,11 @@
 		576C0DFE298ACFED00485AD5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				57E4FDB0299307FD00C8E082 /* Plogging */,
 				57D88FD2298AD2AF00C33F29 /* TabBarController.swift */,
 				576C0E01298AD07000485AD5 /* LoginViewController.swift */,
 				57D88FDD298AD41B00C33F29 /* GroupViewController.swift */,
 				57D88FDF298AD42200C33F29 /* ReviewViewController.swift */,
-				57D88FE1298AD42C00C33F29 /* PloggingViewController.swift */,
 				57D88FE3298AD43500C33F29 /* RankingViewController.swift */,
 				57D88FE5298AD44000C33F29 /* ProfileViewController.swift */,
 				57E4FD9829927CC100C8E082 /* TrashAlbumViewController.swift */,
@@ -145,6 +177,7 @@
 		576C0DFF298ACFF200485AD5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				57E4FDA7299301EE00C8E082 /* Group */,
 				57E4FD9A299287DD00C8E082 /* Trash */,
 			);
 			path = Views;
@@ -180,6 +213,26 @@
 				57E4FDA4299298A000C8E082 /* TrashPhotoCollectionViewCell.xib */,
 			);
 			path = Trash;
+			sourceTree = "<group>";
+		};
+		57E4FDA7299301EE00C8E082 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				57E4FDAC2993061A00C8E082 /* HeaderCollectionReusableView.swift */,
+				57E4FDAD2993061A00C8E082 /* HeaderCollectionReusableView.xib */,
+				5789E39A29930CF1009927F8 /* BodyCollectionViewCell.swift */,
+				5789E39B29930CF1009927F8 /* BodyCollectionViewCell.xib */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		57E4FDB0299307FD00C8E082 /* Plogging */ = {
+			isa = PBXGroup;
+			children = (
+				57D88FE1298AD42C00C33F29 /* PloggingViewController.swift */,
+				57E4FDB12993086300C8E082 /* ActivateGroupsViewController.swift */,
+			);
+			path = Plogging;
 			sourceTree = "<group>";
 		};
 		6A7398B2DB305C1B1D15B3FB /* Frameworks */ = {
@@ -260,8 +313,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5789E39D29930CF1009927F8 /* BodyCollectionViewCell.xib in Resources */,
 				57E4FDA6299298A000C8E082 /* TrashPhotoCollectionViewCell.xib in Resources */,
 				576C0DF0298ACAB400485AD5 /* LaunchScreen.storyboard in Resources */,
+				57E4FDAF2993061A00C8E082 /* HeaderCollectionReusableView.xib in Resources */,
 				954FCE9F298BCDDB001DF8C3 /* SecretKey.plist in Resources */,
 				57E4FDA229928AEE00C8E082 /* TrashPhotoTableViewCell.xib in Resources */,
 				57E4FD9E299288C900C8E082 /* TrashCategoryTableViewCell.xib in Resources */,
@@ -342,17 +397,22 @@
 				57D88FE4298AD43500C33F29 /* RankingViewController.swift in Sources */,
 				57D88FE0298AD42200C33F29 /* ReviewViewController.swift in Sources */,
 				576C0DFB298ACE9C00485AD5 /* Bundle+Ext.swift in Sources */,
+				576B64B42997B382002609FA /* GoogleMapsNetManager.swift in Sources */,
 				57D88FDE298AD41B00C33F29 /* GroupViewController.swift in Sources */,
 				576C0DE4298ACAB300485AD5 /* AppDelegate.swift in Sources */,
 				57D88FD8298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift in Sources */,
 				57D88FD6298AD2ED00C33F29 /* ExampleNavigationController.swift in Sources */,
 				57D88FDC298AD33F00C33F29 /* ExampleBasicContentView.swift in Sources */,
 				57E4FD9929927CC100C8E082 /* TrashAlbumViewController.swift in Sources */,
+				576B64B72997B7A6002609FA /* DistanceMatrix.swift in Sources */,
+				5789E39C29930CF1009927F8 /* BodyCollectionViewCell.swift in Sources */,
 				57D88FD3298AD2AF00C33F29 /* TabBarController.swift in Sources */,
+				57E4FDAE2993061A00C8E082 /* HeaderCollectionReusableView.swift in Sources */,
 				57E4FDA5299298A000C8E082 /* TrashPhotoCollectionViewCell.swift in Sources */,
 				57D88FE6298AD44000C33F29 /* ProfileViewController.swift in Sources */,
 				576C0E02298AD07000485AD5 /* LoginViewController.swift in Sources */,
 				576C0DE6298ACAB300485AD5 /* SceneDelegate.swift in Sources */,
+				57E4FDB22993086300C8E082 /* ActivateGroupsViewController.swift in Sources */,
 				57E4FD9D299288C900C8E082 /* TrashCategoryTableViewCell.swift in Sources */,
 				57E4FDA129928AEE00C8E082 /* TrashPhotoTableViewCell.swift in Sources */,
 			);
