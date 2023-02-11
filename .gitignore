@@ -2,6 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=xcode
 
 Netwalk-iOS/SecretKey.plist
+Netwalk-iOS/GoogleService-Info.plist
 .DS_Store
 
 ### Xcode ###
