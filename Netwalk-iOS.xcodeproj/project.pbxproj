@@ -41,6 +41,9 @@
 		57E4FDB22993086300C8E082 /* ActivateGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E4FDB12993086300C8E082 /* ActivateGroupsViewController.swift */; };
 		7AA3F62EF603725162AB6B74 /* Pods_Netwalk_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */; };
 		952CB78D2997BA8700173BA3 /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 952CB78C2997BA8700173BA3 /* SecretKey.plist */; };
+		95A503FC299A13100022B3DE /* NewGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A503FB299A13100022B3DE /* NewGroupViewController.swift */; };
+		95BDB99F299A0474003680EE /* myGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BDB99D299A0474003680EE /* myGroupTableViewCell.swift */; };
+		95BDB9A0299A0474003680EE /* myGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BDB99E299A0474003680EE /* myGroupTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +85,9 @@
 		57E4FDB12993086300C8E082 /* ActivateGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateGroupsViewController.swift; sourceTree = "<group>"; };
 		5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netwalk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		952CB78C2997BA8700173BA3 /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
+		95A503FB299A13100022B3DE /* NewGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupViewController.swift; sourceTree = "<group>"; };
+		95BDB99D299A0474003680EE /* myGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = myGroupTableViewCell.swift; path = "Netwalk-iOS/MyGroupTableViewCell/myGroupTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		95BDB99E299A0474003680EE /* myGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = myGroupTableViewCell.xib; path = "Netwalk-iOS/MyGroupTableViewCell/myGroupTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,14 +168,16 @@
 		576C0DFE298ACFED00485AD5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				95BDB9A1299A0FE0003680EE /* Group */,
 				57E4FDB0299307FD00C8E082 /* Plogging */,
 				57D88FD2298AD2AF00C33F29 /* TabBarController.swift */,
 				576C0E01298AD07000485AD5 /* LoginViewController.swift */,
-				57D88FDD298AD41B00C33F29 /* GroupViewController.swift */,
 				57D88FDF298AD42200C33F29 /* ReviewViewController.swift */,
 				57D88FE3298AD43500C33F29 /* RankingViewController.swift */,
 				57D88FE5298AD44000C33F29 /* ProfileViewController.swift */,
 				57E4FD9829927CC100C8E082 /* TrashAlbumViewController.swift */,
+				95BDB99D299A0474003680EE /* myGroupTableViewCell.swift */,
+				95BDB99E299A0474003680EE /* myGroupTableViewCell.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -241,6 +249,15 @@
 				5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		95BDB9A1299A0FE0003680EE /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				57D88FDD298AD41B00C33F29 /* GroupViewController.swift */,
+				95A503FB299A13100022B3DE /* NewGroupViewController.swift */,
+			);
+			path = Group;
 			sourceTree = "<group>";
 		};
 		ED93471A6FE4872BCA376455 /* Pods */ = {
@@ -318,6 +335,7 @@
 				576C0DF0298ACAB400485AD5 /* LaunchScreen.storyboard in Resources */,
 				952CB78D2997BA8700173BA3 /* SecretKey.plist in Resources */,
 				57E4FDAF2993061A00C8E082 /* HeaderCollectionReusableView.xib in Resources */,
+				95BDB9A0299A0474003680EE /* myGroupTableViewCell.xib in Resources */,
 				57E4FDA229928AEE00C8E082 /* TrashPhotoTableViewCell.xib in Resources */,
 				57E4FD9E299288C900C8E082 /* TrashCategoryTableViewCell.xib in Resources */,
 				576C0DFD298ACF7100485AD5 /* GoogleService-Info.plist in Resources */,
@@ -402,7 +420,9 @@
 				576C0DE4298ACAB300485AD5 /* AppDelegate.swift in Sources */,
 				57D88FD8298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift in Sources */,
 				57D88FD6298AD2ED00C33F29 /* ExampleNavigationController.swift in Sources */,
+				95A503FC299A13100022B3DE /* NewGroupViewController.swift in Sources */,
 				57D88FDC298AD33F00C33F29 /* ExampleBasicContentView.swift in Sources */,
+				95BDB99F299A0474003680EE /* myGroupTableViewCell.swift in Sources */,
 				57E4FD9929927CC100C8E082 /* TrashAlbumViewController.swift in Sources */,
 				576B64B72997B7A6002609FA /* DistanceMatrix.swift in Sources */,
 				5789E39C29930CF1009927F8 /* BodyCollectionViewCell.swift in Sources */,
