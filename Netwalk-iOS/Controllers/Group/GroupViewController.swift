@@ -55,34 +55,6 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "myGroupTableViewCell") as! myGroupTableViewCell
             cell.selectionStyle = .none
             return cell
-        case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "myGroupTableViewCell") as! myGroupTableViewCell
-            cell.selectionStyle = .none
-            return cell
-        case 3:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "myGroupTableViewCell") as! myGroupTableViewCell
-            cell.selectionStyle = .none
-            return cell
-        case 4:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "myGroupTableViewCell") as! myGroupTableViewCell
-            cell.selectionStyle = .none
-            return cell
-        case 5:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "myGroupTableViewCell") as! myGroupTableViewCell
-            cell.selectionStyle = .none
-            return cell
-        case 6:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "myGroupTableViewCell") as! myGroupTableViewCell
-            cell.selectionStyle = .none
-            return cell
-        case 7:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "myGroupTableViewCell") as! myGroupTableViewCell
-            cell.selectionStyle = .none
-            return cell
-        case 8:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "myGroupTableViewCell") as! myGroupTableViewCell
-            cell.selectionStyle = .none
-            return cell
         default:
             return UITableViewCell()
         }
@@ -94,20 +66,6 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 90
         case 1:
-            return 90
-        case 2:
-            return 90
-        case 3:
-            return 90
-        case 4:
-            return 90
-        case 5:
-            return 90
-        case 6:
-            return 90
-        case 7:
-            return 90
-        case 8:
             return 90
             
         default:
