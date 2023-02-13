@@ -131,36 +131,36 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBd-Kj-HkF">
-                                <rect key="frame" x="0.0" y="119" width="393" height="1"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="x7I-A6-mFQ"/>
-                                </constraints>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NEF-1R-cnE">
-                                <rect key="frame" x="0.0" y="120" width="393" height="651.33333333333337"/>
+                                <rect key="frame" x="0.0" y="118.66666666666666" width="393" height="651.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="j2T-Oh-1qM" id="F5A-vs-yC8"/>
                                     <outlet property="delegate" destination="j2T-Oh-1qM" id="033-OQ-Dgw"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBd-Kj-HkF">
+                                <rect key="frame" x="0.0" y="118.66666666666667" width="393" height="1"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="x7I-A6-mFQ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Whp-Ly-65A"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <accessibility key="accessibilityConfiguration" identifier="NewGroupViewController"/>
                         <constraints>
                             <constraint firstItem="nn4-Cw-KMw" firstAttribute="top" secondItem="Whp-Ly-65A" secondAttribute="top" constant="12" id="2Ka-2C-vXI"/>
+                            <constraint firstItem="NEF-1R-cnE" firstAttribute="trailing" secondItem="Whp-Ly-65A" secondAttribute="trailing" id="3hc-ew-sRD"/>
+                            <constraint firstItem="EBd-Kj-HkF" firstAttribute="top" secondItem="nn4-Cw-KMw" secondAttribute="bottom" constant="14.000000000000014" id="7iU-Gb-iUW"/>
                             <constraint firstItem="nn4-Cw-KMw" firstAttribute="centerX" secondItem="Prb-Oc-TVP" secondAttribute="centerX" id="83E-fi-8rQ"/>
-                            <constraint firstItem="EBd-Kj-HkF" firstAttribute="trailing" secondItem="NEF-1R-cnE" secondAttribute="trailing" id="D5S-6S-o14"/>
+                            <constraint firstItem="EBd-Kj-HkF" firstAttribute="trailing" secondItem="Whp-Ly-65A" secondAttribute="trailing" id="D5S-6S-o14"/>
                             <constraint firstItem="nn4-Cw-KMw" firstAttribute="leading" secondItem="Whp-Ly-65A" secondAttribute="leading" constant="19" id="UCJ-2c-Se1"/>
-                            <constraint firstItem="Whp-Ly-65A" firstAttribute="bottom" secondItem="NEF-1R-cnE" secondAttribute="bottom" constant="46.666666666666629" id="YVG-dX-Cq9"/>
-                            <constraint firstItem="EBd-Kj-HkF" firstAttribute="leading" secondItem="NEF-1R-cnE" secondAttribute="leading" id="bQJ-ts-gXi"/>
-                            <constraint firstItem="EBd-Kj-HkF" firstAttribute="centerX" secondItem="nn4-Cw-KMw" secondAttribute="centerX" id="kS7-Fy-azy"/>
-                            <constraint firstItem="NEF-1R-cnE" firstAttribute="top" secondItem="EBd-Kj-HkF" secondAttribute="bottom" id="xka-IA-EhU"/>
-                            <constraint firstItem="EBd-Kj-HkF" firstAttribute="leading" secondItem="Prb-Oc-TVP" secondAttribute="leadingMargin" constant="-16" id="y0r-2I-Dzq"/>
-                            <constraint firstItem="EBd-Kj-HkF" firstAttribute="top" secondItem="nn4-Cw-KMw" secondAttribute="bottom" constant="14.333333333333343" id="z5s-NK-4jg"/>
+                            <constraint firstItem="Whp-Ly-65A" firstAttribute="bottom" secondItem="NEF-1R-cnE" secondAttribute="bottom" constant="48.000000000000114" id="YVG-dX-Cq9"/>
+                            <constraint firstItem="NEF-1R-cnE" firstAttribute="leading" secondItem="Whp-Ly-65A" secondAttribute="leading" id="aLz-rV-yAA"/>
+                            <constraint firstItem="EBd-Kj-HkF" firstAttribute="leading" secondItem="Whp-Ly-65A" secondAttribute="leading" id="bQJ-ts-gXi"/>
+                            <constraint firstItem="NEF-1R-cnE" firstAttribute="top" secondItem="EBd-Kj-HkF" secondAttribute="bottom" constant="-1" id="xka-IA-EhU"/>
                         </constraints>
                     </view>
                     <connections>
