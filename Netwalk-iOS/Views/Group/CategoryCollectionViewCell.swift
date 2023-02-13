@@ -8,17 +8,19 @@
 import UIKit
 
 class CategoryCollectionViewCell: UICollectionViewCell {
-
-    @IBOutlet weak var CategoryTitle: UILabel!
-    @IBOutlet weak var CategoryImage: UIImageView!
+    
+    @IBOutlet weak var categoryImage: UIImageView!
+    
+    @IBOutlet weak var categoryTitle: UILabel!
+    
     override func awakeFromNib(){
         super.awakeFromNib()
         // Initialization code
     }
     
     public func configure(with category: Category){
-        self.CategoryImage.image = UIImage(named:category.imageName)
-        self.CategoryTitle.text = category.title
+        self.categoryImage.image = UIImage(named: category.imageName)
+        self.categoryTitle.text = category.title
     }
 
 }

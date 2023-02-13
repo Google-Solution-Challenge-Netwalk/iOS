@@ -44,7 +44,7 @@
 		951EFBC9299A64DE00659F8B /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 951EFBC7299A64DE00659F8B /* CategoryCollectionViewCell.xib */; };
 		952CB78D2997BA8700173BA3 /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 952CB78C2997BA8700173BA3 /* SecretKey.plist */; };
 		95A503FC299A13100022B3DE /* NewGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A503FB299A13100022B3DE /* NewGroupViewController.swift */; };
-		95EFDD26299A50E00005BAE7 /* myGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EFDD24299A50E00005BAE7 /* myGroupTableViewCell.xib */; };
+		95EFDD26299A50E00005BAE7 /* MyGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EFDD24299A50E00005BAE7 /* MyGroupTableViewCell.xib */; };
 		95EFDD27299A50E00005BAE7 /* MyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFDD25299A50E00005BAE7 /* MyGroupTableViewCell.swift */; };
 		95EFDD2E299A53430005BAE7 /* NewGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFDD2C299A53430005BAE7 /* NewGroupTableViewCell.swift */; };
 		95EFDD2F299A53430005BAE7 /* NewGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EFDD2D299A53430005BAE7 /* NewGroupTableViewCell.xib */; };
@@ -89,14 +89,14 @@
 		57E4FDAD2993061A00C8E082 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		57E4FDB12993086300C8E082 /* ActivateGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateGroupsViewController.swift; sourceTree = "<group>"; };
 		5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netwalk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		951EFBC6299A64DE00659F8B /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryCollectionViewCell.swift; path = NewGroupViewCell/CollectionViewCell/CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
-		951EFBC7299A64DE00659F8B /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CategoryCollectionViewCell.xib; path = NewGroupViewCell/CollectionViewCell/CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		951EFBC6299A64DE00659F8B /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		951EFBC7299A64DE00659F8B /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		952CB78C2997BA8700173BA3 /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
 		95A503FB299A13100022B3DE /* NewGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupViewController.swift; sourceTree = "<group>"; };
-		95EFDD24299A50E00005BAE7 /* myGroupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = myGroupTableViewCell.xib; path = "Netwalk-iOS/MyGroupTableViewCell/myGroupTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
-		95EFDD25299A50E00005BAE7 /* MyGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyGroupTableViewCell.swift; path = "Netwalk-iOS/MyGroupTableViewCell/MyGroupTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
-		95EFDD2C299A53430005BAE7 /* NewGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewGroupTableViewCell.swift; path = NewGroupViewCell/TableViewCell/NewGroupTableViewCell.swift; sourceTree = "<group>"; };
-		95EFDD2D299A53430005BAE7 /* NewGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NewGroupTableViewCell.xib; path = NewGroupViewCell/TableViewCell/NewGroupTableViewCell.xib; sourceTree = "<group>"; };
+		95EFDD24299A50E00005BAE7 /* MyGroupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyGroupTableViewCell.xib; path = "Netwalk-iOS/Views/Group/MyGroupTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		95EFDD25299A50E00005BAE7 /* MyGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyGroupTableViewCell.swift; path = "Netwalk-iOS/Views/Group/MyGroupTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		95EFDD2C299A53430005BAE7 /* NewGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupTableViewCell.swift; sourceTree = "<group>"; };
+		95EFDD2D299A53430005BAE7 /* NewGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewGroupTableViewCell.xib; sourceTree = "<group>"; };
 		95EFDD36299A61E20005BAE7 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,15 +158,12 @@
 				576B64B52997B658002609FA /* Models */,
 				576C0DFF298ACFF200485AD5 /* Views */,
 				576C0DFE298ACFED00485AD5 /* Controllers */,
+				576C0DE9298ACAB300485AD5 /* Main.storyboard */,
 				576C0DEC298ACAB400485AD5 /* Assets.xcassets */,
 				576C0DEE298ACAB400485AD5 /* LaunchScreen.storyboard */,
 				576C0DF1298ACAB400485AD5 /* Info.plist */,
 				576C0DFC298ACF7100485AD5 /* GoogleService-Info.plist */,
 				952CB78C2997BA8700173BA3 /* SecretKey.plist */,
-				95EFDD2C299A53430005BAE7 /* NewGroupTableViewCell.swift */,
-				95EFDD2D299A53430005BAE7 /* NewGroupTableViewCell.xib */,
-				951EFBC6299A64DE00659F8B /* CategoryCollectionViewCell.swift */,
-				951EFBC7299A64DE00659F8B /* CategoryCollectionViewCell.xib */,
 			);
 			path = "Netwalk-iOS";
 			sourceTree = "<group>";
@@ -190,9 +187,6 @@
 				57D88FE3298AD43500C33F29 /* RankingViewController.swift */,
 				57D88FE5298AD44000C33F29 /* ProfileViewController.swift */,
 				57E4FD9829927CC100C8E082 /* TrashAlbumViewController.swift */,
-				95EFDD25299A50E00005BAE7 /* MyGroupTableViewCell.swift */,
-				95EFDD24299A50E00005BAE7 /* myGroupTableViewCell.xib */,
-				576C0DE9298ACAB300485AD5 /* Main.storyboard */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,7 +194,8 @@
 		576C0DFF298ACFF200485AD5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				57E4FDA7299301EE00C8E082 /* Group */,
+				57C3DD9B299A9B0B009466FA /* Group */,
+				57E4FDA7299301EE00C8E082 /* ActivateGroup */,
 				57E4FD9A299287DD00C8E082 /* Trash */,
 			);
 			path = Views;
@@ -212,6 +207,19 @@
 				57D88FD4298AD2BA00C33F29 /* ESTabBar */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		57C3DD9B299A9B0B009466FA /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				95EFDD25299A50E00005BAE7 /* MyGroupTableViewCell.swift */,
+				95EFDD24299A50E00005BAE7 /* MyGroupTableViewCell.xib */,
+				95EFDD2C299A53430005BAE7 /* NewGroupTableViewCell.swift */,
+				95EFDD2D299A53430005BAE7 /* NewGroupTableViewCell.xib */,
+				951EFBC6299A64DE00659F8B /* CategoryCollectionViewCell.swift */,
+				951EFBC7299A64DE00659F8B /* CategoryCollectionViewCell.xib */,
+			);
+			path = Group;
 			sourceTree = "<group>";
 		};
 		57D88FD4298AD2BA00C33F29 /* ESTabBar */ = {
@@ -238,7 +246,7 @@
 			path = Trash;
 			sourceTree = "<group>";
 		};
-		57E4FDA7299301EE00C8E082 /* Group */ = {
+		57E4FDA7299301EE00C8E082 /* ActivateGroup */ = {
 			isa = PBXGroup;
 			children = (
 				57E4FDAC2993061A00C8E082 /* HeaderCollectionReusableView.swift */,
@@ -246,7 +254,7 @@
 				5789E39A29930CF1009927F8 /* BodyCollectionViewCell.swift */,
 				5789E39B29930CF1009927F8 /* BodyCollectionViewCell.xib */,
 			);
-			path = Group;
+			path = ActivateGroup;
 			sourceTree = "<group>";
 		};
 		57E4FDB0299307FD00C8E082 /* Plogging */ = {
@@ -352,7 +360,7 @@
 				952CB78D2997BA8700173BA3 /* SecretKey.plist in Resources */,
 				57E4FDAF2993061A00C8E082 /* HeaderCollectionReusableView.xib in Resources */,
 				951EFBC9299A64DE00659F8B /* CategoryCollectionViewCell.xib in Resources */,
-				95EFDD26299A50E00005BAE7 /* myGroupTableViewCell.xib in Resources */,
+				95EFDD26299A50E00005BAE7 /* MyGroupTableViewCell.xib in Resources */,
 				57E4FDA229928AEE00C8E082 /* TrashPhotoTableViewCell.xib in Resources */,
 				57E4FD9E299288C900C8E082 /* TrashCategoryTableViewCell.xib in Resources */,
 				576C0DFD298ACF7100485AD5 /* GoogleService-Info.plist in Resources */,

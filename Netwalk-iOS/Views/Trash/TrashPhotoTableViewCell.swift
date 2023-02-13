@@ -20,14 +20,21 @@ class TrashPhotoTableViewCell: UITableViewCell {
     let flowLayout = UICollectionViewFlowLayout()
     
     override func awakeFromNib() {
+        
         super.awakeFromNib()
         // Initialization code
+        
+        print("TrashPhotoTableViewCell")
+        print(#function)
         
         setupCollectionView()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        
+        print("TrashPhotoTableViewCell")
+        print(#function)
         
         // Configure the view for the selected state
     }

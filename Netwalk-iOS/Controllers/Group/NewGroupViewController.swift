@@ -5,8 +5,11 @@
 //  Created by 지윤 on 2023/02/13.
 //
 import UIKit
+
 class NewGroupViewController: UIViewController {
+    
     @IBOutlet weak var groupTableView: UITableView!
+    
     var categorys = [Category]()
     
     override func viewDidLoad() {
@@ -14,7 +17,10 @@ class NewGroupViewController: UIViewController {
         setUpTableView()
         
     }
+    
     func setUpTableView(){
+        print("NewGroupViewController")
+        print(#function)
         categorys.append(Category(imageName: "overseas", title: "overseas"))
         categorys.append(Category(imageName: "overseas", title: "overseas"))
         categorys.append(Category(imageName: "overseas", title: "overseas"))
@@ -37,12 +43,20 @@ extension NewGroupViewController: UITableViewDelegate, UITableViewDataSource {
     -> Int {
             return 1
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        print("NewGroupViewController")
+        print(#function)
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewGroupTableViewCell", for: indexPath) as! NewGroupTableViewCell
-        cell.CategoryTitle.text = "Category"
+        
+        cell.categoryTitle.text = "Category"
         cell.configure(with: categorys)
+        
         return cell
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 210
     }
