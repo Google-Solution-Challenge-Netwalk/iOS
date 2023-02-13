@@ -40,10 +40,15 @@
 		57E4FDAF2993061A00C8E082 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E4FDAD2993061A00C8E082 /* HeaderCollectionReusableView.xib */; };
 		57E4FDB22993086300C8E082 /* ActivateGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E4FDB12993086300C8E082 /* ActivateGroupsViewController.swift */; };
 		7AA3F62EF603725162AB6B74 /* Pods_Netwalk_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */; };
+		951EFBC8299A64DE00659F8B /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951EFBC6299A64DE00659F8B /* CategoryCollectionViewCell.swift */; };
+		951EFBC9299A64DE00659F8B /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 951EFBC7299A64DE00659F8B /* CategoryCollectionViewCell.xib */; };
 		952CB78D2997BA8700173BA3 /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 952CB78C2997BA8700173BA3 /* SecretKey.plist */; };
 		95A503FC299A13100022B3DE /* NewGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A503FB299A13100022B3DE /* NewGroupViewController.swift */; };
-		95BDB99F299A0474003680EE /* myGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BDB99D299A0474003680EE /* myGroupTableViewCell.swift */; };
-		95BDB9A0299A0474003680EE /* myGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BDB99E299A0474003680EE /* myGroupTableViewCell.xib */; };
+		95EFDD26299A50E00005BAE7 /* myGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EFDD24299A50E00005BAE7 /* myGroupTableViewCell.xib */; };
+		95EFDD27299A50E00005BAE7 /* MyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFDD25299A50E00005BAE7 /* MyGroupTableViewCell.swift */; };
+		95EFDD2E299A53430005BAE7 /* NewGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFDD2C299A53430005BAE7 /* NewGroupTableViewCell.swift */; };
+		95EFDD2F299A53430005BAE7 /* NewGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EFDD2D299A53430005BAE7 /* NewGroupTableViewCell.xib */; };
+		95EFDD37299A61E20005BAE7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFDD36299A61E20005BAE7 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,10 +89,15 @@
 		57E4FDAD2993061A00C8E082 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		57E4FDB12993086300C8E082 /* ActivateGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateGroupsViewController.swift; sourceTree = "<group>"; };
 		5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netwalk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		951EFBC6299A64DE00659F8B /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryCollectionViewCell.swift; path = NewGroupViewCell/CollectionViewCell/CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		951EFBC7299A64DE00659F8B /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CategoryCollectionViewCell.xib; path = NewGroupViewCell/CollectionViewCell/CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		952CB78C2997BA8700173BA3 /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
 		95A503FB299A13100022B3DE /* NewGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupViewController.swift; sourceTree = "<group>"; };
-		95BDB99D299A0474003680EE /* myGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = myGroupTableViewCell.swift; path = "Netwalk-iOS/MyGroupTableViewCell/myGroupTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
-		95BDB99E299A0474003680EE /* myGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = myGroupTableViewCell.xib; path = "Netwalk-iOS/MyGroupTableViewCell/myGroupTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		95EFDD24299A50E00005BAE7 /* myGroupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = myGroupTableViewCell.xib; path = "Netwalk-iOS/MyGroupTableViewCell/myGroupTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		95EFDD25299A50E00005BAE7 /* MyGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyGroupTableViewCell.swift; path = "Netwalk-iOS/MyGroupTableViewCell/MyGroupTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		95EFDD2C299A53430005BAE7 /* NewGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewGroupTableViewCell.swift; path = NewGroupViewCell/TableViewCell/NewGroupTableViewCell.swift; sourceTree = "<group>"; };
+		95EFDD2D299A53430005BAE7 /* NewGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NewGroupTableViewCell.xib; path = NewGroupViewCell/TableViewCell/NewGroupTableViewCell.xib; sourceTree = "<group>"; };
+		95EFDD36299A61E20005BAE7 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				576B64B62997B7A6002609FA /* DistanceMatrix.swift */,
+				95EFDD36299A61E20005BAE7 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,12 +158,15 @@
 				576B64B52997B658002609FA /* Models */,
 				576C0DFF298ACFF200485AD5 /* Views */,
 				576C0DFE298ACFED00485AD5 /* Controllers */,
-				576C0DE9298ACAB300485AD5 /* Main.storyboard */,
 				576C0DEC298ACAB400485AD5 /* Assets.xcassets */,
 				576C0DEE298ACAB400485AD5 /* LaunchScreen.storyboard */,
 				576C0DF1298ACAB400485AD5 /* Info.plist */,
 				576C0DFC298ACF7100485AD5 /* GoogleService-Info.plist */,
 				952CB78C2997BA8700173BA3 /* SecretKey.plist */,
+				95EFDD2C299A53430005BAE7 /* NewGroupTableViewCell.swift */,
+				95EFDD2D299A53430005BAE7 /* NewGroupTableViewCell.xib */,
+				951EFBC6299A64DE00659F8B /* CategoryCollectionViewCell.swift */,
+				951EFBC7299A64DE00659F8B /* CategoryCollectionViewCell.xib */,
 			);
 			path = "Netwalk-iOS";
 			sourceTree = "<group>";
@@ -176,8 +190,9 @@
 				57D88FE3298AD43500C33F29 /* RankingViewController.swift */,
 				57D88FE5298AD44000C33F29 /* ProfileViewController.swift */,
 				57E4FD9829927CC100C8E082 /* TrashAlbumViewController.swift */,
-				95BDB99D299A0474003680EE /* myGroupTableViewCell.swift */,
-				95BDB99E299A0474003680EE /* myGroupTableViewCell.xib */,
+				95EFDD25299A50E00005BAE7 /* MyGroupTableViewCell.swift */,
+				95EFDD24299A50E00005BAE7 /* myGroupTableViewCell.xib */,
+				576C0DE9298ACAB300485AD5 /* Main.storyboard */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -330,12 +345,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95EFDD2F299A53430005BAE7 /* NewGroupTableViewCell.xib in Resources */,
 				5789E39D29930CF1009927F8 /* BodyCollectionViewCell.xib in Resources */,
 				57E4FDA6299298A000C8E082 /* TrashPhotoCollectionViewCell.xib in Resources */,
 				576C0DF0298ACAB400485AD5 /* LaunchScreen.storyboard in Resources */,
 				952CB78D2997BA8700173BA3 /* SecretKey.plist in Resources */,
 				57E4FDAF2993061A00C8E082 /* HeaderCollectionReusableView.xib in Resources */,
-				95BDB9A0299A0474003680EE /* myGroupTableViewCell.xib in Resources */,
+				951EFBC9299A64DE00659F8B /* CategoryCollectionViewCell.xib in Resources */,
+				95EFDD26299A50E00005BAE7 /* myGroupTableViewCell.xib in Resources */,
 				57E4FDA229928AEE00C8E082 /* TrashPhotoTableViewCell.xib in Resources */,
 				57E4FD9E299288C900C8E082 /* TrashCategoryTableViewCell.xib in Resources */,
 				576C0DFD298ACF7100485AD5 /* GoogleService-Info.plist in Resources */,
@@ -422,7 +439,7 @@
 				57D88FD6298AD2ED00C33F29 /* ExampleNavigationController.swift in Sources */,
 				95A503FC299A13100022B3DE /* NewGroupViewController.swift in Sources */,
 				57D88FDC298AD33F00C33F29 /* ExampleBasicContentView.swift in Sources */,
-				95BDB99F299A0474003680EE /* myGroupTableViewCell.swift in Sources */,
+				951EFBC8299A64DE00659F8B /* CategoryCollectionViewCell.swift in Sources */,
 				57E4FD9929927CC100C8E082 /* TrashAlbumViewController.swift in Sources */,
 				576B64B72997B7A6002609FA /* DistanceMatrix.swift in Sources */,
 				5789E39C29930CF1009927F8 /* BodyCollectionViewCell.swift in Sources */,
@@ -434,7 +451,10 @@
 				576C0DE6298ACAB300485AD5 /* SceneDelegate.swift in Sources */,
 				57E4FDB22993086300C8E082 /* ActivateGroupsViewController.swift in Sources */,
 				57E4FD9D299288C900C8E082 /* TrashCategoryTableViewCell.swift in Sources */,
+				95EFDD27299A50E00005BAE7 /* MyGroupTableViewCell.swift in Sources */,
+				95EFDD2E299A53430005BAE7 /* NewGroupTableViewCell.swift in Sources */,
 				57E4FDA129928AEE00C8E082 /* TrashPhotoTableViewCell.swift in Sources */,
+				95EFDD37299A61E20005BAE7 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

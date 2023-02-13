@@ -8,14 +8,11 @@
 import UIKit
 
 class MyGroupViewController: UIViewController {
-    @IBOutlet weak var myGroupTable: UITableView!
     @IBOutlet weak var addGroupButton: UIButton!
-    
+    @IBOutlet weak var myGroupTable: UITableView!
     
     override func viewDidLoad() {
-        self.navigationController?.isNavigationBarHidden = true
         addGroupButton.layer.cornerRadius = addGroupButton.layer.frame.size.width / 2
-        self.navigationItem.backButtonTitle = "Zedd"
         super.viewDidLoad()
         setUpTableView()
         
@@ -31,11 +28,9 @@ class MyGroupViewController: UIViewController {
     
     @IBAction func addGroupButtonTapped(_ sender: UIButton) {
         let newGroupVC = storyboard?.instantiateViewController(withIdentifier: "NewGroupVC") as! NewGroupViewController
-
-
-        navigationController?.pushViewController(newGroupVC, animated: true)
-
+                navigationController?.pushViewController(newGroupVC, animated: true)
     }
+    
 }
     
 extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource {
@@ -48,11 +43,11 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.row {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "myGroupTableViewCell") as! myGroupTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "myGroupTableViewCell") as! MyGroupTableViewCell
             cell.selectionStyle = .none
             return cell
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "myGroupTableViewCell") as! myGroupTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "myGroupTableViewCell") as! MyGroupTableViewCell
             cell.selectionStyle = .none
             return cell
         default:

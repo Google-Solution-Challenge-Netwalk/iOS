@@ -7,7 +7,7 @@
 
 import UIKit
 
-class myGroupTableViewCell: UITableViewCell {
+class MyGroupTableViewCell: UITableViewCell {
     @IBOutlet weak var myGroupImg: UIImageView!
     @IBOutlet weak var myGroupTitle: UILabel!
     @IBOutlet weak var myGroupDate: UILabel!

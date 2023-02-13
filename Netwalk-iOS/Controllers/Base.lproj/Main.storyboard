@@ -74,7 +74,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus"/>
                                 <connections>
-                                    <action selector="addGroupButtonTapped:" destination="j2T-Oh-1qM" eventType="touchUpInside" id="FvV-QN-gRc"/>
+                                    <action selector="addGroupButtonTapped:" destination="j2T-Oh-1qM" eventType="touchUpInside" id="6Wg-t3-cpG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,7 +98,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Tcs-VN-nLm"/>
                     <connections>
-                        <outlet property="addGroupButton" destination="eaO-jn-ddI" id="CK1-JN-DEm"/>
+                        <outlet property="addGroupButton" destination="eaO-jn-ddI" id="0MB-Ok-g2g"/>
                         <outlet property="myGroupTable" destination="tyC-qR-yig" id="Do9-Mv-KAK"/>
                     </connections>
                 </viewController>
@@ -110,7 +110,7 @@
         <scene sceneID="udQ-62-9pw">
             <objects>
                 <viewController storyboardIdentifier="NewGroupVC" id="Fdk-M0-yjV" customClass="NewGroupViewController" customModule="Netwalk_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Prb-Oc-TVP">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="NewGroupViewController" id="Prb-Oc-TVP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -149,6 +149,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Whp-Ly-65A"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="NewGroupViewController"/>
                         <constraints>
                             <constraint firstItem="nn4-Cw-KMw" firstAttribute="top" secondItem="Whp-Ly-65A" secondAttribute="top" constant="12" id="2Ka-2C-vXI"/>
                             <constraint firstItem="nn4-Cw-KMw" firstAttribute="centerX" secondItem="Prb-Oc-TVP" secondAttribute="centerX" id="83E-fi-8rQ"/>
@@ -162,10 +163,13 @@
                             <constraint firstItem="EBd-Kj-HkF" firstAttribute="top" secondItem="nn4-Cw-KMw" secondAttribute="bottom" constant="14.333333333333343" id="z5s-NK-4jg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="groupTableView" destination="NEF-1R-cnE" id="QEp-s5-ahD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYD-GQ-cxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4599" y="-1758"/>
+            <point key="canvasLocation" x="4597.7099236641216" y="-1758.4507042253522"/>
         </scene>
         <!--Item-->
         <scene sceneID="hFh-M2-BN3">
