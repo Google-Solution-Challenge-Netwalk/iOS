@@ -21,6 +21,7 @@
 		576C0E02298AD07000485AD5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C0E01298AD07000485AD5 /* LoginViewController.swift */; };
 		5789E39C29930CF1009927F8 /* BodyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789E39A29930CF1009927F8 /* BodyCollectionViewCell.swift */; };
 		5789E39D29930CF1009927F8 /* BodyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5789E39B29930CF1009927F8 /* BodyCollectionViewCell.xib */; };
+		57C3DD9F299CBFEE009466FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C3DD9E299CBFEE009466FA /* Constants.swift */; };
 		57D88FD3298AD2AF00C33F29 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FD2298AD2AF00C33F29 /* TabBarController.swift */; };
 		57D88FD6298AD2ED00C33F29 /* ExampleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FD5298AD2ED00C33F29 /* ExampleNavigationController.swift */; };
 		57D88FD8298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FD7298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift */; };
@@ -72,6 +73,7 @@
 		576C0E01298AD07000485AD5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5789E39A29930CF1009927F8 /* BodyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyCollectionViewCell.swift; sourceTree = "<group>"; };
 		5789E39B29930CF1009927F8 /* BodyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyCollectionViewCell.xib; sourceTree = "<group>"; };
+		57C3DD9E299CBFEE009466FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		57D88FD2298AD2AF00C33F29 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		57D88FD5298AD2ED00C33F29 /* ExampleNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNavigationController.swift; sourceTree = "<group>"; };
 		57D88FD7298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleIrregularityBasicContentView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				576C0DE5298ACAB300485AD5 /* SceneDelegate.swift */,
 				576C0E00298ACFF800485AD5 /* Sources */,
 				576C0DF9298ACE8500485AD5 /* Extensions */,
+				57C3DD9D299CBFCE009466FA /* Helpers */,
 				576B64B22997B27E002609FA /* Networking */,
 				576B64B52997B658002609FA /* Models */,
 				576C0DFF298ACFF200485AD5 /* Views */,
@@ -226,6 +229,14 @@
 				951EFBC7299A64DE00659F8B /* CategoryCollectionViewCell.xib */,
 			);
 			path = Group;
+			sourceTree = "<group>";
+		};
+		57C3DD9D299CBFCE009466FA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				57C3DD9E299CBFEE009466FA /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		57D88FD4298AD2BA00C33F29 /* ESTabBar */ = {
@@ -450,6 +461,7 @@
 				57D88FDE298AD41B00C33F29 /* GroupViewController.swift in Sources */,
 				576C0DE4298ACAB300485AD5 /* AppDelegate.swift in Sources */,
 				57D88FD8298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift in Sources */,
+				57C3DD9F299CBFEE009466FA /* Constants.swift in Sources */,
 				576B64B9299807B0002609FA /* AINetManager.swift in Sources */,
 				57D88FD6298AD2ED00C33F29 /* ExampleNavigationController.swift in Sources */,
 				576B64BB29980E09002609FA /* AIResult.swift in Sources */,

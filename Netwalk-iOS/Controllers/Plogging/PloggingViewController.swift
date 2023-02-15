@@ -9,7 +9,7 @@ import UIKit
 import GoogleMaps
 import CoreLocation
 
-class PloggingViewController: UIViewController, UINavigationControllerDelegate {
+class PloggingViewController: UIViewController {
     
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var totalDistance: UILabel!
@@ -30,11 +30,6 @@ class PloggingViewController: UIViewController, UINavigationControllerDelegate {
     var timer = Timer()
     
     let camera = UIImagePickerController()
-    let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm:ss"
-        return formatter
-    }()
     
     
     override func viewDidLoad() {
@@ -174,15 +169,20 @@ class PloggingViewController: UIViewController, UINavigationControllerDelegate {
     
     @objc func updateCounter() {
         print("-")
-        var hrs = dateFormatter.date(from: totalTime.text!)!
+        var hrs = CustomDateFormatter.format.date(from: totalTime.text!)!
         hrs.addTimeInterval(1)
-        totalTime.text = dateFormatter.string(from: hrs)
+        totalTime.text = CustomDateFormatter.format.string(from: hrs)
     }
 
 }
 
 // MARK: - GMSMapViewDelegate
 extension PloggingViewController: GMSMapViewDelegate {
+    
+}
+
+// MARK: - NavigationControllerDelegate
+extension PloggingViewController: UINavigationControllerDelegate {
     
 }
 
