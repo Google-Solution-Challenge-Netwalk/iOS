@@ -17,3 +17,12 @@ struct CustomDateFormatter {
         return formatter
     }()
 }
+
+
+struct PhotoCVCell {
+    static let spacingWitdh: CGFloat = 0
+    static let cellColumns: CGFloat = 3
+    private init() {}
+}
+
+

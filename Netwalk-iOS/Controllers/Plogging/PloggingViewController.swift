@@ -243,6 +243,9 @@ extension PloggingViewController: UIImagePickerControllerDelegate {
         guard let image = info[.originalImage] as? UIImage else { return }
         
         // 인공지능 네트워킹 처리
+        /// 1. AI 서버로 이미지 전송
+        /// 2. 응답 결과 값을 REST_API 서버로 전송 (Create)
+        /// 3. 쓰레기 앨범 화면에서 네트워킹 통신으로 데이터 받아오기
         
         picker.dismiss(animated: true)
     }

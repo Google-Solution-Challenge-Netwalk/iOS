@@ -7,12 +7,6 @@
 
 import UIKit
 
-struct CVCell {
-    static let spacingWitdh: CGFloat = 0
-    static let cellColumns: CGFloat = 3
-    private init() {}
-}
-
 class TrashPhotoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -24,18 +18,12 @@ class TrashPhotoTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        print("TrashPhotoTableViewCell")
-        print(#function)
-        
         setupCollectionView()
+        requestTrashPhotos()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        print("TrashPhotoTableViewCell")
-        print(#function)
-        
         // Configure the view for the selected state
     }
     
@@ -50,19 +38,22 @@ class TrashPhotoTableViewCell: UITableViewCell {
         
         // UIScreen.main.bounds.width = 스크린 가로 사이즈
         // CVCell.spacingWidth * (CVCell.cellColumns - 1) = 셀 사이의 spacing 공간 개수
-        let collectionCellWidth = ((UIScreen.main.bounds.width - 20) - CVCell.spacingWitdh * (CVCell.cellColumns - 1)) / CVCell.cellColumns
+        let collectionCellWidth = ((UIScreen.main.bounds.width - 20) - PhotoCVCell.spacingWitdh * (PhotoCVCell.cellColumns - 1)) / PhotoCVCell.cellColumns
         
         flowLayout.itemSize = CGSize(width: collectionCellWidth, height: 200)
         
         // 아이템 사이 간격 설정
-        flowLayout.minimumInteritemSpacing = CVCell.spacingWitdh
+        flowLayout.minimumInteritemSpacing = PhotoCVCell.spacingWitdh
         // 아이템 위아래 사이 간격 설정
-        flowLayout.minimumLineSpacing = CVCell.spacingWitdh
+        flowLayout.minimumLineSpacing = PhotoCVCell.spacingWitdh
         
         // 컬렉션뷰 속성에 flowLayout 할당
         collectionView.collectionViewLayout = flowLayout
     }
     
+    func requestTrashPhotos() {
+        
+    }
     
 }
 
