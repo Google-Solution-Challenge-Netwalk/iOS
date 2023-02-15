@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		576B64B42997B382002609FA /* GoogleMapsNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B64B32997B382002609FA /* GoogleMapsNetManager.swift */; };
-		576B64B72997B7A6002609FA /* DistanceMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B64B62997B7A6002609FA /* DistanceMatrix.swift */; };
 		576B64B9299807B0002609FA /* AINetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B64B8299807B0002609FA /* AINetManager.swift */; };
 		576B64BB29980E09002609FA /* AIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B64BA29980E09002609FA /* AIResult.swift */; };
 		576C0DE4298ACAB300485AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C0DE3298ACAB300485AD5 /* AppDelegate.swift */; };
@@ -22,6 +20,7 @@
 		5789E39C29930CF1009927F8 /* BodyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789E39A29930CF1009927F8 /* BodyCollectionViewCell.swift */; };
 		5789E39D29930CF1009927F8 /* BodyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5789E39B29930CF1009927F8 /* BodyCollectionViewCell.xib */; };
 		57C3DD9F299CBFEE009466FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C3DD9E299CBFEE009466FA /* Constants.swift */; };
+		57C3DDA1299CFC57009466FA /* GeoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C3DDA0299CFC57009466FA /* GeoDataSource.swift */; };
 		57D88FD3298AD2AF00C33F29 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FD2298AD2AF00C33F29 /* TabBarController.swift */; };
 		57D88FD6298AD2ED00C33F29 /* ExampleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FD5298AD2ED00C33F29 /* ExampleNavigationController.swift */; };
 		57D88FD8298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FD7298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift */; };
@@ -57,8 +56,6 @@
 /* Begin PBXFileReference section */
 		277EA68E255120B0DBC71666 /* Pods-Netwalk-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netwalk-iOS.release.xcconfig"; path = "Target Support Files/Pods-Netwalk-iOS/Pods-Netwalk-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		4F671F28F8A304E80430BB26 /* Pods-Netwalk-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netwalk-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Netwalk-iOS/Pods-Netwalk-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		576B64B32997B382002609FA /* GoogleMapsNetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsNetManager.swift; sourceTree = "<group>"; };
-		576B64B62997B7A6002609FA /* DistanceMatrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceMatrix.swift; sourceTree = "<group>"; };
 		576B64B8299807B0002609FA /* AINetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AINetManager.swift; sourceTree = "<group>"; };
 		576B64BA29980E09002609FA /* AIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIResult.swift; sourceTree = "<group>"; };
 		576C0DE0298ACAB300485AD5 /* Netwalk-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netwalk-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +71,7 @@
 		5789E39A29930CF1009927F8 /* BodyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyCollectionViewCell.swift; sourceTree = "<group>"; };
 		5789E39B29930CF1009927F8 /* BodyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyCollectionViewCell.xib; sourceTree = "<group>"; };
 		57C3DD9E299CBFEE009466FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		57C3DDA0299CFC57009466FA /* GeoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoDataSource.swift; sourceTree = "<group>"; };
 		57D88FD2298AD2AF00C33F29 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		57D88FD5298AD2ED00C33F29 /* ExampleNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNavigationController.swift; sourceTree = "<group>"; };
 		57D88FD7298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleIrregularityBasicContentView.swift; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 		576B64B22997B27E002609FA /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				576B64B32997B382002609FA /* GoogleMapsNetManager.swift */,
 				576B64B8299807B0002609FA /* AINetManager.swift */,
 			);
 			path = Networking;
@@ -130,7 +127,6 @@
 		576B64B52997B658002609FA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				576B64B62997B7A6002609FA /* DistanceMatrix.swift */,
 				576B64BA29980E09002609FA /* AIResult.swift */,
 				95EFDD36299A61E20005BAE7 /* Category.swift */,
 			);
@@ -214,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				57D88FD4298AD2BA00C33F29 /* ESTabBar */,
+				57C3DDA0299CFC57009466FA /* GeoDataSource.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -456,8 +453,8 @@
 				57D88FDA298AD32800C33F29 /* ExampleBouncesContentView.swift in Sources */,
 				57D88FE4298AD43500C33F29 /* RankingViewController.swift in Sources */,
 				57D88FE0298AD42200C33F29 /* ReviewViewController.swift in Sources */,
+				57C3DDA1299CFC57009466FA /* GeoDataSource.swift in Sources */,
 				576C0DFB298ACE9C00485AD5 /* Bundle+Ext.swift in Sources */,
-				576B64B42997B382002609FA /* GoogleMapsNetManager.swift in Sources */,
 				57D88FDE298AD41B00C33F29 /* GroupViewController.swift in Sources */,
 				576C0DE4298ACAB300485AD5 /* AppDelegate.swift in Sources */,
 				57D88FD8298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift in Sources */,
@@ -469,7 +466,6 @@
 				57D88FDC298AD33F00C33F29 /* ExampleBasicContentView.swift in Sources */,
 				951EFBC8299A64DE00659F8B /* CategoryCollectionViewCell.swift in Sources */,
 				57E4FD9929927CC100C8E082 /* TrashAlbumViewController.swift in Sources */,
-				576B64B72997B7A6002609FA /* DistanceMatrix.swift in Sources */,
 				5789E39C29930CF1009927F8 /* BodyCollectionViewCell.swift in Sources */,
 				57D88FD3298AD2AF00C33F29 /* TabBarController.swift in Sources */,
 				57E4FDAE2993061A00C8E082 /* HeaderCollectionReusableView.swift in Sources */,

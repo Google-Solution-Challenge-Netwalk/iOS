@@ -28,6 +28,8 @@ class PloggingViewController: UIViewController {
     var mapView: GMSMapView!
     var ploggingStatus = false
     var timer = Timer()
+    var coordinates: [[Double]] = []
+    var count = 0
     
     let camera = UIImagePickerController()
     
@@ -40,6 +42,7 @@ class PloggingViewController: UIViewController {
         setupCamera()
     }
     
+    // MARK: - setupView
     func setupView() {
         // 맵뷰 불러오기
         loadMapView()
@@ -71,6 +74,7 @@ class PloggingViewController: UIViewController {
         view.bringSubviewToFront(cameraInfoLabel)
     }
     
+    // MARK: - loadMapView
     // 맵 불러오기
     func loadMapView() {
         
@@ -88,6 +92,7 @@ class PloggingViewController: UIViewController {
         view.addSubview(mapView)
     }
     
+    // MARK: - setupCamera
     // 카메라 관련 설정
     func setupCamera() {
         camera.sourceType = .camera
@@ -97,6 +102,7 @@ class PloggingViewController: UIViewController {
         camera.delegate = self
     }
     
+    // MARK: - setupLocation
     // 내 위치 불러오기
     func setupLocation() {
         print(#function)
@@ -114,6 +120,7 @@ class PloggingViewController: UIViewController {
         }
     }
     
+    // MARK: - myLocationButtonTapped
     @IBAction func myLocationButtonTapped(_ sender: UIButton) {
         
         guard let lat = self.mapView.myLocation?.coordinate.latitude,
@@ -122,27 +129,33 @@ class PloggingViewController: UIViewController {
         self.mapView.animate(to: camera)
     }
     
+    // MARK: - ploggingButtonTapped
     @IBAction func ploggingButtonTapped(_ sender: UIButton) {
-        if ploggingStatus { // 플로깅 활성화 상태
+        if !ploggingStatus { // 플로깅 시작
+            print("start")
+            coordinates.removeAll()
+            guard let myLocation = mapView.myLocation?.coordinate else { return }
+            coordinates.append([myLocation.latitude, myLocation.longitude])
+            sender.setImage(UIImage(systemName: "stop.fill"), for: .normal)
+            cameraButton.isHidden = false
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        } else { // 플로깅 종료
             print("stop")
             sender.setImage(UIImage(systemName: "play.fill"), for: .normal)
             cameraButton.isHidden = true
             timer.invalidate()
-        } else { // 플로깅 비활성화 상태
-            print("start")
-            sender.setImage(UIImage(systemName: "stop.fill"), for: .normal)
-            cameraButton.isHidden = false
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         }
         ploggingStatus = !ploggingStatus
         //GoogleMapsNetManager.shared.getDistanceMatrix()
     }
     
+    // MARK: - groupButtonTapped
     @IBAction func groupButtonTapped(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "ActivateGroupsViewController") as! ActivateGroupsViewController
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    // MARK: - cameraButtonTapped
     @IBAction func cameraButtonTapped(_ sender: UIButton) {
         
         let actionSheet = UIAlertController(title: "title", message: "message", preferredStyle: .actionSheet)
@@ -165,13 +178,31 @@ class PloggingViewController: UIViewController {
         present(actionSheet, animated: true)
     }
     
-    
-    
+    // MARK: - updateCounter
     @objc func updateCounter() {
         print("-")
+        count += 1
+        
+        if count == 3 {
+            print("5")
+            guard let myLocation = mapView.myLocation?.coordinate else { return }
+            
+            let distance = distance(lat1: coordinates.last![0], lon1: coordinates.last![1], lat2: myLocation.latitude, lon2: myLocation.longitude, unit: "K")
+            
+            var totalDst = Double(totalDistance.text!)!
+            //totalDst = round(totalDst * 100) / 100
+            totalDistance.text = "\(round((totalDst + distance) * 100) / 100)"
+            
+            coordinates.append([myLocation.latitude, myLocation.longitude])
+            count = 0
+            
+        }
+        
         var hrs = CustomDateFormatter.format.date(from: totalTime.text!)!
         hrs.addTimeInterval(1)
         totalTime.text = CustomDateFormatter.format.string(from: hrs)
+        
+        
     }
 
 }
@@ -190,12 +221,10 @@ extension PloggingViewController: UINavigationControllerDelegate {
 extension PloggingViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        // 몇 초마다 호출되는지 체크해보기
-        print(#function)
         
         if let location = locations.first {
-            print("위도: \(location.coordinate.latitude)")
-            print("경도: \(location.coordinate.longitude)")
+//            print("위도: \(location.coordinate.latitude)")
+//            print("경도: \(location.coordinate.longitude)")
             
             // 위치 업데이트할 때마다 카메라 위치 이동
             let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
@@ -212,7 +241,6 @@ extension PloggingViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         guard let image = info[.originalImage] as? UIImage else { return }
-        print(image)
         
         // 인공지능 네트워킹 처리
         
