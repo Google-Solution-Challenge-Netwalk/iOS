@@ -32,7 +32,7 @@ class PloggingViewController: UIViewController {
     var count = 0
     
     let camera = UIImagePickerController()
-    
+    let path = GMSMutablePath()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class PloggingViewController: UIViewController {
     // MARK: - setupView
     func setupView() {
         // 맵뷰 불러오기
-        loadMapView()
+        setupMapView()
         topView.layer.cornerRadius = 10
         topView.layer.borderWidth = 1
         topView.layer.borderColor = UIColor.lightGray.cgColor
@@ -76,7 +76,7 @@ class PloggingViewController: UIViewController {
     
     // MARK: - loadMapView
     // 맵 불러오기
-    func loadMapView() {
+    func setupMapView() {
         
         print(#function)
         let myLocation = locationManager.location?.coordinate // 현재 내 위치 가져오기
@@ -133,11 +133,18 @@ class PloggingViewController: UIViewController {
     @IBAction func ploggingButtonTapped(_ sender: UIButton) {
         if !ploggingStatus { // 플로깅 시작
             print("start")
-            coordinates.removeAll()
+            
+            coordinates.removeAll() // 누적 좌표 데이터 삭제
+            path.removeAllCoordinates() // 누적 path 데이터 삭제
+            mapView.clear() // 지도위에 그려진 polyline 제거
+            
             guard let myLocation = mapView.myLocation?.coordinate else { return }
             coordinates.append([myLocation.latitude, myLocation.longitude])
+            path.add(myLocation)
+            
             sender.setImage(UIImage(systemName: "stop.fill"), for: .normal)
             cameraButton.isHidden = false
+            
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         } else { // 플로깅 종료
             print("stop")
@@ -146,7 +153,6 @@ class PloggingViewController: UIViewController {
             timer.invalidate()
         }
         ploggingStatus = !ploggingStatus
-        //GoogleMapsNetManager.shared.getDistanceMatrix()
     }
     
     // MARK: - groupButtonTapped
@@ -180,22 +186,26 @@ class PloggingViewController: UIViewController {
     
     // MARK: - updateCounter
     @objc func updateCounter() {
-        print("-")
         count += 1
         
         if count == 3 {
-            print("5")
             guard let myLocation = mapView.myLocation?.coordinate else { return }
             
+            // 두 좌표사이 거리 계산
             let distance = distance(lat1: coordinates.last![0], lon1: coordinates.last![1], lat2: myLocation.latitude, lon2: myLocation.longitude, unit: "K")
             
-            var totalDst = Double(totalDistance.text!)!
-            //totalDst = round(totalDst * 100) / 100
+            let totalDst = Double(totalDistance.text!)!
             totalDistance.text = "\(round((totalDst + distance) * 100) / 100)"
             
-            coordinates.append([myLocation.latitude, myLocation.longitude])
-            count = 0
+            coordinates.append([myLocation.latitude, myLocation.longitude]) // 현재 좌표 데이터 추가
+            path.add(myLocation) // path 데이터 추가
             
+            let polyline = GMSPolyline(path: path)
+            polyline.strokeWidth = 5
+            polyline.geodesic = true
+            polyline.map = mapView
+            
+            count = 0
         }
         
         var hrs = CustomDateFormatter.format.date(from: totalTime.text!)!
