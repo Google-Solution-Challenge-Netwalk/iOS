@@ -192,7 +192,9 @@ class PloggingViewController: UIViewController {
             guard let myLocation = mapView.myLocation?.coordinate else { return }
             
             // 두 좌표사이 거리 계산
-            let distance = distance(lat1: coordinates.last![0], lon1: coordinates.last![1], lat2: myLocation.latitude, lon2: myLocation.longitude, unit: "K")
+            var distance = distance(lat1: coordinates.last![0], lon1: coordinates.last![1], lat2: myLocation.latitude, lon2: myLocation.longitude, unit: "K")
+            
+            if distance.isNaN { distance = 0.0 }
             
             let totalDst = Double(totalDistance.text!)!
             totalDistance.text = "\(round((totalDst + distance) * 100) / 100)"
@@ -249,15 +251,26 @@ extension PloggingViewController: CLLocationManagerDelegate {
 // MARK: - UIImagePickerControllerDelegate
 extension PloggingViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
+        print(#function)
         guard let image = info[.originalImage] as? UIImage else { return }
         
         // 인공지능 네트워킹 처리
+        
+        let alert = UIAlertController(title: "처리 중...", message: "잠시만 기다려주세요.", preferredStyle: .alert)
+        
+        picker.present(alert, animated: true) {
+            AINetManager.shared.requestTrashtDetection(image: image) {
+                alert.dismiss(animated: true)
+                picker.dismiss(animated: true)
+            }
+        }
+        
         /// 1. AI 서버로 이미지 전송
+        
         /// 2. 응답 결과 값을 REST_API 서버로 전송 (Create)
         /// 3. 쓰레기 앨범 화면에서 네트워킹 통신으로 데이터 받아오기
         
-        picker.dismiss(animated: true)
+        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
