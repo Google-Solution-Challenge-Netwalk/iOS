@@ -13,8 +13,6 @@ class TrashPhotoCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var category: UILabel!
     
-    @IBOutlet weak var date: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
