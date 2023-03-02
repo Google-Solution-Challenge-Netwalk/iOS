@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ActiveUserCollectionViewCell" id="gTV-IL-0wX" customClass="ActiveUserCollectionViewCell" customModule="Netwalk_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="116" height="156"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="116" height="156"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overseas" translatesAutoresizingMaskIntoConstraints="NO" id="5x3-fO-dbz">
+                        <rect key="frame" x="10" y="16" width="96" height="85"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="button_compass_night.png" translatesAutoresizingMaskIntoConstraints="NO" id="EyA-sc-Jb3">
+                        <rect key="frame" x="64" y="61" width="41" height="48"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aRb-yD-K68">
+                        <rect key="frame" x="18" y="108" width="80" height="37.666666666666657"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weploplo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kah-Bm-54K">
+                                <rect key="frame" x="12.666666666666671" y="0.0" width="55" height="14.333333333333334"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="3:47:02" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCY-Dl-loB">
+                                <rect key="frame" x="19.666666666666664" y="14.333333333333329" width="41" height="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.53km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="955-tR-pGe">
+                                <rect key="frame" x="21.333333333333339" y="24.333333333333343" width="37.666666666666657" height="13.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="73" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ipt-bH-zWY">
+                        <rect key="frame" x="78" y="81" width="20" height="9.6666666666666661"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="aRb-yD-K68" firstAttribute="top" secondItem="5x3-fO-dbz" secondAttribute="bottom" constant="7" id="2he-mx-V6A"/>
+                <constraint firstItem="5x3-fO-dbz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="8xR-58-5VL"/>
+                <constraint firstItem="aRb-yD-K68" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Ati-gH-I8X"/>
+                <constraint firstItem="EyA-sc-Jb3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="63" id="BKc-NY-5uo"/>
+                <constraint firstAttribute="trailing" secondItem="5x3-fO-dbz" secondAttribute="trailing" constant="10" id="FY7-M2-dE7"/>
+                <constraint firstItem="EyA-sc-Jb3" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Gtl-tP-Zz4"/>
+                <constraint firstItem="aRb-yD-K68" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="18" id="LRv-VX-16p"/>
+                <constraint firstItem="EyA-sc-Jb3" firstAttribute="centerX" secondItem="Ipt-bH-zWY" secondAttribute="centerX" id="QzA-IV-Kxb"/>
+                <constraint firstItem="aRb-yD-K68" firstAttribute="top" secondItem="EyA-sc-Jb3" secondAttribute="bottom" constant="6" id="S8k-Gq-Sdb"/>
+                <constraint firstItem="EyA-sc-Jb3" firstAttribute="centerY" secondItem="Ipt-bH-zWY" secondAttribute="centerY" id="Sh9-kV-6SA"/>
+                <constraint firstItem="5x3-fO-dbz" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ay4-D4-2qM"/>
+                <constraint firstAttribute="bottom" secondItem="aRb-yD-K68" secondAttribute="bottom" constant="10.33" id="d0v-Jn-YG9"/>
+                <constraint firstItem="EyA-sc-Jb3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="54" id="fhc-8O-7dx"/>
+                <constraint firstAttribute="trailing" secondItem="EyA-sc-Jb3" secondAttribute="trailing" constant="12" id="kqn-sK-HXa"/>
+                <constraint firstItem="5x3-fO-dbz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="psG-bN-0lq"/>
+                <constraint firstAttribute="trailing" secondItem="aRb-yD-K68" secondAttribute="trailing" constant="18" id="w5B-YM-W4M"/>
+            </constraints>
+            <size key="customSize" width="116" height="156"/>
+            <connections>
+                <outlet property="userKm" destination="955-tR-pGe" id="sbr-mq-j1u"/>
+                <outlet property="userName" destination="955-tR-pGe" id="hGO-Iw-n1r"/>
+                <outlet property="userProfileImage" destination="5x3-fO-dbz" id="nrv-g2-oGk"/>
+                <outlet property="userTime" destination="955-tR-pGe" id="Lte-8s-42j"/>
+                <outlet property="userTrashBackground" destination="EyA-sc-Jb3" id="FHM-qO-I4o"/>
+                <outlet property="userTrashNumber" destination="Ipt-bH-zWY" id="vxd-UO-Nl8"/>
+            </connections>
+            <point key="canvasLocation" x="154.19847328244273" y="56.338028169014088"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="button_compass_night.png" width="40" height="40"/>
+        <image name="overseas" width="121" height="121"/>
+    </resources>
+</document>
