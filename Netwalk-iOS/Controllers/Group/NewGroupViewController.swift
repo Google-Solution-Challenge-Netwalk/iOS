@@ -9,11 +9,14 @@ import UIKit
 class NewGroupViewController: UIViewController {
     
     @IBOutlet weak var groupTableView: UITableView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
     
     var categorys = [Category]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         setUpTableView()
         
     }
@@ -32,9 +35,13 @@ class NewGroupViewController: UIViewController {
         groupTableView.separatorStyle = .none
     }
     
-    @IBAction func newGroupButtonTapped(_ sender: Any) {
-        let newGroupVC = storyboard?.instantiateViewController(withIdentifier: "NewGroupVC") as! NewGroupViewController
-        navigationController?.pushViewController(newGroupVC, animated: true)
+    @IBAction func searchButton(_ sender: UIButton) {
+        let detailGroupVC = storyboard?.instantiateViewController(withIdentifier: "DetailGroupVC") as! DetailGroupViewController
+        navigationController?.pushViewController(detailGroupVC, animated: true)
+    }
+    
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
