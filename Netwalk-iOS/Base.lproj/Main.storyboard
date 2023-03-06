@@ -178,10 +178,33 @@
                     <view key="view" contentMode="scaleToFill" id="eI6-qw-f6t">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCc-iR-2i5">
+                                <rect key="frame" x="30" y="70" width="95" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CDY-I3-DDz">
+                                <rect key="frame" x="0.0" y="120" width="393" height="649"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cWB-kA-8fB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aCc-iR-2i5" firstAttribute="top" secondItem="eI6-qw-f6t" secondAttribute="top" constant="70" id="PYd-W7-dRa"/>
+                            <constraint firstItem="aCc-iR-2i5" firstAttribute="leading" secondItem="cWB-kA-8fB" secondAttribute="leading" constant="30" id="Yjw-FU-9yM"/>
+                            <constraint firstItem="cWB-kA-8fB" firstAttribute="trailing" secondItem="CDY-I3-DDz" secondAttribute="trailing" id="g8Q-he-ejE"/>
+                            <constraint firstItem="CDY-I3-DDz" firstAttribute="top" secondItem="aCc-iR-2i5" secondAttribute="bottom" constant="16" id="gIS-S7-0sb"/>
+                            <constraint firstItem="CDY-I3-DDz" firstAttribute="leading" secondItem="cWB-kA-8fB" secondAttribute="leading" id="pri-DL-nUS"/>
+                            <constraint firstItem="cWB-kA-8fB" firstAttribute="bottom" secondItem="CDY-I3-DDz" secondAttribute="bottom" id="ub8-Tc-cOn"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="HRc-ZQ-YkI"/>
+                    <connections>
+                        <outlet property="tableView" destination="CDY-I3-DDz" id="4LO-il-LJ3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIv-LY-naU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
