@@ -19,6 +19,8 @@
 		576C0E02298AD07000485AD5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C0E01298AD07000485AD5 /* LoginViewController.swift */; };
 		5789E39C29930CF1009927F8 /* BodyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789E39A29930CF1009927F8 /* BodyCollectionViewCell.swift */; };
 		5789E39D29930CF1009927F8 /* BodyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5789E39B29930CF1009927F8 /* BodyCollectionViewCell.xib */; };
+		57B5A9F629B5C73F00BB07A8 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B5A9F429B5C73F00BB07A8 /* ReviewTableViewCell.swift */; };
+		57B5A9F729B5C73F00BB07A8 /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57B5A9F529B5C73F00BB07A8 /* ReviewTableViewCell.xib */; };
 		57C3DD9F299CBFEE009466FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C3DD9E299CBFEE009466FA /* Constants.swift */; };
 		57C3DDA1299CFC57009466FA /* GeoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C3DDA0299CFC57009466FA /* GeoDataSource.swift */; };
 		57D88FD3298AD2AF00C33F29 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FD2298AD2AF00C33F29 /* TabBarController.swift */; };
@@ -70,6 +72,8 @@
 		576C0E01298AD07000485AD5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5789E39A29930CF1009927F8 /* BodyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyCollectionViewCell.swift; sourceTree = "<group>"; };
 		5789E39B29930CF1009927F8 /* BodyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyCollectionViewCell.xib; sourceTree = "<group>"; };
+		57B5A9F429B5C73F00BB07A8 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
+		57B5A9F529B5C73F00BB07A8 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
 		57C3DD9E299CBFEE009466FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		57C3DDA0299CFC57009466FA /* GeoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoDataSource.swift; sourceTree = "<group>"; };
 		57D88FD2298AD2AF00C33F29 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 		576C0DFF298ACFF200485AD5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				57B5A9F329B5C72300BB07A8 /* Review */,
 				57C3DD9B299A9B0B009466FA /* Group */,
 				57E4FDA7299301EE00C8E082 /* ActivateGroup */,
 				57E4FD9A299287DD00C8E082 /* Trash */,
@@ -213,6 +218,15 @@
 				57C3DDA0299CFC57009466FA /* GeoDataSource.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		57B5A9F329B5C72300BB07A8 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				57B5A9F429B5C73F00BB07A8 /* ReviewTableViewCell.swift */,
+				57B5A9F529B5C73F00BB07A8 /* ReviewTableViewCell.xib */,
+			);
+			path = Review;
 			sourceTree = "<group>";
 		};
 		57C3DD9B299A9B0B009466FA /* Group */ = {
@@ -370,6 +384,7 @@
 				95EFDD2F299A53430005BAE7 /* NewGroupTableViewCell.xib in Resources */,
 				5789E39D29930CF1009927F8 /* BodyCollectionViewCell.xib in Resources */,
 				57E4FDA6299298A000C8E082 /* TrashPhotoCollectionViewCell.xib in Resources */,
+				57B5A9F729B5C73F00BB07A8 /* ReviewTableViewCell.xib in Resources */,
 				576C0DF0298ACAB400485AD5 /* LaunchScreen.storyboard in Resources */,
 				952CB78D2997BA8700173BA3 /* SecretKey.plist in Resources */,
 				57E4FDAF2993061A00C8E082 /* HeaderCollectionReusableView.xib in Resources */,
@@ -476,6 +491,7 @@
 				57E4FDB22993086300C8E082 /* ActivateGroupsViewController.swift in Sources */,
 				57E4FD9D299288C900C8E082 /* TrashCategoryTableViewCell.swift in Sources */,
 				95EFDD27299A50E00005BAE7 /* MyGroupTableViewCell.swift in Sources */,
+				57B5A9F629B5C73F00BB07A8 /* ReviewTableViewCell.swift in Sources */,
 				95EFDD2E299A53430005BAE7 /* NewGroupTableViewCell.swift in Sources */,
 				57E4FDA129928AEE00C8E082 /* TrashPhotoTableViewCell.swift in Sources */,
 				95EFDD37299A61E20005BAE7 /* Category.swift in Sources */,
