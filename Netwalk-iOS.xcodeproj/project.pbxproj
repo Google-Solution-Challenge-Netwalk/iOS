@@ -19,6 +19,10 @@
 		576C0E02298AD07000485AD5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C0E01298AD07000485AD5 /* LoginViewController.swift */; };
 		5789E39C29930CF1009927F8 /* BodyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5789E39A29930CF1009927F8 /* BodyCollectionViewCell.swift */; };
 		5789E39D29930CF1009927F8 /* BodyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5789E39B29930CF1009927F8 /* BodyCollectionViewCell.xib */; };
+		57B5A9FB29B8A21300BB07A8 /* ProfileHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B5A9F929B8A21300BB07A8 /* ProfileHeaderTableViewCell.swift */; };
+		57B5A9FC29B8A21300BB07A8 /* ProfileHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57B5A9FA29B8A21300BB07A8 /* ProfileHeaderTableViewCell.xib */; };
+		57B5A9FF29B8A25B00BB07A8 /* ProfileBodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B5A9FD29B8A25B00BB07A8 /* ProfileBodyTableViewCell.swift */; };
+		57B5AA0029B8A25B00BB07A8 /* ProfileBodyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57B5A9FE29B8A25B00BB07A8 /* ProfileBodyTableViewCell.xib */; };
 		57C3DD9F299CBFEE009466FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C3DD9E299CBFEE009466FA /* Constants.swift */; };
 		57C3DDA1299CFC57009466FA /* GeoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C3DDA0299CFC57009466FA /* GeoDataSource.swift */; };
 		57D88FD3298AD2AF00C33F29 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FD2298AD2AF00C33F29 /* TabBarController.swift */; };
@@ -70,6 +74,10 @@
 		576C0E01298AD07000485AD5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5789E39A29930CF1009927F8 /* BodyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyCollectionViewCell.swift; sourceTree = "<group>"; };
 		5789E39B29930CF1009927F8 /* BodyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BodyCollectionViewCell.xib; sourceTree = "<group>"; };
+		57B5A9F929B8A21300BB07A8 /* ProfileHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		57B5A9FA29B8A21300BB07A8 /* ProfileHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		57B5A9FD29B8A25B00BB07A8 /* ProfileBodyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBodyTableViewCell.swift; sourceTree = "<group>"; };
+		57B5A9FE29B8A25B00BB07A8 /* ProfileBodyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileBodyTableViewCell.xib; sourceTree = "<group>"; };
 		57C3DD9E299CBFEE009466FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		57C3DDA0299CFC57009466FA /* GeoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoDataSource.swift; sourceTree = "<group>"; };
 		57D88FD2298AD2AF00C33F29 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -199,6 +207,7 @@
 		576C0DFF298ACFF200485AD5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				57B5A9F829B8A08D00BB07A8 /* Profile */,
 				57C3DD9B299A9B0B009466FA /* Group */,
 				57E4FDA7299301EE00C8E082 /* ActivateGroup */,
 				57E4FD9A299287DD00C8E082 /* Trash */,
@@ -213,6 +222,17 @@
 				57C3DDA0299CFC57009466FA /* GeoDataSource.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		57B5A9F829B8A08D00BB07A8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				57B5A9F929B8A21300BB07A8 /* ProfileHeaderTableViewCell.swift */,
+				57B5A9FA29B8A21300BB07A8 /* ProfileHeaderTableViewCell.xib */,
+				57B5A9FD29B8A25B00BB07A8 /* ProfileBodyTableViewCell.swift */,
+				57B5A9FE29B8A25B00BB07A8 /* ProfileBodyTableViewCell.xib */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		57C3DD9B299A9B0B009466FA /* Group */ = {
@@ -370,9 +390,11 @@
 				95EFDD2F299A53430005BAE7 /* NewGroupTableViewCell.xib in Resources */,
 				5789E39D29930CF1009927F8 /* BodyCollectionViewCell.xib in Resources */,
 				57E4FDA6299298A000C8E082 /* TrashPhotoCollectionViewCell.xib in Resources */,
+				57B5AA0029B8A25B00BB07A8 /* ProfileBodyTableViewCell.xib in Resources */,
 				576C0DF0298ACAB400485AD5 /* LaunchScreen.storyboard in Resources */,
 				952CB78D2997BA8700173BA3 /* SecretKey.plist in Resources */,
 				57E4FDAF2993061A00C8E082 /* HeaderCollectionReusableView.xib in Resources */,
+				57B5A9FC29B8A21300BB07A8 /* ProfileHeaderTableViewCell.xib in Resources */,
 				951EFBC9299A64DE00659F8B /* CategoryCollectionViewCell.xib in Resources */,
 				95EFDD26299A50E00005BAE7 /* MyGroupTableViewCell.xib in Resources */,
 				57E4FDA229928AEE00C8E082 /* TrashPhotoTableViewCell.xib in Resources */,
@@ -457,6 +479,7 @@
 				576C0DFB298ACE9C00485AD5 /* Bundle+Ext.swift in Sources */,
 				57D88FDE298AD41B00C33F29 /* GroupViewController.swift in Sources */,
 				576C0DE4298ACAB300485AD5 /* AppDelegate.swift in Sources */,
+				57B5A9FB29B8A21300BB07A8 /* ProfileHeaderTableViewCell.swift in Sources */,
 				57D88FD8298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift in Sources */,
 				57C3DD9F299CBFEE009466FA /* Constants.swift in Sources */,
 				576B64B9299807B0002609FA /* AINetManager.swift in Sources */,
@@ -475,6 +498,7 @@
 				576C0DE6298ACAB300485AD5 /* SceneDelegate.swift in Sources */,
 				57E4FDB22993086300C8E082 /* ActivateGroupsViewController.swift in Sources */,
 				57E4FD9D299288C900C8E082 /* TrashCategoryTableViewCell.swift in Sources */,
+				57B5A9FF29B8A25B00BB07A8 /* ProfileBodyTableViewCell.swift in Sources */,
 				95EFDD27299A50E00005BAE7 /* MyGroupTableViewCell.swift in Sources */,
 				95EFDD2E299A53430005BAE7 /* NewGroupTableViewCell.swift in Sources */,
 				57E4FDA129928AEE00C8E082 /* TrashPhotoTableViewCell.swift in Sources */,

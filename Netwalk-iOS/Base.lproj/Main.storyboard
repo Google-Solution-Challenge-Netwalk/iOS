@@ -210,10 +210,25 @@
                     <view key="view" contentMode="scaleToFill" id="Pbf-ab-JAH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bdc-DX-gNR">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ZMc-Zz-i2s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZMc-Zz-i2s" firstAttribute="bottom" secondItem="Bdc-DX-gNR" secondAttribute="bottom" id="AIQ-G3-ocg"/>
+                            <constraint firstItem="Bdc-DX-gNR" firstAttribute="top" secondItem="ZMc-Zz-i2s" secondAttribute="top" id="Trj-if-R8x"/>
+                            <constraint firstItem="Bdc-DX-gNR" firstAttribute="leading" secondItem="ZMc-Zz-i2s" secondAttribute="leading" id="ZeM-0v-dnO"/>
+                            <constraint firstItem="ZMc-Zz-i2s" firstAttribute="trailing" secondItem="Bdc-DX-gNR" secondAttribute="trailing" id="tBl-RJ-mq3"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="pPw-gi-WBn"/>
+                    <connections>
+                        <outlet property="tableView" destination="Bdc-DX-gNR" id="6N6-bv-jSq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="54S-hL-XDq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
