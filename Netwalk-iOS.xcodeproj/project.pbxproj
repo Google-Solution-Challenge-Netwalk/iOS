@@ -45,6 +45,8 @@
 		57E4FDAE2993061A00C8E082 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E4FDAC2993061A00C8E082 /* HeaderCollectionReusableView.swift */; };
 		57E4FDAF2993061A00C8E082 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E4FDAD2993061A00C8E082 /* HeaderCollectionReusableView.xib */; };
 		57E4FDB22993086300C8E082 /* ActivateGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E4FDB12993086300C8E082 /* ActivateGroupsViewController.swift */; };
+		57F2F06529B8BCB8008605F5 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2F06329B8BCB8008605F5 /* ReviewTableViewCell.swift */; };
+		57F2F06629B8BCB8008605F5 /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57F2F06429B8BCB8008605F5 /* ReviewTableViewCell.xib */; };
 		7AA3F62EF603725162AB6B74 /* Pods_Netwalk_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */; };
 		951EFBC8299A64DE00659F8B /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951EFBC6299A64DE00659F8B /* CategoryCollectionViewCell.swift */; };
 		951EFBC9299A64DE00659F8B /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 951EFBC7299A64DE00659F8B /* CategoryCollectionViewCell.xib */; };
@@ -100,6 +102,8 @@
 		57E4FDAC2993061A00C8E082 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		57E4FDAD2993061A00C8E082 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		57E4FDB12993086300C8E082 /* ActivateGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateGroupsViewController.swift; sourceTree = "<group>"; };
+		57F2F06329B8BCB8008605F5 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
+		57F2F06429B8BCB8008605F5 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
 		5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netwalk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		951EFBC6299A64DE00659F8B /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		951EFBC7299A64DE00659F8B /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -207,6 +211,7 @@
 		576C0DFF298ACFF200485AD5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				57F2F06229B8BC9F008605F5 /* Review */,
 				57B5A9F829B8A08D00BB07A8 /* Profile */,
 				57C3DD9B299A9B0B009466FA /* Group */,
 				57E4FDA7299301EE00C8E082 /* ActivateGroup */,
@@ -298,6 +303,15 @@
 				57E4FDB12993086300C8E082 /* ActivateGroupsViewController.swift */,
 			);
 			path = Plogging;
+			sourceTree = "<group>";
+		};
+		57F2F06229B8BC9F008605F5 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				57F2F06329B8BCB8008605F5 /* ReviewTableViewCell.swift */,
+				57F2F06429B8BCB8008605F5 /* ReviewTableViewCell.xib */,
+			);
+			path = Review;
 			sourceTree = "<group>";
 		};
 		6A7398B2DB305C1B1D15B3FB /* Frameworks */ = {
@@ -400,6 +414,7 @@
 				57E4FDA229928AEE00C8E082 /* TrashPhotoTableViewCell.xib in Resources */,
 				57E4FD9E299288C900C8E082 /* TrashCategoryTableViewCell.xib in Resources */,
 				576C0DFD298ACF7100485AD5 /* GoogleService-Info.plist in Resources */,
+				57F2F06629B8BCB8008605F5 /* ReviewTableViewCell.xib in Resources */,
 				576C0DED298ACAB400485AD5 /* Assets.xcassets in Resources */,
 				576C0DEB298ACAB300485AD5 /* Main.storyboard in Resources */,
 			);
@@ -499,6 +514,7 @@
 				57E4FDB22993086300C8E082 /* ActivateGroupsViewController.swift in Sources */,
 				57E4FD9D299288C900C8E082 /* TrashCategoryTableViewCell.swift in Sources */,
 				57B5A9FF29B8A25B00BB07A8 /* ProfileBodyTableViewCell.swift in Sources */,
+				57F2F06529B8BCB8008605F5 /* ReviewTableViewCell.swift in Sources */,
 				95EFDD27299A50E00005BAE7 /* MyGroupTableViewCell.swift in Sources */,
 				95EFDD2E299A53430005BAE7 /* NewGroupTableViewCell.swift in Sources */,
 				57E4FDA129928AEE00C8E082 /* TrashPhotoTableViewCell.swift in Sources */,

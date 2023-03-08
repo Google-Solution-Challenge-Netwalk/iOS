@@ -178,10 +178,25 @@
                     <view key="view" contentMode="scaleToFill" id="eI6-qw-f6t">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pp8-YQ-0kp">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cWB-kA-8fB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cWB-kA-8fB" firstAttribute="trailing" secondItem="Pp8-YQ-0kp" secondAttribute="trailing" id="Fmp-GT-E3F"/>
+                            <constraint firstItem="Pp8-YQ-0kp" firstAttribute="leading" secondItem="cWB-kA-8fB" secondAttribute="leading" id="cHm-VI-eEl"/>
+                            <constraint firstItem="Pp8-YQ-0kp" firstAttribute="top" secondItem="cWB-kA-8fB" secondAttribute="top" id="sqz-G8-UGk"/>
+                            <constraint firstItem="cWB-kA-8fB" firstAttribute="bottom" secondItem="Pp8-YQ-0kp" secondAttribute="bottom" id="x06-zs-8F4"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="HRc-ZQ-YkI"/>
+                    <connections>
+                        <outlet property="tableView" destination="Pp8-YQ-0kp" id="v1h-TA-3uO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIv-LY-naU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
