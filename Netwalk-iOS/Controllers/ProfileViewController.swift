@@ -21,12 +21,18 @@ class ProfileViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        
+        // 테이블 뷰 헤더 영역 사용하기
         tableView.register(UINib(nibName: "ProfileHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileHeaderTableViewCell")
+        
+        tableView.register(UINib(nibName: "ProfileBodyTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileBodyTableViewCell")
+        
     }
     
 }
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
@@ -37,6 +43,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileHeaderTableViewCell", for: indexPath) as! ProfileHeaderTableViewCell
             return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileBodyTableViewCell", for: indexPath) as! ProfileBodyTableViewCell
+            return cell
         default:
             return UITableViewCell()
         }
@@ -46,8 +55,18 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             return 350
+        case 1:
+            return view.frame.height - 350
         default:
             return 0
         }
     }
+    
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 350
+//    }
+    
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//
+//    }
 }
