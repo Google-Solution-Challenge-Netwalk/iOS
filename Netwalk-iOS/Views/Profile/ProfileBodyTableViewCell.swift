@@ -13,6 +13,8 @@ class ProfileBodyTableViewCell: UITableViewCell {
     
     let flowLayout = UICollectionViewFlowLayout()
     
+    var didSelectItem: ((_ indexPath: IndexPath)->())? = nil
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -65,6 +67,7 @@ extension ProfileBodyTableViewCell: UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("클릭 \(indexPath.item)")
+        didSelectItem?(indexPath)
     }
     
     

@@ -23,7 +23,7 @@ class ReviewViewController: UIViewController {
         tableView.dataSource = self
         
         tableView.register(UINib(nibName: "ReviewTableViewCell", bundle: nil), forCellReuseIdentifier: "ReviewTableViewCell")
-        tableView.rowHeight = 380
+        tableView.rowHeight = 400
     }
 
 }

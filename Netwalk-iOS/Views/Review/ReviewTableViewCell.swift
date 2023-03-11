@@ -32,7 +32,7 @@ class ReviewTableViewCell: UITableViewCell {
     func setupMapView() {
         let camera = GMSCameraPosition(latitude: 36, longitude: 127.5, zoom: 18)
         
-        mapView = GMSMapView(frame: CGRect(x: 0, y: 0, width: 373, height: 240), camera: camera)
+        mapView = GMSMapView(frame: CGRect(x: 0, y: 0, width: 373, height: 300), camera: camera)
         ploggingMap.addSubview(mapView)
     }
     

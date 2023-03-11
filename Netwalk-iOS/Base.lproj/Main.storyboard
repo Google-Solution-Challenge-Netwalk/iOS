@@ -247,12 +247,12 @@
                         <viewLayoutGuide key="safeArea" id="ZMc-Zz-i2s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZMc-Zz-i2s" firstAttribute="bottom" secondItem="Bdc-DX-gNR" secondAttribute="bottom" id="AIQ-G3-ocg"/>
                             <constraint firstItem="v5g-1V-aKZ" firstAttribute="top" secondItem="Pbf-ab-JAH" secondAttribute="top" constant="70" id="LDy-P6-CxO"/>
-                            <constraint firstItem="Bdc-DX-gNR" firstAttribute="leading" secondItem="ZMc-Zz-i2s" secondAttribute="leading" id="ZeM-0v-dnO"/>
+                            <constraint firstItem="ZMc-Zz-i2s" firstAttribute="bottom" secondItem="Bdc-DX-gNR" secondAttribute="bottom" id="aqI-MZ-vTq"/>
+                            <constraint firstItem="Bdc-DX-gNR" firstAttribute="top" secondItem="v5g-1V-aKZ" secondAttribute="bottom" constant="15" id="daV-L6-B2V"/>
                             <constraint firstItem="v5g-1V-aKZ" firstAttribute="leading" secondItem="Pbf-ab-JAH" secondAttribute="leading" constant="30" id="lea-Ey-c9I"/>
-                            <constraint firstItem="Bdc-DX-gNR" firstAttribute="top" secondItem="v5g-1V-aKZ" secondAttribute="bottom" constant="15" id="qb6-xZ-RzF"/>
-                            <constraint firstItem="ZMc-Zz-i2s" firstAttribute="trailing" secondItem="Bdc-DX-gNR" secondAttribute="trailing" id="tBl-RJ-mq3"/>
+                            <constraint firstItem="Bdc-DX-gNR" firstAttribute="leading" secondItem="ZMc-Zz-i2s" secondAttribute="leading" id="v2C-Zf-oTH"/>
+                            <constraint firstItem="Bdc-DX-gNR" firstAttribute="trailing" secondItem="ZMc-Zz-i2s" secondAttribute="trailing" id="wfK-L9-e7A"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="pPw-gi-WBn"/>
@@ -263,6 +263,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="54S-hL-XDq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2914" y="1614"/>
+        </scene>
+        <!--Plogging Detail View Controller-->
+        <scene sceneID="Ac1-M6-dW8">
+            <objects>
+                <viewController storyboardIdentifier="PloggingDetailViewController" id="KAR-kT-cSg" customClass="PloggingDetailViewController" customModule="Netwalk_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CQ1-8T-gZ6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023.01.01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BW-58-pv2">
+                                <rect key="frame" x="30" y="94" width="128.66666666666666" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qIC-Q6-nkX">
+                                <rect key="frame" x="10" y="144" width="373" height="300"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="D1y-KA-79F"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O8l-hp-r2N"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0BW-58-pv2" firstAttribute="leading" secondItem="O8l-hp-r2N" secondAttribute="leading" constant="30" id="NFs-BM-rOA"/>
+                            <constraint firstItem="O8l-hp-r2N" firstAttribute="trailing" secondItem="qIC-Q6-nkX" secondAttribute="trailing" constant="10" id="QwZ-Ok-yEe"/>
+                            <constraint firstItem="qIC-Q6-nkX" firstAttribute="leading" secondItem="O8l-hp-r2N" secondAttribute="leading" constant="10" id="alp-8K-JsX"/>
+                            <constraint firstItem="qIC-Q6-nkX" firstAttribute="top" secondItem="0BW-58-pv2" secondAttribute="bottom" constant="20" id="avv-T4-Hg9"/>
+                            <constraint firstItem="0BW-58-pv2" firstAttribute="top" secondItem="O8l-hp-r2N" secondAttribute="top" constant="35" id="lje-CS-cFB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ploggingDate" destination="0BW-58-pv2" id="w7C-SB-Gsu"/>
+                        <outlet property="ploggingMap" destination="qIC-Q6-nkX" id="lig-dW-OUz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QGw-Yt-Lqj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3755" y="1613"/>
         </scene>
         <!--Plogging View Controller-->
         <scene sceneID="5GG-Ha-vwc">
@@ -612,6 +653,9 @@
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="plus" width="22" height="21"/>
         <image name="search" width="34" height="31"/>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

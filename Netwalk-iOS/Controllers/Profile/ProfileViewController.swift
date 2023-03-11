@@ -45,6 +45,13 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileBodyTableViewCell", for: indexPath) as! ProfileBodyTableViewCell
+            
+            cell.didSelectItem = { indexPath in
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PloggingDetailViewController") as! PloggingDetailViewController
+                
+                self.present(vc, animated: true)
+            }
+            
             return cell
         default:
             return UITableViewCell()
