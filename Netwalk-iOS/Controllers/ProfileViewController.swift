@@ -51,12 +51,13 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    // 수정 필요
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
             return 350
         case 1:
-            return view.frame.height - 350
+            return 1500
         default:
             return 0
         }
