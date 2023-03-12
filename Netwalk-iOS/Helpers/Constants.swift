@@ -20,7 +20,7 @@ struct CustomDateFormatter {
 
 
 struct PhotoCVCell {
-    static let spacingWitdh: CGFloat = 0
+    static let spacingWitdh: CGFloat = 1
     static let cellColumns: CGFloat = 3
     private init() {}
 }
