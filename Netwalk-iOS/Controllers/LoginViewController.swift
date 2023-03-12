@@ -16,10 +16,20 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func testLoginButtonTapped(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tabBarVC = storyboard.instantiateViewController(identifier: "TabBarVC")
         
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(tabBarVC)
+        // 로그인 네트워킹 시작
+        let user = User(email: "test@naver.com", name: "tester")
+        
+        UserNetManager.shared.login(user: user) {
+            DispatchQueue.main.async {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let tabBarVC = storyboard.instantiateViewController(identifier: "TabBarVC")
+                
+                (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(tabBarVC)
+            }
+        }
+        
+        
     }
     
 }
