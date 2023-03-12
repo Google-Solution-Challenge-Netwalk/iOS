@@ -9,7 +9,7 @@ import Foundation
 
 
 class PloggingNetManager {
-    static let PloggingNetManager = PloggingNetManager()
+    static let shared = PloggingNetManager()
     private init() {}
     
     
