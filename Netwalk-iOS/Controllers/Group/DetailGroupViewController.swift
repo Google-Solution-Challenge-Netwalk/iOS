@@ -24,14 +24,19 @@ class DetailGroupViewController: UIViewController {
     func setUpTableView(){
         print("DetailGroupViewController")
         print(#function)
-        activeUsers.append(ActiveUser(userProfileImage: "overseas", userTrashNumber: "73", userTrashBackground: "button_compass_night", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
-        activeUsers.append(ActiveUser(userProfileImage: "overseas", userTrashNumber: "73", userTrashBackground: "button_compass_night", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
-        activeUsers.append(ActiveUser(userProfileImage: "overseas", userTrashNumber: "73", userTrashBackground: "button_compass_night", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
-        activeUsers.append(ActiveUser(userProfileImage: "overseas", userTrashNumber: "73", userTrashBackground: "button_compass_night", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
-        activeUsers.append(ActiveUser(userProfileImage: "overseas", userTrashNumber: "73", userTrashBackground: "button_compass_night", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
-        activeUsers.append(ActiveUser(userProfileImage: "overseas", userTrashNumber: "73", userTrashBackground: "button_compass_night", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
-        activeUsers.append(ActiveUser(userProfileImage: "overseas", userTrashNumber: "73", userTrashBackground: "button_compass_night", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
-        activeUsers.append(ActiveUser(userProfileImage: "overseas", userTrashNumber: "73", userTrashBackground: "button_compass_night", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
+        activeUsers.append(ActiveUser(userProfileImage: "overseas", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
+        activeUsers.append(ActiveUser(userProfileImage: "overseas", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
+        activeUsers.append(ActiveUser(userProfileImage: "overseas", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
+        activeUsers.append(ActiveUser(userProfileImage: "overseas", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
+        activeUsers.append(ActiveUser(userProfileImage: "overseas", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
+        activeUsers.append(ActiveUser(userProfileImage: "overseas", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
+        activeUsers.append(ActiveUser(userProfileImage: "overseas", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
+        activeUsers.append(ActiveUser(userProfileImage: "overseas", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
+        activeUsers.append(ActiveUser(userProfileImage: "overseas", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
+        activeUsers.append(ActiveUser(userProfileImage: "overseas", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
+        activeUsers.append(ActiveUser(userProfileImage: "overseas", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
+        activeUsers.append(ActiveUser(userProfileImage: "overseas", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
+        activeUsers.append(ActiveUser(userProfileImage: "overseas", userName: "Weploplo", userTime: "3:25:36", userKm: "5.21km"))
         detailGroupTableView.delegate = self
         detailGroupTableView.dataSource = self
         detailGroupTableView.register(UINib(nibName:"DetailGroupTableViewCell", bundle:nil), forCellReuseIdentifier: "DetailGroupTableViewCell")
@@ -44,6 +49,7 @@ class DetailGroupViewController: UIViewController {
     }
 }
 extension DetailGroupViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)
     -> Int {
             return 1
@@ -65,7 +71,17 @@ extension DetailGroupViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 700
+        return UIScreen.main.bounds.size.height
     }
     
 }
+
+//extension DetailGroupViewController: UICollectionViewDelegateFlowLayout{
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let margin: CGFloat = 1000
+//        let width: CGFloat = (collectionView.bounds.width - margin) / 3
+//        let height: CGFloat = width * 2
+//
+//        return CGSize(width: width, height: height)
+//    }
+//}

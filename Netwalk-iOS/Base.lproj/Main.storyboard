@@ -121,9 +121,6 @@
                                         <rect key="frame" x="0.0" y="3.6666666666666714" width="48" height="38"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrow-back-ios"/>
-                                        <connections>
-                                            <action selector="backButtonTapped:" destination="Fdk-M0-yjV" eventType="touchUpInside" id="Fdq-SX-fdl"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plogging Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4b-n8-8Sn">
                                         <rect key="frame" x="82.999999999999986" y="5.6666666666666714" width="202.66666666666663" height="33.666666666666664"/>
@@ -135,9 +132,6 @@
                                         <rect key="frame" x="320.66666666666669" y="0.0" width="52.333333333333314" height="45"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="search"/>
-                                        <connections>
-                                            <action selector="searchButton:" destination="Fdk-M0-yjV" eventType="touchUpInside" id="Mxg-qa-yd1"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -145,8 +139,8 @@
                                 <rect key="frame" x="0.0" y="121" width="393" height="649"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="j2T-Oh-1qM" id="F5A-vs-yC8"/>
-                                    <outlet property="delegate" destination="j2T-Oh-1qM" id="033-OQ-Dgw"/>
+                                    <outlet property="dataSource" destination="Fdk-M0-yjV" id="klf-8H-tMa"/>
+                                    <outlet property="delegate" destination="Fdk-M0-yjV" id="MKP-Hg-g9B"/>
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBd-Kj-HkF">
@@ -175,14 +169,55 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="hfo-Ih-rPL" id="RGC-IR-WRa"/>
-                        <outlet property="groupTableView" destination="NEF-1R-cnE" id="QEp-s5-ahD"/>
-                        <outlet property="searchButton" destination="R2F-U3-f9U" id="nID-3l-iVx"/>
+                        <outlet property="tableView" destination="NEF-1R-cnE" id="RZm-tr-xIH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYD-GQ-cxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4597.7099236641216" y="-1758.4507042253522"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mLu-qL-TMz">
+            <objects>
+                <viewController id="X4H-4B-tdL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IZK-gs-bss">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nsf-2z-TjO">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UWr-4z-qKS">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CtD-pb-Swa">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rpz-fm-FB3">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0VQ-Zb-Suj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nsf-2z-TjO" firstAttribute="leading" secondItem="0VQ-Zb-Suj" secondAttribute="leading" id="fNy-vj-PlV"/>
+                            <constraint firstItem="0VQ-Zb-Suj" firstAttribute="bottom" secondItem="Nsf-2z-TjO" secondAttribute="bottom" id="jEy-jL-1jl"/>
+                            <constraint firstItem="Nsf-2z-TjO" firstAttribute="top" secondItem="0VQ-Zb-Suj" secondAttribute="top" id="sbz-lr-lLj"/>
+                            <constraint firstItem="0VQ-Zb-Suj" firstAttribute="trailing" secondItem="Nsf-2z-TjO" secondAttribute="trailing" id="xJg-1g-Yn4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQm-tT-2CS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5263" y="-1758"/>
         </scene>
         <!--Detail Group View Controller-->
         <scene sceneID="zn0-Yi-lfJ">
@@ -257,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ka2-oc-Qxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5261.8320610687024" y="-1758.4507042253522"/>
+            <point key="canvasLocation" x="5937" y="-1758"/>
         </scene>
         <!--Item-->
         <scene sceneID="hFh-M2-BN3">
