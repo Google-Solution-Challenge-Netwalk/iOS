@@ -43,7 +43,6 @@ class NewGroupTableViewCell: UITableViewCell {
         print("NewGroupTableViewCell")
         print(#function)
         
-        
     }
     
     func configure(with categorys: [Category]){

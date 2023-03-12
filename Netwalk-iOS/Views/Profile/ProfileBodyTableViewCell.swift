@@ -1,46 +1,48 @@
 //
-//  TrashPhotoTableViewCell.swift
+//  ProfileBodyTableViewCell.swift
 //  Netwalk-iOS
 //
-//  Created by 이정동 on 2023/02/07.
+//  Created by 이정동 on 2023/03/08.
 //
 
 import UIKit
 
-class TrashPhotoTableViewCell: UITableViewCell {
-    
+class ProfileBodyTableViewCell: UITableViewCell {
+
     @IBOutlet weak var collectionView: UICollectionView!
     
     let flowLayout = UICollectionViewFlowLayout()
     
+    var didSelectItem: ((_ indexPath: IndexPath)->())? = nil
+    
     override func awakeFromNib() {
-        
         super.awakeFromNib()
         // Initialization code
         
         setupCollectionView()
-        requestTrashPhotos()
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
         // Configure the view for the selected state
     }
     
-    func setupCollectionView() {
-        collectionView.dataSource = self
+    
+    private func setupCollectionView() {
         collectionView.delegate = self
+        collectionView.dataSource = self
         
-        collectionView.register(UINib(nibName:"TrashPhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier:"TrashPhotoCollectionViewCell")
+        collectionView.register(UINib(nibName: "ProfileBodyCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProfileBodyCollectionViewCell")
         
         // 스크롤 방향
         flowLayout.scrollDirection = .vertical
         
         // UIScreen.main.bounds.width = 스크린 가로 사이즈
         // CVCell.spacingWidth * (CVCell.cellColumns - 1) = 셀 사이의 spacing 공간 개수
-        let collectionCellWidth = ((UIScreen.main.bounds.width - 20) - PhotoCVCell.spacingWitdh * (PhotoCVCell.cellColumns - 1)) / PhotoCVCell.cellColumns
+        let collectionCellWidth = (UIScreen.main.bounds.width - PhotoCVCell.spacingWitdh * (PhotoCVCell.cellColumns - 1)) / PhotoCVCell.cellColumns
         
-        flowLayout.itemSize = CGSize(width: collectionCellWidth, height: 200)
+        flowLayout.itemSize = CGSize(width: collectionCellWidth, height: collectionCellWidth)
         
         // 아이템 사이 간격 설정
         flowLayout.minimumInteritemSpacing = PhotoCVCell.spacingWitdh
@@ -50,22 +52,22 @@ class TrashPhotoTableViewCell: UITableViewCell {
         // 컬렉션뷰 속성에 flowLayout 할당
         collectionView.collectionViewLayout = flowLayout
     }
-    
-    func requestTrashPhotos() {
-        
-    }
-    
 }
 
-extension TrashPhotoTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ProfileBodyTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 29
+        return 30
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrashPhotoCollectionViewCell", for: indexPath) as! TrashPhotoCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileBodyCollectionViewCell", for: indexPath) as! ProfileBodyCollectionViewCell
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("클릭 \(indexPath.item)")
+        didSelectItem?(indexPath)
     }
     
     

@@ -24,11 +24,11 @@ class TabBarController: ESTabBarController {
         let vc4 = storyboard.instantiateViewController(withIdentifier: "RankingVC")
         let vc5 = storyboard.instantiateViewController(withIdentifier: "ProfileVC")
         
-        vc1.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: "Home", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_1"))
-        vc2.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: "Find", image: UIImage(named: "find"), selectedImage: UIImage(named: "find_1"))
+        vc1.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: "Group", image: UIImage(named: "group"), selectedImage: UIImage(named: "group"))
+        vc2.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: "Review", image: UIImage(named: "review"), selectedImage: UIImage(named: "reivew"))
         vc3.tabBarItem = ESTabBarItem.init(ExampleIrregularityContentView(), title: nil, image: UIImage(named: "photo_verybig"), selectedImage: UIImage(named: "photo_verybig_1"))
-        vc4.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: "Favor", image: UIImage(named: "favor"), selectedImage: UIImage(named: "favor_1"))
-        vc5.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: "Me", image: UIImage(named: "me"), selectedImage: UIImage(named: "me_1"))
+        vc4.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: "Rank", image: UIImage(named: "rank"), selectedImage: UIImage(named: "rank"))
+        vc5.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: "Profile", image: UIImage(named: "profile"), selectedImage: UIImage(named: "profile"))
         
         self.viewControllers = [vc1, vc2, vc3, vc4, vc5]
         self.selectedIndex = 2

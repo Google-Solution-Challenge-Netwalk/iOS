@@ -9,7 +9,7 @@ import UIKit
 import GoogleMaps
 import CoreLocation
 
-class PloggingViewController: UIViewController, UINavigationControllerDelegate {
+class PloggingViewController: UIViewController {
     
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var totalDistance: UILabel!
@@ -28,14 +28,11 @@ class PloggingViewController: UIViewController, UINavigationControllerDelegate {
     var mapView: GMSMapView!
     var ploggingStatus = false
     var timer = Timer()
+    var coordinates: [[Double]] = []
+    var count = 0
     
     let camera = UIImagePickerController()
-    let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm:ss"
-        return formatter
-    }()
-    
+    let path = GMSMutablePath()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,9 +42,10 @@ class PloggingViewController: UIViewController, UINavigationControllerDelegate {
         setupCamera()
     }
     
+    // MARK: - setupView
     func setupView() {
         // 맵뷰 불러오기
-        loadMapView()
+        setupMapView()
         topView.layer.cornerRadius = 10
         topView.layer.borderWidth = 1
         topView.layer.borderColor = UIColor.lightGray.cgColor
@@ -76,8 +74,9 @@ class PloggingViewController: UIViewController, UINavigationControllerDelegate {
         view.bringSubviewToFront(cameraInfoLabel)
     }
     
+    // MARK: - loadMapView
     // 맵 불러오기
-    func loadMapView() {
+    func setupMapView() {
         
         print(#function)
         let myLocation = locationManager.location?.coordinate // 현재 내 위치 가져오기
@@ -93,6 +92,7 @@ class PloggingViewController: UIViewController, UINavigationControllerDelegate {
         view.addSubview(mapView)
     }
     
+    // MARK: - setupCamera
     // 카메라 관련 설정
     func setupCamera() {
         camera.sourceType = .camera
@@ -102,6 +102,7 @@ class PloggingViewController: UIViewController, UINavigationControllerDelegate {
         camera.delegate = self
     }
     
+    // MARK: - setupLocation
     // 내 위치 불러오기
     func setupLocation() {
         print(#function)
@@ -119,6 +120,7 @@ class PloggingViewController: UIViewController, UINavigationControllerDelegate {
         }
     }
     
+    // MARK: - myLocationButtonTapped
     @IBAction func myLocationButtonTapped(_ sender: UIButton) {
         
         guard let lat = self.mapView.myLocation?.coordinate.latitude,
@@ -127,27 +129,39 @@ class PloggingViewController: UIViewController, UINavigationControllerDelegate {
         self.mapView.animate(to: camera)
     }
     
+    // MARK: - ploggingButtonTapped
     @IBAction func ploggingButtonTapped(_ sender: UIButton) {
-        if ploggingStatus { // 플로깅 활성화 상태
+        if !ploggingStatus { // 플로깅 시작
+            print("start")
+            
+            coordinates.removeAll() // 누적 좌표 데이터 삭제
+            path.removeAllCoordinates() // 누적 path 데이터 삭제
+            mapView.clear() // 지도위에 그려진 polyline 제거
+            
+            guard let myLocation = mapView.myLocation?.coordinate else { return }
+            coordinates.append([myLocation.latitude, myLocation.longitude])
+            path.add(myLocation)
+            
+            sender.setImage(UIImage(systemName: "stop.fill"), for: .normal)
+            cameraButton.isHidden = false
+            
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        } else { // 플로깅 종료
             print("stop")
             sender.setImage(UIImage(systemName: "play.fill"), for: .normal)
             cameraButton.isHidden = true
             timer.invalidate()
-        } else { // 플로깅 비활성화 상태
-            print("start")
-            sender.setImage(UIImage(systemName: "stop.fill"), for: .normal)
-            cameraButton.isHidden = false
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         }
         ploggingStatus = !ploggingStatus
-        //GoogleMapsNetManager.shared.getDistanceMatrix()
     }
     
+    // MARK: - groupButtonTapped
     @IBAction func groupButtonTapped(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "ActivateGroupsViewController") as! ActivateGroupsViewController
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    // MARK: - cameraButtonTapped
     @IBAction func cameraButtonTapped(_ sender: UIButton) {
         
         let actionSheet = UIAlertController(title: "title", message: "message", preferredStyle: .actionSheet)
@@ -170,13 +184,37 @@ class PloggingViewController: UIViewController, UINavigationControllerDelegate {
         present(actionSheet, animated: true)
     }
     
-    
-    
+    // MARK: - updateCounter
     @objc func updateCounter() {
-        print("-")
-        var hrs = dateFormatter.date(from: totalTime.text!)!
+        count += 1
+        
+        if count == 3 {
+            guard let myLocation = mapView.myLocation?.coordinate else { return }
+            
+            // 두 좌표사이 거리 계산
+            var distance = distance(lat1: coordinates.last![0], lon1: coordinates.last![1], lat2: myLocation.latitude, lon2: myLocation.longitude, unit: "K")
+            
+            if distance.isNaN { distance = 0.0 }
+            
+            let totalDst = Double(totalDistance.text!)!
+            totalDistance.text = "\(round((totalDst + distance) * 100) / 100)"
+            
+            coordinates.append([myLocation.latitude, myLocation.longitude]) // 현재 좌표 데이터 추가
+            path.add(myLocation) // path 데이터 추가
+            
+            let polyline = GMSPolyline(path: path)
+            polyline.strokeWidth = 5
+            polyline.geodesic = true
+            polyline.map = mapView
+            
+            count = 0
+        }
+        
+        var hrs = CustomDateFormatter.format.date(from: totalTime.text!)!
         hrs.addTimeInterval(1)
-        totalTime.text = dateFormatter.string(from: hrs)
+        totalTime.text = CustomDateFormatter.format.string(from: hrs)
+        
+        
     }
 
 }
@@ -186,16 +224,19 @@ extension PloggingViewController: GMSMapViewDelegate {
     
 }
 
+// MARK: - NavigationControllerDelegate
+extension PloggingViewController: UINavigationControllerDelegate {
+    
+}
+
 // MARK: - CLLocationManagerDelegate
 extension PloggingViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        // 몇 초마다 호출되는지 체크해보기
-        print(#function)
         
         if let location = locations.first {
-            print("위도: \(location.coordinate.latitude)")
-            print("경도: \(location.coordinate.longitude)")
+//            print("위도: \(location.coordinate.latitude)")
+//            print("경도: \(location.coordinate.longitude)")
             
             // 위치 업데이트할 때마다 카메라 위치 이동
             let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
@@ -207,18 +248,33 @@ extension PloggingViewController: CLLocationManagerDelegate {
 
 }
 
+// MARK: - UIImagePickerControllerDelegate
 extension PloggingViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
+        print(#function)
         guard let image = info[.originalImage] as? UIImage else { return }
-        print(image)
         
         // 인공지능 네트워킹 처리
         
-        picker.dismiss(animated: true)
+        let alert = UIAlertController(title: "처리 중...", message: "잠시만 기다려주세요.", preferredStyle: .alert)
+        
+        picker.present(alert, animated: true) {
+            AINetManager.shared.requestTrashtDetection(image: image) {
+                alert.dismiss(animated: true)
+                picker.dismiss(animated: true)
+            }
+        }
+        
+        /// 1. AI 서버로 이미지 전송
+        
+        /// 2. 응답 결과 값을 REST_API 서버로 전송 (Create)
+        /// 3. 쓰레기 앨범 화면에서 네트워킹 통신으로 데이터 받아오기
+        
+        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
         picker.dismiss(animated: true)
     }
     

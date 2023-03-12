@@ -51,7 +51,7 @@ extension TrashAlbumViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return 120
+            return 110
         case 1:
             return tableView.frame.height - 120
         default:
