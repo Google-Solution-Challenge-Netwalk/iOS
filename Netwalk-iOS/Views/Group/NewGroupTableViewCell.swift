@@ -7,10 +7,18 @@
 
 import UIKit
 
+struct CategoryCVCell {
+    static let spacingWitdh: CGFloat = 1
+    static let cellRows: CGFloat = 2
+    private init() {}
+}
+
 class NewGroupTableViewCell: UITableViewCell {
     
     @IBOutlet weak var categoryTitle: UILabel!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
+    
+    let flowLayout = UICollectionViewFlowLayout()
     
     
     static func nib() -> UINib {
@@ -27,7 +35,6 @@ class NewGroupTableViewCell: UITableViewCell {
         print(#function)
         
         setUpCollectionView()
-        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -48,6 +55,17 @@ class NewGroupTableViewCell: UITableViewCell {
         categoryCollectionView.delegate = self
         
         categoryCollectionView.register(UINib(nibName: "CategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoryCollectionViewCell")
+        
+        flowLayout.scrollDirection = .horizontal
+        
+        let collectionCellHeight = 138 - CategoryCVCell.spacingWitdh * (CategoryCVCell.cellRows - 1) / CategoryCVCell.cellRows
+        
+        flowLayout.itemSize = CGSize(width: collectionCellHeight, height: collectionCellHeight)
+        
+        flowLayout.minimumInteritemSpacing = CategoryCVCell.spacingWitdh
+        flowLayout.minimumLineSpacing = CategoryCVCell.spacingWitdh
+        
+        categoryCollectionView.collectionViewLayout = flowLayout
     }
 }
 
@@ -62,8 +80,8 @@ extension NewGroupTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
     
-    func collectionView(_ colletionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemA: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 200)
-    }
+//    func collectionView(_ colletionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemA: IndexPath) -> CGSize {
+//        return CGSize(width: 200, height: 200)
+//    }
     
 }
