@@ -39,6 +39,8 @@
 		57F2F06D29BCDA6E008605F5 /* PloggingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2F06C29BCDA6E008605F5 /* PloggingDetailViewController.swift */; };
 		57F2F06F29BDC181008605F5 /* UserNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2F06E29BDC181008605F5 /* UserNetManager.swift */; };
 		57F2F07129BDC28A008605F5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2F07029BDC28A008605F5 /* User.swift */; };
+		57F2F07329BE4649008605F5 /* PloggingNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2F07229BE4649008605F5 /* PloggingNetManager.swift */; };
+		57F2F07529BE4688008605F5 /* Plogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2F07429BE4688008605F5 /* Plogging.swift */; };
 		7AA3F62EF603725162AB6B74 /* Pods_Netwalk_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */; };
 		95161D31299B981E002B86BA /* DetailGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95161D30299B981E002B86BA /* DetailGroupViewController.swift */; };
 		95161D34299BA71E002B86BA /* DetailGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95161D32299BA71E002B86BA /* DetailGroupTableViewCell.swift */; };
@@ -124,6 +126,8 @@
 		57F2F06C29BCDA6E008605F5 /* PloggingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PloggingDetailViewController.swift; sourceTree = "<group>"; };
 		57F2F06E29BDC181008605F5 /* UserNetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetManager.swift; sourceTree = "<group>"; };
 		57F2F07029BDC28A008605F5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		57F2F07229BE4649008605F5 /* PloggingNetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PloggingNetManager.swift; sourceTree = "<group>"; };
+		57F2F07429BE4688008605F5 /* Plogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plogging.swift; sourceTree = "<group>"; };
 		5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netwalk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95161D30299B981E002B86BA /* DetailGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGroupViewController.swift; sourceTree = "<group>"; };
 		95161D32299BA71E002B86BA /* DetailGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 			children = (
 				576B64B8299807B0002609FA /* AINetManager.swift */,
 				57F2F06E29BDC181008605F5 /* UserNetManager.swift */,
+				57F2F07229BE4649008605F5 /* PloggingNetManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				95EFDD36299A61E20005BAE7 /* Category.swift */,
 				57F2F07029BDC28A008605F5 /* User.swift */,
 				95231F8629BE41F200B77123 /* ActiveUser.swift */,
+				57F2F07429BE4688008605F5 /* Plogging.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -601,6 +607,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95D3695C29BE362700106F5B /* TypeCollectionViewCell.swift in Sources */,
+				57F2F07329BE4649008605F5 /* PloggingNetManager.swift in Sources */,
 				57D88FE2298AD42C00C33F29 /* PloggingViewController.swift in Sources */,
 				57D88FDA298AD32800C33F29 /* ExampleBouncesContentView.swift in Sources */,
 				57D88FE4298AD43500C33F29 /* RankingViewController.swift in Sources */,
@@ -640,6 +647,7 @@
 				95D3696629BE368C00106F5B /* GroupCollectionViewCell.swift in Sources */,
 				57F2F06529B8BCB8008605F5 /* ReviewTableViewCell.swift in Sources */,
 				95EFDD27299A50E00005BAE7 /* MyGroupTableViewCell.swift in Sources */,
+				57F2F07529BE4688008605F5 /* Plogging.swift in Sources */,
 				57E4FDA129928AEE00C8E082 /* TrashPhotoTableViewCell.swift in Sources */,
 				95EFDD37299A61E20005BAE7 /* Category.swift in Sources */,
 				95161D31299B981E002B86BA /* DetailGroupViewController.swift in Sources */,
