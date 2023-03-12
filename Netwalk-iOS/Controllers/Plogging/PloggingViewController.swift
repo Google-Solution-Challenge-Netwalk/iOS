@@ -232,19 +232,19 @@ extension PloggingViewController: UINavigationControllerDelegate {
 // MARK: - CLLocationManagerDelegate
 extension PloggingViewController: CLLocationManagerDelegate {
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        if let location = locations.first {
-//            print("위도: \(location.coordinate.latitude)")
-//            print("경도: \(location.coordinate.longitude)")
-            
-            // 위치 업데이트할 때마다 카메라 위치 이동
-            let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-            let cam = GMSCameraUpdate.setTarget(coordinate)
-            mapView.animate(with: cam)
-            
-        }
-    }
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//
+//        if let location = locations.first {
+////            print("위도: \(location.coordinate.latitude)")
+////            print("경도: \(location.coordinate.longitude)")
+//
+//            // 위치 업데이트할 때마다 카메라 위치 이동
+//            let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+//            let cam = GMSCameraUpdate.setTarget(coordinate)
+//            mapView.animate(with: cam)
+//
+//        }
+//    }
 
 }
 
