@@ -11,7 +11,7 @@ class UserNetManager {
     static let shared = UserNetManager()
     private init() {}
     
-    func login(user: User, completion: @escaping()->()) {
+    func login(user: User, completion: @escaping(Int)->()) {
         
         let urlKey = Bundle.main.getSecretKey(key: "REST_API_URL")
         
@@ -45,16 +45,17 @@ class UserNetManager {
                 return
             }
             
-//            if let safeData = data {
-//                do {
-//                    let decodedData = try JSONDecoder().decode(User.self, from: safeData)
-//                    dump(decodedData)
-//                    completion(decodedData)
-//                } catch {
-//                    print("Decode Error")
-//                }
-//            }
-            completion()
+            if let safeData = data {
+                do {
+                    let decodedData = try JSONDecoder().decode(User.self, from: safeData)
+                    dump(decodedData)
+                
+                    completion(decodedData.user_no!)
+                } catch {
+                    print("Decode Error")
+                }
+            }
+            //completion()
             
         }.resume()
     }
