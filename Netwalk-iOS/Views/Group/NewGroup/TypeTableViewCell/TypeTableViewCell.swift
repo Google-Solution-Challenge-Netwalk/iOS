@@ -27,7 +27,6 @@ class TypeTableViewCell: UITableViewCell {
         
         collectionView.register(UINib(nibName: TypeCollectionViewCell.className, bundle: nil), forCellWithReuseIdentifier : TypeCollectionViewCell.cellId)
         
-        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
