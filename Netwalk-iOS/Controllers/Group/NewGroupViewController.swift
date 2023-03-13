@@ -9,7 +9,7 @@ import UIKit
 
 class NewGroupViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var searchButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,11 @@ class NewGroupViewController: UIViewController {
         tableView.register(UINib(nibName: GroupTableViewCell.className, bundle: nil), forCellReuseIdentifier: GroupTableViewCell.cellId)
     }
 
-
+    @IBAction func searchButtonTapped(_ sender: UIButton) {
+        let detailGroupVC = storyboard?.instantiateViewController(withIdentifier: "DetailGroupVC") as! DetailGroupViewController
+        navigationController?.pushViewController(detailGroupVC, animated: true)
+    }
+    
 }
 
 extension NewGroupViewController: UITableViewDelegate, UITableViewDataSource {

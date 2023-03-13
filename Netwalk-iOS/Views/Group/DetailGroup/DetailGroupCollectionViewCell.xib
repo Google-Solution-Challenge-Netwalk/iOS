@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DetailGroupCollectionViewCell" id="gTV-IL-0wX" customClass="DetailGroupCollectionViewCell" customModule="Netwalk_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="90" height="160"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overseas" id="9Bb-zh-oR7">
+                        <rect key="frame" x="4.9079939668175143" y="13" width="79.999999999999972" height="79.999999999999986"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kxg-9J-fqk">
+                        <rect key="frame" x="10" y="103" width="70" height="47"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="We1-mu-1LK">
+                                <rect key="frame" x="16.333333333333332" y="0.0" width="37.333333333333343" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrv-gi-Kkc">
+                                <rect key="frame" x="16.333333333333332" y="18" width="37.333333333333343" height="11"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AX5-KO-Bmy">
+                                <rect key="frame" x="16.333333333333332" y="29" width="37.333333333333343" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Kxg-9J-fqk" secondAttribute="trailing" constant="10" id="TEj-Da-AsN"/>
+                <constraint firstItem="Kxg-9J-fqk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="q4P-km-DIq"/>
+                <constraint firstAttribute="bottom" secondItem="Kxg-9J-fqk" secondAttribute="bottom" constant="10" id="qKX-Hw-AFf"/>
+                <constraint firstItem="Kxg-9J-fqk" firstAttribute="top" secondItem="9Bb-zh-oR7" secondAttribute="bottom" constant="10" id="wV1-O9-SDC"/>
+            </constraints>
+            <size key="customSize" width="127" height="200"/>
+            <connections>
+                <outlet property="userImage" destination="9Bb-zh-oR7" id="vAq-Dn-mS8"/>
+                <outlet property="userKm" destination="AX5-KO-Bmy" id="XaH-BB-mjW"/>
+                <outlet property="userName" destination="We1-mu-1LK" id="fu4-CS-yX6"/>
+                <outlet property="userTime" destination="nrv-gi-Kkc" id="oTY-Yw-VSc"/>
+            </connections>
+            <point key="canvasLocation" x="176.33587786259542" y="11.267605633802818"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="overseas" width="121" height="121"/>
+    </resources>
+</document>
