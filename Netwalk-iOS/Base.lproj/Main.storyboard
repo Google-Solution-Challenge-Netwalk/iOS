@@ -132,6 +132,9 @@
                                         <rect key="frame" x="320.66666666666669" y="0.0" width="52.333333333333314" height="45"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="search"/>
+                                        <connections>
+                                            <action selector="searchButtonTapped:" destination="Fdk-M0-yjV" eventType="touchUpInside" id="0la-9T-TfJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -169,6 +172,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchButton" destination="R2F-U3-f9U" id="5Sb-cP-1Iq"/>
                         <outlet property="tableView" destination="NEF-1R-cnE" id="RZm-tr-xIH"/>
                     </connections>
                 </viewController>
@@ -234,9 +238,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="38"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrow-back-ios"/>
-                                        <connections>
-                                            <action selector="backButtonTapped:" destination="tfe-hF-V7j" eventType="touchUpInside" id="0Jh-Ti-ug0"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울숲 플로깅해요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBy-6i-kLk">
                                         <rect key="frame" x="84.333333333333314" y="2.3333333333333286" width="200" height="33.666666666666664"/>
@@ -286,8 +287,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="vUq-CE-jBU" id="U53-Vu-R7R"/>
-                        <outlet property="detailGroupTableView" destination="dmY-c9-zP9" id="JlI-gZ-Mzj"/>
+                        <outlet property="tableView" destination="dmY-c9-zP9" id="r4z-uf-nwB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ka2-oc-Qxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
