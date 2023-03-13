@@ -50,7 +50,7 @@ extension NewGroupViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.row{
         case 0:
-            return 250
+            return 200
 //        case 1:
 //            return (width + 40 + 3) * 5 + 40
         default:
