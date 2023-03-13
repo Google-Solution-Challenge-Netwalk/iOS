@@ -1,71 +1,62 @@
 //
-//  NewGroupViewController.swift
-//  Netwalk-iOS
+//  ViewController.swift
+//  CollectionViewinTableView
 //
-//  Created by 지윤 on 2023/02/13.
+//  Created by jh on 2022/01/02.
 //
+
 import UIKit
 
 class NewGroupViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var groupTableView: UITableView!
-    @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var searchButton: UIButton!
-    
-    var categorys = [Category]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
-        setUpTableView()
+        tableView.register(UINib(nibName: TypeTableViewCell.className, bundle: nil), forCellReuseIdentifier: TypeTableViewCell.cellId)
         
+//        tableView.register(UINib(nibName: Collection2TableViewCell.className, bundle: nil), forCellReuseIdentifier: Collection2TableViewCell.cellId)
     }
-    
-    func setUpTableView(){
-        print("NewGroupViewController")
-        print(#function)
-        categorys.append(Category(imageName: "overseas", title: "overseas"))
-        categorys.append(Category(imageName: "overseas", title: "overseas"))
-        categorys.append(Category(imageName: "overseas", title: "overseas"))
-        categorys.append(Category(imageName: "overseas", title: "overseas"))
-        categorys.append(Category(imageName: "overseas", title: "overseas"))
-        groupTableView.delegate = self
-        groupTableView.dataSource = self
-        groupTableView.register(UINib(nibName:"NewGroupTableViewCell", bundle:nil), forCellReuseIdentifier: "NewGroupTableViewCell")
-        groupTableView.separatorStyle = .none
-    }
-    
-    @IBAction func searchButton(_ sender: UIButton) {
-        let detailGroupVC = storyboard?.instantiateViewController(withIdentifier: "DetailGroupVC") as! DetailGroupViewController
-        navigationController?.pushViewController(detailGroupVC, animated: true)
-    }
-    
-    @IBAction func backButtonTapped(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-    }
+
+
 }
 
 extension NewGroupViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)
-    -> Int {
-            return 1
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.row{
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: TypeTableViewCell.cellId, for: indexPath) as! TypeTableViewCell
+            cell.configure()
+            return cell
+//        case 1:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: Collection2TableViewCell.cellId, for: indexPath) as! Collection2TableViewCell
+////            cell.configure()
+//            return cell
+            
+        default:
+            return UITableViewCell()
+        }
         
-        print("NewGroupViewController")
-        print(#function)
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NewGroupTableViewCell", for: indexPath) as! NewGroupTableViewCell
-        
-        cell.categoryTitle.text = "Category"
-        cell.configure(with: categorys)
-        
-        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 210
+//        let interval:CGFloat = 3
+//        let width: CGFloat = ( UIScreen.main.bounds.width - interval * 3 ) / 2
+        
+        switch indexPath.row{
+        case 0:
+            return 200
+//        case 1:
+//            return (width + 40 + 3) * 5 + 40
+        default:
+            return 0
+        }
+        
+        
     }
-    
 }
