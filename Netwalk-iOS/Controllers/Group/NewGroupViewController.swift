@@ -49,7 +49,7 @@ extension NewGroupViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.row{
         case 0:
-            return 200
+            return 170
         case 1:
             return 500
         default:
