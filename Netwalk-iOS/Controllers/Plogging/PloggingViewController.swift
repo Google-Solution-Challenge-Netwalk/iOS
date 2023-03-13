@@ -28,7 +28,8 @@ class PloggingViewController: UIViewController {
     var mapView: GMSMapView!
     var ploggingStatus = false
     var timer = Timer()
-    var coordinates: [[Double]] = []
+    //var coordinates: [[Double]] = []
+    var coordinates: [Coordinate] = []
     var count = 0
     
     let camera = UIImagePickerController()
@@ -139,7 +140,8 @@ class PloggingViewController: UIViewController {
             mapView.clear() // 지도위에 그려진 polyline 제거
             
             guard let myLocation = mapView.myLocation?.coordinate else { return }
-            coordinates.append([myLocation.latitude, myLocation.longitude])
+            let coor = Coordinate(lat: myLocation.latitude, log: myLocation.longitude)
+            coordinates.append(coor)
             path.add(myLocation)
             
             sender.setImage(UIImage(systemName: "stop.fill"), for: .normal)
@@ -192,14 +194,15 @@ class PloggingViewController: UIViewController {
             guard let myLocation = mapView.myLocation?.coordinate else { return }
             
             // 두 좌표사이 거리 계산
-            var distance = distance(lat1: coordinates.last![0], lon1: coordinates.last![1], lat2: myLocation.latitude, lon2: myLocation.longitude, unit: "K")
+            var distance = distance(lat1: coordinates.last!.lat, lon1: coordinates.last!.log, lat2: myLocation.latitude, lon2: myLocation.longitude, unit: "K")
             
             if distance.isNaN { distance = 0.0 }
             
             let totalDst = Double(totalDistance.text!)!
             totalDistance.text = "\(round((totalDst + distance) * 100) / 100)"
             
-            coordinates.append([myLocation.latitude, myLocation.longitude]) // 현재 좌표 데이터 추가
+            // 현재 좌표 데이터 추가
+            coordinates.append(Coordinate(lat: myLocation.latitude, log: myLocation.longitude))
             path.add(myLocation) // path 데이터 추가
             
             let polyline = GMSPolyline(path: path)
