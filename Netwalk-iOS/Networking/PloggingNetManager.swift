@@ -7,10 +7,7 @@
 
 import Foundation
 
-
 class PloggingNetManager {
     static let shared = PloggingNetManager()
     private init() {}
-    
-    
 }
