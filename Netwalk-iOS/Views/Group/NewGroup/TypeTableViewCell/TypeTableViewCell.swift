@@ -7,6 +7,7 @@
 
 import UIKit
 
+    
 class TypeTableViewCell: UITableViewCell {
     
     static let cellId = "TypeTableViewCell"
@@ -26,6 +27,7 @@ class TypeTableViewCell: UITableViewCell {
         
         collectionView.register(UINib(nibName: TypeCollectionViewCell.className, bundle: nil), forCellWithReuseIdentifier : TypeCollectionViewCell.cellId)
         
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -42,13 +44,12 @@ extension TypeTableViewCell: UICollectionViewDataSource, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TypeCollectionViewCell.cellId, for: indexPath) as! TypeCollectionViewCell
-        cell.configure()
+//        cell.configure()
         //        cell.configure(with: model[indexPath.row])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 200)
+        return CGSize(width: 110, height: 110)
     }
 }
-

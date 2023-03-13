@@ -13,8 +13,9 @@ class TypeCollectionViewCell: UICollectionViewCell {
     static let cellId = "TypeCollectionViewCell"
     static let className = "TypeCollectionViewCell"
     
-    @IBOutlet var myLabel: UILabel!
-    @IBOutlet var myImageView: UIImageView!
+    
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var typeImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,8 +25,9 @@ class TypeCollectionViewCell: UICollectionViewCell {
     
     // data model 넣으면 됨
     public func configure() {
-        myLabel.text = "123421321321"
-        myImageView.tintColor = .blue
+        let image = UIImage(named: "overseas.png")
+        typeLabel.text = "overseas"
+        typeImage.image = image
     }
 
 }
