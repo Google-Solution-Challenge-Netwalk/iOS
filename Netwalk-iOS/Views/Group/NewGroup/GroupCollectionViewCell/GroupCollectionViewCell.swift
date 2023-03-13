@@ -8,10 +8,21 @@
 import UIKit
 
 class GroupCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var groupImage: UIImageView!
+    @IBOutlet weak var groupLabel: UILabel!
+    
+    static let cellId = "GroupCollectionViewCell"
+    static let className = "GroupCollectionViewCell"
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    public func configure() {
+//        titleLbl.text = "aaaaaaaaaaaaa"
+//        imageView.tintColor = .blue
     }
 
 }
