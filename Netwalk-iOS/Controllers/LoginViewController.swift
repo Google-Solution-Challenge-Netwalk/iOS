@@ -8,15 +8,10 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
-    @IBAction func testLoginButtonTapped(_ sender: UIButton) {
-        
+    @IBOutlet weak var loginButton: UIImageView!
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         // 로그인 네트워킹 시작
         let user = User(email: "test@naver.com", name: "tester")
         
@@ -28,8 +23,14 @@ class LoginViewController: UIViewController {
                 (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(tabBarVC)
             }
         }
-        
-        
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let tapImageViewRecognizer
+        = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        loginButton.isUserInteractionEnabled = true
+        loginButton.addGestureRecognizer(tapImageViewRecognizer)
+        
+    }
 }
