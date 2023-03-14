@@ -18,23 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SkN-YF-fTv">
-                                <rect key="frame" x="159" y="409" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="testLoginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RjR-Wy-0GK"/>
-                                </connections>
-                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ygz-dZ-TD9">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleLogin" translatesAutoresizingMaskIntoConstraints="NO" id="LWo-QO-qRe">
+                                <rect key="frame" x="50" y="539" width="293" height="55"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ygz-dZ-TD9" secondAttribute="bottom" id="2RR-4M-0YW"/>
+                            <constraint firstItem="Ygz-dZ-TD9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8aA-Pa-c2X"/>
+                            <constraint firstItem="LWo-QO-qRe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="480" id="Adu-8H-74j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LWo-QO-qRe" secondAttribute="bottom" constant="224" id="PlU-mC-HGZ"/>
+                            <constraint firstAttribute="trailing" secondItem="LWo-QO-qRe" secondAttribute="trailing" constant="50" id="cCz-nS-EUj"/>
+                            <constraint firstItem="LWo-QO-qRe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="dOC-5B-gZi"/>
+                            <constraint firstItem="Ygz-dZ-TD9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fTU-h6-NgX"/>
+                            <constraint firstItem="Ygz-dZ-TD9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="59" id="hba-6n-t1T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ygz-dZ-TD9" secondAttribute="trailing" id="kPz-YW-gPe"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="LWo-QO-qRe" id="JQd-OD-a0O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="91" y="-54"/>
+            <point key="canvasLocation" x="90.839694656488547" y="-54.225352112676056"/>
         </scene>
         <!--My Group View Controller-->
         <scene sceneID="k81-GJ-Rzq">
@@ -767,11 +778,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="appleLogin" width="987" height="183"/>
         <image name="arrow-back-ios" width="24" height="24"/>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="clock.arrow.circlepath" catalog="system" width="128" height="112"/>
         <image name="figure.walk.motion" catalog="system" width="128" height="112"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
+        <image name="loginImage" width="1179" height="2556"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="plus" width="22" height="21"/>
