@@ -28,7 +28,6 @@ class PloggingViewController: UIViewController {
     var mapView: GMSMapView!
     var ploggingStatus = false
     var timer = Timer()
-    //var coordinates: [[Double]] = []
     var coordinates: [Coordinate] = []
     var count = 0
     
@@ -145,14 +144,19 @@ class PloggingViewController: UIViewController {
             path.add(myLocation)
             
             sender.setImage(UIImage(systemName: "stop.fill"), for: .normal)
-            cameraButton.isHidden = false
+            //cameraButton.isHidden = false
             
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         } else { // 플로깅 종료
             print("stop")
             sender.setImage(UIImage(systemName: "play.fill"), for: .normal)
-            cameraButton.isHidden = true
+            //cameraButton.isHidden = true
             timer.invalidate()
+            
+            let ploggingData = Plogging(userNo: 10, groupNo: 4, totalActDist: 10, totalActTime: 10, shareState: 0, customList: coordinates)
+            PloggingNetManager.shared.create(ploggingData) {
+                print("종료")
+            }
         }
         ploggingStatus = !ploggingStatus
     }
