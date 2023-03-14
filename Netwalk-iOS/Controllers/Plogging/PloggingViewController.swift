@@ -28,7 +28,7 @@ class PloggingViewController: UIViewController {
     var mapView: GMSMapView!
     var ploggingStatus = false
     var timer = Timer()
-    var coordinates: [[Double]] = []
+    var coordinates: [Coordinate] = []
     var count = 0
     
     let camera = UIImagePickerController()
@@ -43,7 +43,7 @@ class PloggingViewController: UIViewController {
     }
     
     // MARK: - setupView
-    func setupView() {
+    private func setupView() {
         // 맵뷰 불러오기
         setupMapView()
         topView.layer.cornerRadius = 10
@@ -76,7 +76,7 @@ class PloggingViewController: UIViewController {
     
     // MARK: - loadMapView
     // 맵 불러오기
-    func setupMapView() {
+    private func setupMapView() {
         
         print(#function)
         let myLocation = locationManager.location?.coordinate // 현재 내 위치 가져오기
@@ -94,7 +94,7 @@ class PloggingViewController: UIViewController {
     
     // MARK: - setupCamera
     // 카메라 관련 설정
-    func setupCamera() {
+    private func setupCamera() {
         camera.sourceType = .camera
         camera.allowsEditing = false
         camera.cameraDevice = .rear
@@ -104,7 +104,7 @@ class PloggingViewController: UIViewController {
     
     // MARK: - setupLocation
     // 내 위치 불러오기
-    func setupLocation() {
+    private func setupLocation() {
         print(#function)
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest // 거리 정확도 설정
@@ -120,6 +120,37 @@ class PloggingViewController: UIViewController {
         }
     }
     
+    private func startPlogging() {
+        print("start")
+        
+        totalTime.text = "00:00:00"
+        totalDistance.text = "0.00"
+        
+        coordinates.removeAll() // 누적 좌표 데이터 삭제
+        path.removeAllCoordinates() // 누적 path 데이터 삭제
+        mapView.clear() // 지도위에 그려진 polyline 제거
+        
+        guard let myLocation = mapView.myLocation?.coordinate else { return }
+        let coor = Coordinate(lat: myLocation.latitude, log: myLocation.longitude)
+        coordinates.append(coor)
+        path.add(myLocation)
+        //cameraButton.isHidden = false
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+    }
+    
+    private func stopPlogging() {
+        print("stop")
+        timer.invalidate()
+        
+        //cameraButton.isHidden = true
+        
+        let ploggingData = Plogging(userNo: 10, groupNo: 4, totalActDist: 10, totalActTime: 10, shareState: 0, customList: coordinates)
+        PloggingNetManager.shared.create(ploggingData) {
+            print("종료")
+        }
+    }
+    
     // MARK: - myLocationButtonTapped
     @IBAction func myLocationButtonTapped(_ sender: UIButton) {
         
@@ -131,28 +162,38 @@ class PloggingViewController: UIViewController {
     
     // MARK: - ploggingButtonTapped
     @IBAction func ploggingButtonTapped(_ sender: UIButton) {
-        if !ploggingStatus { // 플로깅 시작
-            print("start")
+        if !ploggingStatus {
             
-            coordinates.removeAll() // 누적 좌표 데이터 삭제
-            path.removeAllCoordinates() // 누적 path 데이터 삭제
-            mapView.clear() // 지도위에 그려진 polyline 제거
+            let alert = UIAlertController(title: "플로깅 시작", message: "플로깅을 시작하시겠습니까?", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "시작", style: .default) { _ in
+                sender.setImage(UIImage(systemName: "stop.fill"), for: .normal)
+                self.startPlogging() // 플로깅 시작
+                self.ploggingStatus = !self.ploggingStatus
+            }
             
-            guard let myLocation = mapView.myLocation?.coordinate else { return }
-            coordinates.append([myLocation.latitude, myLocation.longitude])
-            path.add(myLocation)
+            let cancel = UIAlertAction(title: "취소", style: .cancel)
             
-            sender.setImage(UIImage(systemName: "stop.fill"), for: .normal)
-            cameraButton.isHidden = false
+            alert.addAction(ok)
+            alert.addAction(cancel)
             
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
-        } else { // 플로깅 종료
-            print("stop")
-            sender.setImage(UIImage(systemName: "play.fill"), for: .normal)
-            cameraButton.isHidden = true
-            timer.invalidate()
+            present(alert, animated: true)
+            
+        } else {
+            
+            let alert = UIAlertController(title: "플로깅 종료", message: "진행중인 플로깅을 종료하시겠습니까?", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "종료", style: .default) { _ in
+                sender.setImage(UIImage(systemName: "play.fill"), for: .normal)
+                self.stopPlogging()
+                self.ploggingStatus = !self.ploggingStatus
+            }
+            let cancel = UIAlertAction(title: "취소", style: .cancel)
+            
+            alert.addAction(ok)
+            alert.addAction(cancel)
+            
+            present(alert, animated: true)
         }
-        ploggingStatus = !ploggingStatus
+        
     }
     
     // MARK: - groupButtonTapped
@@ -192,14 +233,15 @@ class PloggingViewController: UIViewController {
             guard let myLocation = mapView.myLocation?.coordinate else { return }
             
             // 두 좌표사이 거리 계산
-            var distance = distance(lat1: coordinates.last![0], lon1: coordinates.last![1], lat2: myLocation.latitude, lon2: myLocation.longitude, unit: "K")
+            var distance = distance(lat1: coordinates.last!.lat, lon1: coordinates.last!.log, lat2: myLocation.latitude, lon2: myLocation.longitude, unit: "K")
             
             if distance.isNaN { distance = 0.0 }
             
             let totalDst = Double(totalDistance.text!)!
             totalDistance.text = "\(round((totalDst + distance) * 100) / 100)"
             
-            coordinates.append([myLocation.latitude, myLocation.longitude]) // 현재 좌표 데이터 추가
+            // 현재 좌표 데이터 추가
+            coordinates.append(Coordinate(lat: myLocation.latitude, log: myLocation.longitude))
             path.add(myLocation) // path 데이터 추가
             
             let polyline = GMSPolyline(path: path)
@@ -232,19 +274,19 @@ extension PloggingViewController: UINavigationControllerDelegate {
 // MARK: - CLLocationManagerDelegate
 extension PloggingViewController: CLLocationManagerDelegate {
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        if let location = locations.first {
-//            print("위도: \(location.coordinate.latitude)")
-//            print("경도: \(location.coordinate.longitude)")
-            
-            // 위치 업데이트할 때마다 카메라 위치 이동
-            let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-            let cam = GMSCameraUpdate.setTarget(coordinate)
-            mapView.animate(with: cam)
-            
-        }
-    }
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//
+//        if let location = locations.first {
+////            print("위도: \(location.coordinate.latitude)")
+////            print("경도: \(location.coordinate.longitude)")
+//
+//            // 위치 업데이트할 때마다 카메라 위치 이동
+//            let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+//            let cam = GMSCameraUpdate.setTarget(coordinate)
+//            mapView.animate(with: cam)
+//
+//        }
+//    }
 
 }
 

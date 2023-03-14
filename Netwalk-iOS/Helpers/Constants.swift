@@ -26,3 +26,7 @@ struct PhotoCVCell {
 }
 
 
+enum UserDefaultsKey {
+    static let key = "user"
+}
+

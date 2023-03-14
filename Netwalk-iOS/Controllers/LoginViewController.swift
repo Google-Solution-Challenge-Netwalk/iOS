@@ -13,9 +13,13 @@ class LoginViewController: UIViewController {
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         // 로그인 네트워킹 시작
-        let user = User(email: "test@naver.com", name: "tester")
+        var user = User(email: "test@naver.com", name: "tester")
         
-        UserNetManager.shared.login(user: user) {
+        UserNetManager.shared.login(user: user) { no in
+            user.user_no = no
+            
+            //UserDefaults.standard.setLoginUser(user: user)
+            
             DispatchQueue.main.async {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let tabBarVC = storyboard.instantiateViewController(identifier: "TabBarVC")
