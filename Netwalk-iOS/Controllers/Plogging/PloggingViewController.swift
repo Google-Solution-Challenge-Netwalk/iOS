@@ -164,9 +164,19 @@ class PloggingViewController: UIViewController {
     @IBAction func ploggingButtonTapped(_ sender: UIButton) {
         if !ploggingStatus {
             
-            startPlogging() // 플로깅 시작
-            sender.setImage(UIImage(systemName: "stop.fill"), for: .normal)
-            ploggingStatus = !ploggingStatus
+            let alert = UIAlertController(title: "플로깅 시작", message: "플로깅을 시작하시겠습니까?", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "시작", style: .default) { _ in
+                sender.setImage(UIImage(systemName: "stop.fill"), for: .normal)
+                self.startPlogging() // 플로깅 시작
+                self.ploggingStatus = !self.ploggingStatus
+            }
+            
+            let cancel = UIAlertAction(title: "취소", style: .cancel)
+            
+            alert.addAction(ok)
+            alert.addAction(cancel)
+            
+            present(alert, animated: true)
             
         } else {
             
