@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Plogging: Codable {
+struct Activity: Codable {
     var userNo: Int
     var groupNo: Int
     var totalActDist: Double

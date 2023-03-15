@@ -40,8 +40,11 @@
 		57F2F06F29BDC181008605F5 /* UserNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2F06E29BDC181008605F5 /* UserNetManager.swift */; };
 		57F2F07129BDC28A008605F5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2F07029BDC28A008605F5 /* User.swift */; };
 		57F2F07329BE4649008605F5 /* PloggingNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2F07229BE4649008605F5 /* PloggingNetManager.swift */; };
-		57F2F07529BE4688008605F5 /* Plogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2F07429BE4688008605F5 /* Plogging.swift */; };
+		57F2F07529BE4688008605F5 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2F07429BE4688008605F5 /* Activity.swift */; };
 		57F2F07729BF4E0C008605F5 /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2F07629BF4E0C008605F5 /* UserDefaults+Ext.swift */; };
+		57F2F07A29C1A133008605F5 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2F07929C1A133008605F5 /* Group.swift */; };
+		57F2F07C29C1A534008605F5 /* GroupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2F07B29C1A534008605F5 /* GroupManager.swift */; };
+		57F2F07E29C1A5A7008605F5 /* GroupNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2F07D29C1A5A7008605F5 /* GroupNetManager.swift */; };
 		7AA3F62EF603725162AB6B74 /* Pods_Netwalk_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */; };
 		95161D31299B981E002B86BA /* DetailGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95161D30299B981E002B86BA /* DetailGroupViewController.swift */; };
 		95161D34299BA71E002B86BA /* DetailGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95161D32299BA71E002B86BA /* DetailGroupTableViewCell.swift */; };
@@ -128,8 +131,11 @@
 		57F2F06E29BDC181008605F5 /* UserNetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetManager.swift; sourceTree = "<group>"; };
 		57F2F07029BDC28A008605F5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		57F2F07229BE4649008605F5 /* PloggingNetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PloggingNetManager.swift; sourceTree = "<group>"; };
-		57F2F07429BE4688008605F5 /* Plogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plogging.swift; sourceTree = "<group>"; };
+		57F2F07429BE4688008605F5 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		57F2F07629BF4E0C008605F5 /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
+		57F2F07929C1A133008605F5 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		57F2F07B29C1A534008605F5 /* GroupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupManager.swift; sourceTree = "<group>"; };
+		57F2F07D29C1A5A7008605F5 /* GroupNetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupNetManager.swift; sourceTree = "<group>"; };
 		5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netwalk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95161D30299B981E002B86BA /* DetailGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGroupViewController.swift; sourceTree = "<group>"; };
 		95161D32299BA71E002B86BA /* DetailGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -170,6 +176,7 @@
 				576B64B8299807B0002609FA /* AINetManager.swift */,
 				57F2F06E29BDC181008605F5 /* UserNetManager.swift */,
 				57F2F07229BE4649008605F5 /* PloggingNetManager.swift */,
+				57F2F07D29C1A5A7008605F5 /* GroupNetManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -177,11 +184,11 @@
 		576B64B52997B658002609FA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				57F2F07829C1A0F3008605F5 /* Tables */,
 				576B64BA29980E09002609FA /* AIResult.swift */,
 				95EFDD36299A61E20005BAE7 /* Category.swift */,
-				57F2F07029BDC28A008605F5 /* User.swift */,
 				95231F8629BE41F200B77123 /* ActiveUser.swift */,
-				57F2F07429BE4688008605F5 /* Plogging.swift */,
+				57F2F07B29C1A534008605F5 /* GroupManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -362,6 +369,16 @@
 				57F2F06C29BCDA6E008605F5 /* PloggingDetailViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		57F2F07829C1A0F3008605F5 /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				57F2F07029BDC28A008605F5 /* User.swift */,
+				57F2F07429BE4688008605F5 /* Activity.swift */,
+				57F2F07929C1A133008605F5 /* Group.swift */,
+			);
+			path = Tables;
 			sourceTree = "<group>";
 		};
 		6A7398B2DB305C1B1D15B3FB /* Frameworks */ = {
@@ -614,6 +631,7 @@
 				57D88FE2298AD42C00C33F29 /* PloggingViewController.swift in Sources */,
 				57D88FDA298AD32800C33F29 /* ExampleBouncesContentView.swift in Sources */,
 				57D88FE4298AD43500C33F29 /* RankingViewController.swift in Sources */,
+				57F2F07C29C1A534008605F5 /* GroupManager.swift in Sources */,
 				57D88FE0298AD42200C33F29 /* ReviewViewController.swift in Sources */,
 				95D3697329BE377000106F5B /* GroupTableViewCell.swift in Sources */,
 				57C3DDA1299CFC57009466FA /* GeoDataSource.swift in Sources */,
@@ -635,6 +653,7 @@
 				57F2F07129BDC28A008605F5 /* User.swift in Sources */,
 				95A503FC299A13100022B3DE /* NewGroupViewController.swift in Sources */,
 				57D88FDC298AD33F00C33F29 /* ExampleBasicContentView.swift in Sources */,
+				57F2F07E29C1A5A7008605F5 /* GroupNetManager.swift in Sources */,
 				57E4FD9929927CC100C8E082 /* TrashAlbumViewController.swift in Sources */,
 				95161D34299BA71E002B86BA /* DetailGroupTableViewCell.swift in Sources */,
 				5789E39C29930CF1009927F8 /* BodyCollectionViewCell.swift in Sources */,
@@ -650,8 +669,9 @@
 				95D3696629BE368C00106F5B /* GroupCollectionViewCell.swift in Sources */,
 				57F2F06529B8BCB8008605F5 /* ReviewTableViewCell.swift in Sources */,
 				95EFDD27299A50E00005BAE7 /* MyGroupTableViewCell.swift in Sources */,
+				57F2F07A29C1A133008605F5 /* Group.swift in Sources */,
 				95AEDBA029BF6F2500EBFE55 /* DetailGroupCollectionViewCell.swift in Sources */,
-				57F2F07529BE4688008605F5 /* Plogging.swift in Sources */,
+				57F2F07529BE4688008605F5 /* Activity.swift in Sources */,
 				57E4FDA129928AEE00C8E082 /* TrashPhotoTableViewCell.swift in Sources */,
 				95EFDD37299A61E20005BAE7 /* Category.swift in Sources */,
 				95161D31299B981E002B86BA /* DetailGroupViewController.swift in Sources */,

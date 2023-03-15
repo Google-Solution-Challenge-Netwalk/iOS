@@ -15,6 +15,7 @@ class ActivateGroupsViewController: UIViewController {
         super.viewDidLoad()
 
         setupCollectionView()
+        requestPartGroupList()
     }
     
 
@@ -26,6 +27,19 @@ class ActivateGroupsViewController: UIViewController {
         collectionView.register(UINib(nibName: "HeaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderCollectionReusableView")
         // 셀 등록
         collectionView.register(UINib(nibName:"BodyCollectionViewCell", bundle: nil), forCellWithReuseIdentifier:"BodyCollectionViewCell")
+    }
+    
+    func requestPartGroupList() {
+        
+        guard let user = UserDefaults.standard.getLoginUser() else { return }
+        
+        GroupNetManager.shared.readPartGroup(user.user_no!) { groups in
+            GroupManager.shared.groups = groups
+            
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
     }
 
 }
@@ -46,7 +60,7 @@ extension ActivateGroupsViewController: UICollectionViewDelegate, UICollectionVi
             return 1
         case 1:
             // 비활성화 그룹 개수
-            return 1
+            return GroupManager.shared.groups.count
         default:
             return 0
         }
@@ -99,5 +113,9 @@ extension ActivateGroupsViewController: UICollectionViewDelegate, UICollectionVi
     // 행 간의 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return view.frame.width * 0.062
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
 }
