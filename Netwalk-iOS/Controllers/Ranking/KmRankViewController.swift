@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TimeRankViewController: UIViewController {
+class KmRankViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,20 +19,20 @@ class TimeRankViewController: UIViewController {
     func setUpTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "TimeRankTableViewCell", bundle: nil), forCellReuseIdentifier: "TimeRankTableViewCell") //nib 파일 등록
+        tableView.register(UINib(nibName: "KmRankTableViewCell", bundle: nil), forCellReuseIdentifier: "KmRankTableViewCell") //nib 파일 등록
         
     }
     
 }
 
-extension TimeRankViewController: UITableViewDelegate, UITableViewDataSource {
+extension KmRankViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { //cell의 갯수 설정
         return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //cell의 데이터 구성
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TimeRankTableViewCell") as! TimeRankTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "KmRankTableViewCell") as! KmRankTableViewCell
         cell.selectionStyle = .none
         return cell
         

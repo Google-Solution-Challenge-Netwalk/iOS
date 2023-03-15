@@ -1,5 +1,5 @@
 //
-//  TimeRankTableViewCell.swift
+//  TrashRankTableViewCell.swift
 //  Netwalk-iOS
 //
 //  Created by 지윤 on 2023/03/16.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class TimeRankTableViewCell: UITableViewCell {
-    
+class TrashRankTableViewCell: UITableViewCell {
+
     @IBOutlet weak var rankNumber: UILabel!
     @IBOutlet weak var rankName: UILabel!
     

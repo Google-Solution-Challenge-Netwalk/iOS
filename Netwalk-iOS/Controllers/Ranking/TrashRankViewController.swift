@@ -9,6 +9,7 @@ import UIKit
 
 class TrashRankViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,7 @@ class TrashRankViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TrashRankTableViewCell", bundle: nil), forCellReuseIdentifier: "TrashRankTableViewCell") //nib 파일 등록
-        
+
     }
     
 }
@@ -31,7 +32,7 @@ extension TrashRankViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //cell의 데이터 구성
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TrashRankViewController") as! TrashRankViewController
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TrashRankTableViewCell") as! TrashRankTableViewCell
         cell.selectionStyle = .none
         return cell
         

@@ -1,5 +1,5 @@
 //
-//  TimeRankTableViewCell.swift
+//  KmRankTableViewCell.swift
 //  Netwalk-iOS
 //
 //  Created by 지윤 on 2023/03/16.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-class TimeRankTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var rankNumber: UILabel!
+class KmRankTableViewCell: UITableViewCell {
+
     @IBOutlet weak var rankName: UILabel!
+    @IBOutlet weak var rankNumber: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

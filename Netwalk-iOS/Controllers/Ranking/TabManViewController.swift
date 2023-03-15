@@ -39,8 +39,8 @@ class TabManViewController: TabmanViewController {
         bar.buttons.customize { button in
             button.tintColor = .systemGray4
             button.selectedTintColor = .black
-            button.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
-            button.selectedFont = UIFont.systemFont(ofSize: 15, weight: .semibold)
+            button.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+            button.selectedFont = UIFont.systemFont(ofSize: 18, weight: .semibold)
         }
         
         bar.indicator.weight = .custom(value: 2)

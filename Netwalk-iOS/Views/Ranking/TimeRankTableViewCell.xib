@@ -16,31 +16,38 @@
                 <rect key="frame" x="0.0" y="0.0" width="253" height="60"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7M0-mJ-Jmy">
-                        <rect key="frame" x="45" y="5" width="15" height="50"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7M0-mJ-Jmy">
+                        <rect key="frame" x="30" y="15" width="50" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="KcY-dS-cjv"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H2-0E-DPB">
-                        <rect key="frame" x="110" y="5" width="77" height="50"/>
+                        <rect key="frame" x="120" y="5" width="77" height="50"/>
                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="7M0-mJ-Jmy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="45" id="GgK-dC-0MD"/>
-                    <constraint firstAttribute="bottom" secondItem="7M0-mJ-Jmy" secondAttribute="bottom" constant="5" id="N17-1H-sBh"/>
-                    <constraint firstItem="8H2-0E-DPB" firstAttribute="leading" secondItem="7M0-mJ-Jmy" secondAttribute="trailing" constant="50" id="UtR-hr-gex"/>
+                    <constraint firstItem="7M0-mJ-Jmy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="0lC-ZZ-SfL"/>
+                    <constraint firstAttribute="bottom" secondItem="7M0-mJ-Jmy" secondAttribute="bottom" constant="15" id="N17-1H-sBh"/>
+                    <constraint firstItem="8H2-0E-DPB" firstAttribute="leading" secondItem="7M0-mJ-Jmy" secondAttribute="trailing" constant="40" id="Roa-Sw-kiM"/>
                     <constraint firstItem="7M0-mJ-Jmy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="VhU-b4-Uvq"/>
-                    <constraint firstItem="7M0-mJ-Jmy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="dMr-az-eHY"/>
+                    <constraint firstItem="7M0-mJ-Jmy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="dMr-az-eHY"/>
                     <constraint firstItem="8H2-0E-DPB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="gTG-UM-ILZ"/>
                     <constraint firstItem="8H2-0E-DPB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hdX-uV-i8r"/>
                     <constraint firstAttribute="bottom" secondItem="8H2-0E-DPB" secondAttribute="bottom" constant="5" id="jze-jj-A7m"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="rankName" destination="8H2-0E-DPB" id="gt4-LD-0nZ"/>
+                <outlet property="rankNumber" destination="7M0-mJ-Jmy" id="6gk-tb-CeC"/>
+            </connections>
             <point key="canvasLocation" x="-41.984732824427482" y="5.6338028169014089"/>
         </tableViewCell>
     </objects>
