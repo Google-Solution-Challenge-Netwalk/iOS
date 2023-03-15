@@ -351,8 +351,30 @@
                     <view key="view" contentMode="scaleToFill" id="Wwp-5I-c8p">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqq-Gh-VVC">
+                                <rect key="frame" x="29.999999999999993" y="70" width="94.333333333333314" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mbw-Yc-nIL">
+                                <rect key="frame" x="0.0" y="119" width="393" height="650"/>
+                                <connections>
+                                    <segue destination="074-GG-BXF" kind="embed" id="YMO-7U-5sM"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Us5-Bm-Lax"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Us5-Bm-Lax" firstAttribute="trailing" secondItem="Mbw-Yc-nIL" secondAttribute="trailing" id="86r-4O-8rT"/>
+                            <constraint firstItem="Nqq-Gh-VVC" firstAttribute="leading" secondItem="Us5-Bm-Lax" secondAttribute="leading" constant="30" id="FVu-hR-m16"/>
+                            <constraint firstItem="Mbw-Yc-nIL" firstAttribute="leading" secondItem="Us5-Bm-Lax" secondAttribute="leading" id="Mun-h9-Eq7"/>
+                            <constraint firstItem="Us5-Bm-Lax" firstAttribute="bottom" secondItem="Mbw-Yc-nIL" secondAttribute="bottom" id="Ngr-hM-J7e"/>
+                            <constraint firstItem="Nqq-Gh-VVC" firstAttribute="top" secondItem="Wwp-5I-c8p" secondAttribute="top" constant="70" id="SJZ-GA-ocY"/>
+                            <constraint firstItem="Mbw-Yc-nIL" firstAttribute="top" secondItem="Nqq-Gh-VVC" secondAttribute="bottom" constant="15" id="nQQ-0p-CYG"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="kho-By-gjw"/>
                 </viewController>
@@ -776,6 +798,50 @@
             </objects>
             <point key="canvasLocation" x="2913.740458015267" y="-54.225352112676056"/>
         </scene>
+        <!--Tab Man View Controller-->
+        <scene sceneID="Sfm-Gj-s2M">
+            <objects>
+                <viewController id="074-GG-BXF" customClass="TabManViewController" customModule="Netwalk_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K4o-ZC-hDf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="650"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="paL-cM-9lv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3753" y="782"/>
+        </scene>
+        <!--Time Rank View Controller-->
+        <scene sceneID="wis-0W-IS2">
+            <objects>
+                <viewController storyboardIdentifier="TimeRankViewController" id="Wii-Zr-4RY" customClass="TimeRankViewController" customModule="Netwalk_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="feJ-nw-MPK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WyR-JN-Yn9"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJG-H7-734" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4637" y="771"/>
+        </scene>
+        <!--Km Rank View Controller-->
+        <scene sceneID="aYs-7k-T4d">
+            <objects>
+                <viewController storyboardIdentifier="KmRankViewController" id="RlW-1J-5Ce" customClass="KmRankViewController" customModule="Netwalk_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IL5-fP-cgm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Vbq-Yu-AOX"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="srI-CU-hRR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5381" y="778"/>
+        </scene>
     </scenes>
     <resources>
         <image name="appleLogin" width="987" height="183"/>
@@ -795,8 +861,14 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
