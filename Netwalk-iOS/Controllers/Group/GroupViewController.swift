@@ -40,19 +40,6 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //cell의 데이터 구성
         
         
-//        switch indexPath.row {
-//        case 0:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "MyGroupTableViewCell") as! MyGroupTableViewCell
-//            cell.selectionStyle = .none
-//            return cell
-//        case 1:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "MyGroupTableViewCell") as! MyGroupTableViewCell
-//            cell.selectionStyle = .none
-//            return cell
-//        default:
-//            return UITableViewCell()
-//        }
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyGroupTableViewCell") as! MyGroupTableViewCell
         cell.selectionStyle = .none
         return cell

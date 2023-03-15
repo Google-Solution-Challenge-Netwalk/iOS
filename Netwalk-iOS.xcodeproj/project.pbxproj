@@ -76,6 +76,8 @@
 		95A503FC299A13100022B3DE /* NewGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A503FB299A13100022B3DE /* NewGroupViewController.swift */; };
 		95AEDBA029BF6F2500EBFE55 /* DetailGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEDB9E29BF6F2500EBFE55 /* DetailGroupCollectionViewCell.swift */; };
 		95AEDBA129BF6F2500EBFE55 /* DetailGroupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95AEDB9F29BF6F2500EBFE55 /* DetailGroupCollectionViewCell.xib */; };
+		95B6598929C224E600271BA8 /* TimeRankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B6598729C224E600271BA8 /* TimeRankTableViewCell.swift */; };
+		95B6598A29C224E600271BA8 /* TimeRankTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95B6598829C224E600271BA8 /* TimeRankTableViewCell.xib */; };
 		95D3695C29BE362700106F5B /* TypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D3695A29BE362700106F5B /* TypeCollectionViewCell.swift */; };
 		95D3696629BE368C00106F5B /* GroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D3696429BE368C00106F5B /* GroupCollectionViewCell.swift */; };
 		95D3696F29BE376000106F5B /* TypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D3696D29BE376000106F5B /* TypeTableViewCell.swift */; };
@@ -153,6 +155,8 @@
 		95A503FB299A13100022B3DE /* NewGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupViewController.swift; sourceTree = "<group>"; };
 		95AEDB9E29BF6F2500EBFE55 /* DetailGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGroupCollectionViewCell.swift; sourceTree = "<group>"; };
 		95AEDB9F29BF6F2500EBFE55 /* DetailGroupCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailGroupCollectionViewCell.xib; sourceTree = "<group>"; };
+		95B6598729C224E600271BA8 /* TimeRankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRankTableViewCell.swift; sourceTree = "<group>"; };
+		95B6598829C224E600271BA8 /* TimeRankTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeRankTableViewCell.xib; sourceTree = "<group>"; };
 		95D3695A29BE362700106F5B /* TypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		95D3695B29BE362700106F5B /* TypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypeCollectionViewCell.xib; sourceTree = "<group>"; };
 		95D3696429BE368C00106F5B /* GroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -267,6 +271,7 @@
 		576C0DFF298ACFF200485AD5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				95B6598429C224BA00271BA8 /* Ranking */,
 				57F2F06229B8BC9F008605F5 /* Review */,
 				57B5A9F829B8A08D00BB07A8 /* Profile */,
 				57C3DD9B299A9B0B009466FA /* Group */,
@@ -418,6 +423,15 @@
 				95AEDB9F29BF6F2500EBFE55 /* DetailGroupCollectionViewCell.xib */,
 			);
 			path = DetailGroup;
+			sourceTree = "<group>";
+		};
+		95B6598429C224BA00271BA8 /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				95B6598729C224E600271BA8 /* TimeRankTableViewCell.swift */,
+				95B6598829C224E600271BA8 /* TimeRankTableViewCell.xib */,
+			);
+			path = Ranking;
 			sourceTree = "<group>";
 		};
 		95BDB9A1299A0FE0003680EE /* Group */ = {
@@ -572,6 +586,7 @@
 				95231F8229BE3F9300B77123 /* TrashPhotoCollectionViewCell.xib in Resources */,
 				95231F8329BE3F9300B77123 /* Assets.xcassets in Resources */,
 				95231F7529BE3F9300B77123 /* ProfileBodyTableViewCell.xib in Resources */,
+				95B6598A29C224E600271BA8 /* TimeRankTableViewCell.xib in Resources */,
 				95231F8429BE3F9300B77123 /* SecretKey.plist in Resources */,
 				95231F7F29BE3F9300B77123 /* BodyCollectionViewCell.xib in Resources */,
 				95231F7229BE3F4A00B77123 /* Main.storyboard in Resources */,
@@ -682,6 +697,7 @@
 				57F2F08529C1FBC1008605F5 /* TimeRankViewController.swift in Sources */,
 				57D88FD3298AD2AF00C33F29 /* TabBarController.swift in Sources */,
 				57E4FDAE2993061A00C8E082 /* HeaderCollectionReusableView.swift in Sources */,
+				95B6598929C224E600271BA8 /* TimeRankTableViewCell.swift in Sources */,
 				57E4FDA5299298A000C8E082 /* TrashPhotoCollectionViewCell.swift in Sources */,
 				57D88FE6298AD44000C33F29 /* ProfileViewController.swift in Sources */,
 				576C0E02298AD07000485AD5 /* LoginViewController.swift in Sources */,

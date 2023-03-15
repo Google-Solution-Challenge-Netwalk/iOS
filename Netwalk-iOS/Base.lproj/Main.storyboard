@@ -820,9 +820,28 @@
                     <view key="view" contentMode="scaleToFill" id="feJ-nw-MPK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tse-W8-iDc">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Wii-Zr-4RY" id="laz-dh-pLc"/>
+                                    <outlet property="delegate" destination="Wii-Zr-4RY" id="ghF-hK-Jcw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="WyR-JN-Yn9"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <constraints>
+                            <constraint firstItem="tse-W8-iDc" firstAttribute="top" secondItem="WyR-JN-Yn9" secondAttribute="top" id="Me3-nW-29T"/>
+                            <constraint firstItem="WyR-JN-Yn9" firstAttribute="trailing" secondItem="tse-W8-iDc" secondAttribute="trailing" id="hEN-8b-xHi"/>
+                            <constraint firstItem="tse-W8-iDc" firstAttribute="leading" secondItem="WyR-JN-Yn9" secondAttribute="leading" id="iOE-nX-EU3"/>
+                            <constraint firstItem="WyR-JN-Yn9" firstAttribute="bottom" secondItem="tse-W8-iDc" secondAttribute="bottom" id="o6y-aj-GUb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="tse-W8-iDc" id="xZP-GU-4po"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJG-H7-734" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -835,13 +854,25 @@
                     <view key="view" contentMode="scaleToFill" id="IL5-fP-cgm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8m-uh-X4s">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Vbq-Yu-AOX"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="Q8m-uh-X4s" firstAttribute="leading" secondItem="Vbq-Yu-AOX" secondAttribute="leading" id="A6z-ac-FrV"/>
+                            <constraint firstItem="Q8m-uh-X4s" firstAttribute="top" secondItem="Vbq-Yu-AOX" secondAttribute="top" id="dlP-rP-vHl"/>
+                            <constraint firstItem="Vbq-Yu-AOX" firstAttribute="bottom" secondItem="Q8m-uh-X4s" secondAttribute="bottom" id="n2i-jX-xxP"/>
+                            <constraint firstItem="Vbq-Yu-AOX" firstAttribute="trailing" secondItem="Q8m-uh-X4s" secondAttribute="trailing" id="zyN-aN-jjb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srI-CU-hRR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5381" y="778"/>
+            <point key="canvasLocation" x="5378" y="770"/>
         </scene>
         <!--Trash Rank View Controller-->
         <scene sceneID="veD-cL-k6z">
@@ -850,13 +881,25 @@
                     <view key="view" contentMode="scaleToFill" id="bsP-n0-4Xf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vG-u3-0fl">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ymC-pv-gri"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="7vG-u3-0fl" firstAttribute="trailing" secondItem="ymC-pv-gri" secondAttribute="trailing" id="HlD-zk-Zxp"/>
+                            <constraint firstItem="7vG-u3-0fl" firstAttribute="bottom" secondItem="ymC-pv-gri" secondAttribute="bottom" id="NYS-wh-Ev6"/>
+                            <constraint firstItem="7vG-u3-0fl" firstAttribute="top" secondItem="ymC-pv-gri" secondAttribute="top" id="YPU-FO-eDW"/>
+                            <constraint firstItem="7vG-u3-0fl" firstAttribute="leading" secondItem="ymC-pv-gri" secondAttribute="leading" id="z54-vG-IMu"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p7F-tL-pEM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6088" y="795"/>
+            <point key="canvasLocation" x="6126" y="770"/>
         </scene>
     </scenes>
     <resources>
@@ -888,6 +931,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
