@@ -17,6 +17,8 @@ class ActivateGroupsViewController: UIViewController {
 
         setupTableView()
         requestPartGroupList()
+        
+        
     }
     
 
@@ -24,6 +26,7 @@ class ActivateGroupsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 90
+        tableView.sectionHeaderHeight = 50
         
         tableView.register(UINib(nibName: "ActivateGroupHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "ActivateGroupHeaderView")
         tableView.register(UINib(nibName: "MyGroupTableViewCell", bundle: nil), forCellReuseIdentifier: "MyGroupTableViewCell")
@@ -52,11 +55,10 @@ extension ActivateGroupsViewController: UITableViewDelegate, UITableViewDataSour
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ActivateGroupHeaderView") as! ActivateGroupHeaderView
         
         if section == 0 {
-            view.title.text = "활성화 그룹"
+            view.title.text = "Activate Group"
         } else {
-            view.title.text = "비활성화 그룹"
+            view.title.text = "Inactivate Group"
         }
-        
         
         return view
     }
