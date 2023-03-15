@@ -58,7 +58,7 @@ class PloggingViewController: UIViewController {
         groupInfoLabel.layer.cornerRadius = groupInfoLabel.frame.width / 2
         cameraInfoLabel.layer.cornerRadius = cameraInfoLabel.frame.width / 2
         
-        cameraButton.isHidden = true
+        //cameraButton.isHidden = true
         cameraInfoLabel.isHidden = true
         groupInfoLabel.isHidden = true
         
@@ -145,8 +145,8 @@ class PloggingViewController: UIViewController {
         
         //cameraButton.isHidden = true
         
-        let ploggingData = Plogging(userNo: 10, groupNo: 4, totalActDist: 10, totalActTime: 10, shareState: 0, customList: coordinates)
-        PloggingNetManager.shared.create(ploggingData) {
+        let activity = Activity(userNo: 10, groupNo: 4, totalActDist: 10, totalActTime: 10, shareState: 0, customList: coordinates)
+        PloggingNetManager.shared.create(activity) {
             print("종료")
         }
     }

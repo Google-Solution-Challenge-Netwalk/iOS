@@ -11,7 +11,7 @@ class PloggingNetManager {
     static let shared = PloggingNetManager()
     private init() {}
     
-    func create(_ ploggingData: Plogging, completion: @escaping ()->()) {
+    func create(_ activity: Activity, completion: @escaping ()->()) {
         
         let urlKey = Bundle.main.getSecretKey(key: "REST_API_URL")
         
@@ -20,7 +20,7 @@ class PloggingNetManager {
             return
         }
         
-        guard let jsonData = try? JSONEncoder().encode(ploggingData) else {
+        guard let jsonData = try? JSONEncoder().encode(activity) else {
             print("Error: Trying to convert model to JSON data")
             return
         }
