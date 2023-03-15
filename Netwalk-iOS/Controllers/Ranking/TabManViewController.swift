@@ -23,9 +23,11 @@ class TabManViewController: TabmanViewController {
         
         let timeRankVC = storyboard?.instantiateViewController(withIdentifier: "TimeRankViewController") as! TimeRankViewController
         let kmRankVC = storyboard?.instantiateViewController(withIdentifier: "KmRankViewController") as! KmRankViewController
+        let trashRankVC = storyboard?.instantiateViewController(withIdentifier: "TrashRankViewController") as! TrashRankViewController
         
         viewControllers.append(timeRankVC)
         viewControllers.append(kmRankVC)
+        viewControllers.append(trashRankVC)
         
         self.dataSource = self
         let bar = TMBar.ButtonBar()
@@ -64,9 +66,11 @@ extension TabManViewController: PageboyViewControllerDataSource, TMBarDataSource
     func barItem(for bar: Tabman.TMBar, at index: Int) -> Tabman.TMBarItemable {
         switch index {
         case 0:
-            return TMBarItem(title: "동네맛집")
+            return TMBarItem(title: "시간")
         case 1:
-            return TMBarItem(title: "겨울간식")
+            return TMBarItem(title: "거리")
+        case 2:
+            return TMBarItem(title: "쓰레기량")
         default:
             return TMBarItem(title: "Test")
         }

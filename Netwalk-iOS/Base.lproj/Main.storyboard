@@ -359,7 +359,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mbw-Yc-nIL">
-                                <rect key="frame" x="0.0" y="119" width="393" height="650"/>
+                                <rect key="frame" x="0.0" y="118.66666666666669" width="393" height="650.33333333333326"/>
                                 <connections>
                                     <segue destination="074-GG-BXF" kind="embed" id="YMO-7U-5sM"/>
                                 </connections>
@@ -803,8 +803,9 @@
             <objects>
                 <viewController id="074-GG-BXF" customClass="TabManViewController" customModule="Netwalk_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K4o-ZC-hDf">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="650"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="650.33333333333337"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Tdr-Um-i4h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
@@ -841,6 +842,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srI-CU-hRR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5381" y="778"/>
+        </scene>
+        <!--Trash Rank View Controller-->
+        <scene sceneID="veD-cL-k6z">
+            <objects>
+                <viewController storyboardIdentifier="TrashRankViewController" id="e6J-Ob-9At" customClass="TrashRankViewController" customModule="Netwalk_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bsP-n0-4Xf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ymC-pv-gri"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p7F-tL-pEM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6088" y="795"/>
         </scene>
     </scenes>
     <resources>

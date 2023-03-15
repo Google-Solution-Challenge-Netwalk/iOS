@@ -72,6 +72,7 @@
 		95231F8429BE3F9300B77123 /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 952CB78C2997BA8700173BA3 /* SecretKey.plist */; };
 		95231F8529BE3F9900B77123 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576C0DEE298ACAB400485AD5 /* LaunchScreen.storyboard */; };
 		95231F8729BE41F200B77123 /* ActiveUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95231F8629BE41F200B77123 /* ActiveUser.swift */; };
+		957DE61B29C1FFD100123538 /* TrashRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957DE61A29C1FFD100123538 /* TrashRankViewController.swift */; };
 		95A503FC299A13100022B3DE /* NewGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A503FB299A13100022B3DE /* NewGroupViewController.swift */; };
 		95AEDBA029BF6F2500EBFE55 /* DetailGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEDB9E29BF6F2500EBFE55 /* DetailGroupCollectionViewCell.swift */; };
 		95AEDBA129BF6F2500EBFE55 /* DetailGroupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95AEDB9F29BF6F2500EBFE55 /* DetailGroupCollectionViewCell.xib */; };
@@ -148,6 +149,7 @@
 		95161D33299BA71E002B86BA /* DetailGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailGroupTableViewCell.xib; sourceTree = "<group>"; };
 		95231F8629BE41F200B77123 /* ActiveUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveUser.swift; sourceTree = "<group>"; };
 		952CB78C2997BA8700173BA3 /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
+		957DE61A29C1FFD100123538 /* TrashRankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashRankViewController.swift; sourceTree = "<group>"; };
 		95A503FB299A13100022B3DE /* NewGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupViewController.swift; sourceTree = "<group>"; };
 		95AEDB9E29BF6F2500EBFE55 /* DetailGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGroupCollectionViewCell.swift; sourceTree = "<group>"; };
 		95AEDB9F29BF6F2500EBFE55 /* DetailGroupCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailGroupCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 				57F2F08129C1F85E008605F5 /* TabManViewController.swift */,
 				57F2F08429C1FBC1008605F5 /* TimeRankViewController.swift */,
 				57F2F08629C1FBCD008605F5 /* KmRankViewController.swift */,
+				957DE61A29C1FFD100123538 /* TrashRankViewController.swift */,
 			);
 			path = Ranking;
 			sourceTree = "<group>";
@@ -665,6 +668,7 @@
 				57D88FD8298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift in Sources */,
 				57C3DD9F299CBFEE009466FA /* Constants.swift in Sources */,
 				576B64B9299807B0002609FA /* AINetManager.swift in Sources */,
+				957DE61B29C1FFD100123538 /* TrashRankViewController.swift in Sources */,
 				57D88FD6298AD2ED00C33F29 /* ExampleNavigationController.swift in Sources */,
 				57F2F06F29BDC181008605F5 /* UserNetManager.swift in Sources */,
 				576B64BB29980E09002609FA /* AIResult.swift in Sources */,
