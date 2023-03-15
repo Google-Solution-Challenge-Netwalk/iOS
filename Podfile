@@ -11,5 +11,6 @@ target 'Netwalk-iOS' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'ESTabBarController-swift'
+  pod 'Tabman', '~> 3.0'
 
 end

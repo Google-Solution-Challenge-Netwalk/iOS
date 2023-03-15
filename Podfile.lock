@@ -34,7 +34,10 @@ PODS:
   - GoogleUtilities/Reachability (7.11.0):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (2.1.0)
+  - Pageboy (4.0.2)
   - PromisesObjC (2.1.1)
+  - Tabman (3.0.1):
+    - Pageboy (~> 4.0.2)
 
 DEPENDENCIES:
   - Alamofire
@@ -42,6 +45,7 @@ DEPENDENCIES:
   - FirebaseAuth
   - GoogleMaps
   - GooglePlaces
+  - Tabman (~> 3.0)
 
 SPEC REPOS:
   trunk:
@@ -54,7 +58,9 @@ SPEC REPOS:
     - GooglePlaces
     - GoogleUtilities
     - GTMSessionFetcher
+    - Pageboy
     - PromisesObjC
+    - Tabman
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
@@ -66,8 +72,10 @@ SPEC CHECKSUMS:
   GooglePlaces: 0609463845250bbadafa1739938181e54dece439
   GoogleUtilities: c2bdc4cf2ce786c4d2e6b3bcfd599a25ca78f06f
   GTMSessionFetcher: ffbb25ec00ebcb5201adab0a56d808f6f1902d9f
+  Pageboy: 34ff11e8d1041b81769d5bcde9b19a0cb7218bd9
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
+  Tabman: a5880789298f81d3f2cdd6510b54ae637cfd8e09
 
-PODFILE CHECKSUM: a360263eb14eb07fafcdfe28ad54064988ed1940
+PODFILE CHECKSUM: 92f33cd54bceb18a10d9377f9d67703b5b5904d6
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0
