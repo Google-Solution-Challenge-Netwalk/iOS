@@ -374,35 +374,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqq-Gh-VVC">
-                                <rect key="frame" x="29.999999999999993" y="70" width="94.333333333333314" height="33.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqq-Gh-VVC">
+                                <rect key="frame" x="30" y="70" width="107" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="z4X-Gw-Euj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mbw-Yc-nIL">
-                                <rect key="frame" x="0.0" y="119" width="393" height="650"/>
+                                <rect key="frame" x="0.0" y="126" width="393" height="643"/>
                                 <connections>
                                     <segue destination="074-GG-BXF" kind="embed" id="YMO-7U-5sM"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGR-LU-pRL">
+                                <rect key="frame" x="0.0" y="125" width="393" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="HgI-DG-aRT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Us5-Bm-Lax"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Us5-Bm-Lax" firstAttribute="trailing" secondItem="Mbw-Yc-nIL" secondAttribute="trailing" id="86r-4O-8rT"/>
                             <constraint firstItem="Nqq-Gh-VVC" firstAttribute="leading" secondItem="Us5-Bm-Lax" secondAttribute="leading" constant="30" id="FVu-hR-m16"/>
+                            <constraint firstItem="pGR-LU-pRL" firstAttribute="leading" secondItem="Us5-Bm-Lax" secondAttribute="leading" id="IZX-DU-j8k"/>
                             <constraint firstItem="Mbw-Yc-nIL" firstAttribute="leading" secondItem="Us5-Bm-Lax" secondAttribute="leading" id="Mun-h9-Eq7"/>
                             <constraint firstItem="Us5-Bm-Lax" firstAttribute="bottom" secondItem="Mbw-Yc-nIL" secondAttribute="bottom" id="Ngr-hM-J7e"/>
                             <constraint firstItem="Nqq-Gh-VVC" firstAttribute="top" secondItem="Wwp-5I-c8p" secondAttribute="top" constant="70" id="SJZ-GA-ocY"/>
-                            <constraint firstItem="Mbw-Yc-nIL" firstAttribute="top" secondItem="Nqq-Gh-VVC" secondAttribute="bottom" constant="15" id="nQQ-0p-CYG"/>
+                            <constraint firstItem="pGR-LU-pRL" firstAttribute="top" secondItem="Nqq-Gh-VVC" secondAttribute="bottom" constant="15" id="buZ-p0-ypR"/>
+                            <constraint firstItem="Us5-Bm-Lax" firstAttribute="trailing" secondItem="pGR-LU-pRL" secondAttribute="trailing" id="hFP-Lj-cvq"/>
+                            <constraint firstItem="Mbw-Yc-nIL" firstAttribute="top" secondItem="pGR-LU-pRL" secondAttribute="bottom" id="swC-PQ-gMd"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="kho-By-gjw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ld5-m5-dig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2914" y="783"/>
+            <point key="canvasLocation" x="2913.740458015267" y="782.3943661971831"/>
         </scene>
         <!--Item-->
         <scene sceneID="5R6-ni-Rhn">
@@ -861,7 +874,7 @@
             <objects>
                 <viewController id="074-GG-BXF" customClass="TabManViewController" customModule="Netwalk_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K4o-ZC-hDf">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="650"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="643"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
