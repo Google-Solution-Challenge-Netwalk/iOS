@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         // 로그인 네트워킹 시작
-        var user = User(email: "test@naver.com", name: "tester")
+        var user = User(email: "test1@naver.com", name: "test1")
         
         UserNetManager.shared.login(user: user) { no in
             user.user_no = no

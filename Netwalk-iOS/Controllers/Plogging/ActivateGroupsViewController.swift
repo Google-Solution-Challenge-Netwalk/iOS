@@ -36,7 +36,7 @@ class ActivateGroupsViewController: UIViewController {
         
         guard let user = UserDefaults.standard.getLoginUser() else { return }
         
-        GroupNetManager.shared.readPartGroup(user.user_no!) { groups in
+        GroupNetManager.shared.readPartGroup(11) { groups in
             GroupManager.shared.groups = groups
             
             DispatchQueue.main.async {
@@ -56,20 +56,39 @@ extension ActivateGroupsViewController: UITableViewDelegate, UITableViewDataSour
         
         if section == 0 {
             view.title.text = "Activate Group"
+            view.count.text = "\(GroupManager.shared.activateGroup.count)"
         } else {
             view.title.text = "Inactivate Group"
+            view.count.text = "\(GroupManager.shared.inactivateGroup.count)"
         }
         
         return view
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return GroupManager.shared.groups.count
+        
+        if section == 0 {
+            return GroupManager.shared.activateGroup.count
+        } else {
+            return GroupManager.shared.inactivateGroup.count
+        }
+//        return GroupManager.shared.groups.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyGroupTableViewCell") as! MyGroupTableViewCell
         cell.selectionStyle = .none
+        
+        var group: Group
+        
+        if indexPath.section == 0 {
+            group = GroupManager.shared.activateGroup[indexPath.row]
+        } else {
+            group = GroupManager.shared.inactivateGroup[indexPath.row]
+        }
+        
+        cell.myGroupTitle.text = group.name
+        
         return cell
     }
     
