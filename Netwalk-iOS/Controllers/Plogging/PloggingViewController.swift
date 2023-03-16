@@ -143,9 +143,10 @@ class PloggingViewController: UIViewController {
         print("stop")
         timer.invalidate()
         
-        //cameraButton.isHidden = true
+        let totalActDist = Double(totalDistance.text!)!
+        let totalActTime = CustomDateFormatter.convertToSeconds(totalTime.text!)
         
-        let activity = Activity(userNo: 10, groupNo: 4, totalActDist: 10, totalActTime: 10, shareState: 0, customList: coordinates)
+        let activity = Activity(userNo: 10, groupNo: 4, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, customList: coordinates)
         PloggingNetManager.shared.create(activity) {
             print("종료")
         }
