@@ -22,7 +22,17 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleLogin" translatesAutoresizingMaskIntoConstraints="NO" id="LWo-QO-qRe">
-                                <rect key="frame" x="50" y="539" width="293" height="55"/>
+                                <rect key="frame" x="50" y="539" width="293" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="W6G-Li-SHS"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleLogin" translatesAutoresizingMaskIntoConstraints="NO" id="OF2-nY-C2b">
+                                <rect key="frame" x="50" y="597" width="293" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CUc-jX-6Ym"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="fRn-ge-7a5"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -31,15 +41,18 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ygz-dZ-TD9" secondAttribute="bottom" id="2RR-4M-0YW"/>
                             <constraint firstItem="Ygz-dZ-TD9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8aA-Pa-c2X"/>
                             <constraint firstItem="LWo-QO-qRe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="480" id="Adu-8H-74j"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LWo-QO-qRe" secondAttribute="bottom" constant="224" id="PlU-mC-HGZ"/>
+                            <constraint firstItem="OF2-nY-C2b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="KH7-ft-bYf"/>
                             <constraint firstAttribute="trailing" secondItem="LWo-QO-qRe" secondAttribute="trailing" constant="50" id="cCz-nS-EUj"/>
                             <constraint firstItem="LWo-QO-qRe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="dOC-5B-gZi"/>
                             <constraint firstItem="Ygz-dZ-TD9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fTU-h6-NgX"/>
+                            <constraint firstItem="OF2-nY-C2b" firstAttribute="top" secondItem="LWo-QO-qRe" secondAttribute="bottom" constant="8" id="gKq-ep-Skt"/>
                             <constraint firstItem="Ygz-dZ-TD9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="59" id="hba-6n-t1T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OF2-nY-C2b" secondAttribute="trailing" constant="50" id="htr-1I-wVu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ygz-dZ-TD9" secondAttribute="trailing" id="kPz-YW-gPe"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="googleLoginButton" destination="OF2-nY-C2b" id="QxF-w4-IwH"/>
                         <outlet property="loginButton" destination="LWo-QO-qRe" id="JQd-OD-a0O"/>
                     </connections>
                 </viewController>
@@ -444,6 +457,21 @@
                                     <constraint firstAttribute="height" constant="1" id="LvH-aH-xBE"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnf-Vc-i2j">
+                                <rect key="frame" x="333" y="65" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="J7f-AI-ZyU"/>
+                                    <constraint firstAttribute="width" constant="50" id="NnV-Lw-wbx"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="gearshape.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingButtonTapped:" destination="Be6-II-kjs" eventType="touchUpInside" id="jK3-57-Y5F"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZMc-Zz-i2s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -453,6 +481,8 @@
                             <constraint firstItem="v5g-1V-aKZ" firstAttribute="top" secondItem="Pbf-ab-JAH" secondAttribute="top" constant="70" id="LDy-P6-CxO"/>
                             <constraint firstItem="Dfp-k3-qNi" firstAttribute="leading" secondItem="ZMc-Zz-i2s" secondAttribute="leading" id="WMq-R0-JUR"/>
                             <constraint firstItem="ZMc-Zz-i2s" firstAttribute="bottom" secondItem="Bdc-DX-gNR" secondAttribute="bottom" id="aqI-MZ-vTq"/>
+                            <constraint firstItem="ZMc-Zz-i2s" firstAttribute="trailing" secondItem="Jnf-Vc-i2j" secondAttribute="trailing" constant="10" id="bVK-Z1-FJW"/>
+                            <constraint firstItem="Jnf-Vc-i2j" firstAttribute="centerY" secondItem="v5g-1V-aKZ" secondAttribute="centerY" id="f8Q-Pt-kJb"/>
                             <constraint firstItem="v5g-1V-aKZ" firstAttribute="leading" secondItem="Pbf-ab-JAH" secondAttribute="leading" constant="30" id="lea-Ey-c9I"/>
                             <constraint firstItem="Bdc-DX-gNR" firstAttribute="leading" secondItem="ZMc-Zz-i2s" secondAttribute="leading" id="v2C-Zf-oTH"/>
                             <constraint firstItem="Bdc-DX-gNR" firstAttribute="top" secondItem="Dfp-k3-qNi" secondAttribute="bottom" id="vcS-3g-Y1e"/>
@@ -993,6 +1023,7 @@
         <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="clock.arrow.circlepath" catalog="system" width="128" height="112"/>
         <image name="figure.walk.motion" catalog="system" width="128" height="112"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="loginImage" width="1179" height="2556"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
