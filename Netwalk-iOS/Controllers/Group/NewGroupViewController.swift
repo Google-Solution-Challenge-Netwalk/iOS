@@ -8,6 +8,7 @@
 import UIKit
 
 class NewGroupViewController: UIViewController {
+    @IBOutlet weak var addGroupButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchButton: UIButton!
     
@@ -15,10 +16,18 @@ class NewGroupViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         tableView.register(UINib(nibName: TypeTableViewCell.className, bundle: nil), forCellReuseIdentifier: TypeTableViewCell.cellId)
-        
         tableView.register(UINib(nibName: GroupTableViewCell.className, bundle: nil), forCellReuseIdentifier: GroupTableViewCell.cellId)
+        addGroupButton.layer.cornerRadius = addGroupButton.layer.frame.size.width / 2
+        
     }
-
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    @IBAction func addGroupButtonTapped(_ sender: UIButton) {
+        let createGroupVC = storyboard?.instantiateViewController(withIdentifier: "CreateGroupVC") as! CreateGroupViewController
+        navigationController?.pushViewController(createGroupVC, animated: true)
+    }
+    
     @IBAction func searchButtonTapped(_ sender: UIButton) {
         let detailGroupVC = storyboard?.instantiateViewController(withIdentifier: "DetailGroupVC") as! DetailGroupViewController
         navigationController?.pushViewController(detailGroupVC, animated: true)
