@@ -120,6 +120,7 @@ class PloggingViewController: UIViewController {
         }
     }
     
+    // MARK: - startPlogging
     private func startPlogging() {
         print("start")
         
@@ -139,13 +140,18 @@ class PloggingViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
     }
     
+    // MARK: - stopPlogging
     private func stopPlogging() {
         print("stop")
         timer.invalidate()
         
-        //cameraButton.isHidden = true
+        let totalActDist = Double(totalDistance.text!)!
+        let totalActTime = CustomDateFormatter.convertToSeconds(totalTime.text!)
         
-        let activity = Activity(userNo: 10, groupNo: 4, totalActDist: 10, totalActTime: 10, shareState: 0, customList: coordinates)
+        let activity = Activity(userNo: 11, groupNo: 4, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, customList: coordinates)
+        
+        
+        // 활동기록 네트워킹 시 가입한 그룹 개수에 맞춰 요청 (DispatchGroup 사용)
         PloggingNetManager.shared.create(activity) {
             print("종료")
         }

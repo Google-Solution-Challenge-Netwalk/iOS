@@ -16,6 +16,16 @@ struct CustomDateFormatter {
         formatter.dateFormat = "HH:mm:ss"
         return formatter
     }()
+    
+    static func convertToSeconds(_ hrsString: String) -> Int {
+        let components = hrsString.split(separator: ":").compactMap { Int($0)! }
+        
+        let hours = components[0]
+        let minutes = components[1]
+        let seconds = components[2]
+        
+        return hours * 3600 + minutes * 60 + seconds
+    }
 }
 
 

@@ -15,7 +15,7 @@ struct Group: Codable {
     var groupNo: Int
     var name: String
     var capacity: Int
-    var participant: Int
+    var participant: Int  // 0: 비활성화 , 1: 활성화
     var category: String
     
     
