@@ -18,7 +18,6 @@ class ActivateGroupsViewController: UIViewController {
         setupTableView()
         requestPartGroupList()
         
-        
     }
     
 
@@ -33,12 +32,9 @@ class ActivateGroupsViewController: UIViewController {
     }
     
     func requestPartGroupList() {
-        
         guard let user = UserDefaults.standard.getLoginUser() else { return }
-        
-        
-        GroupNetManager.shared.readPartGroup(11) { groups in
-//        GroupNetManager.shared.readPartGroup(user.user_no!) { groups in
+
+        GroupNetManager.shared.readPartGroup(user.user_no!) { groups in
             GroupManager.shared.groups = groups
             
             DispatchQueue.main.async {

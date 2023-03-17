@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
         UserNetManager.shared.login(user: user) { no in
             user.user_no = no
             
-            //UserDefaults.standard.setLoginUser(user: user)
+            UserDefaults.standard.setLoginUser(user: user)
             
             DispatchQueue.main.async {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)

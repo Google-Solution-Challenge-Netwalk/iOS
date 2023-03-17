@@ -145,10 +145,13 @@ class PloggingViewController: UIViewController {
         print("stop")
         timer.invalidate()
         
+        guard let userNo = UserDefaults.standard.getLoginUser()?.user_no else { print("GetUserDefault Error")
+            return
+        }
         let totalActDist = Double(totalDistance.text!)!
         let totalActTime = CustomDateFormatter.convertToSeconds(totalTime.text!)
         
-        let activity = Activity(userNo: 11, groupNo: 4, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, customList: coordinates)
+        let activity = Activity(userNo: userNo, groupNo: 4, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, customList: coordinates)
         
         
         // 활동기록 네트워킹 시 가입한 그룹 개수에 맞춰 요청 (DispatchGroup 사용)

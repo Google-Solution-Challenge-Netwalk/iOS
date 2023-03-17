@@ -9,7 +9,7 @@ import Foundation
 
 struct Activity: Codable {
     var userNo: Int
-    var groupNo: Int
+    var groupNo: Int?
     var totalActDist: Double
     var totalActTime: Int
     var shareState: Int
