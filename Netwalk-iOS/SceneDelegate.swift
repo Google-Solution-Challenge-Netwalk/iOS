@@ -20,13 +20,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-//        if let _ = UserDefaults.standard.getLoginUser() {
-//            let tabBarVC = storyboard.instantiateViewController(withIdentifier: "TabBarVC")
-//            window?.rootViewController = tabBarVC
-//        } else {
-//            let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC")
-//            window?.rootViewController = loginVC
-//        }
+        if let _ = UserDefaults.standard.getLoginUser() {
+            let tabBarVC = storyboard.instantiateViewController(withIdentifier: "TabBarVC")
+            window?.rootViewController = tabBarVC
+        } else {
+            let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+            window?.rootViewController = loginVC
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

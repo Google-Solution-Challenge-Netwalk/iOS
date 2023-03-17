@@ -16,6 +16,8 @@ class TabBarController: ESTabBarController {
         //self.tabBar.shadowImage = UIImage(named: "transparent")
         //self.tabBar.backgroundImage = UIImage(named: "background_dark")
         tabBar.backgroundColor = .white
+        tabBar.isTranslucent = false
+        
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc1 = storyboard.instantiateViewController(withIdentifier: "GroupVC")

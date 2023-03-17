@@ -42,10 +42,14 @@ class ProfileViewController: UIViewController {
             
             (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(loginVC)
         }
+        
         let withdrawal = UIAlertAction(title: "Withdrawal", style: .default) { _ in
             
         }
+        
         let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        withdrawal.setValue(UIColor.red, forKey: "titleTextColor")
         
         sheet.addAction(signOut)
         sheet.addAction(withdrawal)

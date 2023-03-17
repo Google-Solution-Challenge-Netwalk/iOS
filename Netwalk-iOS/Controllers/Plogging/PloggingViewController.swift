@@ -173,14 +173,14 @@ class PloggingViewController: UIViewController {
     @IBAction func ploggingButtonTapped(_ sender: UIButton) {
         if !ploggingStatus {
             
-            let alert = UIAlertController(title: "플로깅 시작", message: "플로깅을 시작하시겠습니까?", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "시작", style: .default) { _ in
+            let alert = UIAlertController(title: "Start Plogging", message: "Do you want to start plogging?", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "Start", style: .default) { _ in
                 sender.setImage(UIImage(systemName: "stop.fill"), for: .normal)
                 self.startPlogging() // 플로깅 시작
                 self.ploggingStatus = !self.ploggingStatus
             }
             
-            let cancel = UIAlertAction(title: "취소", style: .cancel)
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel)
             
             alert.addAction(ok)
             alert.addAction(cancel)
@@ -189,13 +189,13 @@ class PloggingViewController: UIViewController {
             
         } else {
             
-            let alert = UIAlertController(title: "플로깅 종료", message: "진행중인 플로깅을 종료하시겠습니까?", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "종료", style: .default) { _ in
+            let alert = UIAlertController(title: "Stop Plogging", message: "Are you sure you want to stop the plogging in progress?", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "Stop", style: .default) { _ in
                 sender.setImage(UIImage(systemName: "play.fill"), for: .normal)
                 self.stopPlogging()
                 self.ploggingStatus = !self.ploggingStatus
             }
-            let cancel = UIAlertAction(title: "취소", style: .cancel)
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel)
             
             alert.addAction(ok)
             alert.addAction(cancel)
@@ -214,7 +214,7 @@ class PloggingViewController: UIViewController {
     // MARK: - cameraButtonTapped
     @IBAction func cameraButtonTapped(_ sender: UIButton) {
         
-        let actionSheet = UIAlertController(title: "title", message: "message", preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let camera = UIAlertAction(title: "Camera", style: .default) { action in
             self.present(self.camera, animated: true)
