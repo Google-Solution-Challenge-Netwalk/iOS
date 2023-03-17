@@ -457,6 +457,21 @@
                                     <constraint firstAttribute="height" constant="1" id="LvH-aH-xBE"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnf-Vc-i2j">
+                                <rect key="frame" x="333" y="65" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="J7f-AI-ZyU"/>
+                                    <constraint firstAttribute="width" constant="50" id="NnV-Lw-wbx"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="gearshape.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingButtonTapped:" destination="Be6-II-kjs" eventType="touchUpInside" id="jK3-57-Y5F"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZMc-Zz-i2s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -466,6 +481,8 @@
                             <constraint firstItem="v5g-1V-aKZ" firstAttribute="top" secondItem="Pbf-ab-JAH" secondAttribute="top" constant="70" id="LDy-P6-CxO"/>
                             <constraint firstItem="Dfp-k3-qNi" firstAttribute="leading" secondItem="ZMc-Zz-i2s" secondAttribute="leading" id="WMq-R0-JUR"/>
                             <constraint firstItem="ZMc-Zz-i2s" firstAttribute="bottom" secondItem="Bdc-DX-gNR" secondAttribute="bottom" id="aqI-MZ-vTq"/>
+                            <constraint firstItem="ZMc-Zz-i2s" firstAttribute="trailing" secondItem="Jnf-Vc-i2j" secondAttribute="trailing" constant="10" id="bVK-Z1-FJW"/>
+                            <constraint firstItem="Jnf-Vc-i2j" firstAttribute="centerY" secondItem="v5g-1V-aKZ" secondAttribute="centerY" id="f8Q-Pt-kJb"/>
                             <constraint firstItem="v5g-1V-aKZ" firstAttribute="leading" secondItem="Pbf-ab-JAH" secondAttribute="leading" constant="30" id="lea-Ey-c9I"/>
                             <constraint firstItem="Bdc-DX-gNR" firstAttribute="leading" secondItem="ZMc-Zz-i2s" secondAttribute="leading" id="v2C-Zf-oTH"/>
                             <constraint firstItem="Bdc-DX-gNR" firstAttribute="top" secondItem="Dfp-k3-qNi" secondAttribute="bottom" id="vcS-3g-Y1e"/>
@@ -1006,6 +1023,7 @@
         <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="clock.arrow.circlepath" catalog="system" width="128" height="112"/>
         <image name="figure.walk.motion" catalog="system" width="128" height="112"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="loginImage" width="1179" height="2556"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>

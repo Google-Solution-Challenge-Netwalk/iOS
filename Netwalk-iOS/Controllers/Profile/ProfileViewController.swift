@@ -29,6 +29,33 @@ class ProfileViewController: UIViewController {
         
     }
     
+    @IBAction func settingButtonTapped(_ sender: UIButton) {
+        
+        let sheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let signOut = UIAlertAction(title: "Sign Out", style: .default) { _ in
+            
+            UserDefaults.standard.unsetLoginUser()
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let loginVC = storyboard.instantiateViewController(identifier: "LoginVC")
+            
+            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(loginVC)
+        }
+        let withdrawal = UIAlertAction(title: "Withdrawal", style: .default) { _ in
+            
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        sheet.addAction(signOut)
+        sheet.addAction(withdrawal)
+        sheet.addAction(cancel)
+        
+        present(sheet, animated: true)
+        
+    }
+    
+    
 }
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
