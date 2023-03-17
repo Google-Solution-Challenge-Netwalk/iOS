@@ -86,6 +86,7 @@
 		95D3697329BE377000106F5B /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D3697129BE377000106F5B /* GroupTableViewCell.swift */; };
 		95EFDD27299A50E00005BAE7 /* MyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFDD25299A50E00005BAE7 /* MyGroupTableViewCell.swift */; };
 		95EFDD37299A61E20005BAE7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFDD36299A61E20005BAE7 /* Category.swift */; };
+		95F8984F29C45F6800B6014F /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F8984E29C45F6800B6014F /* CreateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -172,6 +173,7 @@
 		95EFDD24299A50E00005BAE7 /* MyGroupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyGroupTableViewCell.xib; path = "Netwalk-iOS/Views/Group/MyGroup/MyGroupTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		95EFDD25299A50E00005BAE7 /* MyGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyGroupTableViewCell.swift; path = "Netwalk-iOS/Views/Group/MyGroup/MyGroupTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		95EFDD36299A61E20005BAE7 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		95F8984E29C45F6800B6014F /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -446,6 +448,7 @@
 				95161D30299B981E002B86BA /* DetailGroupViewController.swift */,
 				57D88FDD298AD41B00C33F29 /* GroupViewController.swift */,
 				95A503FB299A13100022B3DE /* NewGroupViewController.swift */,
+				95F8984E29C45F6800B6014F /* CreateViewController.swift */,
 			);
 			path = Group;
 			sourceTree = "<group>";
@@ -684,6 +687,7 @@
 				95D3696F29BE376000106F5B /* TypeTableViewCell.swift in Sources */,
 				9580E22729C22C3200387E34 /* TrashRankTableViewCell.swift in Sources */,
 				576C0DFB298ACE9C00485AD5 /* Bundle+Ext.swift in Sources */,
+				95F8984F29C45F6800B6014F /* CreateViewController.swift in Sources */,
 				57D88FDE298AD41B00C33F29 /* GroupViewController.swift in Sources */,
 				576C0DE4298ACAB300485AD5 /* AppDelegate.swift in Sources */,
 				57F2F06929B9051C008605F5 /* ProfileBodyCollectionViewCell.swift in Sources */,
