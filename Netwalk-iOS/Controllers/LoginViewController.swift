@@ -70,7 +70,7 @@ class LoginViewController: UIViewController {
             Auth.auth().signIn(with: credential) { authResult, error in
                 guard error == nil else { print("Google Auth Error"); return }
                 
-                //guard let authResult = authResult else { print("Err"); return }
+                guard let authResult = authResult else { print("Err"); return }
                 
                 var user = User(email: authResult.user.email!, name: authResult.user.displayName!)
                 
