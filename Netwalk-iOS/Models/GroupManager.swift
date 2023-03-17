@@ -14,10 +14,10 @@ class GroupManager {
     var groups: [Group] = [] {
         didSet {
             activateGroup = groups.filter { group in
-                return group.participant == 1
+                return group.actStatus == 1
             }
             inactivateGroup = groups.filter { group in
-                return group.participant == 0
+                return group.actStatus == 0
             }
         }
     }
