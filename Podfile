@@ -12,5 +12,6 @@ target 'Netwalk-iOS' do
   pod 'GooglePlaces'
   pod 'ESTabBarController-swift'
   pod 'Tabman', '~> 3.0'
+  pod 'GoogleSignIn'
 
 end
