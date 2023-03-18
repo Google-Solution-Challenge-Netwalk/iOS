@@ -43,6 +43,10 @@ class LoginViewController: UIViewController {
             
             UserDefaults.standard.setLoginUser(user: user)
             
+            GroupNetManager.shared.readPartGroup(user.user_no!) { groups in
+                GroupManager.shared.groups = groups
+            }
+            
             DispatchQueue.main.async {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let tabBarVC = storyboard.instantiateViewController(identifier: "TabBarVC")
@@ -78,6 +82,10 @@ class LoginViewController: UIViewController {
                     user.user_no = userNo
                     UserDefaults.standard.setLoginUser(user: user)
                     print(user)
+                    
+                    GroupNetManager.shared.readPartGroup(user.user_no!) { groups in
+                        GroupManager.shared.groups = groups
+                    }
                     
                     DispatchQueue.main.async {
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)

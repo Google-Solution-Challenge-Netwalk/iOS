@@ -20,9 +20,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        if let _ = UserDefaults.standard.getLoginUser() {
+        if let user = UserDefaults.standard.getLoginUser() {
             let tabBarVC = storyboard.instantiateViewController(withIdentifier: "TabBarVC")
-            window?.rootViewController = tabBarVC
+            self.window?.rootViewController = tabBarVC
+            
+            GroupNetManager.shared.readPartGroup(user.user_no!) { groups in
+                GroupManager.shared.groups = groups
+            }
+            
         } else {
             let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC")
             window?.rootViewController = loginVC

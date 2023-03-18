@@ -16,7 +16,7 @@ class ActivateGroupsViewController: UIViewController {
         super.viewDidLoad()
 
         setupTableView()
-        requestPartGroupList()
+        //requestPartGroupList()
         
     }
     
@@ -70,7 +70,7 @@ extension ActivateGroupsViewController: UITableViewDelegate, UITableViewDataSour
         } else {
             return GroupManager.shared.inactivateGroup.count
         }
-//        return GroupManager.shared.groups.count
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
