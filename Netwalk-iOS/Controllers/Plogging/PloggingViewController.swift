@@ -151,13 +151,29 @@ class PloggingViewController: UIViewController {
         let totalActDist = Double(totalDistance.text!)!
         let totalActTime = CustomDateFormatter.convertToSeconds(totalTime.text!)
         
-        let activity = Activity(userNo: userNo, groupNo: 4, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, customList: coordinates)
-        
-        
-        // 활동기록 네트워킹 시 가입한 그룹 개수에 맞춰 요청 (DispatchGroup 사용)
-        PloggingNetManager.shared.create(activity) {
-            print("종료")
+        if GroupManager.shared.activateGroup.isEmpty {
+            let activity = Activity(userNo: userNo, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, customList: coordinates)
+            PloggingNetManager.shared.create(activity) {
+                
+            }
+        } else {
+            DispatchQueue.global().async {
+                let dispatchGroup = DispatchGroup()
+                
+                for group in GroupManager.shared.activateGroup {
+                    
+                    let activity = Activity(userNo: userNo, groupNo: group.groupNo, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, customList: self.coordinates)
+                    
+                    dispatchGroup.enter()
+                    PloggingNetManager.shared.create(activity) {
+                        dispatchGroup.leave()
+                    }
+                }
+            }
         }
+        
+        
+        
     }
     
     // MARK: - myLocationButtonTapped
