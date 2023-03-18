@@ -21,7 +21,7 @@ struct Group: Codable {
     
     enum CodingKeys: String, CodingKey {
         case groupNo = "group_no"
+        case actStatus = "act_st"
         case name, capacity, participant, category
-        case actStatus = "ACT_ST"
     }
 }
