@@ -15,11 +15,15 @@ class ProfileBodyTableViewCell: UITableViewCell {
     
     var didSelectItem: ((_ indexPath: IndexPath)->())? = nil
     
+    var ploggingRecords: [Activity] = []
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
         setupCollectionView()
+        requestPloggingRecords()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -52,11 +56,23 @@ class ProfileBodyTableViewCell: UITableViewCell {
         // 컬렉션뷰 속성에 flowLayout 할당
         collectionView.collectionViewLayout = flowLayout
     }
+    
+    private func requestPloggingRecords() {
+        let user = UserDefaults.standard.getLoginUser()!
+        
+        PloggingNetManager.shared.getPloggingRecord(user) { activities in
+            self.ploggingRecords = activities
+            
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
 }
 
 extension ProfileBodyTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return ploggingRecords.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

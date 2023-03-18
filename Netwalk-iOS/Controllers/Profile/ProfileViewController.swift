@@ -11,6 +11,7 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +29,8 @@ class ProfileViewController: UIViewController {
         tableView.register(UINib(nibName: "ProfileBodyTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileBodyTableViewCell")
         
     }
+    
+    
     
     @IBAction func settingButtonTapped(_ sender: UIButton) {
         
@@ -95,7 +98,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 350
         case 1:
-            return 1500
+            return tableView.bounds.height - 350
         default:
             return 0
         }
