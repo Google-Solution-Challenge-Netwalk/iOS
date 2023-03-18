@@ -152,7 +152,7 @@ class PloggingViewController: UIViewController {
         let totalActTime = CustomDateFormatter.convertToSeconds(totalTime.text!)
         
         if GroupManager.shared.activateGroup.isEmpty {
-            let activity = Activity(userNo: userNo, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, customList: coordinates)
+            let activity = Activity(userNo: userNo, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, coordinates: coordinates)
             PloggingNetManager.shared.create(activity) {
                 
             }
@@ -162,7 +162,7 @@ class PloggingViewController: UIViewController {
                 
                 for group in GroupManager.shared.activateGroup {
                     
-                    let activity = Activity(userNo: userNo, groupNo: group.groupNo, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, customList: self.coordinates)
+                    let activity = Activity(userNo: userNo, groupNo: group.groupNo, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, coordinates: self.coordinates)
                     
                     dispatchGroup.enter()
                     PloggingNetManager.shared.create(activity) {
