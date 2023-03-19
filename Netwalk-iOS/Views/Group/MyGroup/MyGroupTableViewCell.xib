@@ -45,10 +45,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="myGroupDate" destination="ffw-TO-qr2" id="h6A-SM-lWv"/>
+                <outlet property="myGroupDate" destination="pQV-fN-mLa" id="Pev-iV-nIQ"/>
                 <outlet property="myGroupImg" destination="1ZA-C6-v0I" id="C8a-6F-gF4"/>
                 <outlet property="myGroupPeople" destination="ffw-TO-qr2" id="wLU-qu-Quv"/>
-                <outlet property="myGroupTitle" destination="pQV-fN-mLa" id="zb9-o2-SuW"/>
+                <outlet property="myGroupTitle" destination="X9X-Yc-IFR" id="5BQ-Ru-N5U"/>
             </connections>
             <point key="canvasLocation" x="153.43511450381678" y="19.718309859154932"/>
         </tableViewCell>
