@@ -61,6 +61,8 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.selectionStyle = .none
         cell.myGroupTitle.text = group.name
+        cell.groupParticipant.text = String(group.participant)
+        cell.groupCapacity.text = String(group.capacity)
         
         return cell
     }
