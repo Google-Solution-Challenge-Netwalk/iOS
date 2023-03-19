@@ -11,11 +11,17 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var ploggingRecords: [Activity] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupTableView()
+        //requestPloggingRecords()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        requestPloggingRecords()
     }
     
     private func setupTableView() {
@@ -30,7 +36,17 @@ class ProfileViewController: UIViewController {
         
     }
     
-    
+    private func requestPloggingRecords() {
+        let user = UserDefaults.standard.getLoginUser()!
+        
+        PloggingNetManager.shared.getPloggingRecord(user) { activities in
+            self.ploggingRecords = activities
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     @IBAction func settingButtonTapped(_ sender: UIButton) {
         
@@ -80,11 +96,13 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileBodyTableViewCell", for: indexPath) as! ProfileBodyTableViewCell
             
+            cell.ploggingRecords = ploggingRecords
             cell.didSelectItem = { indexPath in
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "PloggingDetailViewController") as! PloggingDetailViewController
-                
+                vc.plogging = self.ploggingRecords[indexPath.item]
                 self.present(vc, animated: true)
             }
+            cell.collectionView.reloadData()
             
             return cell
         default:

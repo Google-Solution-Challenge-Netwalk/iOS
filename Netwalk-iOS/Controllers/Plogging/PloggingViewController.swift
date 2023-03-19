@@ -145,6 +145,10 @@ class PloggingViewController: UIViewController {
         print("stop")
         timer.invalidate()
         
+        guard let myLocation = mapView.myLocation?.coordinate else { return }
+        let coor = Coordinate(lat: myLocation.latitude, log: myLocation.longitude)
+        coordinates.append(coor)
+        
         guard let userNo = UserDefaults.standard.getLoginUser()?.user_no else { print("GetUserDefault Error")
             return
         }

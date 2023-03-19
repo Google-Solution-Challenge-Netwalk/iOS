@@ -14,16 +14,13 @@ class ProfileBodyTableViewCell: UITableViewCell {
     let flowLayout = UICollectionViewFlowLayout()
     
     var didSelectItem: ((_ indexPath: IndexPath)->())? = nil
-    
-    var ploggingRecords: [Activity] = []
-    
+    var ploggingRecords: [Activity]!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
         setupCollectionView()
-        requestPloggingRecords()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -57,17 +54,7 @@ class ProfileBodyTableViewCell: UITableViewCell {
         collectionView.collectionViewLayout = flowLayout
     }
     
-    private func requestPloggingRecords() {
-        let user = UserDefaults.standard.getLoginUser()!
-        
-        PloggingNetManager.shared.getPloggingRecord(user) { activities in
-            self.ploggingRecords = activities
-            
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
-    }
+
 }
 
 extension ProfileBodyTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -82,7 +69,6 @@ extension ProfileBodyTableViewCell: UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("클릭 \(indexPath.item)")
         didSelectItem?(indexPath)
     }
     
