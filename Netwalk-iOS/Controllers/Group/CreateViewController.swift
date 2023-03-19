@@ -13,6 +13,8 @@ class CreateGroupViewController: UIViewController {
     @IBOutlet weak var groupNumOfPeople: UITextField!
     @IBOutlet weak var groupCategory: UITextField!
     @IBOutlet weak var groupContent: UITextView!
+    @IBOutlet weak var createButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +26,14 @@ class CreateGroupViewController: UIViewController {
     }
     
     func setUpView(){
+        createButton.layer.cornerRadius = 8
+        backButton.layer.borderColor = UIColor.systemBrown.cgColor
+        backButton.layer.borderWidth = 1
+        backButton.layer.cornerRadius = 8
         groupContent.layer.cornerRadius = 8
         groupContent.layer.borderWidth = 1
         groupContent.layer.borderColor = UIColor.systemGray6.cgColor
     }
-    
     @IBAction func backButtonTapped(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
