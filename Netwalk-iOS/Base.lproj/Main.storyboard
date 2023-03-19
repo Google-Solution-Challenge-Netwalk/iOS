@@ -1011,6 +1011,9 @@
                                         <rect key="frame" x="0.0" y="1" width="48" height="38"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrow-back-ios"/>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="nha-Gt-X3h" eventType="touchUpInside" id="M7l-tH-GpP"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qm-b9-RUZ">
                                         <rect key="frame" x="148.66666666666666" y="3.3333333333333286" width="81" height="33.666666666666664"/>

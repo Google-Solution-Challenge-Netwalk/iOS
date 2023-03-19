@@ -20,7 +20,10 @@ class ActivateGroupsViewController: UIViewController {
         
     }
     
-
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
