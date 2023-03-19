@@ -114,9 +114,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return 350
+            return 300
         case 1:
-            return tableView.bounds.height - 350
+            return tableView.bounds.height - 300
         default:
             return 0
         }

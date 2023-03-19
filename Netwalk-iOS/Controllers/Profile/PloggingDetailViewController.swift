@@ -46,8 +46,8 @@ class PloggingDetailViewController: UIViewController {
     
     private func setupUI() {
         ploggingDate.text = plogging.registDate
-        totalKM.text = "\(plogging.totalActDist)"
-        totalHRS.text = "\(plogging.totalActTime)"
+        totalKM.text = "\(plogging.totalActDist) KM"
+        totalHRS.text = "\(CustomDateFormatter.convertToString(plogging.totalActTime)) HRS"
         sharedSwitch.setOn((plogging.shareState != 0), animated: false)
         drawPolyline()
     }

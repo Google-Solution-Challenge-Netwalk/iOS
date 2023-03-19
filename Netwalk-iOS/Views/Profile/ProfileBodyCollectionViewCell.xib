@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,7 +18,36 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Q7-0c-4Bp">
                         <rect key="frame" x="0.0" y="0.0" width="194" height="188"/>
-                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VHb-Hf-pqL">
+                                <rect key="frame" x="49.333333333333336" y="62" width="95.333333333333314" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023-01-01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMe-NS-QdU">
+                                        <rect key="frame" x="0.0" y="0.0" width="95.333333333333329" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.00 KM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43u-hb-uzo">
+                                        <rect key="frame" x="0.0" y="23" width="95.333333333333329" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09:01:43 HRS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkT-7L-0Ck">
+                                        <rect key="frame" x="0.0" y="46" width="95.333333333333329" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VHb-Hf-pqL" firstAttribute="centerX" secondItem="7Q7-0c-4Bp" secondAttribute="centerX" id="4Ti-ZB-Qej"/>
+                            <constraint firstItem="VHb-Hf-pqL" firstAttribute="centerY" secondItem="7Q7-0c-4Bp" secondAttribute="centerY" id="aS5-3E-zYh"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -31,12 +59,13 @@
                 <constraint firstItem="7Q7-0c-4Bp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="iqT-Jh-gOc"/>
             </constraints>
             <size key="customSize" width="194" height="188"/>
+            <connections>
+                <outlet property="ploggingDate" destination="sMe-NS-QdU" id="qjI-iN-dPj"/>
+                <outlet property="totalHRS" destination="HkT-7L-0Ck" id="xuo-xu-tv2"/>
+                <outlet property="totalKM" destination="43u-hb-uzo" id="pWl-bH-bRh"/>
+                <outlet property="view" destination="7Q7-0c-4Bp" id="roY-y7-zMb"/>
+            </connections>
             <point key="canvasLocation" x="103.81679389312977" y="35.91549295774648"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

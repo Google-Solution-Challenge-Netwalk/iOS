@@ -26,6 +26,22 @@ struct CustomDateFormatter {
         
         return hours * 3600 + minutes * 60 + seconds
     }
+    
+    static func convertToString(_ timeInterval: Int) -> String {
+        
+        let hours = timeInterval / 3600
+        let minutes = (timeInterval % 3600) / 60
+        let seconds = (timeInterval % 3600 % 60)
+        
+        var components = DateComponents()
+        components.hour = hours
+        components.minute = minutes
+        components.second = seconds
+        
+        let date = Calendar.current.date(from: components)!
+        
+        return CustomDateFormatter.format.string(from: date)
+    }
 }
 
 

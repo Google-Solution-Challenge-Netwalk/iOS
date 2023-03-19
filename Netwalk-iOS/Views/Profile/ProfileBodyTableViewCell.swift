@@ -41,7 +41,7 @@ class ProfileBodyTableViewCell: UITableViewCell {
         
         // UIScreen.main.bounds.width = 스크린 가로 사이즈
         // CVCell.spacingWidth * (CVCell.cellColumns - 1) = 셀 사이의 spacing 공간 개수
-        let collectionCellWidth = (UIScreen.main.bounds.width - PhotoCVCell.spacingWitdh * (PhotoCVCell.cellColumns - 1)) / PhotoCVCell.cellColumns
+        let collectionCellWidth = (UIScreen.main.bounds.width - 2 - PhotoCVCell.spacingWitdh * (PhotoCVCell.cellColumns - 1)) / PhotoCVCell.cellColumns
         
         flowLayout.itemSize = CGSize(width: collectionCellWidth, height: collectionCellWidth)
         
@@ -64,6 +64,14 @@ extension ProfileBodyTableViewCell: UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileBodyCollectionViewCell", for: indexPath) as! ProfileBodyCollectionViewCell
+        
+        let ploggingRecord = ploggingRecords[indexPath.item]
+        
+        cell.ploggingDate.text = ploggingRecord.registDate
+        cell.totalKM.text = "\(ploggingRecord.totalActDist) KM"
+        
+        let hrs = CustomDateFormatter.convertToString(ploggingRecord.totalActTime)
+        cell.totalHRS.text = "\(hrs) HRS"
         
         return cell
     }
