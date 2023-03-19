@@ -11,6 +11,8 @@ class GroupCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var groupImage: UIImageView!
     @IBOutlet weak var groupLabel: UILabel!
+    @IBOutlet weak var groupCapacity: UILabel!
+    @IBOutlet weak var groupParticipant: UILabel!
     
     static let cellId = "GroupCollectionViewCell"
     static let className = "GroupCollectionViewCell"
