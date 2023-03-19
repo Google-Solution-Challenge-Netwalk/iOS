@@ -49,8 +49,8 @@
                             </label>
                         </subviews>
                     </stackView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="👥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joS-fl-eaK">
-                        <rect key="frame" x="90" y="42" width="23" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joS-fl-eaK">
+                        <rect key="frame" x="90" y="44" width="23" height="20.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -60,6 +60,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="joS-fl-eaK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="44" id="8GW-Ly-aqh"/>
                 <constraint firstAttribute="bottom" secondItem="v4N-6R-sxi" secondAttribute="bottom" constant="13.67" id="B1W-9v-Dbj"/>
                 <constraint firstItem="joS-fl-eaK" firstAttribute="leading" secondItem="t39-U8-b4z" secondAttribute="trailing" constant="17" id="P46-Yp-omm"/>
                 <constraint firstItem="t39-U8-b4z" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="13" id="Plh-9P-sj7"/>
