@@ -16,8 +16,7 @@ class ActivateGroupsViewController: UIViewController {
         super.viewDidLoad()
 
         setupTableView()
-        requestPartGroupList()
-        
+        //requestPartGroupList()
         
     }
     
@@ -33,12 +32,9 @@ class ActivateGroupsViewController: UIViewController {
     }
     
     func requestPartGroupList() {
-        
         guard let user = UserDefaults.standard.getLoginUser() else { return }
-        
-        
-        GroupNetManager.shared.readPartGroup(11) { groups in
-//        GroupNetManager.shared.readPartGroup(user.user_no!) { groups in
+
+        GroupNetManager.shared.readPartGroup(user.user_no!) { groups in
             GroupManager.shared.groups = groups
             
             DispatchQueue.main.async {
@@ -74,7 +70,7 @@ extension ActivateGroupsViewController: UITableViewDelegate, UITableViewDataSour
         } else {
             return GroupManager.shared.inactivateGroup.count
         }
-//        return GroupManager.shared.groups.count
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

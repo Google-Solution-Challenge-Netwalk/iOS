@@ -23,8 +23,8 @@ class ExampleIrregularityBasicContentView: ExampleBouncesContentView {
         highlightIconColor = UIColor.init(red: 151/255.0, green: 112/255.0, blue: 112/255.0, alpha: 1.0)
         
         // 탭바 백그라운드 색상
-        backdropColor = UIColor.init(white: 255.0 / 255.0, alpha: 1.0)
-        highlightBackdropColor = UIColor.init(white: 255.0 / 255.0, alpha: 1.0)
+        backdropColor = .clear
+        highlightBackdropColor = .clear
     }
     
     public required init?(coder aDecoder: NSCoder) {

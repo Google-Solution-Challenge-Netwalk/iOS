@@ -57,7 +57,6 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Yi4-jz-7V5"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="hR4-Br-JXb" firstAttribute="leading" secondItem="Yi4-jz-7V5" secondAttribute="leading" id="5j1-N8-ioU"/>
                 <constraint firstItem="hR4-Br-JXb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="74x-fO-vNS"/>

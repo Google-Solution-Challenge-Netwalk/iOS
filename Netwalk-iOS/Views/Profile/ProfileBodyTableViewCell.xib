@@ -17,8 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="272" height="205"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ly5-Kr-Ki0">
-                        <rect key="frame" x="0.0" y="0.0" width="272" height="205"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ly5-Kr-Ki0">
+                        <rect key="frame" x="1" y="1" width="270" height="203"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ImH-in-d1H">
                             <size key="itemSize" width="128" height="128"/>
@@ -29,10 +29,10 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ly5-Kr-Ki0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2FP-Uc-Bce"/>
-                    <constraint firstItem="ly5-Kr-Ki0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3Yc-gk-Bkc"/>
-                    <constraint firstAttribute="trailing" secondItem="ly5-Kr-Ki0" secondAttribute="trailing" id="BjH-LZ-kHu"/>
-                    <constraint firstAttribute="bottom" secondItem="ly5-Kr-Ki0" secondAttribute="bottom" id="M1P-jt-Uqm"/>
+                    <constraint firstAttribute="trailing" secondItem="ly5-Kr-Ki0" secondAttribute="trailing" constant="1" id="U3d-mg-yLI"/>
+                    <constraint firstAttribute="bottom" secondItem="ly5-Kr-Ki0" secondAttribute="bottom" constant="1" id="dZh-I5-sZB"/>
+                    <constraint firstItem="ly5-Kr-Ki0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="1" id="fvd-IK-dmP"/>
+                    <constraint firstItem="ly5-Kr-Ki0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="w3a-9o-ZRE"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -14,6 +14,7 @@ class ProfileBodyTableViewCell: UITableViewCell {
     let flowLayout = UICollectionViewFlowLayout()
     
     var didSelectItem: ((_ indexPath: IndexPath)->())? = nil
+    var ploggingRecords: [Activity]!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,7 +41,7 @@ class ProfileBodyTableViewCell: UITableViewCell {
         
         // UIScreen.main.bounds.width = 스크린 가로 사이즈
         // CVCell.spacingWidth * (CVCell.cellColumns - 1) = 셀 사이의 spacing 공간 개수
-        let collectionCellWidth = (UIScreen.main.bounds.width - PhotoCVCell.spacingWitdh * (PhotoCVCell.cellColumns - 1)) / PhotoCVCell.cellColumns
+        let collectionCellWidth = (UIScreen.main.bounds.width - 2 - PhotoCVCell.spacingWitdh * (PhotoCVCell.cellColumns - 1)) / PhotoCVCell.cellColumns
         
         flowLayout.itemSize = CGSize(width: collectionCellWidth, height: collectionCellWidth)
         
@@ -52,21 +53,30 @@ class ProfileBodyTableViewCell: UITableViewCell {
         // 컬렉션뷰 속성에 flowLayout 할당
         collectionView.collectionViewLayout = flowLayout
     }
+    
+
 }
 
 extension ProfileBodyTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return ploggingRecords.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileBodyCollectionViewCell", for: indexPath) as! ProfileBodyCollectionViewCell
         
+        let ploggingRecord = ploggingRecords[indexPath.item]
+        
+        cell.ploggingDate.text = ploggingRecord.registDate
+        cell.totalKM.text = "\(ploggingRecord.totalActDist) KM"
+        
+        let hrs = CustomDateFormatter.convertToString(ploggingRecord.totalActTime)
+        cell.totalHRS.text = "\(hrs) HRS"
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("클릭 \(indexPath.item)")
         didSelectItem?(indexPath)
     }
     

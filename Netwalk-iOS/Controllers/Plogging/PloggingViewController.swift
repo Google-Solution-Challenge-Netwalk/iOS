@@ -145,16 +145,39 @@ class PloggingViewController: UIViewController {
         print("stop")
         timer.invalidate()
         
+        guard let myLocation = mapView.myLocation?.coordinate else { return }
+        let coor = Coordinate(lat: myLocation.latitude, log: myLocation.longitude)
+        coordinates.append(coor)
+        
+        guard let userNo = UserDefaults.standard.getLoginUser()?.user_no else { print("GetUserDefault Error")
+            return
+        }
         let totalActDist = Double(totalDistance.text!)!
         let totalActTime = CustomDateFormatter.convertToSeconds(totalTime.text!)
         
-        let activity = Activity(userNo: 11, groupNo: 4, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, customList: coordinates)
-        
-        
-        // 활동기록 네트워킹 시 가입한 그룹 개수에 맞춰 요청 (DispatchGroup 사용)
-        PloggingNetManager.shared.create(activity) {
-            print("종료")
+        if GroupManager.shared.activateGroup.isEmpty {
+            let activity = Activity(userNo: userNo, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, coordinates: coordinates)
+            PloggingNetManager.shared.create(activity) {
+                
+            }
+        } else {
+            DispatchQueue.global().async {
+                let dispatchGroup = DispatchGroup()
+                
+                for group in GroupManager.shared.activateGroup {
+                    
+                    let activity = Activity(userNo: userNo, groupNo: group.groupNo, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, coordinates: self.coordinates)
+                    
+                    dispatchGroup.enter()
+                    PloggingNetManager.shared.create(activity) {
+                        dispatchGroup.leave()
+                    }
+                }
+            }
         }
+        
+        
+        
     }
     
     // MARK: - myLocationButtonTapped
@@ -170,14 +193,14 @@ class PloggingViewController: UIViewController {
     @IBAction func ploggingButtonTapped(_ sender: UIButton) {
         if !ploggingStatus {
             
-            let alert = UIAlertController(title: "플로깅 시작", message: "플로깅을 시작하시겠습니까?", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "시작", style: .default) { _ in
+            let alert = UIAlertController(title: "Start Plogging", message: "Do you want to start plogging?", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "Start", style: .default) { _ in
                 sender.setImage(UIImage(systemName: "stop.fill"), for: .normal)
                 self.startPlogging() // 플로깅 시작
                 self.ploggingStatus = !self.ploggingStatus
             }
             
-            let cancel = UIAlertAction(title: "취소", style: .cancel)
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel)
             
             alert.addAction(ok)
             alert.addAction(cancel)
@@ -186,13 +209,13 @@ class PloggingViewController: UIViewController {
             
         } else {
             
-            let alert = UIAlertController(title: "플로깅 종료", message: "진행중인 플로깅을 종료하시겠습니까?", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "종료", style: .default) { _ in
+            let alert = UIAlertController(title: "Stop Plogging", message: "Are you sure you want to stop the plogging in progress?", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "Stop", style: .default) { _ in
                 sender.setImage(UIImage(systemName: "play.fill"), for: .normal)
                 self.stopPlogging()
                 self.ploggingStatus = !self.ploggingStatus
             }
-            let cancel = UIAlertAction(title: "취소", style: .cancel)
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel)
             
             alert.addAction(ok)
             alert.addAction(cancel)
@@ -211,7 +234,7 @@ class PloggingViewController: UIViewController {
     // MARK: - cameraButtonTapped
     @IBAction func cameraButtonTapped(_ sender: UIButton) {
         
-        let actionSheet = UIAlertController(title: "title", message: "message", preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let camera = UIAlertAction(title: "Camera", style: .default) { action in
             self.present(self.camera, animated: true)

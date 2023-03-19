@@ -7,13 +7,20 @@
 
 import Foundation
 
+
+struct ActivityList: Codable {
+    var object: [Activity]
+}
+
+
 struct Activity: Codable {
-    var userNo: Int
-    var groupNo: Int
+    var userNo: Int?
+    var groupNo: Int?
     var totalActDist: Double
     var totalActTime: Int
     var shareState: Int
-    var customList: [Coordinate]
+    var coordinates: [Coordinate]
+    var registDate: String?
     
     enum CodingKeys: String, CodingKey {
         case userNo = "user_no"
@@ -21,7 +28,8 @@ struct Activity: Codable {
         case totalActDist = "total_act_distance"
         case totalActTime = "total_act_time"
         case shareState = "share_st"
-        case customList
+        case coordinates = "distances"
+        case registDate = "reg_dt"
     }
 }
 
