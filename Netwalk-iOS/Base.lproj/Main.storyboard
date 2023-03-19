@@ -195,7 +195,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of3-Hl-7Z4">
-                                <rect key="frame" x="300" y="662" width="70" height="70"/>
+                                <rect key="frame" x="300" y="722" width="70" height="70"/>
                                 <color key="backgroundColor" red="0.54259672619999999" green="0.43166595880000003" blue="0.4341856435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="ShF-RC-aEm"/>
@@ -220,11 +220,11 @@
                             <constraint firstItem="nn4-Cw-KMw" firstAttribute="centerX" secondItem="Prb-Oc-TVP" secondAttribute="centerX" id="83E-fi-8rQ"/>
                             <constraint firstItem="EBd-Kj-HkF" firstAttribute="trailing" secondItem="Whp-Ly-65A" secondAttribute="trailing" id="D5S-6S-o14"/>
                             <constraint firstItem="Whp-Ly-65A" firstAttribute="trailing" secondItem="Of3-Hl-7Z4" secondAttribute="trailing" constant="23" id="EjW-Gn-r9W"/>
-                            <constraint firstAttribute="bottom" secondItem="Of3-Hl-7Z4" secondAttribute="bottom" constant="120" id="Jga-l2-PXX"/>
                             <constraint firstItem="nn4-Cw-KMw" firstAttribute="leading" secondItem="Whp-Ly-65A" secondAttribute="leading" constant="10" id="UCJ-2c-Se1"/>
                             <constraint firstItem="Whp-Ly-65A" firstAttribute="bottom" secondItem="NEF-1R-cnE" secondAttribute="bottom" constant="48.000000000000114" id="YVG-dX-Cq9"/>
                             <constraint firstItem="NEF-1R-cnE" firstAttribute="leading" secondItem="Whp-Ly-65A" secondAttribute="leading" id="aLz-rV-yAA"/>
                             <constraint firstItem="EBd-Kj-HkF" firstAttribute="leading" secondItem="Whp-Ly-65A" secondAttribute="leading" id="bQJ-ts-gXi"/>
+                            <constraint firstItem="Whp-Ly-65A" firstAttribute="bottom" secondItem="Of3-Hl-7Z4" secondAttribute="bottom" constant="26" id="t6E-bv-lxk"/>
                             <constraint firstItem="Whp-Ly-65A" firstAttribute="trailing" secondItem="nn4-Cw-KMw" secondAttribute="trailing" constant="10" id="tRx-bx-tjv"/>
                             <constraint firstItem="NEF-1R-cnE" firstAttribute="top" secondItem="EBd-Kj-HkF" secondAttribute="bottom" constant="-1" id="xka-IA-EhU"/>
                         </constraints>
