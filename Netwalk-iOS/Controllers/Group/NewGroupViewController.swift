@@ -32,23 +32,21 @@ class NewGroupViewController: UIViewController {
         let detailGroupVC = storyboard?.instantiateViewController(withIdentifier: "DetailGroupVC") as! DetailGroupViewController
         navigationController?.pushViewController(detailGroupVC, animated: true)
     }
-    
 }
 
 extension NewGroupViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return Category.allCases.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row{
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: TypeTableViewCell.cellId, for: indexPath) as! TypeTableViewCell
-            cell.configure()
-            return cell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TypeCollectionViewCell") else { return UITableViewCell() }
+            cell.textLabel?.text = Category.allCases[indexPath.row].description
+                    return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: GroupTableViewCell.cellId, for: indexPath) as! GroupTableViewCell
-//////            cell.configure()
             return cell
             
         default:
@@ -58,7 +56,6 @@ extension NewGroupViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let interval:CGFloat = 3
         
         switch indexPath.row{
         case 0:
@@ -68,7 +65,5 @@ extension NewGroupViewController: UITableViewDelegate, UITableViewDataSource {
         default:
             return 0
         }
-        
-        
     }
 }
