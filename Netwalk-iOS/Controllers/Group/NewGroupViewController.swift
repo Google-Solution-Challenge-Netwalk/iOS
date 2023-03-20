@@ -36,15 +36,15 @@ class NewGroupViewController: UIViewController {
 
 extension NewGroupViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Category.allCases.count
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row{
         case 0:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TypeCollectionViewCell") else { return UITableViewCell() }
-            cell.textLabel?.text = Category.allCases[indexPath.row].description
-                    return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: TypeTableViewCell.cellId, for: indexPath) as! TypeTableViewCell
+                        cell.configure()
+            return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: GroupTableViewCell.cellId, for: indexPath) as! GroupTableViewCell
             return cell
