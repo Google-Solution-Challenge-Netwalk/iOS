@@ -1,8 +1,8 @@
 //
-//  GroupViewController.swift
+//  MyGroupViewController.swift
 //  Netwalk-iOS
 //
-//  Created by 이정동 on 2023/02/02.
+//  Created by 지윤 on 2023/03/20.
 //
 
 import UIKit
