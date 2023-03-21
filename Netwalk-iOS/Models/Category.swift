@@ -7,16 +7,16 @@
 
 import Foundation
 
-enum Category: CaseIterable {
+enum Category: String, CaseIterable {
     
-    case overseas
-    case mountain
-    case sea
-    case dawn
-    case morning
-    case lunch
-    case evening
-    case night
-    case student
+    case overseas = "Overseas"
+    case mountain = "Mountain"
+    case sea = "Sea"
+    case dawn = "Dawn"
+    case morning = "Morning"
+    case lunch = "Lunch"
+    case evening = "Evening"
+    case night = "Night"
+    case student = "Student"
     
 }

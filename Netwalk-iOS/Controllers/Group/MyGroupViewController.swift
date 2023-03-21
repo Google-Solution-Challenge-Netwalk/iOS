@@ -58,6 +58,7 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyGroupTableViewCell") as! MyGroupTableViewCell
         
         cell.selectionStyle = .none
+        cell.myGroupImg.image = UIImage(named:"\(group.category).png")
         cell.myGroupTitle.text = group.name
         cell.groupParticipant.text = String(group.participant)
         cell.groupCapacity.text = String(group.capacity)

@@ -74,6 +74,7 @@
 		95766C4C29C982CE00971C7F /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95766C4B29C982CE00971C7F /* Ranking.swift */; };
 		95766C4E29C983BF00971C7F /* RankingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95766C4D29C983BF00971C7F /* RankingManager.swift */; };
 		95766C5029C985E000971C7F /* RankingNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95766C4F29C985E000971C7F /* RankingNetManager.swift */; };
+		95766C5229C9FB4500971C7F /* Cate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95766C5129C9FB4500971C7F /* Cate.swift */; };
 		957DE61B29C1FFD100123538 /* TrashRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957DE61A29C1FFD100123538 /* TrashRankViewController.swift */; };
 		9580E22729C22C3200387E34 /* TrashRankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9580E22529C22C3200387E34 /* TrashRankTableViewCell.swift */; };
 		9580E22829C22C3200387E34 /* TrashRankTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9580E22629C22C3200387E34 /* TrashRankTableViewCell.xib */; };
@@ -160,6 +161,7 @@
 		95766C4B29C982CE00971C7F /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
 		95766C4D29C983BF00971C7F /* RankingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingManager.swift; sourceTree = "<group>"; };
 		95766C4F29C985E000971C7F /* RankingNetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingNetManager.swift; sourceTree = "<group>"; };
+		95766C5129C9FB4500971C7F /* Cate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cate.swift; sourceTree = "<group>"; };
 		957DE61A29C1FFD100123538 /* TrashRankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashRankViewController.swift; sourceTree = "<group>"; };
 		9580E22529C22C3200387E34 /* TrashRankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashRankTableViewCell.swift; sourceTree = "<group>"; };
 		9580E22629C22C3200387E34 /* TrashRankTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrashRankTableViewCell.xib; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 				57F2F07429BE4688008605F5 /* Activity.swift */,
 				57F2F07929C1A133008605F5 /* Group.swift */,
 				95766C4B29C982CE00971C7F /* Ranking.swift */,
+				95766C5129C9FB4500971C7F /* Cate.swift */,
 			);
 			path = Tables;
 			sourceTree = "<group>";
@@ -701,6 +704,7 @@
 				95D3696F29BE376000106F5B /* TypeTableViewCell.swift in Sources */,
 				9580E22729C22C3200387E34 /* TrashRankTableViewCell.swift in Sources */,
 				576C0DFB298ACE9C00485AD5 /* Bundle+Ext.swift in Sources */,
+				95766C5229C9FB4500971C7F /* Cate.swift in Sources */,
 				9512A03229C85783003CC81F /* MyGroupViewController.swift in Sources */,
 				95F8984F29C45F6800B6014F /* CreateViewController.swift in Sources */,
 				576C0DE4298ACAB300485AD5 /* AppDelegate.swift in Sources */,
