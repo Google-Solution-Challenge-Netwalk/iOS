@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct UserLists: Codable {
+    var object: [User]
+
+}
 
 struct User: Codable {
     var user_no: Int?

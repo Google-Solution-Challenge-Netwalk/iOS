@@ -13,6 +13,7 @@ class KmRankViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        reqeustUserRank("distance")
         setUpTableView()
     }
     
@@ -23,17 +24,34 @@ class KmRankViewController: UIViewController {
         
     }
     
+    func reqeustUserRank(_ type: String) {
+        
+        RankingNetManager.shared.ranking(type) { rankings in
+            RankingManager.shared.rankings = rankings
+            DispatchQueue.main.async {
+                self.tableView?.reloadData()
+            }
+        }
+    }
+    
 }
 
 extension KmRankViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { //cell의 갯수 설정
-        return 10
+        return RankingManager.shared.rankings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //cell의 데이터 구성
         
+        var ranking: Ranking
+        ranking = RankingManager.shared.rankings[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "KmRankTableViewCell") as! KmRankTableViewCell
+        
         cell.selectionStyle = .none
+        cell.rankName.text = ranking.userName
+        cell.rankNumber.text = String((indexPath.row)+1)
+        
         return cell
         
     }
