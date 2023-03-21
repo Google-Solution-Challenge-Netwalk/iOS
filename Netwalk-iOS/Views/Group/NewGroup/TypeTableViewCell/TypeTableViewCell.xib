@@ -32,8 +32,8 @@
                         </connections>
                     </collectionView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNg-eB-6Yp">
-                        <rect key="frame" x="10" y="10" width="96" height="27"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                        <rect key="frame" x="10" y="10" width="93" height="27"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>

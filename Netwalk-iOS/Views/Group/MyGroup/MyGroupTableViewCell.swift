@@ -10,8 +10,8 @@ import UIKit
 class MyGroupTableViewCell: UITableViewCell {
     @IBOutlet weak var myGroupImg: UIImageView!
     @IBOutlet weak var myGroupTitle: UILabel!
-    @IBOutlet weak var myGroupDate: UILabel!
-    @IBOutlet weak var myGroupPeople: UILabel!
+    @IBOutlet weak var groupCapacity: UILabel!
+    @IBOutlet weak var groupParticipant: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

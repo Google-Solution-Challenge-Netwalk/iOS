@@ -22,7 +22,6 @@
 		57D88FD8298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FD7298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift */; };
 		57D88FDA298AD32800C33F29 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FD9298AD32800C33F29 /* ExampleBouncesContentView.swift */; };
 		57D88FDC298AD33F00C33F29 /* ExampleBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FDB298AD33F00C33F29 /* ExampleBasicContentView.swift */; };
-		57D88FDE298AD41B00C33F29 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FDD298AD41B00C33F29 /* GroupViewController.swift */; };
 		57D88FE0298AD42200C33F29 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FDF298AD42200C33F29 /* ReviewViewController.swift */; };
 		57D88FE2298AD42C00C33F29 /* PloggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FE1298AD42C00C33F29 /* PloggingViewController.swift */; };
 		57D88FE4298AD43500C33F29 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D88FE3298AD43500C33F29 /* RankingViewController.swift */; };
@@ -49,6 +48,7 @@
 		57F2F08A29C2185D008605F5 /* ActivateGroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2F08929C2185D008605F5 /* ActivateGroupHeaderView.swift */; };
 		57F2F09029C218ED008605F5 /* ActivateGroupHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57F2F08F29C218ED008605F5 /* ActivateGroupHeaderView.xib */; };
 		7AA3F62EF603725162AB6B74 /* Pods_Netwalk_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */; };
+		9512A03229C85783003CC81F /* MyGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9512A03129C85783003CC81F /* MyGroupViewController.swift */; };
 		95161D31299B981E002B86BA /* DetailGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95161D30299B981E002B86BA /* DetailGroupViewController.swift */; };
 		95161D34299BA71E002B86BA /* DetailGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95161D32299BA71E002B86BA /* DetailGroupTableViewCell.swift */; };
 		95231F7129BE3F2E00B77123 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 576C0DFC298ACF7100485AD5 /* GoogleService-Info.plist */; };
@@ -119,7 +119,6 @@
 		57D88FD7298AD30F00C33F29 /* ExampleIrregularityBasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleIrregularityBasicContentView.swift; sourceTree = "<group>"; };
 		57D88FD9298AD32800C33F29 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
 		57D88FDB298AD33F00C33F29 /* ExampleBasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleBasicContentView.swift; sourceTree = "<group>"; };
-		57D88FDD298AD41B00C33F29 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		57D88FDF298AD42200C33F29 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		57D88FE1298AD42C00C33F29 /* PloggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PloggingViewController.swift; sourceTree = "<group>"; };
 		57D88FE3298AD43500C33F29 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +150,7 @@
 		57F2F08929C2185D008605F5 /* ActivateGroupHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateGroupHeaderView.swift; sourceTree = "<group>"; };
 		57F2F08F29C218ED008605F5 /* ActivateGroupHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivateGroupHeaderView.xib; sourceTree = "<group>"; };
 		5ABBF463B755262834113F11 /* Pods_Netwalk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netwalk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9512A03129C85783003CC81F /* MyGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupViewController.swift; sourceTree = "<group>"; };
 		95161D30299B981E002B86BA /* DetailGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGroupViewController.swift; sourceTree = "<group>"; };
 		95161D32299BA71E002B86BA /* DetailGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGroupTableViewCell.swift; sourceTree = "<group>"; };
 		95161D33299BA71E002B86BA /* DetailGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailGroupTableViewCell.xib; sourceTree = "<group>"; };
@@ -458,9 +458,9 @@
 			isa = PBXGroup;
 			children = (
 				95161D30299B981E002B86BA /* DetailGroupViewController.swift */,
-				57D88FDD298AD41B00C33F29 /* GroupViewController.swift */,
 				95A503FB299A13100022B3DE /* NewGroupViewController.swift */,
 				95F8984E29C45F6800B6014F /* CreateViewController.swift */,
+				9512A03129C85783003CC81F /* MyGroupViewController.swift */,
 			);
 			path = Group;
 			sourceTree = "<group>";
@@ -701,8 +701,8 @@
 				95D3696F29BE376000106F5B /* TypeTableViewCell.swift in Sources */,
 				9580E22729C22C3200387E34 /* TrashRankTableViewCell.swift in Sources */,
 				576C0DFB298ACE9C00485AD5 /* Bundle+Ext.swift in Sources */,
+				9512A03229C85783003CC81F /* MyGroupViewController.swift in Sources */,
 				95F8984F29C45F6800B6014F /* CreateViewController.swift in Sources */,
-				57D88FDE298AD41B00C33F29 /* GroupViewController.swift in Sources */,
 				576C0DE4298ACAB300485AD5 /* AppDelegate.swift in Sources */,
 				57F2F06929B9051C008605F5 /* ProfileBodyCollectionViewCell.swift in Sources */,
 				57F2F06D29BCDA6E008605F5 /* PloggingDetailViewController.swift in Sources */,
