@@ -16,6 +16,7 @@ struct ActivityList: Codable {
 struct Activity: Codable {
     var userNo: Int?
     var groupNo: Int?
+    var actNo: Int?
     var totalActDist: Double
     var totalActTime: Int
     var shareState: Int
@@ -26,6 +27,7 @@ struct Activity: Codable {
     enum CodingKeys: String, CodingKey {
         case userNo = "user_no"
         case groupNo = "group_no"
+        case actNo = "act_no"
         case totalActDist = "total_act_distance"
         case totalActTime = "total_act_time"
         case shareState = "share_st"
