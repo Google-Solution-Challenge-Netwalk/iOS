@@ -12,6 +12,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var ploggingRecords: [Activity] = []
+    var userPlogData: UserPlogData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,15 +40,26 @@ class ProfileViewController: UIViewController {
     
     private func requestPloggingRecords() {
         let user = UserDefaults.standard.getLoginUser()!
+      
+        let dispatchGroup = DispatchGroup()
         
+        dispatchGroup.enter()
         PloggingNetManager.shared.getPloggingRecord(user) { activities in
             self.ploggingRecords = activities
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+            dispatchGroup.leave()
+        }
+        
+        dispatchGroup.enter()
+        UserNetManager.shared.getUserPlogData(user.user_no!) { data in
+            self.userPlogData = data
+            dispatchGroup.leave()
+        }
+        
+        dispatchGroup.notify(queue: .main) {
+            self.tableView.reloadData()
         }
     }
+
     
     @IBAction func settingButtonTapped(_ sender: UIButton) {
         
@@ -93,6 +105,13 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileHeaderTableViewCell", for: indexPath) as! ProfileHeaderTableViewCell
+            
+            let hrs = CustomDateFormatter.convertToString(userPlogData?.totalActTime ?? 0)
+            cell.totalTime.text = hrs
+            cell.ploggingCount.text = "\(userPlogData?.actCnt ?? 0)"
+            cell.totalDistance.text = "\(userPlogData?.totalActDist ?? 0)"
+            cell.totalTrash.text = "\(userPlogData?.totalActTrash ?? 0)"
+            
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileBodyTableViewCell", for: indexPath) as! ProfileBodyTableViewCell
