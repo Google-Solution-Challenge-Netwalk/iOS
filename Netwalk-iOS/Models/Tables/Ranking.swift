@@ -20,7 +20,7 @@ struct Ranking: Codable {
     
     enum CodingKeys: String, CodingKey {
         case userNo = "user_no"
-        case userRank = "RANKING"
+        case userRank = "ranking"
         case totalActTime = "total_act_time"
         case totalActDist = "total_act_distance"
         case userName = "name"
