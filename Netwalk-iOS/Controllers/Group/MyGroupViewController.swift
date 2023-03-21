@@ -36,8 +36,6 @@ class MyGroupViewController: UIViewController {
 
         GroupNetManager.shared.readPartGroup(user.user_no!) { groups in
             GroupManager.shared.groups = groups
-            
-//            print(groups)
             DispatchQueue.main.async {
                 self.myGroupTable.reloadData()
             }

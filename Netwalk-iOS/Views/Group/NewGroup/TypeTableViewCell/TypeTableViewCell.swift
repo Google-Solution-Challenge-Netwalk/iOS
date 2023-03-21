@@ -52,7 +52,7 @@ extension TypeTableViewCell: UICollectionViewDataSource, UICollectionViewDelegat
         case .mountain:
             cell.typeLabel.text = "Mountain"
             cell.typeImage.image = UIImage(named: "mountain.png")
-        case .seas:
+        case .sea:
             cell.typeLabel.text = "Sea"
             cell.typeImage.image = UIImage(named: "sea.png")
         case .dawn:

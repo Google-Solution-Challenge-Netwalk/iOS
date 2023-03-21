@@ -9,8 +9,8 @@ import UIKit
 
 class GroupCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var groupTitle: UILabel!
     @IBOutlet weak var groupImage: UIImageView!
-    @IBOutlet weak var groupLabel: UILabel!
     @IBOutlet weak var groupCapacity: UILabel!
     @IBOutlet weak var groupParticipant: UILabel!
     

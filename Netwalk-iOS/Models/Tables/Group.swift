@@ -17,7 +17,7 @@ struct Group: Codable {
     var capacity: Int
     var participant: Int  // 0: 비활성화 , 1: 활성화
     var category: String
-    var actStatus: Int
+    var actStatus: Int?
     
     enum CodingKeys: String, CodingKey {
         case groupNo = "group_no"

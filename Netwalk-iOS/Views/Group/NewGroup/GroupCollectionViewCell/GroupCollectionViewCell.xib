@@ -74,7 +74,9 @@
             <size key="customSize" width="311" height="79"/>
             <connections>
                 <outlet property="groupCapacity" destination="U40-Ip-yvI" id="zco-rK-OvC"/>
+                <outlet property="groupImage" destination="t39-U8-b4z" id="KdD-9g-OYN"/>
                 <outlet property="groupParticipant" destination="iir-lC-asf" id="2DC-xd-dlZ"/>
+                <outlet property="groupTitle" destination="gZ5-jI-GUM" id="SUC-db-Cj7"/>
             </connections>
             <point key="canvasLocation" x="290.83969465648852" y="15.140845070422536"/>
         </collectionViewCell>
