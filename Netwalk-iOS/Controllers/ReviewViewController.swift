@@ -11,10 +11,13 @@ class ReviewViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var ploggingRecords: [Activity] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupTableView()
+        requestUsersPloggingRecords()
     }
     
 
@@ -23,18 +26,32 @@ class ReviewViewController: UIViewController {
         tableView.dataSource = self
         
         tableView.register(UINib(nibName: "ReviewTableViewCell", bundle: nil), forCellReuseIdentifier: "ReviewTableViewCell")
-        tableView.rowHeight = 400
+        tableView.rowHeight = 500
     }
 
+    func requestUsersPloggingRecords() {
+        PloggingNetManager.shared.getUsersPloggingRecord { activities in
+            self.ploggingRecords = activities
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
 }
 
 extension ReviewViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return ploggingRecords.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewTableViewCell", for: indexPath) as! ReviewTableViewCell
+        
+        cell.plogging = ploggingRecords[indexPath.row]
+        
+        cell.setupUI()
+        
         return cell
     }
     

@@ -37,7 +37,6 @@ class PloggingDetailViewController: UIViewController {
         let coor = plogging.coordinates[0]
         let camera = GMSCameraPosition(latitude: coor.lat, longitude: coor.log, zoom: 18)
         
-        print(ploggingMap.frame.width)
         //mapView = GMSMapView(frame: CGRect(x: 0, y: 0, width: 373, height: 400), camera: camera)
         mapView = GMSMapView(frame: CGRect(x: 0, y: 0, width: ploggingMap.frame.width, height: ploggingMap.frame.height), camera: camera)
         ploggingMap.addSubview(mapView)
