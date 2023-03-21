@@ -70,6 +70,7 @@ extension TabManViewController: PageboyViewControllerDataSource, TMBarDataSource
         case 1:
             return TMBarItem(title: "거리")
         case 2:
+//            timeRankVC.reqeustUserRank("trash")
             return TMBarItem(title: "쓰레기량")
         default:
             return TMBarItem(title: "Test")

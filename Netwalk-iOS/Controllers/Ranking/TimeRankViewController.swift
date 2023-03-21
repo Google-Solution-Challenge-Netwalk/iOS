@@ -17,23 +17,40 @@ class TimeRankViewController: UIViewController {
     }
     
     func setUpTableView() {
+        reqeustUserRank("time")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TimeRankTableViewCell", bundle: nil), forCellReuseIdentifier: "TimeRankTableViewCell") //nib 파일 등록
         
     }
     
+    func reqeustUserRank(_ type: String) {
+        
+        RankingNetManager.shared.ranking(type) { rankings in
+            RankingManager.shared.rankings = rankings
+            DispatchQueue.main.async {
+                self.tableView?.reloadData()
+            }
+        }
+    }
 }
 
 extension TimeRankViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { //cell의 갯수 설정
-        return 10
+        return RankingManager.shared.rankings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //cell의 데이터 구성
         
+        var ranking: Ranking
+        ranking = RankingManager.shared.rankings[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "TimeRankTableViewCell") as! TimeRankTableViewCell
+
         cell.selectionStyle = .none
+        cell.rankName.text = ranking.userName
+        cell.rankNumber.text = String((indexPath.row)+1)
+        
         return cell
         
     }
