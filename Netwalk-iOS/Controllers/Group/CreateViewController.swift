@@ -17,7 +17,7 @@ class CreateGroupViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     var categoryPicker: UIPickerView!
     var exitBtn: UIBarButtonItem!
-    var list = ["Overseas", "Mountain", "Sea", "Dawn", "Morining", "Lunch", "Evening", "Night", "Student"]
+    var list = ["Overseas", "Mountain", "Sea", "Dawn", "Morning", "Lunch", "Evening", "Night", "Student"]
     var selectCity = "Overseas"
     
     override func viewDidLoad() {
