@@ -15,17 +15,50 @@ class CreateGroupViewController: UIViewController {
     @IBOutlet weak var groupContent: UITextView!
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
+    var categoryPicker: UIPickerView!
+    var exitBtn: UIBarButtonItem!
+    var list = ["Overseas", "Mountain", "Sea", "Dawn", "Morining", "Lunch", "Evening", "Night", "Student"]
+    var selectCity = "Overseas"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         setUpView()
-        groupContent.delegate = self
-        groupContent.text =  "Grpup Content"
-        groupContent.textColor = UIColor.systemGray3
+        setUpPicker()
+    }
+    
+    func setUpPicker(){
+        categoryPicker = UIPickerView()
+        categoryPicker.delegate = self
+        /// 텍스트필드에 뷰를 등록하면, picker는 자동으로 화면 하단에 나타남
+        groupCategory.inputView = categoryPicker
+        
+        let pickerToolbar : UIToolbar = UIToolbar()
+        let btnDone = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(onPickDone))
+        let btnCancel = UIBarButtonItem(title: "Exit", style: .done, target: self, action: #selector(onPickCancel))
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        pickerToolbar.barStyle = .default
+        pickerToolbar.isTranslucent = true
+        pickerToolbar.backgroundColor = .lightGray
+        pickerToolbar.sizeToFit()
+        pickerToolbar.setItems([btnCancel , space , btnDone], animated: true)
+        pickerToolbar.isUserInteractionEnabled = true
+        groupCategory.inputAccessoryView = pickerToolbar
+    }
+    
+    @objc func onPickDone() {
+        groupCategory.text = selectCity
+        groupCategory.resignFirstResponder()
+    }
+       
+    @objc func onPickCancel() {
+        groupCategory.resignFirstResponder()
     }
     
     func setUpView(){
+        groupContent.delegate = self
+        groupContent.text =  "Grpup Content"
+        groupContent.textColor = UIColor.systemGray3
         createButton.layer.cornerRadius = 8
         backButton.layer.borderColor = UIColor.systemBrown.cgColor
         backButton.layer.borderWidth = 1
@@ -55,4 +88,23 @@ extension CreateGroupViewController: UITextViewDelegate {
       textView.textColor = UIColor.systemGray3
     }
   }
+}
+
+extension CreateGroupViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return list.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return list[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectCity = list[row]
+    }
+    
 }
