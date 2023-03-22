@@ -10,12 +10,23 @@ import UIKit
 class DetailGroupViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var groupTitle: UILabel!
+    var group: Group!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
-        
+//        print(group.groupNo)
         tableView.register(UINib(nibName: DetailGroupTableViewCell.className, bundle: nil), forCellReuseIdentifier: DetailGroupTableViewCell.cellId)
+    }
+    
+    func requestGroupUsers(_ grouoNo : Int) {
+        
+        UserNetManager.shared.readGroupUsers(grouoNo){ users in
+            UserManager.shared.users = users
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 
 }
@@ -29,6 +40,10 @@ extension DetailGroupViewController: UITableViewDelegate, UITableViewDataSource 
         switch indexPath.row{
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: DetailGroupTableViewCell.cellId, for: indexPath) as! DetailGroupTableViewCell
+            groupTitle.text = group.name
+            cell.groupCategory.text = group.category
+            cell.groupParticipant.text = String(group.participant)
+            cell.groupCapacity.text = String(group.capacity)
             cell.configure()
             return cell
             

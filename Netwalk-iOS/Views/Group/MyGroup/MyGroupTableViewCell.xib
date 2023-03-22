@@ -17,25 +17,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울숲 플로깅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9X-Yc-IFR">
-                        <rect key="frame" x="101" y="18" width="184" height="29.666666666666671"/>
+                        <rect key="frame" x="96" y="18" width="189" height="29.666666666666671"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overseas" translatesAutoresizingMaskIntoConstraints="NO" id="1ZA-C6-v0I">
-                        <rect key="frame" x="20" y="15" width="65" height="60"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Overseas" translatesAutoresizingMaskIntoConstraints="NO" id="1ZA-C6-v0I">
+                        <rect key="frame" x="20" y="15" width="60" height="60"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="65" id="D2E-og-y0s"/>
+                            <constraint firstAttribute="width" constant="60" id="D2E-og-y0s"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1X4-vY-o6Y">
-                        <rect key="frame" x="103" y="49.666666666666664" width="23" height="20.333333333333336"/>
+                        <rect key="frame" x="98" y="49.666666666666664" width="23" height="20.333333333333336"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BVc-qz-7qb">
-                        <rect key="frame" x="132" y="51.666666666666664" width="36" height="20.333333333333336"/>
+                        <rect key="frame" x="127" y="51.666666666666664" width="36" height="20.333333333333336"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWP-TI-020">
                                 <rect key="frame" x="0.0" y="0.0" width="10.666666666666666" height="20.333333333333332"/>
@@ -83,6 +83,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="overseas" width="121" height="121"/>
+        <image name="Overseas" width="121" height="121"/>
     </resources>
 </document>

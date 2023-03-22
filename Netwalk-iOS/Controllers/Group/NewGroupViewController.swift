@@ -69,6 +69,11 @@ extension NewGroupViewController: UITableViewDelegate, UITableViewDataSource {
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: GroupTableViewCell.cellId, for: indexPath) as! GroupTableViewCell
             cell.groups = groups
+            cell.didSelectItem = { indexPath in
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailGroupVC") as! DetailGroupViewController
+                vc.group = self.groups[indexPath.item]
+                self.present(vc, animated: true)
+            }
             cell.collectionView.reloadData()
             return cell
             

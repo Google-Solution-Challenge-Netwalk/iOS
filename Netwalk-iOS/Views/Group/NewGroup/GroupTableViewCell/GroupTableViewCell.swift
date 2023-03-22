@@ -14,6 +14,7 @@ class GroupTableViewCell: UITableViewCell {
     static let cellId = "GroupTableViewCell"
     static let className = "GroupTableViewCell"
     var groups: [Group] = []
+    var didSelectItem: ((_ indexPath: IndexPath)->())? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -44,6 +45,10 @@ extension GroupTableViewCell: UICollectionViewDataSource, UICollectionViewDelega
         
         return cell
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        didSelectItem?(indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
