@@ -13,7 +13,7 @@ class DetailGroupCollectionViewCell: UICollectionViewCell {
     static let className = "DetailGroupCollectionViewCell"
     
     
-    @IBOutlet weak var userImage: UIImageView!
+//    @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userTime: UILabel!
     @IBOutlet weak var userKm: UILabel!

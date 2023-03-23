@@ -72,7 +72,7 @@
                         </constraints>
                     </stackView>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6Rb-W2-93N">
-                        <rect key="frame" x="10" y="100" width="400" height="450"/>
+                        <rect key="frame" x="20" y="100" width="380" height="450"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="450" id="bXk-SU-4Cd"/>
@@ -92,9 +92,9 @@
                 <constraints>
                     <constraint firstItem="byv-Ha-n9K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="337-Gm-oU0"/>
                     <constraint firstAttribute="trailing" secondItem="byv-Ha-n9K" secondAttribute="trailing" constant="10" id="AFu-5o-UEP"/>
-                    <constraint firstAttribute="trailing" secondItem="6Rb-W2-93N" secondAttribute="trailing" constant="10" id="ae5-OU-lVb"/>
+                    <constraint firstAttribute="trailing" secondItem="6Rb-W2-93N" secondAttribute="trailing" constant="20" id="ae5-OU-lVb"/>
                     <constraint firstAttribute="bottom" secondItem="6Rb-W2-93N" secondAttribute="bottom" constant="10" id="cZZ-FX-eeT"/>
-                    <constraint firstItem="6Rb-W2-93N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="fcM-Ak-xVd"/>
+                    <constraint firstItem="6Rb-W2-93N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="fcM-Ak-xVd"/>
                     <constraint firstItem="6Rb-W2-93N" firstAttribute="top" secondItem="byv-Ha-n9K" secondAttribute="bottom" constant="30" id="tZD-H1-1Fo"/>
                     <constraint firstItem="byv-Ha-n9K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="wpn-cN-h76"/>
                 </constraints>
