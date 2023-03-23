@@ -44,7 +44,7 @@ extension DetailGroupViewController: UITableViewDelegate, UITableViewDataSource 
             
             groupTitle.text = group.name
             cell.groupCategory.text = group.category
-            cell.groupParticipant.text = String(group.participant)
+            cell.groupParticipant.text = String(users.count)
             cell.groupCapacity.text = String(group.capacity)
             cell.users = self.users
             
