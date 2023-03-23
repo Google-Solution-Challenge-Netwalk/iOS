@@ -58,7 +58,6 @@ extension NewGroupViewController: UITableViewDelegate, UITableViewDataSource {
                         cell.configure()
             cell.didSelectRow = { data in
                 GroupNetManager.shared.readCategoryGroup(data) { groups in
-                    print(groups)
                     self.groups = groups
                     DispatchQueue.main.async {
                         self.tableView.reloadData()

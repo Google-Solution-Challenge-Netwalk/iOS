@@ -60,9 +60,9 @@
             </constraints>
             <size key="customSize" width="147" height="187"/>
             <connections>
-                <outlet property="userKm" destination="71b-CV-Z4D" id="96v-pw-1jT"/>
-                <outlet property="userName" destination="BmP-VB-fKT" id="yAW-XK-oED"/>
-                <outlet property="userTime" destination="Jfv-K3-WMh" id="kq4-ul-nrX"/>
+                <outlet property="userKm" destination="71b-CV-Z4D" id="kKn-5P-6u7"/>
+                <outlet property="userName" destination="BmP-VB-fKT" id="5FF-XG-gOe"/>
+                <outlet property="userTime" destination="Jfv-K3-WMh" id="afc-7L-JyT"/>
             </connections>
             <point key="canvasLocation" x="190.83969465648855" y="6.6901408450704229"/>
         </collectionViewCell>

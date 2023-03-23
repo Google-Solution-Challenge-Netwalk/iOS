@@ -12,10 +12,10 @@ class UserNetManager {
     private init() {}
     
     // 그룹별 가입된 사용자 정보
-    func readGroupUsers(_ groupNo: Int, completion: @escaping ([User])->()) {
+    func readGroupUsers(_ groupNo: Int, completion: @escaping ([GroupUser])->()) {
         let urlKey = Bundle.main.getSecretKey(key: "REST_API_URL")
         
-        guard let url = URL(string: "\(urlKey)/api/v1/group/part/\(groupNo)") else {
+        guard let url = URL(string: "\(urlKey)/api/v1/group/\(groupNo)") else {
             print("URL Error")
             return
         }
@@ -37,10 +37,9 @@ class UserNetManager {
             
             if let safeData = data {
                 do {
-                    let decodedData = try JSONDecoder().decode(UserLists.self, from: safeData)
+                    let decodedData = try JSONDecoder().decode(GroupUserLists.self, from: safeData)
                     dump(decodedData.object)
                     completion(decodedData.object)
-                    print("adsfdasdsdfsadfsfdsadf",decodedData.object)
                 } catch {
                     print("Decode Error")
                 }

@@ -22,12 +22,5 @@ class DetailGroupCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
-    // data model 넣으면 됨
-    public func configure() {
-        userName.text = "Jiyoon"
-        userTime.text = "15h 32s"
-        userKm.text = "7.37km"
-    }
 
 }
