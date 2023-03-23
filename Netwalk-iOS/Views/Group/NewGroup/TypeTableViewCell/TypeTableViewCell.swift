@@ -7,15 +7,14 @@
 
 import UIKit
 
-    
 class TypeTableViewCell: UITableViewCell {
     
     static let cellId = "TypeTableViewCell"
     static let className = "TypeTableViewCell"
-    
+    let groupTableVC = GroupTableViewCell()
+    var didSelectRow: ((_ data: String) -> Void)? = nil
+
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    var model = [String]()
     
     func configure(){
         //        with model: [Model]
@@ -36,6 +35,7 @@ class TypeTableViewCell: UITableViewCell {
     }
 }
 
+
 extension TypeTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Category.allCases.count
@@ -44,40 +44,20 @@ extension TypeTableViewCell: UICollectionViewDataSource, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let target = Category.allCases[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TypeCollectionViewCell.cellId, for: indexPath) as! TypeCollectionViewCell
-
-        switch target { // 타입별로 값을 설정
-        case .overseas:
-            cell.typeLabel.text = "Overseas"
-            cell.typeImage.image = UIImage(named: "overseas.png")
-        case .mountain:
-            cell.typeLabel.text = "Mountain"
-            cell.typeImage.image = UIImage(named: "mountain.png")
-        case .sea:
-            cell.typeLabel.text = "Sea"
-            cell.typeImage.image = UIImage(named: "sea.png")
-        case .dawn:
-            cell.typeLabel.text = "Dawn"
-            cell.typeImage.image = UIImage(named: "dawn.png")
-        case .morning:
-            cell.typeLabel.text = "Morning"
-            cell.typeImage.image = UIImage(named: "morning.png")
-        case .lunch:
-            cell.typeLabel.text = "Lunch"
-            cell.typeImage.image = UIImage(named: "lunch.png")
-        case .evening:
-            cell.typeLabel.text = "Evening"
-            cell.typeImage.image = UIImage(named: "evening.png")
-        case .night:
-            cell.typeLabel.text = "Night"
-            cell.typeImage.image = UIImage(named: "night.png")
-        case .student:
-            cell.typeLabel.text = "Student"
-            cell.typeImage.image = UIImage(named: "student.png")
-        }
+        let category = Category.allCases[indexPath.item]
+        
+        cell.typeLabel.text = category.rawValue
+        cell.typeImage.image = UIImage(named: "\(category.rawValue).png")
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 110, height: 110)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let category = Category.allCases[indexPath.item]
+        didSelectRow?(category.rawValue)
+    }
+    
 }

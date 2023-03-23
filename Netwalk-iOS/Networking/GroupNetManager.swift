@@ -12,9 +12,9 @@ class GroupNetManager {
     private init() {}
     
     // 카테고리별 그룹 보기
-    func readCategoryGroup(_ category: Category, completion: @escaping ([Group])->()) {
+    func readCategoryGroup(_ category: String, completion: @escaping ([Group])->()) {
         let urlKey = Bundle.main.getSecretKey(key: "REST_API_URL")
-        let param = ["category": "테스터"]
+        let param = ["category":category]
         
         guard let url = URL(string: "\(urlKey)/api/v1/group/cate") else {
             print("URL Error")

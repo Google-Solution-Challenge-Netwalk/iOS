@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="311" height="79"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="overseas" translatesAutoresizingMaskIntoConstraints="NO" id="t39-U8-b4z">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Overseas" translatesAutoresizingMaskIntoConstraints="NO" id="t39-U8-b4z">
                         <rect key="frame" x="13" y="10" width="60" height="59"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="망원 한강공원 플로깅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gZ5-jI-GUM">
@@ -82,6 +82,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="overseas" width="121" height="121"/>
+        <image name="Overseas" width="121" height="121"/>
     </resources>
 </document>

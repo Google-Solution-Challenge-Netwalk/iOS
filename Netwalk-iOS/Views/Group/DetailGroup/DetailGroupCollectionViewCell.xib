@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="110" height="160"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overseas" translatesAutoresizingMaskIntoConstraints="NO" id="e7g-ro-0PH">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Overseas" translatesAutoresizingMaskIntoConstraints="NO" id="e7g-ro-0PH">
                         <rect key="frame" x="10" y="10" width="90" height="90"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="e7g-ro-0PH" secondAttribute="height" multiplier="1:1" id="uNU-Sr-rEz"/>
@@ -69,6 +69,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="overseas" width="121" height="121"/>
+        <image name="Overseas" width="121" height="121"/>
     </resources>
 </document>
