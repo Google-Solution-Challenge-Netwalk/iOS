@@ -10,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailGroupTableViewCell" rowHeight="542" id="KGk-i7-Jjw" customClass="DetailGroupTableViewCell" customModule="Netwalk_iOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="420" height="634"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailGroupTableViewCell" rowHeight="647" id="KGk-i7-Jjw" customClass="DetailGroupTableViewCell" customModule="Netwalk_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="616"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="420" height="634"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="420" height="616"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="byv-Ha-n9K">
@@ -72,11 +72,8 @@
                         </constraints>
                     </stackView>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6Rb-W2-93N">
-                        <rect key="frame" x="20" y="100" width="380" height="450"/>
+                        <rect key="frame" x="20" y="100" width="380" height="491"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="450" id="bXk-SU-4Cd"/>
-                        </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vVz-X9-QuZ">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -93,7 +90,7 @@
                     <constraint firstItem="byv-Ha-n9K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="337-Gm-oU0"/>
                     <constraint firstAttribute="trailing" secondItem="byv-Ha-n9K" secondAttribute="trailing" constant="10" id="AFu-5o-UEP"/>
                     <constraint firstAttribute="trailing" secondItem="6Rb-W2-93N" secondAttribute="trailing" constant="20" id="ae5-OU-lVb"/>
-                    <constraint firstAttribute="bottom" secondItem="6Rb-W2-93N" secondAttribute="bottom" constant="10" id="cZZ-FX-eeT"/>
+                    <constraint firstAttribute="bottom" secondItem="6Rb-W2-93N" secondAttribute="bottom" constant="25" id="cZZ-FX-eeT"/>
                     <constraint firstItem="6Rb-W2-93N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="fcM-Ak-xVd"/>
                     <constraint firstItem="6Rb-W2-93N" firstAttribute="top" secondItem="byv-Ha-n9K" secondAttribute="bottom" constant="30" id="tZD-H1-1Fo"/>
                     <constraint firstItem="byv-Ha-n9K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="wpn-cN-h76"/>
@@ -106,7 +103,7 @@
                 <outlet property="groupCategory" destination="bqJ-FE-Kim" id="14D-rT-CBI"/>
                 <outlet property="groupParticipant" destination="aDz-eK-HhJ" id="0Oz-un-yYk"/>
             </connections>
-            <point key="canvasLocation" x="74.809160305343511" y="89.436619718309871"/>
+            <point key="canvasLocation" x="74.809160305343511" y="126.05633802816902"/>
         </tableViewCell>
     </objects>
     <resources>
