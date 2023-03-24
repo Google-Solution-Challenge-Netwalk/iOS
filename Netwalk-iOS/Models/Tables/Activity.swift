@@ -20,6 +20,7 @@ struct Activity: Codable {
     var totalActDist: Double
     var totalActTime: Int
     var shareState: Int
+    var actState: String?
     var coordinates: [Coordinate]
     var registDate: String?
     var name: String?
@@ -31,6 +32,7 @@ struct Activity: Codable {
         case totalActDist = "total_act_distance"
         case totalActTime = "total_act_time"
         case shareState = "share_st"
+        case actState = "act_st"
         case coordinates = "distances"
         case registDate = "reg_dt"
         case name
@@ -45,4 +47,14 @@ struct Coordinate: Codable {
         case lat = "latitude"
         case log = "longitude"
     }
+}
+
+struct ActivityObject: Codable {
+    var object: Int
+}
+
+struct StartPloggingData: Codable {
+    var user_no: Int
+    var groups: [Int]?
+    var act_st: String
 }
