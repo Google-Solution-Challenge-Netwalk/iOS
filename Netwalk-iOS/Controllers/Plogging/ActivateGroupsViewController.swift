@@ -90,5 +90,28 @@ extension ActivateGroupsViewController: UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        var group: Group
+        var newGroupList: [Group]
+        
+        switch indexPath.section {
+        case 0:
+            group = GroupManager.shared.activateGroup.remove(at: indexPath.row)
+            group.actStatus = 0
+            GroupManager.shared.inactivateGroup.insert(group, at: 0)
+        case 1:
+            group = GroupManager.shared.inactivateGroup.remove(at: indexPath.row)
+            group.actStatus = 1
+            GroupManager.shared.activateGroup.insert(group, at: 0)
+        default:
+            return
+        }
+        
+        newGroupList = GroupManager.shared.activateGroup + GroupManager.shared.inactivateGroup
+        GroupManager.shared.groups = newGroupList
+        
+        tableView.reloadData()
+        
+    }
 }
