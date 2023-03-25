@@ -45,13 +45,15 @@ class ProfileViewController: UIViewController {
         
         dispatchGroup.enter()
         PloggingNetManager.shared.getPloggingRecord(user) { activities in
-            self.ploggingRecords = activities
+            self.ploggingRecords = activities.reversed()
+            //self.ploggingRecords.reverse()
             dispatchGroup.leave()
         }
         
         dispatchGroup.enter()
         UserNetManager.shared.getUserPlogData(user.user_no!) { data in
             self.userPlogData = data
+            self.userPlogData!.totalActDist = round(self.userPlogData!.totalActDist * 100) / 100
             dispatchGroup.leave()
         }
         
