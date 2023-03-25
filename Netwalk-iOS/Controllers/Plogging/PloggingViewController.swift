@@ -30,6 +30,7 @@ class PloggingViewController: UIViewController {
     var timer = Timer()
     var coordinates: [Coordinate] = []
     var count = 0
+    var actNo = 0
     
     let camera = UIImagePickerController()
     let path = GMSMutablePath()
@@ -137,7 +138,24 @@ class PloggingViewController: UIViewController {
         path.add(myLocation)
         //cameraButton.isHidden = false
         
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        var groups: [Int] = []
+        for group in GroupManager.shared.activateGroup {
+            groups.append(group.groupNo)
+        }
+        
+        let userNo = UserDefaults.standard.getLoginUser()!.user_no!
+        
+        var startPlogData = StartPloggingData(user_no: userNo, act_st: "progress")
+        if !groups.isEmpty { startPlogData.groups = groups }
+        
+        PloggingNetManager.shared.startPlogging(startPlogData) { actNo in
+            self.actNo = actNo
+            
+            DispatchQueue.main.async {
+                self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateCounter), userInfo: nil, repeats: true)
+            }
+        }
+        
     }
     
     // MARK: - stopPlogging
@@ -155,29 +173,14 @@ class PloggingViewController: UIViewController {
         let totalActDist = Double(totalDistance.text!)!
         let totalActTime = CustomDateFormatter.convertToSeconds(totalTime.text!)
         
-        if GroupManager.shared.activateGroup.isEmpty {
-            let activity = Activity(userNo: userNo, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, coordinates: coordinates)
-            PloggingNetManager.shared.create(activity) {
-                
-            }
-        } else {
-            DispatchQueue.global().async {
-                let dispatchGroup = DispatchGroup()
-                
-                for group in GroupManager.shared.activateGroup {
-                    
-                    let activity = Activity(userNo: userNo, groupNo: group.groupNo, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, coordinates: self.coordinates)
-                    
-                    dispatchGroup.enter()
-                    PloggingNetManager.shared.create(activity) {
-                        dispatchGroup.leave()
-                    }
-                }
-            }
+        var groupNo: [Int] = []
+        for group in GroupManager.shared.activateGroup {
+            groupNo.append(group.groupNo)
         }
-        
-        
-        
+        let activity = Activity(userNo: userNo, groupNo: groupNo, actNo: self.actNo, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, actState: "finish", coordinates: self.coordinates)
+        PloggingNetManager.shared.stopPlogging(activity) {
+            
+        }
     }
     
     // MARK: - myLocationButtonTapped

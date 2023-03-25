@@ -11,7 +11,7 @@ struct GroupLists: Codable {
     var object: [Group]
 }
 
-struct Group: Codable {
+struct Group: Codable, Equatable {
     var groupNo: Int
     var name: String
     var capacity: Int
