@@ -12,17 +12,18 @@ class DetailGroupViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var groupTitle: UILabel!
     var group: Group!
+    var users : [GroupUser] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
-//        print(group.groupNo)
+        requestGroupUsers(group.groupNo)
         tableView.register(UINib(nibName: DetailGroupTableViewCell.className, bundle: nil), forCellReuseIdentifier: DetailGroupTableViewCell.cellId)
     }
     
     func requestGroupUsers(_ grouoNo : Int) {
         
         UserNetManager.shared.readGroupUsers(grouoNo){ users in
-            UserManager.shared.users = users
+            self.users = users
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -33,17 +34,20 @@ class DetailGroupViewController: UIViewController {
 
 extension DetailGroupViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row{
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: DetailGroupTableViewCell.cellId, for: indexPath) as! DetailGroupTableViewCell
+            
             groupTitle.text = group.name
             cell.groupCategory.text = group.category
-            cell.groupParticipant.text = String(group.participant)
+            cell.groupParticipant.text = String(users.count)
             cell.groupCapacity.text = String(group.capacity)
+            cell.users = self.users
+            
             cell.configure()
             return cell
             
