@@ -15,7 +15,7 @@ struct ActivityList: Codable {
 
 struct Activity: Codable {
     var userNo: Int?
-    var groupNo: Int?
+    var groupNo: [Int]?
     var actNo: Int?
     var totalActDist: Double
     var totalActTime: Int

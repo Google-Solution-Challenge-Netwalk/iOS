@@ -173,29 +173,14 @@ class PloggingViewController: UIViewController {
         let totalActDist = Double(totalDistance.text!)!
         let totalActTime = CustomDateFormatter.convertToSeconds(totalTime.text!)
         
-        if GroupManager.shared.activateGroup.isEmpty {
-            let activity = Activity(userNo: userNo, actNo: actNo, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, actState: "finish", coordinates: coordinates)
-            PloggingNetManager.shared.stopPlogging(activity) {
-                
-            }
-        } else {
-            DispatchQueue.global().async {
-                let dispatchGroup = DispatchGroup()
-                
-                for group in GroupManager.shared.activateGroup {
-                    
-                    let activity = Activity(userNo: userNo, groupNo: group.groupNo, actNo: self.actNo, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, actState: "finish", coordinates: self.coordinates)
-                    
-                    dispatchGroup.enter()
-                    PloggingNetManager.shared.stopPlogging(activity) {
-                        dispatchGroup.leave()
-                    }
-                }
-            }
+        var groupNo: [Int] = []
+        for group in GroupManager.shared.activateGroup {
+            groupNo.append(group.groupNo)
         }
-        
-        
-        
+        let activity = Activity(userNo: userNo, groupNo: groupNo, actNo: self.actNo, totalActDist: totalActDist, totalActTime: totalActTime, shareState: 0, actState: "finish", coordinates: self.coordinates)
+        PloggingNetManager.shared.stopPlogging(activity) {
+            
+        }
     }
     
     // MARK: - myLocationButtonTapped
