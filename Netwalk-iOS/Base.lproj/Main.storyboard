@@ -420,10 +420,10 @@
                     <connections>
                         <outlet property="backButton" destination="Pzq-4m-4Tf" id="Mod-Gu-100"/>
                         <outlet property="createButton" destination="6z0-Of-awY" id="YVf-y3-A7M"/>
+                        <outlet property="groupCapacity" destination="Muc-4W-eap" id="mxf-2C-4mR"/>
                         <outlet property="groupCategory" destination="BoQ-Rt-02P" id="b8a-i4-oRd"/>
                         <outlet property="groupContent" destination="5YJ-uS-KY7" id="4T9-ah-uai"/>
-                        <outlet property="groupName" destination="Muc-4W-eap" id="EyH-vw-NwZ"/>
-                        <outlet property="groupNumOfPeople" destination="Muc-4W-eap" id="hn2-Bg-lPC"/>
+                        <outlet property="groupName" destination="b5g-JU-hbD" id="AiR-g2-aCT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zE-vg-QFJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
