@@ -8,12 +8,15 @@
 import UIKit
 
 class NewGroupViewController: UIViewController {
+    
     @IBOutlet weak var addGroupButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchButton: UIButton!
+    var groups: [Group] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        requestNewGroup("")
         self.navigationController?.isNavigationBarHidden = true
         tableView.register(UINib(nibName: TypeTableViewCell.className, bundle: nil), forCellReuseIdentifier: TypeTableViewCell.cellId)
         tableView.register(UINib(nibName: GroupTableViewCell.className, bundle: nil), forCellReuseIdentifier: GroupTableViewCell.cellId)
@@ -33,6 +36,14 @@ class NewGroupViewController: UIViewController {
         navigationController?.pushViewController(detailGroupVC, animated: true)
     }
     
+    func requestNewGroup(_ category: String) {
+        GroupNetManager.shared.readCategoryGroup(category) { groups in
+            self.groups = groups
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
 }
 
 extension NewGroupViewController: UITableViewDelegate, UITableViewDataSource {
@@ -44,11 +55,26 @@ extension NewGroupViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row{
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: TypeTableViewCell.cellId, for: indexPath) as! TypeTableViewCell
-            cell.configure()
+                        cell.configure()
+            cell.didSelectRow = { data in
+                GroupNetManager.shared.readCategoryGroup(data) { groups in
+                    print(groups)
+                    self.groups = groups
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }
+            }
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: GroupTableViewCell.cellId, for: indexPath) as! GroupTableViewCell
-//////            cell.configure()
+            cell.groups = groups
+            cell.didSelectItem = { indexPath in
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailGroupVC") as! DetailGroupViewController
+                vc.group = self.groups[indexPath.item]
+                self.present(vc, animated: true)
+            }
+            cell.collectionView.reloadData()
             return cell
             
         default:
@@ -58,7 +84,6 @@ extension NewGroupViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let interval:CGFloat = 3
         
         switch indexPath.row{
         case 0:
@@ -68,7 +93,5 @@ extension NewGroupViewController: UITableViewDelegate, UITableViewDataSource {
         default:
             return 0
         }
-        
-        
     }
 }

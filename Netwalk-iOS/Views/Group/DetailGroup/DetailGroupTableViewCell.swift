@@ -12,9 +12,13 @@ class DetailGroupTableViewCell: UITableViewCell {
     static let cellId = "DetailGroupTableViewCell"
     static let className = "DetailGroupTableViewCell"
     
-    @IBOutlet weak var collectionView: UICollectionView!
     
-    var model = [String]()
+    @IBOutlet weak var groupCapacity: UILabel!
+    @IBOutlet weak var groupParticipant: UILabel!
+    @IBOutlet weak var groupCategory: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    var didSelectItem: ((_ indexPath: IndexPath)->())? = nil
+    var users: User!
     
     func configure(){
         collectionView.reloadData()
@@ -30,6 +34,8 @@ class DetailGroupTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    
 }
 
 extension DetailGroupTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{

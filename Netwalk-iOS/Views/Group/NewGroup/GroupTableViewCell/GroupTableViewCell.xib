@@ -20,7 +20,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recruit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g7q-as-pwE">
                         <rect key="frame" x="11" y="8" width="104" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -48,7 +48,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="collectionView" destination="D6g-Lc-VDA" id="mTj-OC-du1"/>
+                <outlet property="collectionView" destination="D6g-Lc-VDA" id="Y2G-2o-smG"/>
             </connections>
             <point key="canvasLocation" x="70.229007633587784" y="92.605633802816911"/>
         </tableViewCell>

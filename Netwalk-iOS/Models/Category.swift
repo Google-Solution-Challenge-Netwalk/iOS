@@ -7,12 +7,16 @@
 
 import Foundation
 
-struct Category {
-    let imageName: String
-    let title: String
+enum Category: String, CaseIterable {
     
-    init(imageName: String, title:String){
-        self.imageName = imageName
-        self.title = title
-    }
+    case overseas = "Overseas"
+    case mountain = "Mountain"
+    case sea = "Sea"
+    case dawn = "Dawn"
+    case morning = "Morning"
+    case lunch = "Lunch"
+    case evening = "Evening"
+    case night = "Night"
+    case student = "Student"
+    
 }

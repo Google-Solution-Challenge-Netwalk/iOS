@@ -17,11 +17,11 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="overseas" translatesAutoresizingMaskIntoConstraints="NO" id="SYs-ue-Tza">
-                        <rect key="frame" x="30" y="18" width="80" height="80"/>
+                        <rect key="frame" x="30" y="18" width="80" height="81.333333333333329"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overseas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5f0-jr-3sB">
-                        <rect key="frame" x="20" y="105" width="100" height="21.666666666666671"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                        <rect key="frame" x="0.0" y="106.33333333333333" width="140" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -31,13 +31,13 @@
             <color key="backgroundColor" red="0.54259672619999999" green="0.43166595880000003" blue="0.4341856435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="SYs-ue-Tza" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="A86-Qm-W22"/>
-                <constraint firstItem="5f0-jr-3sB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="Bzm-jI-BLN"/>
                 <constraint firstAttribute="bottom" secondItem="5f0-jr-3sB" secondAttribute="bottom" constant="13.333333333333343" id="Neg-qc-whh"/>
-                <constraint firstAttribute="trailing" secondItem="5f0-jr-3sB" secondAttribute="trailing" constant="20" id="bmG-0r-vSj"/>
                 <constraint firstAttribute="trailing" secondItem="SYs-ue-Tza" secondAttribute="trailing" constant="30" id="dWg-zj-0CB"/>
                 <constraint firstItem="SYs-ue-Tza" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="18" id="hPX-Lp-50q"/>
+                <constraint firstAttribute="trailing" secondItem="5f0-jr-3sB" secondAttribute="trailing" id="poz-ZR-Jug"/>
                 <constraint firstItem="SYs-ue-Tza" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="pr2-Pk-krl"/>
                 <constraint firstItem="5f0-jr-3sB" firstAttribute="top" secondItem="SYs-ue-Tza" secondAttribute="bottom" constant="7" id="qld-W4-Dfr"/>
+                <constraint firstItem="5f0-jr-3sB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="syw-Kc-gpM"/>
                 <constraint firstItem="5f0-jr-3sB" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="vK5-O9-I64"/>
             </constraints>
             <size key="customSize" width="324" height="243"/>

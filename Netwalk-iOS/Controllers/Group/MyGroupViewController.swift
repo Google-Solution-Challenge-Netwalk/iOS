@@ -1,8 +1,8 @@
 //
-//  GroupViewController.swift
+//  MyGroupViewController.swift
 //  Netwalk-iOS
 //
-//  Created by 이정동 on 2023/02/02.
+//  Created by 지윤 on 2023/03/20.
 //
 
 import UIKit
@@ -13,7 +13,7 @@ class MyGroupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        requestPartGroupList()
         addGroupButton.layer.cornerRadius = addGroupButton.layer.frame.size.width / 2
         setUpTableView()
     }
@@ -30,21 +30,42 @@ class MyGroupViewController: UIViewController {
         navigationController?.pushViewController(newGroupVC, animated: true)
     }
     
+    func requestPartGroupList() {
+        
+        guard let user = UserDefaults.standard.getLoginUser() else { return }
+
+        GroupNetManager.shared.readPartGroup(user.user_no!) { groups in
+            GroupManager.shared.groups = groups
+            DispatchQueue.main.async {
+                self.myGroupTable.reloadData()
+            }
+        }
+    }
+    
 }
 
 extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { //cell의 갯수 설정
-        return 5
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return GroupManager.shared.groups.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //cell의 데이터 구성
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        var group: Group
+        group = GroupManager.shared.groups[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyGroupTableViewCell") as! MyGroupTableViewCell
-        cell.selectionStyle = .none
-        return cell
         
+        cell.selectionStyle = .none
+        cell.myGroupImg.image = UIImage(named:"\(group.category).png")
+        cell.myGroupTitle.text = group.name
+        cell.groupParticipant.text = String(group.participant)
+        cell.groupCapacity.text = String(group.capacity)
+        
+        return cell
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { //cell의 높이 설정
         
         return 90

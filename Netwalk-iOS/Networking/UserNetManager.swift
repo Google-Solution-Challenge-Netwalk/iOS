@@ -11,6 +11,43 @@ class UserNetManager {
     static let shared = UserNetManager()
     private init() {}
     
+    // 그룹별 가입된 사용자 정보
+    func readGroupUsers(_ groupNo: Int, completion: @escaping ([User])->()) {
+        let urlKey = Bundle.main.getSecretKey(key: "REST_API_URL")
+        
+        guard let url = URL(string: "\(urlKey)/api/v1/group/part/\(groupNo)") else {
+            print("URL Error")
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) { data, res, err in
+            if err != nil {
+                print("Place Net Error")
+                return
+            }
+            
+            guard let response = res as? HTTPURLResponse, (200 ..< 299) ~=
+                    response.statusCode else {
+                print("Error: HTTP request failed")
+                return
+            }
+            
+            if let safeData = data {
+                do {
+                    let decodedData = try JSONDecoder().decode(UserLists.self, from: safeData)
+                    dump(decodedData.object)
+                    completion(decodedData.object)
+                    print("adsfdasdsdfsadfsfdsadf",decodedData.object)
+                } catch {
+                    print("Decode Error")
+                }
+            }
+        }.resume()
+    }
+    
     func login(user: User, completion: @escaping(Int)->()) {
         
         let urlKey = Bundle.main.getSecretKey(key: "REST_API_URL")

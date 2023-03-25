@@ -16,31 +16,72 @@
                 <rect key="frame" x="0.0" y="0.0" width="311" height="79"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Overseas" translatesAutoresizingMaskIntoConstraints="NO" id="t39-U8-b4z">
+                        <rect key="frame" x="13" y="10" width="60" height="59"/>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="망원 한강공원 플로깅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gZ5-jI-GUM">
-                        <rect key="frame" x="90" y="19" width="201" height="41"/>
+                        <rect key="frame" x="86" y="9" width="201" height="41"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="overseas" translatesAutoresizingMaskIntoConstraints="NO" id="t39-U8-b4z">
-                        <rect key="frame" x="16" y="9" width="60" height="61"/>
-                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="v4N-6R-sxi">
+                        <rect key="frame" x="123.00000000000001" y="45" width="35.666666666666671" height="20.333333333333329"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iir-lC-asf">
+                                <rect key="frame" x="0.0" y="0.0" width="10.333333333333334" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzW-Mx-LDN">
+                                <rect key="frame" x="15.333333333333343" y="0.0" width="5" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U40-Ip-yvI">
+                                <rect key="frame" x="25.333333333333343" y="0.0" width="10.333333333333336" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joS-fl-eaK">
+                        <rect key="frame" x="90" y="44" width="23" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="t39-U8-b4z" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="175-Kk-AKE"/>
-                <constraint firstItem="t39-U8-b4z" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="9" id="4MZ-Ju-LU7"/>
-                <constraint firstItem="gZ5-jI-GUM" firstAttribute="leading" secondItem="t39-U8-b4z" secondAttribute="trailing" constant="14" id="fsl-SI-NYF"/>
-                <constraint firstItem="t39-U8-b4z" firstAttribute="centerY" secondItem="gZ5-jI-GUM" secondAttribute="centerY" id="nx9-rZ-pIQ"/>
+                <constraint firstItem="joS-fl-eaK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="44" id="8GW-Ly-aqh"/>
+                <constraint firstAttribute="bottom" secondItem="v4N-6R-sxi" secondAttribute="bottom" constant="13.67" id="B1W-9v-Dbj"/>
+                <constraint firstItem="joS-fl-eaK" firstAttribute="leading" secondItem="t39-U8-b4z" secondAttribute="trailing" constant="17" id="P46-Yp-omm"/>
+                <constraint firstItem="t39-U8-b4z" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="13" id="Plh-9P-sj7"/>
+                <constraint firstItem="v4N-6R-sxi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="45" id="Xrx-vl-1Jy"/>
+                <constraint firstItem="gZ5-jI-GUM" firstAttribute="leading" secondItem="t39-U8-b4z" secondAttribute="trailing" constant="13" id="fW2-2P-2YT"/>
+                <constraint firstItem="t39-U8-b4z" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="hgm-0h-zxp"/>
+                <constraint firstItem="v4N-6R-sxi" firstAttribute="leading" secondItem="joS-fl-eaK" secondAttribute="trailing" constant="10" id="n8s-9I-pnj"/>
+                <constraint firstAttribute="bottom" secondItem="t39-U8-b4z" secondAttribute="bottom" constant="10" id="r9h-fz-gzA"/>
+                <constraint firstItem="t39-U8-b4z" firstAttribute="top" secondItem="gZ5-jI-GUM" secondAttribute="top" constant="1" id="rgo-8B-ium"/>
             </constraints>
             <size key="customSize" width="311" height="79"/>
+            <connections>
+                <outlet property="groupCapacity" destination="U40-Ip-yvI" id="zco-rK-OvC"/>
+                <outlet property="groupImage" destination="t39-U8-b4z" id="KdD-9g-OYN"/>
+                <outlet property="groupParticipant" destination="iir-lC-asf" id="2DC-xd-dlZ"/>
+                <outlet property="groupTitle" destination="gZ5-jI-GUM" id="SUC-db-Cj7"/>
+            </connections>
             <point key="canvasLocation" x="290.83969465648852" y="15.140845070422536"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="overseas" width="121" height="121"/>
+        <image name="Overseas" width="121" height="121"/>
     </resources>
 </document>
