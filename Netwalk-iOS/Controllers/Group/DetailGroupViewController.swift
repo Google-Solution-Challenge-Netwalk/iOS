@@ -9,20 +9,42 @@ import UIKit
 
 class DetailGroupViewController: UIViewController {
     
+    @IBOutlet weak var joinButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var groupTitle: UILabel!
     var group: Group!
     var users : [GroupUser] = []
+    var flag = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
+        if flag == 0 {
+            joinButton.isHidden = true
+        }
+        else {
+            joinButton.isHidden = false
+        }
         requestGroupUsers(group.groupNo)
         tableView.register(UINib(nibName: DetailGroupTableViewCell.className, bundle: nil), forCellReuseIdentifier: DetailGroupTableViewCell.cellId)
     }
+    
     @IBAction func joinButtonTapped(_ sender: UIButton) {
-        let user = UserDefaults.standard.getLoginUser()!
-        let joinUser = Join(userNo: user.user_no!, groupNo: group.groupNo)
-        requestJoinGroup(joinUser)
+        
+        let alert = UIAlertController(title: "Join a group?", message: "\(group.name)", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Yes", style: .default) { _ in
+            let user = UserDefaults.standard.getLoginUser()!
+            let joinUser = Join(userNo: user.user_no!, groupNo: self.group.groupNo)
+            self.requestJoinGroup(joinUser)
+        }
+        
+        let cancel = UIAlertAction(title: "No", style: .cancel)
+        
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        
+        present(alert, animated: true)
+        
     }
     
     func requestGroupUsers(_ grouoNo : Int) {
@@ -36,7 +58,18 @@ class DetailGroupViewController: UIViewController {
     }
     
     func requestJoinGroup(_ joinUser:Join){
-        UserNetManager.shared.joinGroup(joinUser) { 
+        UserNetManager.shared.joinGroup(joinUser) {
+            DispatchQueue.main.async {
+                guard let viewControllerStack =
+                        self.navigationController?.viewControllers else { return }
+                for viewController in viewControllerStack {
+                    if let myGroupView = viewController as? MyGroupViewController {
+                        myGroupView.requestPartGroupList()
+                        myGroupView.myGroupTable.reloadData()
+                        self.navigationController?.popToViewController(myGroupView, animated: true)
+                    }
+                }
+            }
         }
     }
 

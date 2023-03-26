@@ -66,12 +66,11 @@ extension TabManViewController: PageboyViewControllerDataSource, TMBarDataSource
     func barItem(for bar: Tabman.TMBar, at index: Int) -> Tabman.TMBarItemable {
         switch index {
         case 0:
-            return TMBarItem(title: "시간")
+            return TMBarItem(title: "Time")
         case 1:
-            return TMBarItem(title: "거리")
+            return TMBarItem(title: "Distance")
         case 2:
-//            timeRankVC.reqeustUserRank("trash")
-            return TMBarItem(title: "쓰레기량")
+            return TMBarItem(title: "Waste")
         default:
             return TMBarItem(title: "Test")
         }
