@@ -51,7 +51,6 @@ extension DetailGroupViewController: UITableViewDelegate, UITableViewDataSource 
         switch indexPath.row{
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: DetailGroupTableViewCell.cellId, for: indexPath) as! DetailGroupTableViewCell
-            print("ADSfdafsadfsdfsdasfasdfsdaf",group.name)
             groupTitle.text = group.name
             cell.groupCategory.text = group.category
             cell.groupParticipant.text = String(users.count)

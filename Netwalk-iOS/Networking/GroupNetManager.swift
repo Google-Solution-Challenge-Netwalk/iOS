@@ -138,7 +138,6 @@ class GroupNetManager {
                     let decodedData = try JSONDecoder().decode(GroupLists.self, from: safeData)
                     dump(decodedData.object)
                     completion(decodedData.object)
-                    print("내가 참여한 그룹", decodedData.object)
                 } catch {
                     print("Decode Error")
                 }
