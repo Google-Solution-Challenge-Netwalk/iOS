@@ -90,6 +90,7 @@
 		95D3696629BE368C00106F5B /* GroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D3696429BE368C00106F5B /* GroupCollectionViewCell.swift */; };
 		95D3696F29BE376000106F5B /* TypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D3696D29BE376000106F5B /* TypeTableViewCell.swift */; };
 		95D3697329BE377000106F5B /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D3697129BE377000106F5B /* GroupTableViewCell.swift */; };
+		95D7A7FD29D01EF5006C687E /* Join.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7A7FC29D01EF5006C687E /* Join.swift */; };
 		95EFDD27299A50E00005BAE7 /* MyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFDD25299A50E00005BAE7 /* MyGroupTableViewCell.swift */; };
 		95EFDD37299A61E20005BAE7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFDD36299A61E20005BAE7 /* Category.swift */; };
 		95F8984F29C45F6800B6014F /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F8984E29C45F6800B6014F /* CreateGroupViewController.swift */; };
@@ -182,6 +183,7 @@
 		95D3696E29BE376000106F5B /* TypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypeTableViewCell.xib; sourceTree = "<group>"; };
 		95D3697129BE377000106F5B /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		95D3697229BE377000106F5B /* GroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupTableViewCell.xib; sourceTree = "<group>"; };
+		95D7A7FC29D01EF5006C687E /* Join.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Join.swift; sourceTree = "<group>"; };
 		95EFDD24299A50E00005BAE7 /* MyGroupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyGroupTableViewCell.xib; path = "Netwalk-iOS/Views/Group/MyGroup/MyGroupTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		95EFDD25299A50E00005BAE7 /* MyGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyGroupTableViewCell.swift; path = "Netwalk-iOS/Views/Group/MyGroup/MyGroupTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		95EFDD36299A61E20005BAE7 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -403,6 +405,7 @@
 				57F2F07929C1A133008605F5 /* Group.swift */,
 				95766C4B29C982CE00971C7F /* Ranking.swift */,
 				95766C5129C9FB4500971C7F /* Cate.swift */,
+				95D7A7FC29D01EF5006C687E /* Join.swift */,
 			);
 			path = Tables;
 			sourceTree = "<group>";
@@ -712,6 +715,7 @@
 				95F8984F29C45F6800B6014F /* CreateGroupViewController.swift in Sources */,
 				576C0DE4298ACAB300485AD5 /* AppDelegate.swift in Sources */,
 				57F2F06929B9051C008605F5 /* ProfileBodyCollectionViewCell.swift in Sources */,
+				95D7A7FD29D01EF5006C687E /* Join.swift in Sources */,
 				57F2F06D29BCDA6E008605F5 /* PloggingDetailViewController.swift in Sources */,
 				95766C4A29C8EBBA00971C7F /* UserManager.swift in Sources */,
 				57B5A9FB29B8A21300BB07A8 /* ProfileHeaderTableViewCell.swift in Sources */,

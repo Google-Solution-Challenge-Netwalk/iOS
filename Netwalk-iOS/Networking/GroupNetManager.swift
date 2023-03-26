@@ -102,23 +102,33 @@ class GroupNetManager {
     // 내가 참여한 그룹
     func readPartGroup(_ userNo: Int, completion: @escaping ([Group])->()) {
         let urlKey = Bundle.main.getSecretKey(key: "REST_API_URL")
-        
-        guard let url = URL(string: "\(urlKey)/api/v1/group/part/\(userNo)") else {
+        let param = ["user_no":userNo]
+        guard let url = URL(string: "\(urlKey)/api/v1/group/part/me") else {
             print("URL Error")
             return
         }
         
+        guard let jsonData = try? JSONEncoder().encode(param) else {
+            print("Error: Trying to convert model to JSON data")
+            return
+        }
+        
         var request = URLRequest(url: url)
-        request.httpMethod = "GET"
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.httpBody = jsonData
         
         URLSession.shared.dataTask(with: request) { data, res, err in
-            if err != nil {
-                print("Place Net Error")
+            
+            guard err == nil else {
+                print("Error: error calling POST")
+                print(err)
                 return
             }
             
-            guard let response = res as? HTTPURLResponse, (200 ..< 299) ~=
-                    response.statusCode else {
+            // HTTP 200번대 정상코드인 경우만 다음 코드로 넘어감
+            guard let response = res as? HTTPURLResponse, (200 ..< 299) ~= response.statusCode else {
                 print("Error: HTTP request failed")
                 return
             }
@@ -126,12 +136,14 @@ class GroupNetManager {
             if let safeData = data {
                 do {
                     let decodedData = try JSONDecoder().decode(GroupLists.self, from: safeData)
-                    dump(decodedData)
+                    dump(decodedData.object)
                     completion(decodedData.object)
+                    print("내가 참여한 그룹", decodedData.object)
                 } catch {
                     print("Decode Error")
                 }
             }
+            
         }.resume()
     }
 }
