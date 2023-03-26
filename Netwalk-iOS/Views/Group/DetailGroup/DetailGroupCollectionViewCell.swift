@@ -13,7 +13,7 @@ class DetailGroupCollectionViewCell: UICollectionViewCell {
     static let className = "DetailGroupCollectionViewCell"
     
     
-    @IBOutlet weak var userImage: UIImageView!
+//    @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userTime: UILabel!
     @IBOutlet weak var userKm: UILabel!
@@ -21,13 +21,6 @@ class DetailGroupCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-    
-    // data model 넣으면 됨
-    public func configure() {
-        userName.text = "Jiyoon"
-        userTime.text = "15h 32s"
-        userKm.text = "7.37km"
     }
 
 }

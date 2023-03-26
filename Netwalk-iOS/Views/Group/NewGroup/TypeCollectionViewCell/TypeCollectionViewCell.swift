@@ -25,8 +25,8 @@ class TypeCollectionViewCell: UICollectionViewCell {
     
     // data model 넣으면 됨
     public func configure() {
-        let image = UIImage(named: "overseas.png")
-        typeLabel.text = "overseas"
+        let image = UIImage(named: "Overseas.png")
+        typeLabel.text = "Overseas"
         typeImage.image = image
     }
 
