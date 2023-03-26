@@ -434,37 +434,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aK0-pc-sTr">
-                                <rect key="frame" x="10" y="70" width="373" height="40"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="              " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vb2-eT-F7H">
-                                        <rect key="frame" x="0.0" y="9.9999999999999982" width="67.666666666666671" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울숲 플로깅해요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBy-6i-kLk">
-                                        <rect key="frame" x="77.666666666666671" y="3.3333333333333286" width="221.66666666666663" height="33.666666666666664"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHc-7x-Fgk">
-                                        <rect key="frame" x="309.33333333333331" y="3" width="63.666666666666686" height="34.333333333333336"/>
-                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Join"/>
-                                        <connections>
-                                            <action selector="joinButtonTapped:" destination="tfe-hF-V7j" eventType="touchUpInside" id="0Ic-Gs-iXc"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="4Yb-GN-ykb"/>
-                                </constraints>
-                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dmY-c9-zP9">
-                                <rect key="frame" x="0.0" y="125" width="393" height="645"/>
+                                <rect key="frame" x="0.0" y="128.66666666666669" width="393" height="641.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="tfe-hF-V7j" id="eB9-CG-QIp"/>
@@ -472,34 +443,70 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qxe-Wq-6Ge">
-                                <rect key="frame" x="0.0" y="125" width="393" height="1"/>
+                                <rect key="frame" x="0.0" y="128.66666666666666" width="393" height="1"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="r8Q-rX-GWO"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxc-BQ-Top">
+                                <rect key="frame" x="96.666666666666686" y="77" width="200" height="36.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Ipv-Dz-gbn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q22-7B-7jU">
+                                <rect key="frame" x="9.9999999999999964" y="75" width="46.666666666666657" height="38.666666666666657"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow-back-ios"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="tfe-hF-V7j" eventType="touchUpInside" id="OkS-XK-kbO"/>
+                                    <action selector="backButtonTapped:" destination="Fdk-M0-yjV" eventType="touchUpInside" id="bMq-Xu-Hij"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNg-pT-bAC">
+                                <rect key="frame" x="316.66666666666669" y="80" width="66.333333333333314" height="33.666666666666657"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Join">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="joinButtonTapped:" destination="tfe-hF-V7j" eventType="touchUpInside" id="7SX-0E-B4P"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FYC-q3-4es"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Qxe-Wq-6Ge" firstAttribute="top" secondItem="aK0-pc-sTr" secondAttribute="bottom" constant="15" id="8bm-py-Xt0"/>
-                            <constraint firstItem="aK0-pc-sTr" firstAttribute="centerX" secondItem="JFU-Qf-Otr" secondAttribute="centerX" id="Kn2-oG-7d8"/>
+                            <constraint firstItem="DNg-pT-bAC" firstAttribute="top" secondItem="FYC-q3-4es" secondAttribute="top" constant="21" id="3Qn-xA-nnt"/>
+                            <constraint firstItem="Jxc-BQ-Top" firstAttribute="centerX" secondItem="JFU-Qf-Otr" secondAttribute="centerX" id="BKx-TF-Ns4"/>
+                            <constraint firstItem="Jxc-BQ-Top" firstAttribute="top" secondItem="FYC-q3-4es" secondAttribute="top" constant="18" id="J2b-1T-qa5"/>
+                            <constraint firstItem="Jxc-BQ-Top" firstAttribute="leading" secondItem="q22-7B-7jU" secondAttribute="trailing" constant="40" id="JGM-eF-d1w"/>
                             <constraint firstItem="FYC-q3-4es" firstAttribute="trailing" secondItem="Qxe-Wq-6Ge" secondAttribute="trailing" id="Kyn-4t-BAw"/>
                             <constraint firstItem="dmY-c9-zP9" firstAttribute="leading" secondItem="FYC-q3-4es" secondAttribute="leading" id="L91-7V-Sax"/>
                             <constraint firstItem="dmY-c9-zP9" firstAttribute="top" secondItem="Qxe-Wq-6Ge" secondAttribute="bottom" constant="-1" id="NCs-ga-oue"/>
                             <constraint firstItem="Qxe-Wq-6Ge" firstAttribute="trailing" secondItem="FYC-q3-4es" secondAttribute="trailing" id="QJS-3M-QWw"/>
-                            <constraint firstItem="aK0-pc-sTr" firstAttribute="top" secondItem="JFU-Qf-Otr" secondAttribute="top" constant="70" id="QXk-5X-fja"/>
+                            <constraint firstItem="dmY-c9-zP9" firstAttribute="top" secondItem="Jxc-BQ-Top" secondAttribute="bottom" constant="15" id="Usc-h3-Mn3"/>
+                            <constraint firstItem="DNg-pT-bAC" firstAttribute="leading" secondItem="Jxc-BQ-Top" secondAttribute="trailing" constant="20" id="Xts-nk-EFU"/>
                             <constraint firstItem="FYC-q3-4es" firstAttribute="leading" secondItem="Qxe-Wq-6Ge" secondAttribute="leading" id="agb-FQ-0Xd"/>
+                            <constraint firstItem="dmY-c9-zP9" firstAttribute="top" secondItem="q22-7B-7jU" secondAttribute="bottom" constant="15" id="e7Y-8Y-xjn"/>
+                            <constraint firstItem="q22-7B-7jU" firstAttribute="top" secondItem="FYC-q3-4es" secondAttribute="top" constant="16" id="emH-6r-SgS"/>
+                            <constraint firstItem="q22-7B-7jU" firstAttribute="leading" secondItem="FYC-q3-4es" secondAttribute="leading" constant="10" id="g4O-nu-Fkl"/>
                             <constraint firstItem="dmY-c9-zP9" firstAttribute="trailing" secondItem="FYC-q3-4es" secondAttribute="trailing" id="ggM-yl-KuH"/>
-                            <constraint firstItem="aK0-pc-sTr" firstAttribute="leading" secondItem="FYC-q3-4es" secondAttribute="leading" constant="10" id="n56-Ez-klG"/>
-                            <constraint firstItem="FYC-q3-4es" firstAttribute="trailing" secondItem="aK0-pc-sTr" secondAttribute="trailing" constant="10" id="oPT-7f-6H1"/>
+                            <constraint firstItem="FYC-q3-4es" firstAttribute="trailing" secondItem="DNg-pT-bAC" secondAttribute="trailing" constant="10" id="orK-7A-Dvi"/>
                             <constraint firstItem="FYC-q3-4es" firstAttribute="bottom" secondItem="dmY-c9-zP9" secondAttribute="bottom" constant="48" id="xIf-Qq-9NQ"/>
+                            <constraint firstItem="dmY-c9-zP9" firstAttribute="top" secondItem="DNg-pT-bAC" secondAttribute="bottom" constant="15" id="zgw-ft-t7S"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="r4w-yi-Jsw"/>
                     <connections>
-                        <outlet property="groupTitle" destination="GBy-6i-kLk" id="HMy-qk-cuL"/>
-                        <outlet property="joinButton" destination="ZHc-7x-Fgk" id="nSv-Qp-TOU"/>
+                        <outlet property="backButton" destination="q22-7B-7jU" id="n29-17-FGc"/>
+                        <outlet property="groupTitle" destination="Jxc-BQ-Top" id="etl-Uy-tcy"/>
+                        <outlet property="joinButton" destination="DNg-pT-bAC" id="nIj-AQ-alk"/>
                         <outlet property="tableView" destination="dmY-c9-zP9" id="r4z-uf-nwB"/>
                     </connections>
                 </viewController>

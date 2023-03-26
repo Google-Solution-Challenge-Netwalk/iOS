@@ -9,9 +9,11 @@ import UIKit
 
 class DetailGroupViewController: UIViewController {
     
+    
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var groupTitle: UILabel!
     @IBOutlet weak var joinButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var groupTitle: UILabel!
     var group: Group!
     var users : [GroupUser] = []
     var flag = 0
@@ -30,8 +32,7 @@ class DetailGroupViewController: UIViewController {
     }
     
     @IBAction func joinButtonTapped(_ sender: UIButton) {
-        
-        let alert = UIAlertController(title: "Join a group?", message: "\(group.name)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Do you want to join a group?", message: "Plogging with member of the \(group.name)", preferredStyle: .alert)
         let ok = UIAlertAction(title: "Yes", style: .default) { _ in
             let user = UserDefaults.standard.getLoginUser()!
             let joinUser = Join(userNo: user.user_no!, groupNo: self.group.groupNo)
@@ -44,7 +45,10 @@ class DetailGroupViewController: UIViewController {
         alert.addAction(cancel)
         
         present(alert, animated: true)
-        
+    }
+    
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func requestGroupUsers(_ grouoNo : Int) {
