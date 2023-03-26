@@ -13,7 +13,7 @@ class MyGroupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        requestPartGroupList()
+//        requestPartGroupList()
         addGroupButton.layer.cornerRadius = addGroupButton.layer.frame.size.width / 2
         setUpTableView()
     }
@@ -21,7 +21,7 @@ class MyGroupViewController: UIViewController {
     func setUpTableView() {
         myGroupTable.delegate = self
         myGroupTable.dataSource = self
-        myGroupTable.register(UINib(nibName: "MyGroupTableViewCell", bundle: nil), forCellReuseIdentifier: "MyGroupTableViewCell") //nib 파일 등록
+        myGroupTable.register(UINib(nibName: "MyGroupTableViewCell", bundle: nil), forCellReuseIdentifier: "MyGroupTableViewCell")
         
     }
     
@@ -31,9 +31,7 @@ class MyGroupViewController: UIViewController {
     }
     
     func requestPartGroupList() {
-        
         guard let user = UserDefaults.standard.getLoginUser() else { return }
-
         GroupNetManager.shared.readPartGroup(user.user_no!) { groups in
             GroupManager.shared.groups = groups
             DispatchQueue.main.async {
@@ -41,10 +39,16 @@ class MyGroupViewController: UIViewController {
             }
         }
     }
-    
 }
 
 extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailGroupVC = storyboard?.instantiateViewController(withIdentifier: "DetailGroupVC") as! DetailGroupViewController
+        detailGroupVC.group = GroupManager.shared.groups[indexPath.row]
+        detailGroupVC.flag = 0
+        navigationController?.pushViewController(detailGroupVC, animated: true)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return GroupManager.shared.groups.count
@@ -52,9 +56,7 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var group: Group
-        group = GroupManager.shared.groups[indexPath.row]
-        
+        let group = GroupManager.shared.groups[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyGroupTableViewCell") as! MyGroupTableViewCell
         
         cell.selectionStyle = .none
@@ -62,15 +64,14 @@ extension MyGroupViewController: UITableViewDelegate, UITableViewDataSource {
         cell.myGroupTitle.text = group.name
         cell.groupParticipant.text = String(group.participant)
         cell.groupCapacity.text = String(group.capacity)
-        
         return cell
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { //cell의 높이 설정
         
         return 90
         
-        
-        
     }
+    
 }

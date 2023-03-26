@@ -163,9 +163,6 @@
                                         <rect key="frame" x="320.66666666666669" y="0.0" width="52.333333333333314" height="40"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="search"/>
-                                        <connections>
-                                            <action selector="searchButtonTapped:" destination="Fdk-M0-yjV" eventType="touchUpInside" id="0la-9T-TfJ"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -233,7 +230,6 @@
                         <outlet property="addGroupButton" destination="Of3-Hl-7Z4" id="pph-OG-2xh"/>
                         <outlet property="searchButton" destination="R2F-U3-f9U" id="5Sb-cP-1Iq"/>
                         <outlet property="tableView" destination="NEF-1R-cnE" id="RZm-tr-xIH"/>
-                        <segue destination="tfe-hF-V7j" kind="show" identifier="ㅡㅛㄴㄷ볃" id="r4h-5K-8eg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYD-GQ-cxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -435,29 +431,29 @@
             <objects>
                 <viewController storyboardIdentifier="DetailGroupVC" id="tfe-hF-V7j" customClass="DetailGroupViewController" customModule="Netwalk_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="Detail" id="JFU-Qf-Otr">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aK0-pc-sTr">
                                 <rect key="frame" x="10" y="70" width="373" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="              " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vb2-eT-F7H">
-                                        <rect key="frame" x="0.0" y="9.9999999999999982" width="68" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="9.9999999999999982" width="67.666666666666671" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울숲 플로깅해요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBy-6i-kLk">
-                                        <rect key="frame" x="78" y="3.3333333333333286" width="223" height="33.666666666666664"/>
+                                        <rect key="frame" x="77.666666666666671" y="3.3333333333333286" width="221.66666666666663" height="33.666666666666664"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHc-7x-Fgk">
-                                        <rect key="frame" x="311" y="3" width="62" height="34.333333333333336"/>
+                                        <rect key="frame" x="309.33333333333331" y="3" width="63.666666666666686" height="34.333333333333336"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="가입"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Join"/>
                                         <connections>
                                             <action selector="joinButtonTapped:" destination="tfe-hF-V7j" eventType="touchUpInside" id="0Ic-Gs-iXc"/>
                                         </connections>
@@ -468,7 +464,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dmY-c9-zP9">
-                                <rect key="frame" x="0.0" y="125" width="393" height="610"/>
+                                <rect key="frame" x="0.0" y="125" width="393" height="645"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="tfe-hF-V7j" id="eB9-CG-QIp"/>
@@ -503,12 +499,13 @@
                     <navigationItem key="navigationItem" id="r4w-yi-Jsw"/>
                     <connections>
                         <outlet property="groupTitle" destination="GBy-6i-kLk" id="HMy-qk-cuL"/>
+                        <outlet property="joinButton" destination="ZHc-7x-Fgk" id="nSv-Qp-TOU"/>
                         <outlet property="tableView" destination="dmY-c9-zP9" id="r4z-uf-nwB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ka2-oc-Qxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5337" y="-1758"/>
+            <point key="canvasLocation" x="5308" y="-1758"/>
         </scene>
         <!--Item-->
         <scene sceneID="hFh-M2-BN3">
@@ -1006,9 +1003,6 @@
                                         <rect key="frame" x="325" y="0.0" width="58" height="40"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="search"/>
-                                        <connections>
-                                            <action selector="searchButtonTapped:" destination="Fdk-M0-yjV" eventType="touchUpInside" id="PFN-Ko-vsP"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

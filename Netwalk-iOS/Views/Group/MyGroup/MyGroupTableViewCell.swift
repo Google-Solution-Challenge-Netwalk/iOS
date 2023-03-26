@@ -12,7 +12,7 @@ class MyGroupTableViewCell: UITableViewCell {
     @IBOutlet weak var myGroupTitle: UILabel!
     @IBOutlet weak var groupCapacity: UILabel!
     @IBOutlet weak var groupParticipant: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,5 +23,4 @@ class MyGroupTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }
