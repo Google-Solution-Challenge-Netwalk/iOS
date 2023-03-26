@@ -333,7 +333,7 @@ extension PloggingViewController: UIImagePickerControllerDelegate {
         let alert = UIAlertController(title: "처리 중...", message: "잠시만 기다려주세요.", preferredStyle: .alert)
         
         picker.present(alert, animated: true) {
-            AINetManager.shared.requestTrashtDetection(image: image) {
+            AINetManager.shared.requestTrashtDetection(actNo: self.actNo, image: image) {
                 alert.dismiss(animated: true)
                 picker.dismiss(animated: true)
             }
