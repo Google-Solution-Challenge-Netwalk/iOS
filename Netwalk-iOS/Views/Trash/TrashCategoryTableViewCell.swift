@@ -16,11 +16,15 @@ class TrashCategoryTableViewCell: UITableViewCell {
     @IBOutlet weak var vinyl: UIButton!
     @IBOutlet weak var others: UIButton!
     
+    var images: [Trash] = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
         setupUI()
+        setupTrashCount()
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -49,7 +53,29 @@ class TrashCategoryTableViewCell: UITableViewCell {
         others.layer.borderWidth = 1
         others.layer.borderColor = UIColor.lightGray.cgColor
         
+    }
+    
+    func setupTrashCount() {
+        let plasticCnt = getCategoryCount(TrashCategory.plastic.rawValue)
+        let canCnt = getCategoryCount(TrashCategory.can.rawValue)
+        let glassCnt = getCategoryCount(TrashCategory.glass.rawValue)
+        let paperCnt = getCategoryCount(TrashCategory.paper.rawValue)
+        let vinylCnt = getCategoryCount(TrashCategory.box.rawValue)
+        let othersCnt = getCategoryCount(TrashCategory.others.rawValue)
         
+        plastic.setTitle("Plastic (\(plasticCnt))", for: .normal)
+        can.setTitle("Can (\(canCnt))", for: .normal)
+        glass.setTitle("Glass (\(glassCnt))", for: .normal)
+        paper.setTitle("Paper (\(paperCnt))", for: .normal)
+        vinyl.setTitle("Vinyl (\(vinylCnt))", for: .normal)
+        others.setTitle("Others (\(othersCnt))", for: .normal)
+    }
+    
+    
+    func getCategoryCount(_ category: String) -> Int {
+        return images.filter { trash in
+            trash.category == category
+        }.count
     }
     
 }

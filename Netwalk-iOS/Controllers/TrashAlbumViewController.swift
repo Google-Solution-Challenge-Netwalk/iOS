@@ -11,11 +11,14 @@ class TrashAlbumViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var images: [Trash] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setupTableView()
+        requestTrashImage()
     }
     
     func setupTableView() {
@@ -24,6 +27,20 @@ class TrashAlbumViewController: UIViewController {
         
         tableView.register(UINib(nibName:"TrashCategoryTableViewCell", bundle: nil), forCellReuseIdentifier:"TrashCategoryTableViewCell")
         tableView.register(UINib(nibName:"TrashPhotoTableViewCell", bundle: nil), forCellReuseIdentifier:"TrashPhotoTableViewCell")
+    }
+    
+    func requestTrashImage() {
+        guard let userNo = UserDefaults.standard.getLoginUser()?.user_no else {
+            print("UserDefault Err")
+            return
+        }
+        
+        TrashNetManager.shared.getTrashImages(userNo) { images in
+            self.images = images
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 
 }
@@ -37,11 +54,12 @@ extension TrashAlbumViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "TrashCategoryTableViewCell", for: indexPath) as! TrashCategoryTableViewCell
-            
+            cell.images = images
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "TrashPhotoTableViewCell", for: indexPath) as! TrashPhotoTableViewCell
-            
+            cell.images = images
+            cell.collectionView.reloadData()
             return cell
         default:
             return UITableViewCell()

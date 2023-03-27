@@ -13,6 +13,8 @@ class TrashPhotoCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var category: UILabel!
     
+    var imageUrl: String!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

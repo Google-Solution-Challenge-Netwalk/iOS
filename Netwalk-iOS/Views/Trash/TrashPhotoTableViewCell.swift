@@ -13,13 +13,14 @@ class TrashPhotoTableViewCell: UITableViewCell {
     
     let flowLayout = UICollectionViewFlowLayout()
     
+    var images: [Trash] = []
+    
     override func awakeFromNib() {
         
         super.awakeFromNib()
         // Initialization code
         
         setupCollectionView()
-        requestTrashPhotos()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -51,19 +52,20 @@ class TrashPhotoTableViewCell: UITableViewCell {
         collectionView.collectionViewLayout = flowLayout
     }
     
-    func requestTrashPhotos() {
-        
-    }
-    
 }
 
 extension TrashPhotoTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 29
+        return images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrashPhotoCollectionViewCell", for: indexPath) as! TrashPhotoCollectionViewCell
+        
+        let image = images[indexPath.item]
+        
+        cell.imageUrl = image.imageUrl
+        cell.category.text = image.category
         
         return cell
     }
