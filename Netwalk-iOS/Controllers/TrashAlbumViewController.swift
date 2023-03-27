@@ -15,7 +15,7 @@ class TrashAlbumViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(#function)
         // Do any additional setup after loading the view.
         setupTableView()
         requestTrashImage()

@@ -89,6 +89,9 @@ extension ActivateGroupsViewController: UITableViewDelegate, UITableViewDataSour
         }
         
         cell.myGroupTitle.text = group.name
+        cell.groupCapacity.text = "\(group.capacity)"
+        cell.groupParticipant.text = "\(group.participant)"
+        cell.myGroupImg.image = UIImage(named: "\(group.category).png")
         
         return cell
     }
