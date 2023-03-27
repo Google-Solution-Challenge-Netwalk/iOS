@@ -245,6 +245,7 @@ class PloggingViewController: UIViewController {
         
         let trashList = UIAlertAction(title: "Trash List", style: .default) { action in
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "TrashAlbumVC") as! TrashAlbumViewController
+            vc.actNo = self.actNo
             self.navigationController?.pushViewController(vc, animated: true)
         }
         

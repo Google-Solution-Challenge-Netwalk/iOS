@@ -24,5 +24,8 @@ class TrashPhotoCollectionViewCell: UICollectionViewCell {
 
     func setupUI() {
         photo.layer.cornerRadius = 5
+        
+        let url = URL(string: imageUrl)
+        photo.load(url: url!)
     }
 }
