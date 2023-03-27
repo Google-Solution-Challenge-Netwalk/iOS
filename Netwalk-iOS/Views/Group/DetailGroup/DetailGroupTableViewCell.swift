@@ -18,7 +18,7 @@ class DetailGroupTableViewCell: UITableViewCell {
     @IBOutlet weak var groupCategory: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     var didSelectItem: ((_ indexPath: IndexPath)->())? = nil
-    var users: User!
+    var users: [GroupUser]!
     
     func configure(){
         collectionView.reloadData()
@@ -40,12 +40,15 @@ class DetailGroupTableViewCell: UITableViewCell {
 
 extension DetailGroupTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return users.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailGroupCollectionViewCell.cellId, for: indexPath) as! DetailGroupCollectionViewCell
-        cell.configure()
+        let user = users[indexPath.item]
+        cell.userName.text = user.name
+        cell.userTime.text = String("\(CustomDateFormatter.convertToString(Int(user.total_act_time!)))")
+        cell.userKm.text = String("\(user.total_act_distance!) km")
         return cell
     }
     

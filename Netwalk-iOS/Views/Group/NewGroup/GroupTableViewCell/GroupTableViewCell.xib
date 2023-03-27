@@ -25,7 +25,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="D6g-Lc-VDA">
-                        <rect key="frame" x="10" y="43" width="324" height="254"/>
+                        <rect key="frame" x="10" y="43" width="324" height="249"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i8u-qa-uI3">
                             <size key="itemSize" width="128" height="128"/>
@@ -41,7 +41,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="D6g-Lc-VDA" secondAttribute="trailing" constant="10" id="Vvg-1W-FwQ"/>
-                    <constraint firstAttribute="bottom" secondItem="D6g-Lc-VDA" secondAttribute="bottom" constant="10" id="WRy-pN-pVh"/>
+                    <constraint firstAttribute="bottom" secondItem="D6g-Lc-VDA" secondAttribute="bottom" constant="15" id="WRy-pN-pVh"/>
                     <constraint firstItem="D6g-Lc-VDA" firstAttribute="top" secondItem="g7q-as-pwE" secondAttribute="bottom" constant="8" id="amS-Yo-NOz"/>
                     <constraint firstItem="D6g-Lc-VDA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="pw9-Vk-6is"/>
                 </constraints>

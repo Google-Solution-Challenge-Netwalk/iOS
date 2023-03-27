@@ -13,6 +13,7 @@ struct GroupLists: Codable {
 
 struct Group: Codable, Equatable {
     var groupNo: Int
+    var userNo: Int
     var name: String
     var capacity: Int
     var participant: Int  // 0: 비활성화 , 1: 활성화
@@ -20,8 +21,12 @@ struct Group: Codable, Equatable {
     var actStatus: Int?
     
     enum CodingKeys: String, CodingKey {
+        case userNo = "create_user_no"
+        case name = "name"
+        case participant = "participant"
+        case capacity = "capacity"
+        case category = "category"
         case groupNo = "group_no"
         case actStatus = "act_st"
-        case name, capacity, participant, category
     }
 }
