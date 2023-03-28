@@ -840,7 +840,7 @@
                                     <constraint firstAttribute="width" constant="50" id="3nf-4H-g31"/>
                                     <constraint firstAttribute="height" constant="50" id="ung-RE-0RN"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
                                     <imageReference key="image" image="location.fill" catalog="system" symbolScale="large"/>
@@ -856,7 +856,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Zo1-yI-lEw"/>
                                     <constraint firstAttribute="width" constant="50" id="jNE-PQ-0G7"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="play.fill" catalog="system"/>
                                 <connections>
@@ -870,7 +870,7 @@
                                     <constraint firstAttribute="width" constant="50" id="hQn-b7-sIK"/>
                                     <constraint firstAttribute="height" constant="50" id="jh4-Ko-q8i"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="person.3.fill" catalog="system"/>
                                 <connections>
@@ -895,7 +895,7 @@
                                     <constraint firstAttribute="width" constant="50" id="Y53-KJ-pUd"/>
                                     <constraint firstAttribute="height" constant="50" id="sJl-VE-ifD"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="camera.fill" catalog="system"/>
                                 <connections>
@@ -1274,9 +1274,6 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
