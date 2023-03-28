@@ -71,16 +71,28 @@ class CreateGroupViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func createButtonTapped(_ sender: UIButton) {
-        // 로그인된 유저 정보
         guard let user = UserDefaults.standard.getLoginUser() else { return }
         let group = Group(groupNo: 0, userNo: user.user_no!, name: groupName.text!, capacity: Int(groupCapacity.text!)!, participant: 1, category: groupCategory.text!)
         requestCreateGroup(group)
-        let newGroupVC = storyboard?.instantiateViewController(withIdentifier: "NewGroupVC") as! NewGroupViewController
-        navigationController?.pushViewController(newGroupVC, animated: true)
+//        let newGroupVC = storyboard?.instantiateViewController(withIdentifier: "NewGroupVC") as! NewGroupViewController
+//        newGroupVC.tableView.reloadData()
+//        navigationController?.pushViewController(newGroupVC, animated: true)
+        
     }
     
     func requestCreateGroup(_ group: Group) {
         GroupNetManager.shared.createGroup(group) {
+            DispatchQueue.main.async {
+                guard let viewControllerStack =
+                        self.navigationController?.viewControllers else { return }
+                for viewController in viewControllerStack {
+                    if let newGroupView = viewController as? NewGroupViewController {
+                        newGroupView.requestNewGroup("")
+                        newGroupView.tableView.reloadData()
+                        self.navigationController?.popToViewController(newGroupView, animated: true)
+                    }
+                }
+            }
         }
     }
 }
