@@ -16,7 +16,6 @@ class TrashAlbumViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#function)
         // Do any additional setup after loading the view.
         setupTableView()
         requestTrashImage()
@@ -64,7 +63,7 @@ extension TrashAlbumViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TrashPhotoTableViewCell", for: indexPath) as! TrashPhotoTableViewCell
         cell.images = images
-        cell.collectionView.reloadData()
+        //cell.collectionView.reloadData()
         return cell
     }
     

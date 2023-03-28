@@ -16,11 +16,12 @@ class TrashPhotoTableViewCell: UITableViewCell {
     var images: [Trash] = []
     
     override func awakeFromNib() {
-        
+        print("collection", #function)
         super.awakeFromNib()
         // Initialization code
         
         setupCollectionView()
+        collectionView.reloadData()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -64,8 +65,8 @@ extension TrashPhotoTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         
         let image = images[indexPath.item]
         
-        cell.imageUrl = image.imageUrl
         cell.category.text = image.category
+        cell.photo.load(url: URL(string: image.imageUrl)!)
         
         return cell
     }

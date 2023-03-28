@@ -13,21 +13,13 @@ class TrashPhotoCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var category: UILabel!
     
-    var imageUrl: String?
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
         setupUI()
     }
 
     func setupUI() {
         photo.layer.cornerRadius = 5
-        
-        guard let imgUrl = imageUrl else { return }
-        
-        let url = URL(string: imgUrl)
-        photo.load(url: url!)
     }
 }
