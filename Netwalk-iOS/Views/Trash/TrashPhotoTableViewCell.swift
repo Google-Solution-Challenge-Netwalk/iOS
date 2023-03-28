@@ -64,9 +64,10 @@ extension TrashPhotoTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrashPhotoCollectionViewCell", for: indexPath) as! TrashPhotoCollectionViewCell
         
         let image = images[indexPath.item]
-        
+
         cell.category.text = image.category
         cell.photo.load(url: URL(string: image.imageUrl)!)
+        
         
         return cell
     }
