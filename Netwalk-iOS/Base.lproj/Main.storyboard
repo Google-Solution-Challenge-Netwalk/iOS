@@ -1196,40 +1196,6 @@
             </objects>
             <point key="canvasLocation" x="5378" y="770"/>
         </scene>
-        <!--Trash Rank View Controller-->
-        <scene sceneID="veD-cL-k6z">
-            <objects>
-                <viewController storyboardIdentifier="TrashRankViewController" id="e6J-Ob-9At" customClass="TrashRankViewController" customModule="Netwalk_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bsP-n0-4Xf">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qpH-pw-9DJ">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="e6J-Ob-9At" id="PJa-RN-sff"/>
-                                    <outlet property="delegate" destination="e6J-Ob-9At" id="ju9-1x-GS6"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="ymC-pv-gri"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="qpH-pw-9DJ" firstAttribute="leading" secondItem="ymC-pv-gri" secondAttribute="leading" id="XLg-ey-EEE"/>
-                            <constraint firstItem="ymC-pv-gri" firstAttribute="bottom" secondItem="qpH-pw-9DJ" secondAttribute="bottom" id="Z3a-UM-KC0"/>
-                            <constraint firstItem="ymC-pv-gri" firstAttribute="trailing" secondItem="qpH-pw-9DJ" secondAttribute="trailing" id="e0n-Zw-rf6"/>
-                            <constraint firstItem="qpH-pw-9DJ" firstAttribute="top" secondItem="ymC-pv-gri" secondAttribute="top" id="w0r-Bu-k5i"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="qpH-pw-9DJ" id="c8y-hV-Xyo"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p7F-tL-pEM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6126" y="770"/>
-        </scene>
         <!--Item-->
         <scene sceneID="1fN-Vs-7ms">
             <objects>
