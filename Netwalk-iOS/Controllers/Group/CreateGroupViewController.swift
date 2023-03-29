@@ -18,7 +18,7 @@ class CreateGroupViewController: UIViewController {
     var categoryPicker: UIPickerView!
     var exitBtn: UIBarButtonItem!
     var list = ["Overseas", "Mountain", "Sea", "Dawn", "Morning", "Lunch", "Evening", "Night", "Student"]
-    var selectCity = "Overseas"
+    var selectCity = "overseas"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +72,7 @@ class CreateGroupViewController: UIViewController {
     }
     @IBAction func createButtonTapped(_ sender: UIButton) {
         guard let user = UserDefaults.standard.getLoginUser() else { return }
-        let group = Group(groupNo: 0, userNo: user.user_no!, name: groupName.text!, capacity: Int(groupCapacity.text!)!, participant: 1, category: groupCategory.text!)
+        let group = Group(groupNo: 0, userNo: user.user_no!, name: groupName.text!, capacity: Int(groupCapacity.text!)!, participant: 1, category: groupCategory.text!.lowercased())
         requestCreateGroup(group)
 //        let newGroupVC = storyboard?.instantiateViewController(withIdentifier: "NewGroupVC") as! NewGroupViewController
 //        newGroupVC.tableView.reloadData()

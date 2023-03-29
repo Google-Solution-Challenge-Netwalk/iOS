@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="110" height="147"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Overseas" translatesAutoresizingMaskIntoConstraints="NO" id="e7g-ro-0PH">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="e7g-ro-0PH">
                         <rect key="frame" x="10" y="10" width="90" height="62"/>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="efL-lc-COz">
@@ -68,6 +68,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Overseas" width="121" height="121"/>
+        <image name="profile_image" width="360" height="370.5"/>
     </resources>
 </document>

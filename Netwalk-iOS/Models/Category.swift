@@ -9,14 +9,14 @@ import Foundation
 
 enum Category: String, CaseIterable {
     
-    case overseas = "Overseas"
-    case mountain = "Mountain"
-    case sea = "Sea"
-    case dawn = "Dawn"
-    case morning = "Morning"
-    case lunch = "Lunch"
-    case evening = "Evening"
-    case night = "Night"
-    case student = "Student"
+    case overseas = "overseas"
+    case mountain = "mountain"
+    case sea = "sea"
+    case dawn = "dawn"
+    case morning = "morning"
+    case lunch = "lunch"
+    case evening = "evening"
+    case night = "night"
+    case student = "student"
     
 }
