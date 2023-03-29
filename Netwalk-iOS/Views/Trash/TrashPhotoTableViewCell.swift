@@ -57,17 +57,16 @@ class TrashPhotoTableViewCell: UITableViewCell {
 
 extension TrashPhotoTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrashPhotoCollectionViewCell", for: indexPath) as! TrashPhotoCollectionViewCell
-        
-        let image = images[indexPath.item]
-
-        cell.category.text = image.category
-        cell.photo.load(url: URL(string: image.imageUrl)!)
-        
+//
+//        let image = images[indexPath.item]
+//
+//        cell.category.text = image.category
+//        cell.photo.load(url: URL(string: image.imageUrl)!)
         
         return cell
     }

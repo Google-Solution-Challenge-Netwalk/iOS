@@ -32,12 +32,12 @@ class AINetManager {
             guard let statusCode = response.response?.statusCode else { return }
             print(statusCode)
 
-            guard let safeData = response.data else { return }
-
-            let decodedData = try? JSONDecoder().decode(AIResult.self, from: safeData)
-            guard let data = decodedData else { return }
-            
-            dump(data)
+//            guard let safeData = response.data else { return }
+//
+//            let decodedData = try? JSONDecoder().decode(AIResult.self, from: safeData)
+//            guard let data = decodedData else { return }
+//            
+//            dump(data)
             
             completion()
             
