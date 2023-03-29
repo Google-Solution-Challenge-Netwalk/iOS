@@ -331,7 +331,7 @@ extension PloggingViewController: UIImagePickerControllerDelegate {
         
         // 인공지능 네트워킹 처리
         
-        let alert = UIAlertController(title: "처리 중...", message: "잠시만 기다려주세요.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Processing...", message: "Please wait a moment", preferredStyle: .alert)
         
         picker.present(alert, animated: true) {
             AINetManager.shared.requestTrashtDetection(actNo: self.actNo, image: image) {
