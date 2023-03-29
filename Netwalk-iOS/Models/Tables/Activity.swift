@@ -24,6 +24,7 @@ struct Activity: Codable {
     var coordinates: [Coordinate]
     var registDate: String?
     var name: String?
+    var trashCnt: Int?
     
     enum CodingKeys: String, CodingKey {
         case userNo = "user_no"
@@ -35,6 +36,7 @@ struct Activity: Codable {
         case actState = "act_st"
         case coordinates = "distances"
         case registDate = "reg_dt"
+        case trashCnt = "trash_cnt"
         case name
     }
 }

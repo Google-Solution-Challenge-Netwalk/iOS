@@ -44,7 +44,7 @@ class ReviewTableViewCell: UITableViewCell {
         let hrs = CustomDateFormatter.convertToString(plogging.totalActTime)
         totalHRS.text = "\(hrs) hrs"
         totalKM.text = "\(plogging.totalActDist) km"
-        // totalTrash.text = 
+        totalTrash.text = "+\(plogging.trashCnt!)"
         
         setupMapView()
         drawPolyline()
