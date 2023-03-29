@@ -16,7 +16,6 @@ class TrashPhotoCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
         setupUI()
     }
 

@@ -12,7 +12,7 @@ class AINetManager {
     static let shared = AINetManager()
     private init() {}
     
-    func requestTrashtDetection(image: UIImage, completion: @escaping()->()) {
+    func requestTrashtDetection(actNo: Int, image: UIImage, completion: @escaping()->()) {
         let urlKey = Bundle.main.getSecretKey(key: "REST_API_URL")
         let url = "\(urlKey)/model/"
         
@@ -23,7 +23,9 @@ class AINetManager {
         // 멀티파트 통신
         AF.upload(multipartFormData: { (multipartFormData) in
 
-            multipartFormData.append(file, withName: "id", fileName: "test.png", mimeType: "multipart/form-data")
+            multipartFormData.append(file, withName: "file", fileName: "test.png", mimeType: "multipart/form-data")
+            
+            multipartFormData.append("\(actNo)".data(using: .utf8)!, withName: "act_no")
 
         }, to: url, method: .post, headers: headers).responseJSON { (response) in
 

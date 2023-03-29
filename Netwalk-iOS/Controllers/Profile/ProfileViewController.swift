@@ -113,6 +113,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             cell.ploggingCount.text = "\(userPlogData?.actCnt ?? 0)"
             cell.totalDistance.text = "\(userPlogData?.totalActDist ?? 0)"
             cell.totalTrash.text = "\(userPlogData?.totalActTrash ?? 0)"
+            cell.username.text = UserDefaults.standard.getLoginUser()?.name
             
             return cell
         case 1:
