@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		574461382A1269F600FAD7B1 /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 574461372A1269F600FAD7B1 /* SecretKey.plist */; };
 		576B64B9299807B0002609FA /* AINetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B64B8299807B0002609FA /* AINetManager.swift */; };
 		576B64BB29980E09002609FA /* AIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B64BA29980E09002609FA /* AIResult.swift */; };
 		576C0DE4298ACAB300485AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C0DE3298ACAB300485AD5 /* AppDelegate.swift */; };
@@ -71,7 +72,6 @@
 		95231F8129BE3F9300B77123 /* TrashPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E4FDA029928AEE00C8E082 /* TrashPhotoTableViewCell.xib */; };
 		95231F8229BE3F9300B77123 /* TrashPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E4FDA4299298A000C8E082 /* TrashPhotoCollectionViewCell.xib */; };
 		95231F8329BE3F9300B77123 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 576C0DEC298ACAB400485AD5 /* Assets.xcassets */; };
-		95231F8429BE3F9300B77123 /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 952CB78C2997BA8700173BA3 /* SecretKey.plist */; };
 		95231F8529BE3F9900B77123 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576C0DEE298ACAB400485AD5 /* LaunchScreen.storyboard */; };
 		95231F8729BE41F200B77123 /* ActiveUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95231F8629BE41F200B77123 /* ActiveUser.swift */; };
 		9524FA0729CCBC3C0053DA39 /* GroupUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9524FA0629CCBC3C0053DA39 /* GroupUser.swift */; };
@@ -102,6 +102,7 @@
 /* Begin PBXFileReference section */
 		277EA68E255120B0DBC71666 /* Pods-Netwalk-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netwalk-iOS.release.xcconfig"; path = "Target Support Files/Pods-Netwalk-iOS/Pods-Netwalk-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		4F671F28F8A304E80430BB26 /* Pods-Netwalk-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netwalk-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Netwalk-iOS/Pods-Netwalk-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		574461372A1269F600FAD7B1 /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
 		576B64B8299807B0002609FA /* AINetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AINetManager.swift; sourceTree = "<group>"; };
 		576B64BA29980E09002609FA /* AIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIResult.swift; sourceTree = "<group>"; };
 		576C0DE0298ACAB300485AD5 /* Netwalk-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netwalk-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +167,6 @@
 		95161D33299BA71E002B86BA /* DetailGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailGroupTableViewCell.xib; sourceTree = "<group>"; };
 		95231F8629BE41F200B77123 /* ActiveUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveUser.swift; sourceTree = "<group>"; };
 		9524FA0629CCBC3C0053DA39 /* GroupUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupUser.swift; sourceTree = "<group>"; };
-		952CB78C2997BA8700173BA3 /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
 		95766C4929C8EBBA00971C7F /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		95766C4B29C982CE00971C7F /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
 		95766C4D29C983BF00971C7F /* RankingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingManager.swift; sourceTree = "<group>"; };
@@ -271,7 +271,7 @@
 				576C0DEE298ACAB400485AD5 /* LaunchScreen.storyboard */,
 				576C0DF1298ACAB400485AD5 /* Info.plist */,
 				576C0DFC298ACF7100485AD5 /* GoogleService-Info.plist */,
-				952CB78C2997BA8700173BA3 /* SecretKey.plist */,
+				574461372A1269F600FAD7B1 /* SecretKey.plist */,
 			);
 			path = "Netwalk-iOS";
 			sourceTree = "<group>";
@@ -624,11 +624,11 @@
 				95231F8129BE3F9300B77123 /* TrashPhotoTableViewCell.xib in Resources */,
 				95231F8029BE3F9300B77123 /* TrashCategoryTableViewCell.xib in Resources */,
 				95231F8229BE3F9300B77123 /* TrashPhotoCollectionViewCell.xib in Resources */,
+				574461382A1269F600FAD7B1 /* SecretKey.plist in Resources */,
 				95231F8329BE3F9300B77123 /* Assets.xcassets in Resources */,
 				9580E22C29C22C4D00387E34 /* KmRankTableViewCell.xib in Resources */,
 				95231F7529BE3F9300B77123 /* ProfileBodyTableViewCell.xib in Resources */,
 				95B6598A29C224E600271BA8 /* TimeRankTableViewCell.xib in Resources */,
-				95231F8429BE3F9300B77123 /* SecretKey.plist in Resources */,
 				95231F7229BE3F4A00B77123 /* Main.storyboard in Resources */,
 				95AEDBA129BF6F2500EBFE55 /* DetailGroupCollectionViewCell.xib in Resources */,
 				95231F7129BE3F2E00B77123 /* GoogleService-Info.plist in Resources */,

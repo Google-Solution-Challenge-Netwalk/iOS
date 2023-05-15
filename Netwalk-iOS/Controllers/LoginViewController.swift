@@ -57,46 +57,46 @@ class LoginViewController: UIViewController {
     }
     
     @objc func googleLoginButtonTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
-        let config = GIDConfiguration(clientID: clientID)
-
-        GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { [unowned self] user, error in
-            
-            guard error == nil else { print("Google Login Error"); return }
-            
-            guard
-                let authentication = user?.authentication,
-                let idToken = authentication.idToken
-            else { print("User authentication, idToken Error"); return }
-            
-            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: authentication.accessToken)
-            
-            Auth.auth().signIn(with: credential) { authResult, error in
-                guard error == nil else { print("Google Auth Error"); return }
-                
-                guard let authResult = authResult else { print("Err"); return }
-                
-                var user = User(email: authResult.user.email!, name: authResult.user.displayName!)
-                
-                UserNetManager.shared.login(user: user) { userNo in
-                    user.user_no = userNo
-                    UserDefaults.standard.setLoginUser(user: user)
-                    print(user)
-                    
-                    GroupNetManager.shared.readPartGroup(user.user_no!) { groups in
-                        GroupManager.shared.groups = groups
-                    }
-                    
-                    DispatchQueue.main.async {
-                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        let tabBarVC = storyboard.instantiateViewController(identifier: "TabBarVC")
-                        
-                        // Root View Controller 변경
-                        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(tabBarVC)
-                    }
-                }
-            }
-            
-        }
+//        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+//        let config = GIDConfiguration(clientID: clientID)
+//
+//        GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { [unowned self] user, error in
+//            
+//            guard error == nil else { print("Google Login Error"); return }
+//            
+//            guard
+//                let authentication = user?.authentication,
+//                let idToken = authentication.idToken
+//            else { print("User authentication, idToken Error"); return }
+//            
+//            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: authentication.accessToken)
+//            
+//            Auth.auth().signIn(with: credential) { authResult, error in
+//                guard error == nil else { print("Google Auth Error"); return }
+//                
+//                guard let authResult = authResult else { print("Err"); return }
+//                
+//                var user = User(email: authResult.user.email!, name: authResult.user.displayName!)
+//                
+//                UserNetManager.shared.login(user: user) { userNo in
+//                    user.user_no = userNo
+//                    UserDefaults.standard.setLoginUser(user: user)
+//                    print(user)
+//                    
+//                    GroupNetManager.shared.readPartGroup(user.user_no!) { groups in
+//                        GroupManager.shared.groups = groups
+//                    }
+//                    
+//                    DispatchQueue.main.async {
+//                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                        let tabBarVC = storyboard.instantiateViewController(identifier: "TabBarVC")
+//                        
+//                        // Root View Controller 변경
+//                        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(tabBarVC)
+//                    }
+//                }
+//            }
+//            
+//        }
     }
 }
